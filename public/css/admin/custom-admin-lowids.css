@@ -1,0 +1,36 @@
+.form-group .alert{
+    padding: 5px;
+    margin: 0
+}
+
+.cover-container {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.cover-item {
+    position: relative;
+    display: inline-block;
+    margin: 8px 8px;
+    box-shadow: 2px 2px 4px #bbb;
+    border-top-right-radius: 4px;
+    width: 200px;
+    height: 250px;
+    vertical-align: bottom;
+    border-style: solid;
+    text-align: center;
+}
+
+.cover-image{
+    background: no-repeat center;
+    background-size: cover;
+    height: 245px;
+}
+
+.cover-btn-group{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
