@@ -33,6 +33,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{ route('product-request') }}">
+                            <i class="fa fa-exclamation-triangle"></i> Product Request
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ route('new-order-list') }}">
                             <i class="fa fa-exclamation-triangle"></i> New Order
                         </a>

@@ -34,6 +34,12 @@ class ProductController extends Controller
         return View('admin.show-products', compact('products'));
     }
 
+    public function ProductRequest(){
+        $products = Product::Where('status_id', 3)->get()->sortByDesc('created_on');
+
+        return View('admin.show-product-requests', compact('products'));
+    }
+
     public function create(){
         $categories = Category::all();
 

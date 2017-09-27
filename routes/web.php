@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Home, contact us, term, etc
+Route::get('/', 'Frontend\HomeController@Home')->name('Home');
+Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('Contact');
+Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('About');
+Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('Term-condition');
+Route::get('/Privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('Privacy-policy');
 
+//End Frontend Routing
 
 // Rajaongkir
 Route::get('rajaongkir/subdistrict/{cityId}', 'frontend\UserAddressController@getSubdistrict');
@@ -41,6 +45,7 @@ Route::get('/admin/logout', 'Auth\LoginAdminController@logout')->name('admin-log
 // Product
 Route::prefix('/admin/product')->group(function (){
     Route::get('/', 'Admin\ProductController@index')->name('product-list');
+    Route::get('/request', 'Admin\ProductController@ProductRequest')->name('product-request');
     Route::post('/', 'Admin\ProductController@store');
     Route::get('/create', 'Admin\ProductController@create')->name('product-create');
     Route::get('/edit/{id}', 'Admin\ProductController@edit')->name('product-edit');

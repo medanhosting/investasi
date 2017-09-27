@@ -1,0 +1,146 @@
+
+a.meanmenu-reveal {
+    display: none;
+}
+.mean-container .mean-bar {
+    background: transparent none repeat scroll 0 0;
+    float: left;
+    min-height: 42px;
+    padding: 0 0 8px;
+    position: relative;
+    width: 100%;
+    z-index: 999999;
+}
+.mean-container a.meanmenu-reveal {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1px;
+    font-weight: 700;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 13px 11px;
+    right: 0;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 0;
+    width: 22px;
+}
+.mean-container a.meanmenu-reveal span {
+    background: #fff none repeat scroll 0 0;
+    display: block;
+    height: 3px;
+    margin-top: 3px;
+}
+.mean-container .mean-nav {
+    background: #0c1923 none repeat scroll 0 0;
+    float: left;
+    width: 100%;
+}
+.mean-container .mean-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.mean-container .mean-nav ul li {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border-top: 1px solid #ddd;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.mean-container .mean-nav ul li a {
+    background: #f8f8f8 none repeat scroll 0 0;
+    color: #232323;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 1em 5%;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 90%;
+}
+.mobile-menu-area {
+    background: #262626 none repeat scroll 0 0;
+}
+.mean-container .mean-nav ul li li a {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    color: #444;
+    font-weight: normal;
+    opacity: 0.75;
+    padding: 1em 10%;
+    text-shadow: none;
+    text-transform: capitalize;
+    visibility: visible;
+    width: 80%;
+}
+.mean-container .mean-nav ul li.mean-last a {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+.mean-container .mean-nav ul li li li a {
+    padding: 1em 15%;
+    width: 70%;
+}
+.mean-container .mean-nav ul li li li li a {
+    padding: 1em 20%;
+    width: 60%;
+}
+.mean-container .mean-nav ul li li li li li a {
+    padding: 1em 25%;
+    width: 50%;
+}
+.mean-container .mean-nav ul li a:hover {
+    background: #f8f8f8 none repeat scroll 0 0;
+    color: #468ee4;
+}
+.mean-container .mean-nav ul li a.mean-expand {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: 0 none;
+    font-weight: 700;
+    height: 15px;
+    line-height: 19px;
+    margin-top: 1px;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -1px;
+    width: 26px;
+    z-index: 2;
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: #f8f8f8 none repeat scroll 0 0;
+}
+.mean-container .mean-push {
+    clear: both;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.mean-nav .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.mean-container .mean-bar, .mean-container .mean-bar * {
+    box-sizing: content-box;
+}
+.mean-remove {
+    display: none;
+}
+.mean-container .mean-bar::after {
+    color: #ffffff;
+    content: "MENU";
+    font-size: 21px;
+    left: 5%;
+    position: absolute;
+    top: 12px;
+}
