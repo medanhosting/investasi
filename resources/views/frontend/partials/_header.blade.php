@@ -14,33 +14,33 @@
         <div class="container">
             <div class="row">
                 <div class="logo-wrap col-md-3 col-xs-6">
-                    <a href="index.html"><img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:50%"></a>
+                    <a href="{{route('home')}}"><img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:50%"></a>
                     {{--<a href="index.html">Investasi.me</a>--}}
                 </div>
                 <div class="menu-wrap col-md-8 ">
                     <ul class="menu">
                         <li class="active">
-                            <a href="{{route('Home')}}" >Home</a>
+                            <a href="{{route('home')}}" >Home</a>
                         </li>
                         <li>
-                            <a href="{{route('Home')}}">Invest.me</a>
+                            <a href="{{route('product-list')}}">Invest.me</a>
                         </li>
                         <li>
                             <span>About</span>
                             <ul class="submenu">
-                                <li><a href="{{route('About')}}">About Us</a></li>
-                                <li><a href="{{route('Term-condition')}}">Term & Condition</a></li>
-                                <li><a href="{{route('Privacy-policy')}}">Privacy Policy</a></li>
-                                <li><a href="{{route('Contact')}}">Contact Us</a></li>
+                                <li><a href="{{route('about')}}">About Us</a></li>
+                                <li><a href="{{route('term-condition')}}">Term & Condition</a></li>
+                                <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+                                <li><a href="{{route('contact')}}">Contact Us</a></li>
                             </ul>
                         </li>
                         <li>
                             <span><i class="fa fa-user" aria-hidden="true"></i></span>
                             <ul class="submenu">
-                                <li><a href="{{route('Home')}}">My Profile</a></li>
-                                <li><a href="{{route('Home')}}">Portfolio</a></li>
-                                <li><a href="{{route('Home')}}">My Wallet</a></li>
-                                <li><a href="{{route('Home')}}">Login</a></li>
+                                <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                <li><a href="{{route('home')}}">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -62,21 +62,22 @@
                             <div class="mobile-menu">
                                 <nav id="mobile-nav">
                                     <ul>
-                                        <li><a href="{{route('Home')}}">Home </a></li>
-                                        <li><a href="{{route('Home')}}"> Invest.me </a></li>
+                                        <li><a href="{{route('home')}}">Home </a></li>
+                                        <li><a href="{{route('product-list')}}"> Invest.me </a></li>
                                         <li><a>About</a>
                                             <ul>
-                                                <li><a href="{{route('About')}}">About Us</a></li>
-                                                <li><a href="{{route('Term-condition')}}">Term & Condition</a></li>
-                                                <li><a href="{{route('Privacy-policy')}}">Privacy Policy</a></li>
-                                                <li><a href="{{route('Contact')}}">Contact Us</a></li>
+                                                <li><a href="{{route('about')}}">About Us</a></li>
+                                                <li><a href="{{route('term-condition')}}">Term & Condition</a></li>
+                                                <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+                                                <li><a href="{{route('contact')}}">Contact Us</a></li>
                                             </ul>
                                         </li>
                                         <li><a>Profile</a>
                                             <ul class="single">
-                                                <li><a href="{{route('Home')}}">My Profile</a></li>
-                                                <li><a href="{{route('Home')}}">Portfolio</a></li>
-                                                <li><a href="{{route('Home')}}">My Wallet</a></li>
+                                                <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                                <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                                <li><a href="{{route('home')}}">Logout</a></li>
                                             </ul>
                                         </li>
                                     </ul>

@@ -127,90 +127,36 @@
             </div>
             <div class="causes">
                 <div class="causes-list row">
-                    <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 legal health">
-                        <div class="cause content-box">
-                            <div class="img-wrapper">
-                                <div class="overlay">
+                    @for($i=0;$i<3;$i++)
+                        <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 legal health">
+                            <div class="cause content-box">
+                                <div class="img-wrapper">
+                                    <div class="overlay">
+                                    </div>
+                                    <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt="">
                                 </div>
-                                <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt="">
-                            </div>
-                            <div class="info-block">
-                                <h4><a href="#">Stop Chilldern Abuse</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur deleniti fuga ear</p>
-                                <div class="foundings">
-                                    <div class="progress-bar-wrapper min">
-                                        <div class="progress-bar-outer">
-                                            <p class="values"><span class="value one">Raised: $12500</span>-<span class="value two">To go: $45222</span></p>
-                                            <div class="progress-bar-inner">
-                                                <div class="progress-bar">
-                                                    <span data-percent="55"><span class="pretng">55%</span> </span>
+                                <div class="info-block">
+                                    <h4><a href="#">Stop Chilldern Abuse</a></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur deleniti fuga ear</p>
+                                    <div class="foundings">
+                                        <div class="progress-bar-wrapper min">
+                                            <div class="progress-bar-outer">
+                                                <p class="values"><span class="value one">Raised: $12500</span>-<span class="value two">To go: $45222</span></p>
+                                                <div class="progress-bar-inner">
+                                                    <div class="progress-bar">
+                                                        <span data-percent="55"><span class="pretng">55%</span> </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="donet_btn">
-                                    <a href="causes-single.html" class="btn btn-min btn-solid"><i class="fa fa-archive"></i><span>Donate Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 education poor health legal">
-                        <div class="cause content-box">
-                            <div class="img-wrapper">
-                                <div class="overlay">
-                                </div>
-                                <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-2.jpg') }}" alt="">
-                            </div>
-                            <div class="info-block">
-                                <h4><a href="#">Don't Hurt Me, Please!</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur deleniti fuga ear</p>
-                                <div class="foundings">
-                                    <div class="progress-bar-wrapper min">
-                                        <div class="progress-bar-outer">
-                                            <p class="values"><span class="value one">Raised: $12500</span>-<span class="value two">To go: $45222</span></p>
-                                            <div class="progress-bar-inner">
-                                                <div class="progress-bar">
-                                                    <span data-percent="35"> <span class="pretng">35%</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="donet_btn">
+                                        <a href="causes-single.html" class="btn btn-min btn-solid"><i class="fa fa-archive"></i><span>Donate Now</span></a>
                                     </div>
                                 </div>
-                                <div class="donet_btn">
-                                    <a href="causes-single.html" class="btn btn-min btn-solid"><i class="fa fa-archive"></i><span>Donate Now</span></a>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="cause-wrapper col-md-4 col-xs-12 col-sm-6 ugent poor animals-wildlife hidden-sm  ">
-                        <div class="cause content-box">
-                            <div class="img-wrapper">
-                                <div class="overlay">
-                                </div>
-                                <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-3.jpg') }}" alt="">
-                            </div>
-                            <div class="info-block">
-                                <h4><a href="#">A Better Life for Disabled</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur deleniti fuga ear</p>
-                                <div class="foundings">
-                                    <div class="progress-bar-wrapper min">
-                                        <div class="progress-bar-outer">
-                                            <p class="values"><span class="value one">Raised: $12500</span>-<span class="value two">To go: $45222</span></p>
-                                            <div class="progress-bar-inner">
-                                                <div class="progress-bar">
-                                                    <span data-percent="75"><span class="pretng">75%</span> </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="donet_btn">
-                                    <a href="causes-single.html" class="btn btn-min btn-solid"><i class="fa fa-archive"></i><span>Donate Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endfor
                 </div>
             </div>
         </div>
@@ -228,61 +174,25 @@
             </div>
             <div class="row">
                 <!-- Blog Single -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                27 july 2017
+
+                @for($i=0;$i<3;$i++)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-box">
+                            <div class="blog-top-desc">
+                                <div class="blog-date">
+                                    27 july 2017
+                                </div>
+                                <h4>Helping kids Grow up Stronger</h4>
+                                <i class="fa fa-user"></i> <strong>Admin</strong>
                             </div>
-                            <h4>Helping kids Grow up Stronger</h4>
-                            <i class="fa fa-user-o"></i> <strong>Admin</strong>
-                            <i class="fa fa-commenting-o"></i> <strong>12 Comments</strong>
-                        </div>
-                        <img src="{{ URL::asset('frontend_images/blog/img-1.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
-                            <a href="#" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
+                            <img src="{{ URL::asset('frontend_images/blog/img-1.jpg') }}" alt="">
+                            <div class="blog-btm-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
+                                <a href="#" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Blog Single -->
-                <!-- Blog Single -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                20 july 2017
-                            </div>
-                            <h4>Helping kids Grow up Stronger</h4>
-                            <i class="fa fa-user-o"></i> <strong>Admin</strong>
-                            <i class="fa fa-commenting-o"></i> <strong>10 Comments</strong>
-                        </div>
-                        <img src="{{ URL::asset('frontend_images/blog/img-3.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
-                            <a href="#" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Single -->
-                <!-- Blog Single -->
-                <div class="col-md-4 col-sm-4 hidden-sm">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                17 july 2017
-                            </div>
-                            <h4>Helping kids Grow up Stronger</h4>
-                            <i class="fa fa-user-o"></i> <strong>Admin</strong>
-                            <i class="fa fa-commenting-o"></i> <strong>8 Comments</strong>
-                        </div>
-                        <img src="{{ URL::asset('frontend_images/blog/img-2.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
-                            <a href="#" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
+                @endfor
                 <!-- Blog Single -->
 
             </div>

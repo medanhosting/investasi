@@ -12,11 +12,26 @@
 */
 
 //Home, contact us, term, etc
-Route::get('/', 'Frontend\HomeController@Home')->name('Home');
-Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('Contact');
-Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('About');
-Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('Term-condition');
-Route::get('/Privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('Privacy-policy');
+Route::get('/', 'Frontend\HomeController@Home')->name('home');
+Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('contact');
+Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('about');
+Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
+Route::get('/Privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
+
+//blog
+Route::get('/Blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
+Route::get('/Blog', 'Frontend\BlogController@SingleBlog')->name('blog');
+//Route::get('/blog/{id}', 'Frontend\HomeController@AboutUs')->name('About');
+
+//profile
+Route::get('/My-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
+Route::get('/Portfolio', 'Frontend\ProfileController@Portfolio')->name('portfolio');
+Route::get('/My-wallet', 'Frontend\ProfileController@Wallet')->name('my-wallet');
+
+//product
+Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('product-list');
+Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('product-list');
+//Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('product-detail');
 
 //End Frontend Routing
 
