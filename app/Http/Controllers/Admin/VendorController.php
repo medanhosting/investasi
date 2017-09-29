@@ -41,22 +41,35 @@ class VendorController extends Controller
 
 
     public function AcceptRequest($id){
-        if(Auth::guard('user_admins')->user()->id != $id){
-            return Redirect::route('admin-list');
+        $vendor = Vendor::find($id);
+
+        if($vendor == null){
+            Session::flash('error', 'Vendor Not Found!');
+
+            return Redirect::route('vendor-request');
         }
 
-        $admin = Vendor::find($id);
+        $vendor->id = 1;
+        $vendor->save();
 
-        return View('admin.edit-user', compact('admin'));
+        Session::flash('message', 'Success Accepting Vendor!');
+        return Redirect::route('vendor-request');
     }
+
     public function RejectRequest($id){
-        if(Auth::guard('user_admins')->user()->id != $id){
-            return Redirect::route('admin-list');
+        $vendor = Vendor::find($id);
+
+        if($vendor == null){
+            Session::flash('error', 'Vendor Not Found!');
+
+            return Redirect::route('vendor-request');
         }
 
-        $admin = Vendor::find($id);
+        $vendor->id = 7;
+        $vendor->save();
 
-        return View('admin.edit-user', compact('admin'));
+        Session::flash('message', 'Success Rejecting Vendor!');
+        return Redirect::route('vendor-request');
     }
 
 }

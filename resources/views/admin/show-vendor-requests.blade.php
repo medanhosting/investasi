@@ -36,6 +36,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
+                            @include('admin.partials._success')
                             <h2>Vendor Requests</h2>
                             {{--<ul class="nav navbar-right panel_toolbox">--}}
                             {{--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>--}}
@@ -76,16 +77,12 @@
                                             <td>{{ $vendor->description }}</td>
                                             <td>{{ \Carbon\Carbon::parse($user->created_on)->format('j M Y G:i:s') }}</td>
                                             <td>
-                                                @if(\Illuminate\Support\Facades\Auth::guard('user_admins')->user()->id == $user->id)
-                                                    <a href="/admin/vendor/request-accept/{{ $user->id }}"class="btn btn-primary">Accept</a>
-                                                    <a href="/admin/vendor/request-reject/{{ $user->id }}"class="btn btn-primary">Reject</a>
-                                                @else
-                                                    -
-                                                @endif
+                                                <a href="/admin/vendor/request-accept/{{ $vendor->id }}"class="btn btn-primary">Accept</a>
+                                                <a href="/admin/vendor/request-reject/{{ $vendor->id }}"class="btn btn-danger">Reject</a>
                                             </td>
                                         </tr>
                                         @php( $idx++ )
-                                            @endforeach
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
