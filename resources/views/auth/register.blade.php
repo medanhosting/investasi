@@ -42,7 +42,7 @@
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('phone') ? ' has-error' : '' }}">
                                 <h4>Phone</h4>
-                                <input type="text" name="phone">
+                                <input type="number" name="phone">
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('phone') }}</strong>
@@ -67,17 +67,9 @@
                                     </span>
                                 @endif
                             </div>
-                            <div class="col-sm-12">
-                                <label>
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                </label>
-                            </div>
-                            <div class="field col-sm-4">
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
+                            <div class="field col-sm-12">
                                 <br/>
-                                <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Login</span></button>
+                                <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Register</span></button>
                             </div>
                         </form>
                     </div>
