@@ -12,7 +12,7 @@
 */
 
 //Home, contact us, term, etc
-Route::get('/', 'Frontend\HomeController@Home')->name('home');
+Route::get('/', 'Frontend\HomeController@Home')->name('index');
 Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('contact');
 Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('about');
 Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
@@ -188,7 +188,6 @@ Route::prefix('admin/vendor')->group(function(){
 // End admin Routing
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

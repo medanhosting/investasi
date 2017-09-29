@@ -1,84 +1,86 @@
 @extends('layouts.frontend')
 
 @section('body-content')
-    {{--<!-- basic-slider start -->--}}
-    {{--<div class="slider-section">--}}
-        {{--<div class="slider-active owl-carousel">--}}
-            {{--<div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s1.jpg') }});">--}}
-                {{--<div class="container">--}}
-                    {{--<div class="slider-content text-white">--}}
-                        {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>--}}
-                        {{--<p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor--}}
-                            {{--<br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>--}}
-                        {{--<div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/s2.jpg') }});">--}}
-                {{--<div class="container">--}}
-                    {{--<div class="slider-content text-white">--}}
-                        {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>--}}
-                        {{--<p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor--}}
-                            {{--<br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>--}}
-                        {{--<div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s3.jpg') }});">--}}
-                {{--<div class="container">--}}
-                    {{--<div class="slider-content text-white">--}}
-                        {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>--}}
-                        {{--<p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor--}}
-                            {{--<br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>--}}
-                        {{--<div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-    {{--<!-- basic-slider end -->--}}
-
-    <!-- Features -->
-    <div class="features-wrapper one">
-        <div class="container">
-            <div class="section-name one">
-                <h2>Hello</h2>
-                <div class="short-text">
-                    <h5>Welcome back, xxxx</h5>
-                </div>
-            </div>
-            <div class="row features">
-                <div class="col-md-4 col-sm-6 ">
-                    <div class="feature clearfix">
-                        <div class="icon_we"><i class="fa fa-money"></i></div>
-                        <h4>My wallet</h4>
-                        <p>Rp. 5.000.000</p>
-                        <a href="#" class="btn btn-min btn-secondary
-						"><span>See More</span></a>
+    @if(auth()->check())
+        <!-- Features -->
+        <div class="features-wrapper one">
+            <div class="container">
+                <div class="section-name one">
+                    <h2>Hello</h2>
+                    <div class="short-text">
+                        <h5>Welcome back, {{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}</h5>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature  higlight clearfix">
-                        <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
-                        <h4> Total Investment </h4>
-                        <p>3 ongoing <br> 2 done</p>
-                        <a href="#" class="btn btn-min btn-secondary
+                <div class="row features">
+                    <div class="col-md-4 col-sm-6 ">
+                        <div class="feature clearfix">
+                            <div class="icon_we"><i class="fa fa-money"></i></div>
+                            <h4>My wallet</h4>
+                            <p>Rp. 5.000.000</p>
+                            <a href="#" class="btn btn-min btn-secondary
 						"><span>See More</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 hidden-sm ">
-                    <div class="feature clearfix">
-                        <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
-                        <h4>Dividen / Yield Income</h4>
-                        <p>Rp. 5.000.000</p>
-                        <a href="#" class="btn btn-min btn-secondary
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature  higlight clearfix">
+                            <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                            <h4> Total Investment </h4>
+                            <p>3 ongoing <br> 2 done</p>
+                            <a href="#" class="btn btn-min btn-secondary
 						"><span>See More</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 hidden-sm ">
+                        <div class="feature clearfix">
+                            <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
+                            <h4>Dividen / Yield Income</h4>
+                            <p>Rp. 5.000.000</p>
+                            <a href="#" class="btn btn-min btn-secondary
+						"><span>See More</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @else
+        <!-- basic-slider start -->
+        <div class="slider-section">
+            <div class="slider-active owl-carousel">
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s1.jpg') }});">
+                    <div class="container">
+                        <div class="slider-content text-white">
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
+                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
+                            <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/s2.jpg') }});">
+                    <div class="container">
+                        <div class="slider-content text-white">
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
+                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
+                            <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s3.jpg') }});">
+                    <div class="container">
+                        <div class="slider-content text-white">
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
+                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
+                            <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- basic-slider end -->
+    @endif
 
     <!-- Special Cuase Paralax -->
     <div class="special-cause">

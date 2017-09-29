@@ -14,5 +14,13 @@
         </div>
     </div>
 
+    <!-- contact wrapper -->
+    <div class="contact-page-wrapper">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
 
 @endsection

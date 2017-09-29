@@ -14,13 +14,13 @@
         <div class="container">
             <div class="row">
                 <div class="logo-wrap col-md-3 col-xs-6">
-                    <a href="{{route('home')}}"><img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:50%"></a>
+                    <a href="{{route('index')}}"><img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:50%"></a>
                     {{--<a href="index.html">Investasi.me</a>--}}
                 </div>
                 <div class="menu-wrap col-md-8 ">
                     <ul class="menu">
                         <li class="active">
-                            <a href="{{route('home')}}" >Home</a>
+                            <a href="{{route('index')}}" >Home</a>
                         </li>
                         <li>
                             <a href="{{route('product-list')}}">Invest.me</a>
@@ -37,10 +37,16 @@
                         <li>
                             <span><i class="fa fa-user" aria-hidden="true"></i></span>
                             <ul class="submenu">
-                                <li><a href="{{route('my-profile')}}">My Profile</a></li>
-                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-                                <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
-                                <li><a href="{{route('home')}}">Logout</a></li>
+
+                                @if(auth()->check())
+                                    <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                    <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                    <li><a href="{{route('logout')}}">Logout</a></li>
+                                @else
+                                    <li><a href="{{ route('login') }}" >Login</a></li>
+                                    <li><a href="{{ route('register') }}" >Register</a></li>
+                                @endif
                             </ul>
                         </li>
                     </ul>
@@ -74,10 +80,16 @@
                                         </li>
                                         <li><a>Profile</a>
                                             <ul class="single">
-                                                <li><a href="{{route('my-profile')}}">My Profile</a></li>
-                                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-                                                <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
-                                                <li><a href="{{route('home')}}">Logout</a></li>
+
+                                                @if(auth()->check())
+                                                    <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                                    <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                                    <li><a href="{{route('logout')}}">Logout</a></li>
+                                                @else
+                                                    <li><a href="{{ route('login') }}" >Login</a></li>
+                                                    <li><a href="{{ route('register') }}" >Register</a></li>
+                                                @endif
                                             </ul>
                                         </li>
                                     </ul>

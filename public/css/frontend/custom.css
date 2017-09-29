@@ -1,0 +1,30 @@
+.page-banner{
+    background: #BD562a !important;
+}
+
+#chart_wrap {
+    position: relative;
+    padding-bottom: 30%;
+    height: 0;
+    overflow:hidden;
+}
+
+@media screen and (min-width: 466px) and (max-width: 751px)  {
+    #chart_wrap {
+        padding-bottom: 60%;
+    }
+}
+@media screen and (max-width: 465px)  {
+    #chart_wrap {
+        padding-bottom: 75%;
+    }
+}
+
+#chart_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+

@@ -9,9 +9,20 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Transaction;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function Profile()
     {
         return View ('frontend.show-profile');
@@ -19,11 +30,19 @@ class ProfileController extends Controller
 
     public function Portfolio()
     {
-        return View ('frontend.show-portfolio');
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $transactions = Transaction::Where('user_id', $userId);
+        return View ('frontend.show-portfolio', compact('transactions'));
     }
 
     public function Wallet()
     {
-        return View ('frontend.show-wallet');
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $statments = WalletStatement::Where('user_id', $userId);
+        return View ('frontend.show-wallet', compact('statments'));
     }
 }
