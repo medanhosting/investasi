@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
+use App\Models\WalletStatement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
@@ -44,5 +45,20 @@ class ProfileController extends Controller
 
         $statments = WalletStatement::Where('user_id', $userId);
         return View ('frontend.show-wallet', compact('statments'));
+    }
+    public function WithdrawShow()
+    {
+        $user = Auth::user();
+        $userId = $user->id;
+
+        return View ('frontend.wallet-withdraw');
+    }
+    public function DepositShow()
+    {
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $statments = WalletStatement::Where('user_id', $userId);
+        return View ('frontend.wallet-deposit', compact('statments'));
     }
 }

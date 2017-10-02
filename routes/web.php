@@ -27,6 +27,8 @@ Route::get('/Blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 Route::get('/My-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
 Route::get('/Portfolio', 'Frontend\ProfileController@Portfolio')->name('portfolio');
 Route::get('/My-wallet', 'Frontend\ProfileController@Wallet')->name('my-wallet');
+Route::get('/Withdraw', 'Frontend\ProfileController@WithdrawShow')->name('withdraw');
+Route::get('/Deposit', 'Frontend\ProfileController@DepositShow')->name('deposit');
 
 //product
 Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('product-list');

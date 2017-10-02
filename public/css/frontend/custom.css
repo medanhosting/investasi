@@ -28,3 +28,12 @@
     height:100%;
 }
 
+.progress-bar {
+    background: #f1f1f1 none repeat scroll 0 0 !important;
+    border-radius: 25px !important;
+    box-shadow: 0 0 0 !important;
+    height: 17px !important;
+    margin: 0 0 19px !important;
+    position: relative !important;
+    width: 100% !important;
+}

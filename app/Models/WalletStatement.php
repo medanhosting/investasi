@@ -18,6 +18,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $description
  * @property float $amount
  * @property \Carbon\Carbon $date
+ * @property int $status_id
  * @property \Carbon\Carbon $created_on
  * @property string $created_by
  * @property \Carbon\Carbon $modified_on
@@ -32,7 +33,8 @@ class WalletStatement extends Eloquent
     public $timestamps = false;
 
     protected $casts = [
-        'amount' => 'float'
+        'amount' => 'float',
+        'status_id' => 'int'
     ];
 
     protected $dates = [
@@ -46,6 +48,7 @@ class WalletStatement extends Eloquent
         'amount',
         'description',
         'date',
+        'status_id',
         'created_on',
         'created_by',
         'modified_on',
@@ -55,6 +58,11 @@ class WalletStatement extends Eloquent
     public function user()
     {
         return $this->belongsTo(\App\Models\User::class);
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(\App\Models\Status::class);
     }
 
     public function getAmountAttribute(){

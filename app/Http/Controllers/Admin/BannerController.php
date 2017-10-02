@@ -77,7 +77,7 @@ class BannerController extends Controller
 
             $filename = 'banner1_'. Carbon::now('Asia/Jakarta')->format('Ymdhms'). '_0.'. $ext[1];
 
-            $img->save(public_path('storage\banner' . '\\'. $filename));
+            $img->save(public_path('storage/banner/'. $filename));
 
             $banner->image_path = $filename;
         }
@@ -158,7 +158,7 @@ class BannerController extends Controller
 
             $filename = 'banner1_'. Carbon::now('Asia/Jakarta')->format('Ymdhms'). '_0.'. $ext[1];
 
-            $img->save(public_path('storage\banner' . '\\'. $filename));
+            $img->save(public_path('storage/banner/'. $filename));
 
             // Save old banner image
             $oldImgPath = $banner->image_path;
@@ -256,7 +256,7 @@ class BannerController extends Controller
 
             $filename = 'banner2_'. Carbon::now('Asia/Jakarta')->format('Ymdhms'). '_0.'. $ext[1];
 
-            $img->save(public_path('storage\banner' . '\\'. $filename));
+            $img->save(public_path('storage/banner/'. $filename));
 
             // Save old banner image
             $oldImgPath = $banner->image_path;

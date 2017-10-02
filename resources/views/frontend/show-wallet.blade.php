@@ -22,11 +22,13 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="row">
                         <div class="col-md-7 col-xs-12 center">
-                            <h2><i class="fa fa-money fa-2x"></i> My Wallet = Rp 5.000.000</h2>
+                            <h2>
+                                <i class="fa fa-money fa-1x"></i> Rp 5.000.000
+                            </h2>
                         </div>
-                        <div class="col-md-5 col-xs-12 center">
-                            <button class="btn btn-big btn-warning">Withdraw</button>
-                            <button class="btn btn-big btn-success">Deposit</button>
+                        <div class="col-md-5 col-xs-12 center" style="padding-top:3%;">
+                            <a href="{{route('withdraw')}}" class="btn btn-big btn-warning">Withdraw</a>
+                            <a href="{{route('deposit')}}" class="btn btn-big btn-success">Deposit</a>
                         </div>
                     </div>
                 </div>

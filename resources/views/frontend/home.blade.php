@@ -49,7 +49,7 @@
                 <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s1.jpg') }});">
                     <div class="container">
                         <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT ASDF ABCD </h2>
                             <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
                                 <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
                             <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
@@ -59,7 +59,7 @@
                 <div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/s2.jpg') }});">
                     <div class="container">
                         <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT ABCD ASDF </h2>
                             <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
                                 <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
                             <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
@@ -70,7 +70,7 @@
                 <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s3.jpg') }});">
                     <div class="container">
                         <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >KINDNESS &amp; HUMANITY </h2>
+                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT QWERTY ZXCVB </h2>
                             <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
                                 <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
                             <div class="slider_button b_faddown3"><a href="#">Donate Now</a></div>
@@ -92,11 +92,11 @@
                 <div class="col-md-6 col-xs-12 donet__area">
                     <div class="section-name parallax one">
                         <h1>Almost Done Project Right Now</h1>
-                        <h2>Giving clean drinking water </h2>
+                        <h2>PT QWERTY ZXCVB </h2>
                         <h4>Lorem Ipsum is simply dummy text of the printing type industry. Our Ipsum has been the industry's standard dummy text ever the 1500 when unknown printer took galley homero untouched.</h4>
                     </div>
                     <div class="foundings">
-                        <div class="progress-bar-wrapper big">
+                        <div class="progress-bar-wrapper min">
                             <div class="progress-bar-outer">
                                 <div class="clearfix">
                                     <span class="value one">Rised: $9620</span>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="progress-bar-inner">
                                     <div class="progress-bar">
-                                        <span data-percent="75"> <span class="pretng">75%</span> </span>
+                                        <span data-percent="95"> <span class="pretng">95%</span> </span>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                     <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt="">
                                 </div>
                                 <div class="info-block">
-                                    <h4><a href="#">Stop Chilldern Abuse</a></h4>
+                                    <h4><a href="#">PT ABCD ASDF {{$i}}</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur deleniti fuga ear</p>
                                     <div class="foundings">
                                         <div class="progress-bar-wrapper min">
