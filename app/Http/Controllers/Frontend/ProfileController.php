@@ -13,6 +13,7 @@ use App\Models\Transaction;
 use App\Models\WalletStatement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
@@ -36,29 +37,5 @@ class ProfileController extends Controller
 
         $transactions = Transaction::Where('user_id', $userId);
         return View ('frontend.show-portfolio', compact('transactions'));
-    }
-
-    public function Wallet()
-    {
-        $user = Auth::user();
-        $userId = $user->id;
-
-        $statments = WalletStatement::Where('user_id', $userId);
-        return View ('frontend.show-wallet', compact('statments'));
-    }
-    public function WithdrawShow()
-    {
-        $user = Auth::user();
-        $userId = $user->id;
-
-        return View ('frontend.wallet-withdraw');
-    }
-    public function DepositShow()
-    {
-        $user = Auth::user();
-        $userId = $user->id;
-
-        $statments = WalletStatement::Where('user_id', $userId);
-        return View ('frontend.wallet-deposit', compact('statments'));
     }
 }

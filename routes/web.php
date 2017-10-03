@@ -25,10 +25,18 @@ Route::get('/Blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 
 //profile
 Route::get('/My-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
+
+//portfolio
 Route::get('/Portfolio', 'Frontend\ProfileController@Portfolio')->name('portfolio');
-Route::get('/My-wallet', 'Frontend\ProfileController@Wallet')->name('my-wallet');
-Route::get('/Withdraw', 'Frontend\ProfileController@WithdrawShow')->name('withdraw');
-Route::get('/Deposit', 'Frontend\ProfileController@DepositShow')->name('deposit');
+
+//wallet
+Route::get('/My-wallet', 'Frontend\WalletController@Wallet')->name('my-wallet');
+Route::get('/Deposit', 'Frontend\WalletController@DepositShow')->name('deposit');
+Route::get('/Withdraw', 'Frontend\WalletController@WithdrawShow')->name('withdraw');
+Route::post('/Withdraw-submit', [
+    'uses' => 'Frontend\WalletController@WithdrawSubmit',
+    'as' => 'withdrawSubmit'
+]);
 
 //product
 Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('product-list');

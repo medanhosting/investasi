@@ -44,6 +44,7 @@ class WalletStatement extends Eloquent
     ];
 
     protected $fillable = [
+        'id',
         'user_id',
         'amount',
         'description',

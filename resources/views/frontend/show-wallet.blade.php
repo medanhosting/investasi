@@ -51,12 +51,12 @@
                                 </thead>
                                 <tbody>
                                 @php( $idx = 1 )
-                                    @foreach($statments as $trx)
+                                    @foreach($statements as $trx)
                                         <tr>
                                             <td>{{ $idx }}</td>
-                                            <td>{{ $trx->invoice }}</td>
-                                            <td>{{ $trx->user->first_name }}&nbsp;{{ $trx->user->last_name }}</td>
-                                            <td>{{ $trx->payment_method->description }}</td>
+                                            <td>{{ $trx->date }}</td>
+                                            <td>{{ $trx->description }}</td>
+                                            <td>{{ $trx->amount }}</td>
                                         </tr>
                                         @php( $idx++ )
                                             @endforeach

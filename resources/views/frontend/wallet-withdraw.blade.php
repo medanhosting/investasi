@@ -30,43 +30,52 @@
                         <div class="widget-title ">
                             <h4>Withdraw</h4>
                         </div>
-                        <form class="comment-form row altered" method="POST" action="{{ route('register') }}">
+                        <form class="comment-form row altered" method="POST" action="{{ route('withdrawSubmit') }}">
                             {{ csrf_field() }}
 
 
-                            <div class="field col-sm-12 {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <div class="field col-sm-12 {{ $errors->has('amount') ? ' has-error' : '' }}">
                                 <h5>Amount</h5>
-                                <input type="number" name="email">
-                                @if ($errors->has('email'))
+                                <input type="number" name="amount">
+                                @if ($errors->has('amount'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('amount') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <div class="field col-sm-12 {{ $errors->has('first_name') ? ' has-error' : '' }}">
+                            <div class="field col-sm-12 {{ $errors->has('acc_number') ? ' has-error' : '' }}">
                                 <h5>Account Number</h5>
-                                <input type="text" name="first_name">
-                                @if ($errors->has('first_name'))
+                                <input type="text" name="acc_number">
+                                @if ($errors->has('acc_number'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                        <strong>{{ $errors->first('acc_number') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('last_name') ? ' has-error' : '' }}">
+                            <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('acc_name') ? ' has-error' : '' }}">
                                 <h5>Account Name</h5>
-                                <input type="text" name="last_name">
-                                @if ($errors->has('last_name'))
+                                <input type="text" name="acc_name">
+                                @if ($errors->has('acc_name'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                        <strong>{{ $errors->first('acc_name') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                            <div class="field col-sm-12 {{ $errors->has('phone') ? ' has-error' : '' }}">
+                            <div class="field col-sm-12 {{ $errors->has('bank') ? ' has-error' : '' }}">
                                 <h5>Bank Name</h5>
-                                <input type="number" name="phone">
-                                @if ($errors->has('phone'))
+                                {{--<select class="form-control" name="bank" id="bank">--}}
+                                    {{--<option value="PT BCA (Bank Central Asia) TBK">PT BCA (Bank Central Asia) TBK</option>--}}
+                                    {{--<option value="asdf">PT Bank Negara Indonesia (BNI)</option>--}}
+                                    {{--<option value="asdf">PT Bank Rakyat Indonesia (BRI)</option>--}}
+                                    {{--<option value="asdf">PT. Bank CIMB NIAGA TBK</option>--}}
+                                    {{--<option value="asdf">CITIBANK NA</option>--}}
+                                    {{--<option value="asdf">PT Bank Danamon Indonesia TBK</option>--}}
+                                    {{--<option value="asdf">PT Bank Mandiri </option>--}}
+                                {{--</select>--}}
+                                <input type="text" name="bank">
+                                @if ($errors->has('bank'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('phone') }}</strong>
+                                        <strong>{{ $errors->first('bank') }}</strong>
                                     </span>
                                 @endif
                             </div>
