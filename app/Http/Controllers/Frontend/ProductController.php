@@ -9,16 +9,23 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
     public function ProductList()
     {
-        return View ('frontend.show-products');
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $products = Product::all();
+        return View ('frontend.show-products', compact('products'));
     }
 
-    public function ProductDetail()
+    public function ProductDetail($id)
     {
+
         return View ('frontend.show-product');
     }
 }

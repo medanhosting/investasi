@@ -23,7 +23,7 @@
                             <a href="{{route('index')}}" >Home</a>
                         </li>
                         <li>
-                            <a href="{{route('product-list')}}">Invest.me</a>
+                            <a href="{{route('offering-list')}}">Invest.me</a>
                         </li>
                         <li>
                             <span>About</span>
@@ -76,7 +76,7 @@
                                 <nav id="mobile-nav">
                                     <ul>
                                         <li><a href="{{route('home')}}">Home </a></li>
-                                        <li><a href="{{route('product-list')}}"> Invest.me </a></li>
+                                        <li><a href="{{route('offering-list')}}"> Invest.me </a></li>
                                         <li><a>About</a>
                                             <ul>
                                                 <li><a href="{{route('about')}}">About Us</a></li>

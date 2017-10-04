@@ -39,8 +39,8 @@ Route::post('/Withdraw-submit', [
 ]);
 
 //product
-Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('product-list');
-Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('product-list');
+Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('offering-list');
+Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('offering-detail');
 //Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('product-detail');
 
 //End Frontend Routing
