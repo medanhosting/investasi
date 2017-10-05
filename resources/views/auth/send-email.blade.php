@@ -35,7 +35,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
-                            <p>We have sent verification email to {{$email}}</p>
+                            <p>We have sent verification email to {{\Illuminate\Support\Facades\Session::flash('email')}}</p>
                         </div>
                     </div>
                 </div>

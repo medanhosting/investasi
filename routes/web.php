@@ -197,7 +197,14 @@ Route::prefix('admin/vendor')->group(function(){
 
 // End admin Routing
 
+// Sms Routing Start
+Route::get('/send-verification-number', 'Frontend\PhoneNumberController@VerifyPhoneNumber')->name('verify-phone-show');
+Route::post('/verification-number', 'Frontend\PhoneNumberController@Verify')->name('verify-phone');
+// Sms Routing End
 
+// Auth Routing Start
+Route::view('/send-email', 'auth.send-email');
+// Auth Routing End
 
 Auth::routes();
 

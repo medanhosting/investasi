@@ -16,10 +16,11 @@ use App\Notifications\NewOrder;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
-{public function __construct()
 {
-    $this->middleware('auth:user_admins');
-}
+    public function __construct()
+    {
+        $this->middleware('auth:user_admins');
+    }
 
 
     public function index(){
