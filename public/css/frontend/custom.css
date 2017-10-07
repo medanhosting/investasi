@@ -48,10 +48,6 @@
     padding-bottom: 3px;
 }
 
-
-element {
-
-}
 .bag_total tr {
 
     display: block;
@@ -88,4 +84,11 @@ element {
     font-weight: 900;
     font-size: 18px;
     color: #333;
+}
+
+/* hidden text number spinner */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

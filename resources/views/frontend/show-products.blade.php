@@ -56,7 +56,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('offering-detail', ['id' => $product->id]) }}" >
-                                                <button class="btn btn-primary">Edit</button>
+                                                <button class="btn btn-primary">Detail</button>
                                             </a>
                                         </td>
                                     </tr>
@@ -67,7 +67,7 @@
 
 
                     </div>
-                </div>
+                </div>app
             </div>
         </div>
     </div>

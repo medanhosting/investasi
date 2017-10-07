@@ -16,8 +16,8 @@ class ProductController extends Controller
 {
     public function ProductList()
     {
-        $user = Auth::user();
-        $userId = $user->id;
+//        $user = Auth::user();
+//        $userId = $user->id;
 
         $products = Product::all();
         return View ('frontend.show-products', compact('products'));

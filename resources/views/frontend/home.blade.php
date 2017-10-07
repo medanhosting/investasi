@@ -17,7 +17,7 @@
                             <div class="icon_we"><i class="fa fa-money"></i></div>
                             <h4>My wallet</h4>
                             <p>Rp. 5.000.000</p>
-                            <a href="#" class="btn btn-min btn-secondary
+                            <a href="{{route('my-wallet')}}" class="btn btn-min btn-secondary
 						"><span>See More</span></a>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                             <h4> Total Investment </h4>
                             <p>3 ongoing <br> 2 done</p>
-                            <a href="#" class="btn btn-min btn-secondary
+                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
 						"><span>See More</span></a>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
                             <h4>Dividen / Yield Income</h4>
                             <p>Rp. 5.000.000</p>
-                            <a href="#" class="btn btn-min btn-secondary
+                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
 						"><span>See More</span></a>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                             <img src="{{ URL::asset('frontend_images/blog/img-1.jpg') }}" alt="">
                             <div class="blog-btm-desc">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.</p>
-                                <a href="#" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
+                                <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Read More  <i class="fa fa-arrow-right"></i> </a>
                             </div>
                         </div>
                     </div>
