@@ -19,7 +19,7 @@ class ProductController extends Controller
 //        $user = Auth::user();
 //        $userId = $user->id;
 
-        $products = Product::all();
+        $products = Product::where('is_secondary', 0)->get();
         return View ('frontend.show-products', compact('products'));
     }
 
@@ -27,5 +27,11 @@ class ProductController extends Controller
     {
 
         return View ('frontend.show-product');
+    }
+
+    public function DownloadFile($filename)
+    {
+        $file_path = public_path('files/'.$filename);
+        return response()->download($file_path);
     }
 }

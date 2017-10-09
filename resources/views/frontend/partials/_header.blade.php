@@ -22,8 +22,13 @@
                         <li class="active">
                             <a href="{{route('index')}}" >Home</a>
                         </li>
+
                         <li>
-                            <a href="{{route('offering-list')}}">Invest.me</a>
+                            <span>Invest.me</span>
+                            <ul class="submenu">
+                                <li><a href="{{route('project-list')}}">Project List</a></li>
+                                <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
+                            </ul>
                         </li>
                         <li>
                             <span>About</span>
@@ -76,7 +81,12 @@
                                 <nav id="mobile-nav">
                                     <ul>
                                         <li><a href="{{route('home')}}">Home </a></li>
-                                        <li><a href="{{route('offering-list')}}"> Invest.me </a></li>
+                                        <li><a>Invest.me</a>
+                                            <ul>
+                                                <li><a href="{{route('project-list')}}">Project List</a></li>
+                                                <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a>About</a>
                                             <ul>
                                                 <li><a href="{{route('about')}}">About Us</a></li>

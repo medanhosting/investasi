@@ -24,12 +24,4 @@ class ProfileController extends Controller
         return View ('frontend.show-profile');
     }
 
-    public function Portfolio()
-    {
-        $user = Auth::user();
-        $userId = $user->id;
-
-        $transactions = Transaction::Where('user_id', $userId);
-        return View ('frontend.show-portfolio', compact('transactions'));
-    }
 }

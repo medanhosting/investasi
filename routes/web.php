@@ -27,7 +27,12 @@ Route::get('/Blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 Route::get('/My-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
 
 //portfolio
-Route::get('/Portfolio', 'Frontend\ProfileController@Portfolio')->name('portfolio');
+Route::get('/Portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');
+Route::get('/Portfolio/{id}', 'Frontend\TransactionController@PortfolioDetail')->name('portfolio-detail');
+
+//secondary market
+Route::get('/Secondary-market', 'Frontend\TransactionController@SecondaryMarkets')->name('secondary-market');
+
 
 //wallet
 Route::get('/My-wallet', 'Frontend\WalletController@Wallet')->name('my-wallet');
@@ -39,9 +44,9 @@ Route::post('/Withdraw-submit', [
 ]);
 
 //product
-Route::get('/Offering', 'Frontend\ProductController@ProductList')->name('offering-list');
-Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('offering-detail');
-//Route::get('/Offering/{id}', 'Frontend\ProductController@ProductDetail')->name('product-detail');
+Route::get('/Project', 'Frontend\ProductController@ProductList')->name('project-list');
+Route::get('/Project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
+Route::get('/Download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
 
 //End Frontend Routing
 

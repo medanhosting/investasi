@@ -6,9 +6,12 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Offering List</h2>
+                <h2>Project List</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>Invest.me </h5>
+                    <h5>Home
+                        <i class="fa fa-angle-double-right"></i>Invest.me
+                        <i class="fa fa-angle-double-right"></i>Project List
+                    </h5>
                 </div>
             </div>
         </div>
@@ -55,7 +58,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="{{ route('offering-detail', ['id' => $product->id]) }}" >
+                                            <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
                                                 <button class="btn btn-primary">Detail</button>
                                             </a>
                                         </td>
@@ -67,7 +70,7 @@
 
 
                     </div>
-                </div>app
+                </div>
             </div>
         </div>
     </div>

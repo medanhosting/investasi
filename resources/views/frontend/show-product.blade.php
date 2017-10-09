@@ -6,9 +6,13 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Offering Detail</h2>
+                <h2>Project Detail</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>Invest.me<i class="fa fa-angle-double-right"></i>Detail </h5>
+                    <h5> Home
+                        <i class="fa fa-angle-double-right"></i>Invest.me
+                        <i class="fa fa-angle-double-right"></i>Project List
+                        <i class="fa fa-angle-double-right"></i>Detail
+                    </h5>
                 </div>
             </div>
         </div>
@@ -50,7 +54,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid error, repellat, voluptatem at iste soluta veritatis aperiam, pariatur sunt odit, ad praesentium! Modi asperiores adipisci optio voluptatibus iste corporis, animi ducimus placeat tenetur reprehenderit impedit quam molestiae suscipit, eaque dignissimos eos quae omnis, quidem.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odio quasi nobis et aliquam deleniti, facilis corrupti quas, debitis modi? Autem repellat dolorum ipsa delectus adipisci culpa, quaerat quisquam dignissimos nihil tempora iste rem. Cupiditate, odit dolor numquam est non eveniet, perspiciatis dolorem commodi delectus maxime excepturi velit quos inventore?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius doloribus consequatur ratione, assumenda ipsum, quos itaque inventore ducimus voluptate, quas aliquid commodi sint. Nihil aut dolorem sed temporibus! At, ea dignissimos. Magni id fuga quidem tempora doloremque eaque dicta quia assumenda, odit ullam voluptate modi soluta, corrupti eum possimus. Possimus nesciunt cumque, consequuntur, sint aspernatur illum molestias atque consectetur voluptates quibusdam perspiciatis voluptate ipsa nostrum.</p>
-
+                        <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
                     </div>
                 </div>
             </div>

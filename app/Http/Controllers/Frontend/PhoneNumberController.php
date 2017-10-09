@@ -28,7 +28,7 @@ class PhoneNumberController extends Controller
             $data->phone_token = $randomNumber;
             $data->save();
 
-            $test = Utilities::SendSms('081290003971', $randomNumber);
+            $test = Utilities::SendSms($phone, $randomNumber);
             if($test == null){
                 //Return to a view to insert Another Phone???
             }
