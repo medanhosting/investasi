@@ -215,4 +215,9 @@ Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+// Photo Verification
+Route::get('/verifyphoto', 'Frontend\VerificationController@VerifyPhoto');
+Route::post('/verifyphoto', 'Frontend\VerificationController@UploadPhoto');
+// Photo Verification
+
 Route::get('/home', 'HomeController@index')->name('home');

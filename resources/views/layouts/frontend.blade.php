@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/style.css') }}">
 
+    <!-- bootstrap-file-input -->
+    <link href="{{ URL::asset('css/kartik-bootstrap-file-input/fileinput.min.css') }}" rel="stylesheet">
+
     <!-- Datatables -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet">
@@ -42,6 +45,8 @@
 <script type="text/javascript" src="{{ URL::asset('js/frontend/jquery2.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/bootstrap.min.js') }}"></script>
 
+<!-- bootstrap-file-input -->
+<script src="{{ URL::asset('js/kartik-bootstrap-file-input/fileinput.min.js') }}"></script>
 
 <!-- Datatables -->
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js "></script>
@@ -64,6 +69,7 @@
 <script>
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();
+    $('#verification-photo').fileinput();
 </script>
 
 </body>

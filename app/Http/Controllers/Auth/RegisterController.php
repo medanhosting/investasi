@@ -129,4 +129,6 @@ class RegisterController extends Controller
             return View('auth.email-confirm',['user'=>$user]);
         }
     }
+
+
 }
