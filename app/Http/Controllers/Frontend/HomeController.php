@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,9 @@ class HomeController extends Controller
 
     //
     public function Home(){
-        return View('frontend.home');
+        $recentProducts = Product::where('status_id', '!=',3)->orderByDesc('created_on')->take(3)->get();
+
+        return View('frontend.home', compact('recentProducts'));
     }
 
     //

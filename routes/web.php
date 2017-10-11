@@ -221,3 +221,5 @@ Route::post('/verifyphoto', 'Frontend\VerificationController@UploadPhoto');
 // Photo Verification
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/map', 'Frontend\ProfileController@GoogleMap');

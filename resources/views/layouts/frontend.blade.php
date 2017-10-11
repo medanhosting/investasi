@@ -69,6 +69,7 @@
 <script>
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();
+    $('#datatable-responsive-sharing').DataTable();
     $('#verification-photo').fileinput();
 </script>
 

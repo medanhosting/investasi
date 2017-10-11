@@ -6,9 +6,11 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Blog Single</h2>
+                <h2>Berita</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>Blog Single</h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('blog-list')}}">Daftar Berita</a>
+                        <i class="fa fa-angle-double-right"></i>Berita</h5>
                 </div>
             </div>
         </div>

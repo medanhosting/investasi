@@ -7,9 +7,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>About Us</h2>
+                <h2>Tentang Kami</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>About Us</h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i>Tentang Kami</h5>
                 </div>
             </div>
         </div>

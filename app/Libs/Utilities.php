@@ -9,6 +9,8 @@
 namespace App\Libs;
 
 use GuzzleHttp\Client;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 
 class Utilities
 {
@@ -49,5 +51,15 @@ class Utilities
 
             return $collect;
         }
+    }
+
+
+    public static function ExceptionLog($ex){
+        $logContent = ['id' => 1,
+            'description' => $ex];
+
+        $log = new Logger('exception');
+        $log->pushHandler(new StreamHandler(storage_path('logs/error.log')), Logger::ALERT);
+        $log->info('exception', $logContent);
     }
 }

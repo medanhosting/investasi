@@ -6,9 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>My Wallet</h2>
+                <h2>Dompet Saya</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>My Wallet</h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i>Dompet Saya</h5>
                 </div>
             </div>
         </div>
@@ -27,8 +28,8 @@
                             </h2>
                         </div>
                         <div class="col-md-5 col-xs-12 center" style="padding-top:3%;">
-                            <a href="{{route('withdraw')}}" class="btn btn-big btn-warning">Withdraw</a>
-                            <a href="{{route('deposit')}}" class="btn btn-big btn-success">Deposit</a>
+                            <a href="{{route('withdraw')}}" class="btn btn-big btn-warning">Penarikan Dana</a>
+                            <a href="{{route('deposit')}}" class="btn btn-big btn-success">Top Up Dompet</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Statement</h2>
+                            <h2>Riwayat</h2>
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content table-responsive">
@@ -44,19 +45,26 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                    <th>Amount</th>
+                                    <th>Tanggal</th>
+                                    <th>Deskripsi</th>
+                                    <th class="text-right">Jumlah</th>
+                                    <th>Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @php( $idx = 1 )
-                                    @foreach($statements as $trx)
+                                    @foreach($statements as $statement)
                                         <tr>
                                             <td>{{ $idx }}</td>
-                                            <td>{{ $trx->date }}</td>
-                                            <td>{{ $trx->description }}</td>
-                                            <td>{{ $trx->amount }}</td>
+                                            <td>{{ $statement->date }}</td>
+                                            <td>{{ $statement->description }}</td>
+                                            <td class="text-right">Rp {{ $statement->amount }}</td>
+                                            @if($statement->status_id == 3)
+                                                <td>Pending</td>
+                                            @else
+                                                <td>Selesai</td>
+                                            @endif
+
                                         </tr>
                                         @php( $idx++ )
                                             @endforeach

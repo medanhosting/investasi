@@ -24,19 +24,19 @@
                         </li>
 
                         <li>
-                            <span>Invest.me</span>
+                            <span>Proyek</span>
                             <ul class="submenu">
-                                <li><a href="{{route('project-list')}}">Project List</a></li>
+                                <li><a href="{{route('project-list')}}">Daftar Proyek</a></li>
                                 <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>About</span>
                             <ul class="submenu">
-                                <li><a href="{{route('about')}}">About Us</a></li>
-                                <li><a href="{{route('term-condition')}}">Term & Condition</a></li>
-                                <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
-                                <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                <li><a href="{{route('about')}}">Tentang Kami</a></li>
+                                <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>
+                                <li><a href="{{route('privacy-policy')}}">Kebijakan Privasi</a></li>
+                                <li><a href="{{route('contact')}}">Hubungi Kami</a></li>
                             </ul>
                         </li>
                         <li>
@@ -44,9 +44,9 @@
                             <ul class="submenu">
 
                                 @if(auth()->check())
-                                    <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                    <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
                                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-                                    <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                    <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Logout
@@ -81,27 +81,27 @@
                                 <nav id="mobile-nav">
                                     <ul>
                                         <li><a href="{{route('home')}}">Home </a></li>
-                                        <li><a>Invest.me</a>
+                                        <li><a>Proyek</a>
                                             <ul>
-                                                <li><a href="{{route('project-list')}}">Project List</a></li>
+                                                <li><a href="{{route('project-list')}}">Daftar Proyek</a></li>
                                                 <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
                                             </ul>
                                         </li>
                                         <li><a>About</a>
                                             <ul>
-                                                <li><a href="{{route('about')}}">About Us</a></li>
-                                                <li><a href="{{route('term-condition')}}">Term & Condition</a></li>
-                                                <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
-                                                <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                                <li><a href="{{route('about')}}">Tentang Kami</a></li>
+                                                <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>
+                                                <li><a href="{{route('privacy-policy')}}">Kebijakan Privasi</a></li>
+                                                <li><a href="{{route('contact')}}">Hubungi Kami</a></li>
                                             </ul>
                                         </li>
-                                        <li><a>Profile</a>
+                                        <li><a>Profil</a>
                                             <ul class="single">
 
                                                 @if(auth()->check())
-                                                    <li><a href="{{route('my-profile')}}">My Profile</a></li>
+                                                    <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
                                                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-                                                    <li><a href="{{route('my-wallet')}}">My Wallet</a></li>
+                                                    <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                                     <li>
                                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                             Logout

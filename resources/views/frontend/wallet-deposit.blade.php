@@ -6,9 +6,12 @@
     <div class="container">
         <div class="parallax-mask"></div>
         <div class="section-name">
-            <h2>My Wallet</h2>
+            <h2>Top Up Dompet</h2>
             <div class="short-text">
-                <h5>Home<i class="fa fa-angle-double-right"></i>My Wallet<i class="fa fa-angle-double-right"></i>Deposit</h5>
+                <h5><a href="{{route('index')}}">Home</a>
+                    <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Dompet Saya</a>
+                    <i class="fa fa-angle-double-right"></i>Top Up Dompet
+                </h5>
             </div>
         </div>
     </div>

@@ -6,9 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Privacy Policy</h2>
+                <h2>Kebijakan Privasi</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>Privacy Policy</h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i>Kebijakan Privasi</h5>
                 </div>
             </div>
         </div>
@@ -18,7 +19,7 @@
     <div class="contact-page-wrapper">
         <div class="container">
             <div class="row">
-                <span>Privacy Policy</span>
+                <span>Kebijakan Privasi</span>
             </div>
         </div>
     </div>

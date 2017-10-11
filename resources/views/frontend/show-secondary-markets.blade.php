@@ -8,8 +8,7 @@
             <div class="section-name">
                 <h2>Secondary Market</h2>
                 <div class="short-text">
-                    <h5>Home
-                        <i class="fa fa-angle-double-right"></i>Invest.me
+                    <h5><a href="{{route('index')}}">Home</a>
                         <i class="fa fa-angle-double-right"></i> Secondary Market
                     </h5>
                 </div>
@@ -28,10 +27,10 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Name</th>
-                                <th>Raising</th>
-                                <th>Day left</th>
-                                <th>Raised</th>
+                                <th>Nama</th>
+                                <th>Total</th>
+                                <th>Sisa Hari</th>
+                                <th>Terkumpul</th>
                                 <th>Minimum</th>
                                 <th>Progress</th>
                                 <th>Option</th>

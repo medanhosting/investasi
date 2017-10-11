@@ -6,9 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>My Portfolio</h2>
+                <h2>Portfolio</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>My Portfolio</h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i>Portfolio</h5>
                 </div>
             </div>
         </div>
@@ -54,7 +55,7 @@
                                                         <td>{{ $trx->user->first_name }}&nbsp;{{ $trx->user->last_name }}</td>
                                                         <td>{{ $trx->payment_method->description }}</td>
                                                         <td>
-                                                            <a href="/admin/transaction/detail/{{ $trx->id }}" class="btn btn-primary">Detail</a>
+                                                            <a href="{{route('portfolio-detail'), ['id' => $trx->id]}}" class="btn btn-primary">Detail</a>
                                                         </td>
                                                     </tr>
                                                     @php( $idx++ )
@@ -93,7 +94,7 @@
                                                         <td>{{ $trx->user->first_name }}&nbsp;{{ $trx->user->last_name }}</td>
                                                         <td>{{ $trx->payment_method->description }}</td>
                                                         <td>
-                                                            <a href="/admin/transaction/detail/{{ $trx->id }}" class="btn btn-primary">Detail</a>
+                                                            <a href="{{route('portfolio-detail'), ['id' => $trx->id]}}" class="btn btn-primary">Detail</a>
                                                         </td>
                                                     </tr>
                                                     @php( $idx++ )

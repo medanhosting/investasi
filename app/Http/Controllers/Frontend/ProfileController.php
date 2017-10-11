@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -21,7 +22,16 @@ class ProfileController extends Controller
 
     public function Profile()
     {
-        return View ('frontend.show-profile');
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $user = User::find($userId);
+        return View ('frontend.show-profile', compact('user'));
     }
 
+
+    public function GoogleMap()
+    {
+        return View('auth.address-verification');
+    }
 }

@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
+use App\Models\User;
 use App\Models\WalletStatement;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class WalletController extends Controller
         $user = Auth::user();
         $userId = $user->id;
 
-        $statements = WalletStatement::Where('user_id', $userId);
+        $statements = WalletStatement::where('user_id', $userId)->orderByDesc('created_on')->get();
         return View ('frontend.show-wallet', compact('statements'));
     }
     public function DepositShow()
@@ -33,7 +34,7 @@ class WalletController extends Controller
         $user = Auth::user();
         $userId = $user->id;
 
-        $statements = WalletStatement::Where('user_id', $userId);
+        $statements = WalletStatement::where('user_id', $userId)->get();
         return View ('frontend.wallet-deposit', compact('statements'));
     }
 
@@ -47,43 +48,49 @@ class WalletController extends Controller
 
     //withdraw process
     public function WithdrawSubmit(Request $request){
-        $user = Auth::user();
-        $userId = $user->id;
+        try{
 
-        $validator = Validator::make($request->all(),[
-            'amount'        => 'required',
-            'acc_number'    => 'required',
-            'acc_name'      => 'required',
-            'bank'          => 'required'
-        ]);
+            $user = Auth::user();
+            $userId = $user->id;
 
-        if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
-        }
-        else {
-            $dateTimeNow = Carbon::now('Asia/Jakarta');
-
-            $amount = Input::get('amount');
-            $accNumber = Input::get('acc_number');
-            $accName = Input::get('acc_name');
-            $bank = Input::get('bank');
-
-            //status 3=pending, 6=accepted, 7=rejected
-            $newStatement = WalletStatement::create([
-                'id'            => Uuid::generate(),
-                'user_id'       => $userId,
-                'description'   => "Withdrawal Deposito (".$bank." - ".$accName." - ".$accNumber.")",
-                'amount'          => $amount,
-                'date'         => $dateTimeNow->toDateTimeString(),
-                'status_id'        => 3,
-                'created_on'    => $dateTimeNow->toDateTimeString()
+            $validator = Validator::make($request->all(),[
+                'amount'        => 'required',
+                'acc_number'    => 'required',
+                'acc_name'      => 'required',
+                'bank'          => 'required'
             ]);
-            $newStatement->save();
+
+            if ($validator->fails()) {
+                $this->throwValidationException(
+                    $request, $validator
+                );
+            }
+            else {
+                $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+                $amount = Input::get('amount');
+                $accNumber = Input::get('acc_number');
+                $accName = Input::get('acc_name');
+                $bank = Input::get('bank');
+                //status 3=pending, 6=accepted, 7=rejected
+                $newStatement = WalletStatement::create([
+                    'id'            => Uuid::generate(),
+                    'user_id'       => $userId,
+                    'description'   => "Withdrawal Deposito (".$bank." - ".$accName." - ".$accNumber.")",
+                    'amount'          => $amount,
+                    'date'         => $dateTimeNow->toDateTimeString(),
+                    'status_id'        => 3,
+                    'created_on'    => $dateTimeNow->toDateTimeString()
+                ]);
+                $newStatement->save();
+            }
+
+            //return ke page transaction
+            return redirect()->route('my-wallet');
+        }
+        catch (\Exception $ex){
+            Utilities::ExceptionLog('WalletWithdrawSubmit EX = '. $ex);
         }
 
-        //return ke page transaction
-        return redirect()->route('my-wallet');
     }
 }

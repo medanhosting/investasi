@@ -25,8 +25,8 @@ class ProductController extends Controller
 
     public function ProductDetail($id)
     {
-
-        return View ('frontend.show-product');
+        $product = Product::find($id);
+        return View ('frontend.show-product', compact('product'));
     }
 
     public function DownloadFile($filename)

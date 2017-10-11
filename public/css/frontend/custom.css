@@ -96,3 +96,30 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+/* change on hover color */
+.btn.btn-solid:hover {
+    background:#BD562a;
+    color: #ffffff;
+}
+.btn.btn-secondary:hover {
+    background:#BD562a;
+    color: #ffffff;
+}
+.navigation #search-toggle:hover,
+.navigation #menu-toggle:hover{
+    background:#BD562a;
+    color: #ffffff;
+}
+
+a#scrollUp:hover {
+    background: #BD562a none repeat scroll 0 0;
+    color: #ffffff;
+}
+
+h5 a{
+    color: #ffffff;
+}
+h5 a:hover{
+    color: #ffffff;
+}

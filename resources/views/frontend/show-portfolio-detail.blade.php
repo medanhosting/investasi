@@ -6,9 +6,12 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Offering Detail</h2>
+                <h2>Portfolio Detail</h2>
                 <div class="short-text">
-                    <h5>Home<i class="fa fa-angle-double-right"></i>Invest.me<i class="fa fa-angle-double-right"></i>Detail </h5>
+                    <h5><a href="{{route('index')}}">Home</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('portfolio')}}">Portfolio</a>
+                        <i class="fa fa-angle-double-right"></i>Detail
+                    </h5>
                 </div>
             </div>
         </div>
