@@ -36,13 +36,11 @@
                         <div class="foundings">
                             <div class="progress-bar-wrapper min">
                                 <div class="progress-bar-outer">
-                                    @php( $togo = $product->getOriginal('raising') - $product->getOriginal('raised') )
-                                    @php( $togo = number_format($togo,0, ",", ".") )
 
                                     <p class="values">
                                         <span class="value one">Terkumpul: Rp {{ $product->raised }}</span>
                                         /
-                                        <span class="value two"> Sisa: Rp {{ $togo }}</span></p>
+                                        <span class="value two"> Dari: Rp {{ $product->raising }}</span></p>
 
                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                     @php( $percentage = number_format($percentage, 0) )
@@ -58,7 +56,11 @@
                     </div>
                     <div class="info-block">
                         <p>{{$product->description}}</p>
-                        <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
+                        @if(auth()->check())
+                            <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
+                        @else
+                            <button type="button" data-toggle="modal" data-target="#prospektusModal" class="btn btn-big btn-solid "><span>Prospektus</span></button>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -101,20 +103,20 @@
                                             </div>
                                         </div>
                                         <div class="field col-sm-6 col-sm-offset-6 text-right" >
-                                            <table class="bag_total">
-                                                <tr class="cart-subtotal clearfix">
-                                                    <th>Sub total</th>
-                                                    <td>Rp 5.000.000</td>
-                                                </tr>
-                                                <tr class="shipping clearfix">
-                                                    <th>Admin</th>
-                                                    <td>Rp 30.000</td>
-                                                </tr>
-                                                <tr class="total clearfix">
-                                                    <th>Total</th>
-                                                    <td>Rp 5.030.000</td>
-                                                </tr>
-                                            </table>
+                                            {{--<table class="bag_total">--}}
+                                                {{--<tr class="cart-subtotal clearfix">--}}
+                                                    {{--<th>Sub total</th>--}}
+                                                    {{--<td>Rp 5.000.000</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr class="shipping clearfix">--}}
+                                                    {{--<th>Admin</th>--}}
+                                                    {{--<td>Rp 30.000</td>--}}
+                                                {{--</tr>--}}
+                                                {{--<tr class="total clearfix">--}}
+                                                    {{--<th>Total</th>--}}
+                                                    {{--<td>Rp 5.030.000</td>--}}
+                                                {{--</tr>--}}
+                                            {{--</table>--}}
                                             <a href="#" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></a>
                                         </div>
                                     </form>
@@ -126,4 +128,5 @@
             </div>
         </div>
     </div>
+    @include('frontend.partials._modal-prospektus')
 @endsection

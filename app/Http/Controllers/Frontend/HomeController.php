@@ -37,4 +37,8 @@ class HomeController extends Controller
     public function ContactUs(){
         return View('frontend.contact-us');
     }
+
+    public function Tutorial(){
+        return View('frontend.show-tutorial');
+    }
 }

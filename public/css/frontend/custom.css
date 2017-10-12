@@ -117,9 +117,15 @@ a#scrollUp:hover {
     color: #ffffff;
 }
 
+/* change link hover  */
 h5 a{
     color: #ffffff;
 }
 h5 a:hover{
-    color: #ffffff;
+    color: #ff7a00;
+}
+
+/* change modal header and body border */
+.modal-footer {
+    border-top: none !Important;
 }

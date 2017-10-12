@@ -17,6 +17,7 @@ Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('contact');
 Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('about');
 Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
 Route::get('/Privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
+Route::get('/Tutorial', 'Frontend\HomeController@Tutorial')->name('tutorial');
 
 //blog
 Route::get('/Blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
@@ -47,6 +48,10 @@ Route::post('/Withdraw-submit', [
 Route::get('/Project', 'Frontend\ProductController@ProductList')->name('project-list');
 Route::get('/Project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
 Route::get('/Download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
+Route::post('/Register-prospectus', [
+    'uses' => 'Frontend\ProductController@GetProspectus',
+    'as' => 'get-prospectus'
+]);
 
 //End Frontend Routing
 

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Webpatser\Uuid\Uuid;
+use App\Libs\Utilities;
 
 class WalletController extends Controller
 {

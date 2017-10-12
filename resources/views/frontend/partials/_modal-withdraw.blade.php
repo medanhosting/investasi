@@ -18,7 +18,7 @@
 {{--</div>--}}
 
 <!-- Modal -->
-<div class="modal fade" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">
+<div class="modal fade" id="withdraw-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

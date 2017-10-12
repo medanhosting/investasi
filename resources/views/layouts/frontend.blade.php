@@ -28,6 +28,10 @@
 
     <!-- Pie Chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -37,13 +41,16 @@
 
 @yield('body-content')
 
+@include('frontend.partials._modal-ads')
 <!-- FOOTER -->
 @include('frontend.partials._footer')
 <!-- //FOOTER -->
 
 <!-- Scripts -->
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 <script type="text/javascript" src="{{ URL::asset('js/frontend/jquery2.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/frontend/bootstrap.min.js') }}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{{--<script type="text/javascript" src="{{ URL::asset('js/frontend/bootstrap.min.js') }}"></script>--}}
 
 <!-- bootstrap-file-input -->
 <script src="{{ URL::asset('js/kartik-bootstrap-file-input/fileinput.min.js') }}"></script>
@@ -67,6 +74,13 @@
 <script type="text/javascript" src="https://rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js"></script>
 
 <script>
+    function adsModalFunction() {
+        $("#adsModal").modal()
+    }
+
+    $( document ).ready(function() {
+        setTimeout(adsModalFunction, 60000);
+    });
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();
     $('#datatable-responsive-sharing').DataTable();
