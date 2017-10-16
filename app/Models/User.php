@@ -17,7 +17,9 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $casts = [
-        'id' => 'string'
+        'id' => 'string',
+        'address_latitude' => 'float',
+        'address_longitude' => 'float'
     ];
 
     protected $fillable = [
@@ -27,6 +29,8 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'username',
+        'address_latitude',
+        'address_longitude',
         'identity_number',
         'dob',
         'gender',

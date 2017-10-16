@@ -25,7 +25,7 @@ class Utilities
         //Set Json Object
         $myObj = [];
         $myObj = array_add($myObj, 'apikey', env('SMS_API_KEY'));
-        $myObj = array_add($myObj, 'callbackurl', 'www.something.com');
+        $myObj = array_add($myObj, 'callbackurl', 'www.investasi.me');
 
         $alldata = [];
         $datapacket = [];

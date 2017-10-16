@@ -33,38 +33,41 @@
                     </ul>
                 </div>
 
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="comment-form-wrapper contact-from clearfix">
-                        <input type="text" id="searchmap">
-                        <div id="map-canvas"></div>
+                <div class="row ">
+                    <div class="col-md-6 ">
 
-                        <label>lat</label>
-                        <input type="text" id="lat" name="lat">
-                        <label>lng</label>
-                        <input type="text" id="lng" name="lng">
+                        <div class="about-right-text"style="background: none;padding-top:10%;">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="about-right-text"style="background: none;padding-top:10%;">
+                            <div class="widget-title">
+                                <h4>Atau Cari Alamat Anda</h4>
+                            </div>
+                            <form class="comment-form row altered">
+                                <div class="input">
+                                    <div class="field col-sm-6">
+                                        <input type="text" id="address" name="address">
+                                    </div>
+                                    <div class="field col-sm-6" style="margin-top:0;">
+                                        {{--<input type="submit" class="btn btn-big btn-solid" value="Search" />--}}
+                                        <input type="button" id="geocoding_form" class="btn btn-big btn-solid" value="Search"/>
+                                    </div>
+                                </div>
+                            </form>
+                            <br/>
+
+                            <form class="comment-form row altered" method="POST" action="{{ route('map-submit') }}">
+                                {{ csrf_field() }}
+                                <input type="hidden" id="geo-latitude" name="geo-latitude">
+                                <input type="hidden" id="geo-longitude" name="geo-longitude">
+                                <button class="btn btn-big btn-solid">Simpan Data ALamat</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        var map= new google.maps.Map(document.getElementById('map-canvas'),{
-            center:{
-              lat:27.799999999999,
-                lng:85.999999999
-            },
-            zoom:15
-        });
-
-        var marker = new google.maps.Marker({
-           position:{
-               lat:27.799999999999,
-               lng:85.999999999
-           },
-            map: map,
-            draggable: true
-        });
-
-        var searchBox = new google.maps.places.SearchBox(document.getElementById('searchmap'));
-    </script>
 @endsection

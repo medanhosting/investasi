@@ -8,7 +8,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
-                            <h4>Register</h4>
+                            <h4>Registrasi</h4>
                         </div>
                         <form class="comment-form row altered" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
@@ -23,7 +23,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('first_name') ? ' has-error' : '' }}">
-                                <h4>First Name</h4>
+                                <h4>Nama Depan</h4>
                                 <input type="text" name="first_name">
                                 @if ($errors->has('first_name'))
                                     <span class="help-block">
@@ -32,7 +32,7 @@
                                 @endif
                             </div>
                             <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('last_name') ? ' has-error' : '' }}">
-                                <h4>Last Name</h4>
+                                <h4>Nama Belakang</h4>
                                 <input type="text" name="last_name">
                                 @if ($errors->has('last_name'))
                                     <span class="help-block">
@@ -41,7 +41,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('phone') ? ' has-error' : '' }}">
-                                <h4>Phone</h4>
+                                <h4>Telepon</h4>
                                 <input type="number" name="phone">
                                 @if ($errors->has('phone'))
                                     <span class="help-block">
@@ -59,7 +59,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12" {{ $errors->has('password_confirmation') ? ' has-error' : '' }}>
-                                <h4>Password Confirmation</h4>
+                                <h4>Konfirmasi Password</h4>
                                 <input type="password" name="password_confirmation">
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">

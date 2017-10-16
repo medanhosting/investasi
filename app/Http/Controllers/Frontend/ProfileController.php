@@ -12,6 +12,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Request;
 
 class ProfileController extends Controller
 {
@@ -33,5 +35,22 @@ class ProfileController extends Controller
     public function GoogleMap()
     {
         return View('auth.address-verification');
+    }
+
+    public function GoogleMapSubmit(Request $request)
+    {
+        $lat = Input::get('geo-latitude');
+        $lng = Input::get('geo-longitude');
+
+        $userAuth = Auth::user();
+        $userId = $userAuth->id;
+
+        $user = User::find($userId);
+        $user->address_latitude = $lat;
+        $user->address_longitude = $lng;
+        $user->status_id = 1;
+
+        $user->save();
+        return View('frontend.home');
     }
 }

@@ -65,13 +65,18 @@
 <script type="text/javascript" src="{{ URL::asset('js/frontend/nivo-lightbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/isotope.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/countdown.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBEypW1XtGLWpikFPcityAok8rhJzzWRw "></script>
-<script type="text/javascript" src="{{ URL::asset('js/frontend/gmaps.js') }}"></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBROUPyS84INXyl7iqq0NxSLmHudbQ_Dc4 "></script>--}}
+{{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBROUPyS84INXyl7iqq0NxSLmHudbQ_Dc4&libraries=places&callback=initMap" async defer></script>--}}
+
+{{--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&callback=initialize"></script>--}}
+
 <script type="text/javascript" src="{{ URL::asset('js/frontend/plugins.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/js.js') }}"></script>
 
 <!-- Resize js -->
 <script type="text/javascript" src="https://rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js"></script>
+
+<script type="text/javascript" src="{{ URL::asset('js/frontend/custom-maps.js') }}"></script>
 
 <script>
     function adsModalFunction() {
@@ -81,11 +86,16 @@
     $( document ).ready(function() {
         setTimeout(adsModalFunction, 60000);
     });
+
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();
     $('#datatable-responsive-sharing').DataTable();
     $('#verification-photo').fileinput();
+
+
 </script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBROUPyS84INXyl7iqq0NxSLmHudbQ_Dc4&libraries=places&callback=init" async defer></script>
+<script type="text/javascript" src="{{ URL::asset('js/frontend/gmaps.js') }}"></script>
 </body>
 </html>

@@ -126,7 +126,9 @@ class RegisterController extends Controller
         $user->status_id = 11;
 
         if($user->save()){
-            return View('auth.email-confirm',['user'=>$user]);
+            Session::put("user-data", $user);
+            return Redirect::route('verify-phone-show');
+//            return View('auth.email-confirm',['user'=>$user]);
         }
     }
 

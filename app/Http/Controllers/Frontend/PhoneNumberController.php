@@ -28,7 +28,7 @@ class PhoneNumberController extends Controller
             $data->phone_token = $randomNumber;
             $data->save();
 
-            $test = Utilities::SendSms($phone, $randomNumber);
+            $test = Utilities::SendSms($phone, "Investasi.me - Kode verifikasi Anda adalah ".$randomNumber);
             if($test == null){
                 //Return to a view to insert Another Phone???
             }
@@ -44,12 +44,12 @@ class PhoneNumberController extends Controller
             $data->status_id = 12;
             $data->save();
 
-            Session::flash('message', 'Phone Verified, Please Login!');
+            Session::flash('message', 'Nomor sudah terverifikasi, silahkan login');
             Session::forget('user-data');
             return Redirect::route('login');
         }
         else{
-            Session::flash('error', 'Wrong Verification Number!!');
+            Session::flash('error', 'Salah Kode verifikasi');
             return Redirect::route('verify-phone-show');
         }
     }

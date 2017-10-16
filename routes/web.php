@@ -221,10 +221,11 @@ Auth::routes();
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 // Photo Verification
-Route::get('/verifyphoto', 'Frontend\VerificationController@VerifyPhoto');
+Route::get('/verifyphoto', 'Frontend\VerificationController@VerifyPhoto')->name("verify-photo");
 Route::post('/verifyphoto', 'Frontend\VerificationController@UploadPhoto');
 // Photo Verification
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/map', 'Frontend\ProfileController@GoogleMap');
+Route::get('/map', 'Frontend\ProfileController@GoogleMap')->name('map');
+Route::post('/map', 'Frontend\ProfileController@GoogleMapSubmit')->name('map-submit');
