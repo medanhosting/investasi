@@ -98,7 +98,7 @@
 
                                                 <div class="field col-sm-6 {{ $errors->has('fname') ? ' has-error' : '' }}">
                                                     <h5>Nama Depan</h5>
-                                                    <input type="text" name="fname" placeholder="{{$user->first_name}}">
+                                                    <input type="text" name="fname" value="{{$user->first_name}}">
                                                     @if ($errors->has('fname'))
                                                         <span class="help-block">
                                                     <strong>{{ $errors->first('fname') }}</strong>
@@ -107,7 +107,7 @@
                                                 </div>
                                                 <div class="field col-sm-6 {{ $errors->has('lname') ? ' has-error' : '' }}">
                                                     <h5>Nama Belakang</h5>
-                                                    <input type="text" name="lname" placeholder="{{$user->last_name}}">
+                                                    <input type="text" name="lname" value="{{$user->last_name}}">
                                                     @if ($errors->has('lname'))
                                                         <span class="help-block">
                                                     <strong>{{ $errors->first('lname') }}</strong>
@@ -116,7 +116,7 @@
                                                 </div>
                                                 <div class="field col-sm-12 {{ $errors->has('email') ? ' has-error' : '' }}">
                                                     <h5>Email</h5>
-                                                    <input type="text" name="email" placeholder="{{$user->email}}">
+                                                    <input type="text" name="email" value="{{$user->email}}">
                                                     @if ($errors->has('email'))
                                                         <span class="help-block">
                                                     <strong>{{ $errors->first('email') }}</strong>

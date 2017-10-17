@@ -6,10 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Daftar Proyek</h2>
+                <h2>Daftar Investasi</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Home</a>
-                        <i class="fa fa-angle-double-right"></i>Daftar Proyek
+                        <i class="fa fa-angle-double-right"></i>Daftar Investasi
                     </h5>
                 </div>
             </div>

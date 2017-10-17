@@ -20,18 +20,18 @@
                 <div class="menu-wrap col-md-8 ">
                     <ul class="menu">
                         <li class="active">
-                            <a href="{{route('index')}}" >Home</a>
+                            <a href="{{route('index')}}" >Beranda </a>
                         </li>
 
                         <li>
-                            <span>Proyek</span>
+                            <span>Investasi </span>
                             <ul class="submenu">
-                                <li><a href="{{route('project-list')}}">Daftar Proyek</a></li>
+                                <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
                                 <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
                             </ul>
                         </li>
                         <li>
-                            <span>About</span>
+                            <span>Tentang</span>
                             <ul class="submenu">
                                 <li><a href="{{route('about')}}">Tentang Kami</a></li>
                                 <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>
@@ -80,14 +80,14 @@
                             <div class="mobile-menu">
                                 <nav id="mobile-nav">
                                     <ul>
-                                        <li><a href="{{route('home')}}">Home </a></li>
-                                        <li><a>Proyek</a>
+                                        <li><a href="{{route('home')}}">Beranda </a></li>
+                                        <li><a>Investasi </a>
                                             <ul>
-                                                <li><a href="{{route('project-list')}}">Daftar Proyek</a></li>
+                                                <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
                                                 <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
                                             </ul>
                                         </li>
-                                        <li><a>About</a>
+                                        <li><a>Tentang</a>
                                             <ul>
                                                 <li><a href="{{route('about')}}">Tentang Kami</a></li>
                                                 <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>

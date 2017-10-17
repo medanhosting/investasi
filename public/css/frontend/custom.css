@@ -129,3 +129,16 @@ h5 a:hover{
 .modal-footer {
     border-top: none !Important;
 }
+
+/* change banner  */
+.page-banner {
+    height: 200px;
+    padding-top: 68px;
+}
+
+.blog-page-wrapper .blog-posts .blog-post.single-post ol li {
+    margin: 0 0 15px 20px;
+    color: #444;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}

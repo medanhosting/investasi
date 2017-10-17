@@ -20,19 +20,15 @@
     <div class="about-page-wrapper">
         <div class="description container">
             <div class="row ">
-                <div class="col-md-6 ">
-                    <div class="image-wrapper">
-                        <img class="img-responsive" src="assets/img/featured-image-11.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 ">
-                    <div class="about-right-text">
+                <div class="col-md-12 ">
+                    <div class="about-right-text" style="padding-top:0;">
                         <div class="widget-title">
-                            <h4>Hi We Provide Worldwide Charity Service Since 1978</h4>
+                            <h4>Apa itu Investasi.me ?</h4>
                         </div>
-                        <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sapiente deleniti commodi provident veniam vitae blanditiis rerum temporibus totam est, omnis sint excepturi maiores iure similique. Sequi magni, suscipit laudantium velit. Excepturi sint placeat vel, porro, saepe ratione sunt natus, quod rem error ipsum ipsa.</p>
-                        <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptates dolor reprehenderit, deserunt, quibusdam repellat architecto blanditiis a, nulla inventore minima necessitatibus illum molestias, quas molestiae maiores tempora temporibus incidunt ea! Voluptate temporibus repellat nulla omnis nesciunt illum odit dicta fuga id!</p>
-                        <a href="#" class="btn btn-min btn-secondary"><span>Learn More</span></a>
+                        <p class="first">
+                            Investasi.me adalah sebuah platform fintech lending di Indonesia pertama yang memiliki akses solusi permodalan dan investasi yang paling lengkap. Kami menyadari bahwa setiap usaha adalah unik, sehingga akses permodalan yang dilakukan tidak selalu cocok satu model dengan yang lainnya. Dan demikian juga sebagai investor, memiliki keinginan dan profil yang berbeda-beda. Pelajari Lebih Lanjut
+                        </p>
+                        <a href="#" class="btn btn-min btn-secondary"><span>Pelajari Lebih Lanjut</span></a>
                     </div>
                 </div>
             </div>
@@ -41,9 +37,9 @@
         <div class="team-wrapper">
             <div class="container">
                 <div class="section-name one">
-                    <h2>our volunteers</h2>
+                    <h2>Siapa tim kami?</h2>
                     <div class="short-text">
-                        <h5>We are all times support them for their smile</h5>
+                        <h5>Kami menyadari bahwa 'masakan berkwalitas' datang dari 'koki' yang tepat dan berpengalaman. Mari kami perkenalkan tim Investasi.me</h5>
                     </div>
                 </div>
 
@@ -52,17 +48,22 @@
                         <div class="single-member">
                             <div class="best-volunteer">
                                 <div class="voluntee-image">
-                                    <a href="#" title=""><img src="assets/img/best-volunte-1.jpg" alt=""></a>
+                                    <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture1.png') }}" alt="">
                                 </div>
                                 <ul class="socials">
                                     <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                     <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
                                 </ul>
                                 <span><a href="#" title="">Cheif Director</a></span>
-                                <h2><a href="#" title="">Jonathan Greg</a></h2>
-                                <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
+                                <h2><a href="#" title="">Steffen Fang</a></h2>
+                                <p>Berpengalaman lebih dari 17 tahun di bidang investasi & keuangan, baik sebagai advisor, banker,
+                                    maupun pelaku usaha.
+                                </p>
+                                <p>Mengawali karir sebagai seorang investment banker, Steffen memiliki kemampuan dan kualifikasi
+                                    yang kuat dalam analisa kelayakan usaha, due diligence dan pendanaan, yang krusial dibutuhkan
+                                    dalam bisnis crowdfunding.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -70,25 +71,7 @@
                         <div class="single-member">
                             <div class="best-volunteer">
                                 <div class="voluntee-image">
-                                    <a href="#" title=""><img src="assets/img/best-volunte-2.jpg" alt=""></a>
-                                </div>
-                                <ul class="socials">
-                                    <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
-                                </ul>
-                                <span><a href="#" title="">Cheif Volunteer</a></span>
-                                <h2><a href="#" title="">Jennifier kalvin</a></h2>
-                                <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 hidden-sm">
-                        <div class="single-member">
-                            <div class="best-volunteer">
-                                <div class="voluntee-image">
-                                    <a href="#" title=""><img src="assets/img/best-volunte-3.jpg" alt=""></a>
+                                    <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture2.png') }}" alt="">
                                 </div>
                                 <ul class="socials">
                                     <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -97,8 +80,41 @@
 
                                 </ul>
                                 <span><a href="#" title="">Cheif Director</a></span>
-                                <h2><a href="#" title="">Mikel Willson</a></h2>
-                                <p>Lorem Jonathan Greg ipsum dolor sit amet, consectetur adipiscing elit, sed Jonathan Greg do...</p>
+                                <h2><a href="#" title="">Hevy Yafanny</a></h2>
+                                <p>Memulai karir sebagai auditor di Deloitte, Hevy Yafanny memiliki kemampuan & pengalaman yang tinggi
+                                    dalam bidang keuangan, akuntansi & fraud detection.
+                                </p>
+                                <p>Hevy juga berpengalaman selama hampir 20 tahun dalam berbagai industri, baik pertambangan, property,
+                                    keuangan dan investasi. Kemampuan dan pengalaman beliau dalam melihat potensi dan kelayakan usaha
+                                    akan sangat berharga dalam menjalankan bisnis investment & crowdfunding.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 hidden-sm">
+                        <div class="single-member">
+                            <div class="best-volunteer">
+                                <div class="voluntee-image">
+                                    <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture3.png') }}" alt="">
+                                </div>
+                                <ul class="socials">
+                                    <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+
+                                </ul>
+                                <span><a href="#" title="">Cheif Director</a></span>
+                                <h2><a href="#" title="">Ryan Filbert</a></h2>
+                                <p> Ryan dikenal sebagai Praktisi dan Inspirator Investasi no 1 di Indonesia, Penulis Puluhan Buku Investasi
+                                    Best Seller Nasional, dan Peraih Penghargaan Tokoh Inspiratif Pasar Modal tahun 2017 dari Bapak Presiden
+                                    Joko Widodo.
+                                </p>
+                                <p> Sepak terjangnya selama lebih dari 10 tahun di dunia pasar modal, pelaku usaha dan praktisi
+                                    independen serta otodidak merupakan nilai tambah dalam konsep-konsep 'out of the box' dalam semua hal
+                                    yang dikerjakan oleh Ryan Filbert. Semua perjalanan karir lengkap dalam hal penggunaan otak kanan dan otak kiri,
+                                    analisa teknikal, fundamental dan lainnya membuat Ryan menjadi sosok yang tepat untuk berada dalam bisnis
+                                    investasi berbasis crowdfunding.
+                                </p>
                             </div>
                         </div>
                     </div>
