@@ -13,42 +13,42 @@
 
 //Home, contact us, term, etc
 Route::get('/', 'Frontend\HomeController@Home')->name('index');
-Route::get('/Contact-us', 'Frontend\HomeController@ContactUs')->name('contact');
-Route::get('/About-us', 'Frontend\HomeController@AboutUs')->name('about');
-Route::get('/Term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
-Route::get('/Privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
-Route::get('/Tutorial', 'Frontend\HomeController@Tutorial')->name('tutorial');
+Route::get('/contact-us', 'Frontend\HomeController@ContactUs')->name('contact');
+Route::get('/about-us', 'Frontend\HomeController@AboutUs')->name('about');
+Route::get('/term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
+Route::get('/privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
+Route::get('/tutorial', 'Frontend\HomeController@Tutorial')->name('tutorial');
 
 //blog
-Route::get('/Blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
-Route::get('/Blog', 'Frontend\BlogController@SingleBlog')->name('blog');
+Route::get('/blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
+Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 //Route::get('/blog/{id}', 'Frontend\HomeController@AboutUs')->name('About');
 
 //profile
-Route::get('/My-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
+Route::get('/my-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
 
 //portfolio
-Route::get('/Portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');
-Route::get('/Portfolio/{id}', 'Frontend\TransactionController@PortfolioDetail')->name('portfolio-detail');
+Route::get('/portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');
+Route::get('/portfolio/{id}', 'Frontend\TransactionController@PortfolioDetail')->name('portfolio-detail');
 
 //secondary market
-Route::get('/Secondary-market', 'Frontend\TransactionController@SecondaryMarkets')->name('secondary-market');
+Route::get('/secondary-market', 'Frontend\TransactionController@SecondaryMarkets')->name('secondary-market');
 
 
 //wallet
-Route::get('/My-wallet', 'Frontend\WalletController@Wallet')->name('my-wallet');
-Route::get('/Deposit', 'Frontend\WalletController@DepositShow')->name('deposit');
-Route::get('/Withdraw', 'Frontend\WalletController@WithdrawShow')->name('withdraw');
-Route::post('/Withdraw-submit', [
+Route::get('/my-wallet', 'Frontend\WalletController@Wallet')->name('my-wallet');
+Route::get('/deposit', 'Frontend\WalletController@DepositShow')->name('deposit');
+Route::get('/withdraw', 'Frontend\WalletController@WithdrawShow')->name('withdraw');
+Route::post('/withdraw-submit', [
     'uses' => 'Frontend\WalletController@WithdrawSubmit',
     'as' => 'withdrawSubmit'
 ]);
 
 //product
-Route::get('/Project', 'Frontend\ProductController@ProductList')->name('project-list');
-Route::get('/Project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
-Route::get('/Download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
-Route::post('/Register-prospectus', [
+Route::get('/project', 'Frontend\ProductController@ProductList')->name('project-list');
+Route::get('/project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
+Route::get('/download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
+Route::post('/register-prospectus', [
     'uses' => 'Frontend\ProductController@GetProspectus',
     'as' => 'get-prospectus'
 ]);
@@ -61,11 +61,11 @@ Route::get('rajaongkir/subdistrict/{cityId}', 'frontend\UserAddressController@ge
 // admin Routing
 Route::get('/admin', 'Admin\DashboardController@dashboardShow')->name('admin-dashboard');
 
-Route::get('/investasi/login', function (){
+Route::get('/investasi-saya', function (){
     return view('admin/login');
 })->name('login-admin');
 
-Route::get('/investasi/login/{failed}', function ($failed){
+Route::get('/investasi-saya/{failed}', function ($failed){
     $msg = "Not Found!";
     return view('admin/login')->with('msg', $msg);
 })->name('login-admin-failed');
@@ -204,6 +204,12 @@ Route::prefix('admin/vendor')->group(function(){
     Route::get('/request-reject/{id}', 'Admin\VendorController@RejectRequest');
 });
 
+// Wallet
+Route::prefix('admin/dompet')->group(function(){
+    Route::get('/', 'Admin\DompetController@index')->name('dompet-list');
+    Route::get('/request', 'Admin\DompetController@newRequest')->name('dompet-request');
+    Route::get('/detail/{id}', 'Admin\TransactionController@detail')->name('transaction-detail');
+});
 
 // End admin Routing
 

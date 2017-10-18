@@ -49,73 +49,43 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
-                                    <th>Category</th>
-                                    <th>Weight</th>
-                                    <th>Normal Price</th>
-                                    <th>Discount</th>
-                                    <th>Flat Discount</th>
-                                    <th>Final Price</th>
-                                    <th>Stock</th>
-                                    <th>Created Date</th>
-                                    <th>Featured Photo</th>
-                                    <th>Status</th>
+                                    <th>Nama</th>
+                                    <th>Total</th>
+                                    <th>Sisa Hari</th>
+                                    <th>Terkumpul</th>
+                                    <th>Minimum</th>
+                                    <th>Progress</th>
                                     <th>Option</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @php ($idx = 1)
-                                @foreach($products as $product)
-                                    <tr>
-                                        <td>{{ $idx}}</td>
-                                        <td>{{ $product->name}}</td>
-                                        <td>{{ $product->category->name }}</td>
-                                        <td>{{ $product->weight }} gr</td>
-                                        <td>Rp {{ $product->price}}</td>
-                                        <td>
-                                            @if(!empty($product->discount))
-                                                {{ $product->discount}}%
-                                            @else
-                                                -
-                                            @endif
+                                @php( $idx = 1 )
+                                    @foreach($products as $product)
 
-                                        </td>
-                                        <td>
-                                            @if(!empty( $product->discount_flat))
-                                                Rp {{ $product->discount_flat}}
-                                            @else
-                                                -
-                                            @endif
-                                        </td>
-                                        <td>
-                                            @if(!empty($product->price_discounted))
-                                                Rp {{$product->price_discounted}}
-                                            @else
-                                                -
-                                            @endif
-                                        </td>
-                                        <td>
-                                            {{ $product->quantity }}
-                                        </td>
-                                        <td>
-                                            {{ \Carbon\Carbon::parse($product->created_on)->format('j F y')}}
-                                        </td>
-                                        <td width="15%">
-                                            <img width="100%" src="{{ asset('storage\product\\'. $product->product_image()->where('featured', 1)->first()->path) }}">
-                                        </td>
-                                        <td>
-                                            @if($product->status_id == 1)
-                                                Active
-                                            @else
-                                                Inactive
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <a href="/admin/product/edit/{{ $product->id }}" class="btn btn-primary">Edit</a>
-                                        </td>
-                                    </tr>
-                                    @php ($idx++)
-                                @endforeach
+                                        @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
+                                            @php( $percentage = number_format($percentage, 0) )
+                                                <tr>
+                                                    <td>{{ $idx }}</td>
+                                                    <td>{{ $product->name }}</td>
+                                                    <td>Rp {{ $product->raising }}</td>
+                                                    <td>{{ $product->days_left }} </td>
+                                                    <td>Rp {{ $product->raised }}</td>
+                                                    <td>Rp {{ $product->minimum_per_investor }}</td>
+                                                    <td>
+                                                        <div class="progress-bar-inner">
+                                                            <div class="progress-bar">
+                                                                <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{ route('project-detail', ['id' => $product->id]) }}" target="_blank">
+                                                            <button class="btn btn-primary">Detail</button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                @php( $idx++ )
+                                                    @endforeach
                                 </tbody>
                             </table>
 

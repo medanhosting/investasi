@@ -57,39 +57,74 @@
         <!-- basic-slider start -->
         <div class="slider-section">
             <div class="slider-active owl-carousel">
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s1.jpg') }});">
-                    <div class="container">
-                        <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT Testing Pertama </h2>
-                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
-                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
-                            <div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>
-                        </div>
-                    </div>
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/Banner1.jpg') }});background-size: 100%;">
+                    {{--<div class="container">--}}
+                        {{--<div class="slider-content text-white">--}}
+                            {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Apakah Anda tau? </h2>--}}
+                            {{--<p class="b_faddown2">Tidak ada satupun zebra memiliki pola belang yang sama.--}}
+                                {{--<br />Demikian juga dalam setiap bisnis dan investasi <br> Oleh karena itu kami ada </p>--}}
+                            {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/s2.jpg') }});">
-                    <div class="container">
-                        <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT Testing Kedua </h2>
-                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
-                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
-                            <div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>
-                        </div>
-                    </div>
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/Banner2.jpg') }});background-size: 100%;">
+                    {{--<div class="container">--}}
+                        {{--<div class="slider-content text-white">--}}
+                            {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Sukses dimulai dari hal kecil  </h2>--}}
+                            {{--<p class="b_faddown2">Investasi yang sukses dimulai dari bisnis yang sukses--}}
+                                {{--<br />semua kesuksesan selalu dimulai dari awal yang kosong. <br>Kami menghargai setiap bisnis dan investasi Anda</p>--}}
+                            {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
 
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/s3.jpg') }});">
-                    <div class="container">
-                        <div class="slider-content text-white">
-                            <h2 class="b_faddown1 cd-headline clip is-full-width" >PT Testing Ketiga </h2>
-                            <p class="b_faddown2">Lorem ipsum dolor sit amet consecte tur adipiscing titor sit amet consecte tur adipiscing titor
-                                <br />a accumsan justo laoreetsit amet consecte tur adipiscing titor </p>
-                            <div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>
-                        </div>
-                    </div>
+                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/Banner3.jpg') }});background-size: 100%;">
+                    {{--<div class="container">--}}
+                        {{--<div class="slider-content text-white">--}}
+                            {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Berinvestasilah pada proyek terbaru kami </h2>--}}
+                            {{--<p class="b_faddown2">Pabrik XYZ adalah pabrik pembuatan obat-obatan yang dapat anda investasikan dana Anda hari ini juga.--}}
+                                {{--<br />Silahkan akses link untuk mendapatkan info lengkap!</p>--}}
+                            {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
+
+
+        {{--<div id="myCarousel" class="carousel slide" data-ride="carousel">--}}
+            {{--<!-- Indicators -->--}}
+            {{--<ol class="carousel-indicators">--}}
+                {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
+                {{--<li data-target="#myCarousel" data-slide-to="1"></li>--}}
+                {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
+            {{--</ol>--}}
+
+            {{--<!-- Wrapper for slides -->--}}
+            {{--<div class="carousel-inner">--}}
+                {{--<div class="item active">--}}
+                    {{--<img src="{{ URL::asset('frontend_images/slides/Banner1.jpg') }}" alt="Los Angeles">--}}
+                {{--</div>--}}
+
+                {{--<div class="item">--}}
+                    {{--<img src="{{ URL::asset('frontend_images/slides/Banner2.jpg') }}" alt="Chicago">--}}
+                {{--</div>--}}
+
+                {{--<div class="item">--}}
+                    {{--<img src="{{ URL::asset('frontend_images/slides/Banner3.jpg') }}" alt="New York">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+            {{--<!-- Left and right controls -->--}}
+            {{--<a class="left carousel-control" href="#myCarousel" data-slide="prev">--}}
+                {{--<span class="glyphicon glyphicon-chevron-left"></span>--}}
+                {{--<span class="sr-only">Previous</span>--}}
+            {{--</a>--}}
+            {{--<a class="right carousel-control" href="#myCarousel" data-slide="next">--}}
+                {{--<span class="glyphicon glyphicon-chevron-right"></span>--}}
+                {{--<span class="sr-only">Next</span>--}}
+            {{--</a>--}}
+        {{--</div>--}}
         <!-- basic-slider end -->
     @endif
 

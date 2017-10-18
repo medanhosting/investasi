@@ -29,22 +29,22 @@
                     </li>
                     <li>
                         <a href="{{ route('vendor-request') }}">
-                            <i class="fa fa-exclamation-triangle"></i> Vendor Request
+                            <i class="fa fa-exclamation-triangle"></i> Request Investor
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('product-request') }}">
-                            <i class="fa fa-exclamation-triangle"></i> Product Request
+                            <i class="fa fa-exclamation-triangle"></i> Request Produk Investasi
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('new-order-list') }}">
-                            <i class="fa fa-exclamation-triangle"></i> New Order
+                        <a href="{{ route('dompet-request') }}">
+                            <i class="fa fa-exclamation-triangle"></i> Request Penarikan Dompet
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('payment-list') }}">
-                            <i class="fa fa-money"></i> Payment Status
+                        <a href="{{ route('vendor-list') }}">
+                            <i class="fa fa-money"></i> Investor List
                         </a>
                     </li>
                     <li>
@@ -52,10 +52,21 @@
                             <i class="fa fa-users"></i> Customer List
                         </a>
                     </li>
-                    <li><a><i class="fa fa-tags"></i> Product <span class="fa fa-chevron-down"></span></a>
+                    <li>
+                        <a href="{{ route('dompet-list') }}">
+                            <i class="fa fa-money"></i> Dompet List
+                        </a>
+                    </li>
+                    <li><a><i class="fa fa-tags"></i> Produk Investasi <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ route('product-list') }}">Show</a></li>
-                            <li><a href="{{ route('product-create') }}">Create</a></li>
+                            {{--<li><a href="{{ route('product-create') }}">Tambah</a></li>--}}
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-tags"></i> Blog <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="#">Show</a></li>
+                            <li><a href="#">Tambah</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-edit"></i> Banner <span class="fa fa-chevron-down"></span></a>
@@ -63,43 +74,16 @@
                             <li><a>Slider Banner<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li class="sub-menu"><a href="{{ route('slider-banner-list') }}">Show</a></li>
-                                    <li><a href="{{ route('slider-banner-create') }}">Create</a></li>
+                                    <li><a href="{{ route('slider-banner-create') }}">Tambah</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ route('side-banner-list') }}">Side Banner</a>
-                            </li>
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-shopping-cart"></i> Transaction <span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-shopping-cart"></i> Transaksi <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('delivery-list') }}">Delivery Request</a></li>
-                            <li><a href="{{ route('transaction-list') }}">History</a></li>
+                            <li><a href="{{ route('transaction-list') }}">Histori</a></li>
                         </ul>
                     </li>
-                    {{--<li><a><i class="fa fa-list"></i> Category <span class="fa fa-chevron-down"></span></a>--}}
-                        {{--<ul class="nav child_menu">--}}
-                            {{--<li><a href="{{ route('category-list') }}">Show</a></li>--}}
-                            {{--<li><a href="{{ route('category-create') }}">Create</a></li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                    <li><a><i class="fa fa-bank"></i> Payment Methods <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="{{ route('payment-method-show') }}">Show</a></li>
-                            <li><a href="{{ route('payment-method-create') }}">Create</a></li>
-                        </ul>
-                    </li>
-                    {{--<li><a><i class="fa fa-truck"></i> Courier <span class="fa fa-chevron-down"></span></a>--}}
-                        {{--<ul class="nav child_menu">--}}
-                            {{--<li><a href="{{ route('courier-list') }}">Show</a></li>--}}
-                            {{--<li><a href="{{ route('courier-create') }}">Create</a></li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                    {{--<li><a><i class="fa fa-truck"></i> Delivery Type <span class="fa fa-chevron-down"></span></a>--}}
-                        {{--<ul class="nav child_menu">--}}
-                            {{--<li><a href="{{ route('delivery-type-list') }}">Show</a></li>--}}
-                            {{--<li><a href="{{ route('delivery-type-create') }}">Create</a></li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
                     <li><a><i class="fa fa-bar-chart"></i> Reports <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ route('report-form') }}">Show</a></li>
@@ -114,11 +98,6 @@
                     <li><a><i class="fa fa-user-secret"></i> Admin <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ route('admin-list') }}">Show</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-gear"></i> Store Setting <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="{{ route('store-address') }}">Address</a></li>
                         </ul>
                     </li>
                 </ul>

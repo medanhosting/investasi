@@ -36,7 +36,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Product List</h2>
+                            <h2>Request Produk Investasi</h2>
                             <div class="nav navbar-right">
                                 <a href="{{ route('product-create') }}" class="btn btn-app">
                                     <i class="fa fa-plus"></i> Add
@@ -54,7 +54,6 @@
                                     <th>User Name</th>
                                     <th>Company Name</th>
                                     <th>Raised</th>
-                                    <th>Days Left</th>
                                     <th>Created Date</th>
                                     <th>Featured Photo</th>
                                     <th>Option</th>
@@ -68,21 +67,22 @@
                                             <td>{{ $product->name}}</td>
                                             <td>{{ $product->category->name }}</td>
                                             <td>{{ $product->user->first_name }} {{ $product->user->last_name }}</td>
-                                            <td>{{ $product->user->vendor->name}}</td>
+                                            <td>{{ $product->name}}</td>
                                             <td>{{ $product->raised}}</td>
-                                            <td>{{ $product->days_left}} days left</td>
                                             <td>
                                                 {{ \Carbon\Carbon::parse($product->created_on)->format('j F y')}}
                                             </td>
-                                            <td width="15%">
-                                                <img width="100%" src="{{ asset('storage\product\\'. $product->product_image()->where('featured', 1)->first()->path) }}">
-                                            </td>
+                                            {{--<td width="15%">--}}
+                                                {{--<img width="100%" src="{{ asset('storage\product\\'. $product->product_image()->where('featured', 1)->first()->path) }}">--}}
+                                            {{--</td>--}}
+                                            <td>ini fotonya</td>
                                             <td>
-                                                <a href="/admin/product/edit/{{ $product->id }}" class="btn btn-primary">Edit</a>
+                                                <a href="#" class="btn btn-primary">Terima</a>
+                                                <a href="#" class="btn btn-danger">Tolak</a>
                                             </td>
                                         </tr>
                                         @php ($idx++)
-                                            @endforeach
+                                    @endforeach
                                 </tbody>
                             </table>
 
