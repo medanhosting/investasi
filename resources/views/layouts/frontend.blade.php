@@ -77,6 +77,7 @@
 <script type="text/javascript" src="https://rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js"></script>
 
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-maps.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/frontend/custom-bayu.js') }}"></script>
 
 <script>
     function adsModalFunction() {

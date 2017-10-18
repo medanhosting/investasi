@@ -16,7 +16,8 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $product_id
  * @property string $user_id
  * @property int $quantity
- * @property float $total_price
+ * @property float $invest_amount
+ * @property float $total_invest_amount
  * @property int $courier_id
  * @property int $delivery_type_id
  * @property float $delivery_fee
@@ -37,7 +38,8 @@ class Cart extends Eloquent
 
 	protected $casts = [
 		'quantity' => 'int',
-		'total_price' => 'float',
+        'invest_amount' => 'float',
+		'total_invest_amount' => 'float',
         'delivery_fee' => 'float',
         'admin_fee' => 'float',
         'payment_method' => 'int'
@@ -47,7 +49,8 @@ class Cart extends Eloquent
 		'product_id',
 		'user_id',
 		'quantity',
-		'total_price',
+        'invest_amount',
+		'total_invest_amount',
         'courier_id',
         'delivery_type_id',
         'delivery_fee',
@@ -66,8 +69,12 @@ class Cart extends Eloquent
 		return $this->belongsTo(\App\Models\User::class);
 	}
 
-    public function getTotalPriceAttribute(){
-        return number_format($this->attributes['total_price'], 0, ",", ".");
+    public function getInvestAmountAttribute(){
+        return number_format($this->attributes['invest_amount'], 0, ",", ".");
+    }
+
+    public function getTotalInvestAmountAttribute(){
+        return number_format($this->attributes['total_invest_amount'], 0, ",", ".");
     }
 
     public function courier()

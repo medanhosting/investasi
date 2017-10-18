@@ -56,6 +56,15 @@ Route::post('/register-prospectus', [
 //investor
 Route::get('/project', 'Frontend\ProductController@ProductList')->name('investor-request');
 
+//payment
+Route::prefix('/payment')->group(function (){
+    Route::post('/confirm/{investId}', 'Frontend\PaymentController@pay');
+    Route::get('/success/cc/{userId}', 'Frontend\PaymentController@successCC');
+    Route::get('/success/va', 'Frontend\PaymentController@successVA');
+    Route::get('/failed/{investId}', 'Frontend\PaymentController@failed');
+    Route::get('/test', 'Frontend\PaymentController@test');
+});
+
 
 //End Frontend Routing
 

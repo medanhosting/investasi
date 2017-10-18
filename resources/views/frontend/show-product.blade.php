@@ -6,7 +6,7 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Detil Investasi</h2>
+                <h2>Detail Investasi</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
                         <i class="fa fa-angle-double-right"></i><a href="{{route('project-list')}}">Daftar Investasi</a>
@@ -85,39 +85,41 @@
                                         <div class="field col-sm-6">
                                             <h4>Jumlah Investasi</h4>
                                             <div class="radio-inputs">
-                                                <input type="radio" id="amount-1" name="amount" value="50">
-                                                <label for="amount-1"><span></span>Rp 50</label>
-                                                <input type="radio" id="amount-2" name="amount" value="100">
-                                                <label for="amount-2"><span></span>Rp 100</label>
-                                                <input type="radio" id="amount-3" name="amount" value="150">
-                                                <label for="amount-3"><span></span>Rp 150</label>
+                                                <input type="radio" id="amount-1" name="amount" value="50000" checked>
+                                                <label for="amount-1"><span></span>Rp 50.000</label>
+                                                <input type="radio" id="amount-2" name="amount" value="100000">
+                                                <label for="amount-2"><span></span>Rp 100.000</label>
+                                                <input type="radio" id="amount-3" name="amount" value="150000">
+                                                <label for="amount-3"><span></span>Rp 150.000</label>
                                             </div>
                                         </div>
                                         <div class="field col-sm-6">
                                             <h4>Pilihan Pembayaran</h4>
                                             <div class="radio-inputs">
-                                                <input type="radio" id="payment-1" name="payment" value="bank">
+                                                <input type="radio" id="payment-1" name="payment" value="wallet" checked>
                                                 <label for="payment-1"><span></span>Dompet</label>
-                                                <input type="radio" id="payment-2" name="payment" value="cc">
+                                                <input type="radio" id="payment-2" name="payment" value="credit_card">
                                                 <label for="payment-2"><span></span>Kartu Kredit</label>
+                                                <input type="radio" id="payment-3" name="payment" value="bank_transfer">
+                                                <label for="payment-3"><span></span>Akun Virtual</label>
                                             </div>
                                         </div>
                                         <div class="field col-sm-6 col-sm-offset-6 text-right" >
                                             {{--<table class="bag_total">--}}
-                                                {{--<tr class="cart-subtotal clearfix">--}}
-                                                    {{--<th>Sub total</th>--}}
-                                                    {{--<td>Rp 5.000.000</td>--}}
-                                                {{--</tr>--}}
-                                                {{--<tr class="shipping clearfix">--}}
-                                                    {{--<th>Admin</th>--}}
-                                                    {{--<td>Rp 30.000</td>--}}
-                                                {{--</tr>--}}
-                                                {{--<tr class="total clearfix">--}}
-                                                    {{--<th>Total</th>--}}
-                                                    {{--<td>Rp 5.030.000</td>--}}
-                                                {{--</tr>--}}
+                                            {{--<tr class="cart-subtotal clearfix">--}}
+                                            {{--<th>Sub total</th>--}}
+                                            {{--<td>Rp 5.000.000</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr class="shipping clearfix">--}}
+                                            {{--<th>Admin</th>--}}
+                                            {{--<td>Rp 30.000</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr class="total clearfix">--}}
+                                            {{--<th>Total</th>--}}
+                                            {{--<td>Rp 5.030.000</td>--}}
+                                            {{--</tr>--}}
                                             {{--</table>--}}
-                                            <a href="#" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></a>
+                                            <button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -129,4 +131,60 @@
         </div>
     </div>
     @include('frontend.partials._modal-prospektus')
+
+    <!-- Modal Checkout -->
+    <div class="modal fade" id="modal-checkout-confirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                {!! Form::open(array('action' => array('Frontend\PaymentController@pay', $product->id), 'method' => 'POST', 'role' => 'form')) !!}
+                {{ csrf_field() }}
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Konfirmasi Checkout</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                            <p>Metode pembayaran via <span id="checkout-payment-method">Kartu Kredit</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="pull-right">Jumlah Investasi:</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <span id="checkout-invest-amount" class="pull-right">Rp 200.000</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="pull-right">Biaya Admin:</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <span id="checkout-admin-fee" class="pull-right">Rp 200.000</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="pull-right">Total:</label>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <span id="checkout-total-invest" class="pull-right">Rp 400.000</span>
+                        </div>
+                    </div>
+                    {{ Form::hidden('checkout-invest-amount-input', '', array('id' => 'checkout-invest-amount-input')) }}
+                    {{ Form::hidden('checkout-admin-fee-input', '', array('id' => 'checkout-admin-fee-input')) }}
+                    {{ Form::hidden('checkout-payment-method-input', '', array('id' => 'checkout-payment-method-input')) }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-error" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-solid">Bayar Sekarang</button>
+                </div>
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+
 @endsection
