@@ -53,6 +53,10 @@ Route::post('/register-prospectus', [
     'as' => 'get-prospectus'
 ]);
 
+//investor
+Route::get('/project', 'Frontend\ProductController@ProductList')->name('investor-request');
+
+
 //End Frontend Routing
 
 // Rajaongkir

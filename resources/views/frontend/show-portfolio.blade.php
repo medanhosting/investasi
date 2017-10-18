@@ -8,7 +8,7 @@
             <div class="section-name">
                 <h2>Portfolio</h2>
                 <div class="short-text">
-                    <h5><a href="{{route('index')}}">Home</a>
+                    <h5><a href="{{route('index')}}">Beranda</a>
                         <i class="fa fa-angle-double-right"></i>Portfolio</h5>
                 </div>
             </div>

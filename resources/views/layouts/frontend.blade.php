@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/animate.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/meanmenu.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/nivo-lightbox.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/frontend/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/style.css') }}">
 
     <!-- bootstrap-file-input -->
