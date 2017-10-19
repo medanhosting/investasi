@@ -41,6 +41,13 @@
     <link href="{{ URL::asset('css/admin/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/admin/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }} " rel="stylesheet">
 
+    <!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+
+    <!-- include summernote -->
+    <link rel="stylesheet" href="{{ URL::asset('css/admin/summernote/summernote.css') }}">
+
     <!-- Custom Theme Style -->
     <link href="{{ URL::asset('css/admin/custom.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/admin/custom-admin-lowids.css') }}" rel="stylesheet">
@@ -142,6 +149,13 @@
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>--}}
 <script src="http://www.position-absolute.com/creation/print/jquery.printPage.js"></script>
 
+{{-- js for wysiwyg editor --}}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+<script src="{{ URL::asset('js/admin/summernote/summernote.js') }}"></script>
+
+
 <!-- Custom Theme Scripts -->
 <script src="{{ URL::asset('js/admin/custom.js') }}"></script>
 
@@ -161,7 +175,18 @@
             }
         ]
     } );
-</script>
 
+    $(function() {
+        $('.summernote').summernote({
+            height: 400
+        });
+//
+//        $('form').on('submit', function (e) {
+//            e.preventDefault();
+//            alert($('.summernote').summernote('code'));
+//            alert($('.summernote').val());
+//        });
+    });
+</script>
 </body>
 </html>

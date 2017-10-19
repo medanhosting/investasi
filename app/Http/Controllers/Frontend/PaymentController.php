@@ -23,6 +23,9 @@ class PaymentController extends Controller
         try{
 //            dd(Input::get('checkout-invest-amount-input'). " - ". Input::get('checkout-admin-fee-input'). " - ". Input::get('checkout-payment-method-input'));
 
+            if(!auth()->check()){
+                return redirect()->route('project-detail', ['id' => $investId]);
+            }
             $user = Auth::user();
             $userId = $user->id;
 

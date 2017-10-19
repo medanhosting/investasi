@@ -54,7 +54,7 @@ Route::post('/register-prospectus', [
 ]);
 
 //investor
-Route::get('/project', 'Frontend\ProductController@ProductList')->name('investor-request');
+Route::get('/project-request', 'Frontend\ProductController@ProductList')->name('investor-request');
 
 //payment
 Route::prefix('/payment')->group(function (){
@@ -222,6 +222,12 @@ Route::prefix('admin/dompet')->group(function(){
     Route::get('/', 'Admin\DompetController@index')->name('dompet-list');
     Route::get('/request', 'Admin\DompetController@newRequest')->name('dompet-request');
     Route::get('/detail/{id}', 'Admin\TransactionController@detail')->name('transaction-detail');
+});
+
+// Blog
+Route::prefix('admin/blog')->group(function(){
+    Route::get('/create', 'Admin\BlogController@create')->name('blog-create');
+    Route::post('/', 'Admin\BlogController@store');
 });
 
 // End admin Routing
