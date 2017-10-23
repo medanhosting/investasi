@@ -77,7 +77,7 @@ class WalletController extends Controller
                 $newStatement = WalletStatement::create([
                     'id'            => Uuid::generate(),
                     'user_id'       => $userId,
-                    'description'   => "Withdrawal Deposito (".$bank." - ".$accName." - ".$accNumber.")",
+                    'description'   => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
                     'amount'          => $amount,
                     'date'         => $dateTimeNow->toDateTimeString(),
                     'status_id'        => 3,

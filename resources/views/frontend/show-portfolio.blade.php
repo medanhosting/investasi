@@ -128,10 +128,9 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Breakdown'],
-                ['Wallet', 11.5],
-                ['Investasi', 5],
-                ['Earning', 4],
-                ['Divestasi', 7]
+                ['Cash', 13],
+                ['Investasi', 6],
+                ['Earning', 4]
             ]);
 
             var options = {

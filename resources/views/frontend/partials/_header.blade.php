@@ -63,11 +63,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-1 col-xs-6">
-                    <div id="search-toggle">
-                        <i class="fa fa-search"></i>
-                    </div>
-                </div>
+                {{--<div class="col-md-1 col-xs-6">--}}
+                    {{--<div id="search-toggle">--}}
+                        {{--<i class="fa fa-search"></i>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
 

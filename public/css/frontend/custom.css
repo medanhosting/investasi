@@ -151,3 +151,14 @@ h5 a:hover{
     padding: 0;
     position: relative;
 }
+body{
+    font-size: 17px;
+}
+/*.blog-page-wrapper .blog-posts .blog-post.single-post p{*/
+p{
+    font-size: 17px;
+}
+
+.orange{
+    color: #ff7a00 !Important;
+}

@@ -84,9 +84,6 @@
         $("#adsModal").modal()
     }
 
-    $( document ).ready(function() {
-        setTimeout(adsModalFunction, 60000);
-    });
 
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();

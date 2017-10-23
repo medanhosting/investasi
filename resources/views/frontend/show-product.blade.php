@@ -119,7 +119,13 @@
                                             {{--<td>Rp 5.030.000</td>--}}
                                             {{--</tr>--}}
                                             {{--</table>--}}
-                                            <button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>
+
+                                            @if(auth()->check())
+                                                <button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                            @else
+                                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                            @endif
+
                                         </div>
                                     </form>
                                 </div>
@@ -131,6 +137,7 @@
         </div>
     </div>
     @include('frontend.partials._modal-prospektus')
+    @include('frontend.partials._modal-login-notify')
 
     <!-- Modal Checkout -->
     <div class="modal fade" id="modal-checkout-confirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">

@@ -41,7 +41,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('phone') ? ' has-error' : '' }}">
-                                <h4>Telepon</h4>
+                                <h4>Nomor Handphone</h4>
                                 <input type="number" name="phone">
                                 @if ($errors->has('phone'))
                                     <span class="help-block">

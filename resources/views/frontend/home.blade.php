@@ -16,7 +16,10 @@
                         <div class="feature clearfix">
                             <div class="icon_we"><i class="fa fa-money"></i></div>
                             <h4>Dompet Saya</h4>
-                            <p>Rp. 5.000.000</p>
+                            <div class="feature-div">
+                                <p>Rp. 5.000.000</p>
+                                <p>&nbsp;</p>
+                            </div>
                             <a href="{{route('my-wallet')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
                         </div>
@@ -25,8 +28,10 @@
                         <div class="feature  clearfix">
                             <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                             <h4> Total Investasi </h4>
-                            <p>3 berjalan</p>
-                            <p>2 selesai</p>
+                            <div class="feature-div">
+                                <p>3 berjalan</p>
+                                <p>2 selesai</p>
+                            </div>
                             <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
                         </div>
@@ -35,17 +40,22 @@
                         <div class="feature  clearfix">
                             <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
                             <h4>Pendapatan</h4>
-                            <p>Rp. 5.000.000</p>
-                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
-						"><span>Lihat Semua</span></a>
+                            <div class="feature-div">
+                                <p>Rp. 5.000.000</p>
+                                <p>&nbsp;</p>
+                            </div>
+                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary">
+                                <span>Lihat Semua</span></a>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="feature clearfix">
                             <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
                             <h4>Proyek</h4>
-                            <p>3 berjalan, 3 terbaru</p>
-                            <p>3 hampir selesai, 3 selesai</p>
+                            <div class="feature-div">
+                                <p>3 berjalan, 3 terbaru</p>
+                                <p>3 hampir selesai, 3 selesai</p>
+                            </div>
                             <a href="{{route('project-list')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
                         </div>
@@ -57,7 +67,7 @@
         <!-- basic-slider start -->
         <div class="slider-section">
             <div class="slider-active owl-carousel">
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/Banner1.jpg') }});background-size: 100%;">
+                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner1.jpg') }});background-size: 100%;">
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Apakah Anda tau? </h2>--}}
@@ -67,7 +77,7 @@
                         {{--</div>--}}
                     {{--</div>--}}
                 </div>
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40 " style="background-image: url({{ URL::asset('frontend_images/slides/Banner2.jpg') }});background-size: 100%;">
+                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner2.jpg') }});background-size: 100%;">
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Sukses dimulai dari hal kecil  </h2>--}}
@@ -78,7 +88,7 @@
                     {{--</div>--}}
                 </div>
 
-                <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ URL::asset('frontend_images/slides/Banner3.jpg') }});background-size: 100%;">
+                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner3.jpg') }});background-size: 100%;">
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Berinvestasilah pada proyek terbaru kami </h2>--}}
@@ -255,5 +265,9 @@
         </div>
     </div>
 
-
+<script>
+    $( document ).ready(function() {
+        setTimeout(adsModalFunction, 60000);
+    });
+</script>
 @endsection

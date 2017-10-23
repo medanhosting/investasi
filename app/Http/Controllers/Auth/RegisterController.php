@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use App\Http\Controllers\Controller;
@@ -128,6 +129,7 @@ class RegisterController extends Controller
         if($user->save()){
             Session::put("user-data", $user);
             return Redirect::route('verify-phone-show');
+//            return View('auth.send-email', compact('email'));
 //            return View('auth.email-confirm',['user'=>$user]);
         }
     }
