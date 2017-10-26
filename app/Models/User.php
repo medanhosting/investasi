@@ -42,7 +42,8 @@ class User extends Authenticatable
         'created_by',
         'updated_at',
         'updated_by',
-        'email_token'
+        'email_token',
+        'username'
     ];
 
     /**

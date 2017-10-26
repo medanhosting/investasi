@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Referral;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -54,12 +55,25 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $rules = array(
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users|not_contains',
             'password' => 'required|string|min:6|confirmed',
-        ]);
+            'username' => 'required|unique',
+        );
+
+        $messages = array(
+            'not_contains' => 'The :attribute must not contain banned words',
+        );
+
+        return Validator::make($data, $rules, $messages);
+        /*return Validator::make($data, [
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users|not_contains',
+            'password' => 'required|string|min:6|confirmed',
+        ]);*/
     }
 
     /**
@@ -76,7 +90,7 @@ class RegisterController extends Controller
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'username' => '',
+            'username' => $data['username'],
             'email_token' => base64_encode($data['email']),
             'status_id' => 3,
             'password' => bcrypt($data['password']),
@@ -91,7 +105,23 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {
-        $validator = Validator::make($request->all(),
+        $rules = array(
+            'email'                 => 'required|email|max:100|unique:users|not_contains',
+            'first_name'            => 'required|max:100',
+            'last_name'             => 'required|max:100',
+            'phone'                 => 'required|max:20|unique:users',
+            'password'              => 'required|min:6|max:20|same:password',
+            'password_confirmation' => 'required|same:password',
+            'username'              => 'required|unique:users'
+        );
+
+        $messages = array(
+            'not_contains' => 'Email tidak boleh memiliki karakter + !',
+        );
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        /*$validator = Validator::make($request->all(),
             [
                 'email'                 => 'required|email|max:100|unique:users',
                 'first_name'            => 'required|max:100',
@@ -100,13 +130,27 @@ class RegisterController extends Controller
                 'password'              => 'required|min:6|max:20|same:password',
                 'password_confirmation' => 'required|same:password'
             ]
-        );
+        );*/
 
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
 
         $user = $this->create($request->all());
+
+        //Check Referral
+        if($request->referral != null){
+            //Add Referrals
+            $parent = User::where('username', $request->referral)->first();
+            $child = User::Where('username', $user->username)->first();
+
+            Referral::create([
+                'user_id_parent' => $parent->id,
+                'user_id_child' => $child->id
+            ]);
+        }
+
+        //Send Email
         $emailVerify = new EmailVerification($user);
         Mail::to($user->email)->send($emailVerify);
 

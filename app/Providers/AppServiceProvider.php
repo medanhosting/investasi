@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Validator::extend('not_contains', function($attribute, $value, $parameters)
+        {
+            // Banned char
+            $word = '+';
+            if (stripos($value, $word) !== false) return false;
+
+            return true;
+        });
     }
 
     /**

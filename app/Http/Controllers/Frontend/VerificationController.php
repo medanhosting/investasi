@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
-
+//php artisan code:
 class VerificationController extends Controller
 {
     public function __construct()

@@ -40,6 +40,15 @@
                                     </span>
                                 @endif
                             </div>
+                            <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('username') ? ' has-error' : '' }}">
+                                <h4>Username</h4>
+                                <input type="text" name="username">
+                                @if ($errors->has('username'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                             <div class="field col-sm-12 {{ $errors->has('phone') ? ' has-error' : '' }}">
                                 <h4>Nomor Handphone</h4>
                                 <input type="number" name="phone">
@@ -64,6 +73,15 @@
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('referral') ? ' has-error' : '' }}">
+                                <h4>Referral</h4>
+                                <input type="text" name="referral">
+                                @if ($errors->has('referral'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('referral') }}</strong>
                                     </span>
                                 @endif
                             </div>

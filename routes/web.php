@@ -65,6 +65,8 @@ Route::prefix('/payment')->group(function (){
     Route::get('/test', 'Frontend\PaymentController@test');
 });
 
+//Referral
+Route::get('/referral', 'Frontend\ReferralController@ShowReferral');
 
 //End Frontend Routing
 
