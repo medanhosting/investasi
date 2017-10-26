@@ -12,6 +12,18 @@
                     </div>
                 </div>
                 <div class="row features">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="feature clearfix">
+                            <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                            <h4>Investasi sekarang</h4>
+                            <div class="feature-div">
+                                <p>3 berjalan, 3 terbaru</p>
+                                <p>3 hampir selesai, 3 selesai</p>
+                            </div>
+                            <a href="{{route('project-list')}}" class="btn btn-min btn-secondary
+						"><span>Lihat Semua</span></a>
+                        </div>
+                    </div>
                     <div class="col-md-3 col-sm-6 ">
                         <div class="feature clearfix">
                             <div class="icon_we"><i class="fa fa-money"></i></div>
@@ -27,7 +39,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="feature  clearfix">
                             <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
-                            <h4> Total Investasi </h4>
+                            <h4> Portfolio Saya </h4>
                             <div class="feature-div">
                                 <p>3 berjalan</p>
                                 <p>2 selesai</p>
@@ -46,18 +58,6 @@
                             </div>
                             <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary">
                                 <span>Lihat Semua</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="feature clearfix">
-                            <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-                            <h4>Proyek</h4>
-                            <div class="feature-div">
-                                <p>3 berjalan, 3 terbaru</p>
-                                <p>3 hampir selesai, 3 selesai</p>
-                            </div>
-                            <a href="{{route('project-list')}}" class="btn btn-min btn-secondary
-						"><span>Lihat Semua</span></a>
                         </div>
                     </div>
                 </div>

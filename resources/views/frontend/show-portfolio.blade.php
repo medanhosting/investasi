@@ -21,8 +21,8 @@
                 <div class="panel with-nav-tabs panel-default">
                     <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#equity" data-toggle="tab">Equity</a></li>
-                            <li><a href="#debt" data-toggle="tab">Debt</a></li>
+                            <li class="active"><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
+                            <li><a href="#debt" data-toggle="tab">Debt Portfolio</a></li>
                             <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
                     </div>

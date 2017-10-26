@@ -23,9 +23,9 @@
             <div class="panel with-nav-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#debt" data-toggle="tab">Debt</a></li>
-                        <li><a href="#equity" data-toggle="tab">Equity</a></li>
-                        <li><a href="#sharing" data-toggle="tab">Profit Sharing / Produk</a></li>
+                        <li class="active"><a href="#debt" data-toggle="tab">Saham</a></li>
+                        <li><a href="#equity" data-toggle="tab">Hutang</a></li>
+                        <li><a href="#sharing" data-toggle="tab">Bagi Hasil / Produk</a></li>
                     </ul>
                 </div>
                 <div class="panel-body">
