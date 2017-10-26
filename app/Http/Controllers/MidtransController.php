@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 use App\Libs\Utilities;
 use App\Libs\Veritrans;
 use App\Models\Transaction;
+use App\Models\TransactionWallet;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -39,13 +40,45 @@ class MidtransController extends Controller
 
                 $dateTimeNow = Carbon::now('Asia/Jakarta');
 
-                if($json->status_code == "200"){
-                    if(($json->transaction_status == "capture" || $json->transaction_status =="accept") && $json->fraud_status == "accept"){
-                        $transaction = Transaction::where('order_id', $orderid)->first();
-                        $transaction->status_id = 5;
+                sleep(5);
+
+                $type = explode('-', $orderid);
+
+                // Transaction type is WALLET TOP UP
+                if($type[0] == 'WALLET'){
+                    $transaction = TransactionWallet::where('order_id', $orderid)->first();
+
+                    if($json->status_code == "200"){
+                        if(($json->transaction_status == "capture" || $json->transaction_status =="accept") && $json->fraud_status == "accept"){
+                            $transaction->status_id = 17;
+
+                            // Filter payment type
+                            if($json->payment_type == "bank_transfer"){
+                                // Filter bank
+                                if(!empty($json->permata_va_number)){
+                                    $transaction->va_bank = "permata";
+                                    $transaction->va_number = $json->permata_va_number;
+                                }
+                                else if(!empty($json->va_numbers)){
+                                    $transaction->va_bank = $json->va_numbers[0]->bank;
+                                    $transaction->va_number = $json->va_numbers[0]->va_number;
+                                }
+                            }
+                            else if($json->payment_type == "echannel"){
+                                $transaction->va_bank = "mandiri";
+                                $transaction->bill_key = $json->bill_key;
+                                $transaction->biller_code = $json->biller_code;
+                            }
+
+                            $transaction->updated_at = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+                    }
+                    else if($json->status_code == "201"){
 
                         // Filter payment type
                         if($json->payment_type == "bank_transfer"){
+
                             // Filter bank
                             if(!empty($json->permata_va_number)){
                                 $transaction->va_bank = "permata";
@@ -55,61 +88,105 @@ class MidtransController extends Controller
                                 $transaction->va_bank = $json->va_numbers[0]->bank;
                                 $transaction->va_number = $json->va_numbers[0]->va_number;
                             }
+
+                            $transaction->updated_at = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
                         }
                         else if($json->payment_type == "echannel"){
-                            $transaction->va_bank = "mandiri";
                             $transaction->bill_key = $json->bill_key;
                             $transaction->biller_code = $json->biller_code;
-                        }
 
-                        $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                            $transaction->updated_at = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+//                        else if($json->payment_type == "credit_card"){
+//                            $transaction->status_id = 11;
+//
+//                            $transaction->updated_at = $dateTimeNow->toDateTimeString();
+//                            $transaction->save();
+//                        }
+                    }
+                    else if($json->status_code == "202"){
+                        $transaction->status_id = 10;
+                        $transaction->updated_at = $dateTimeNow->toDateTimeString();
                         $transaction->save();
+                    }
+                    else{
+                        // Log error exception here
                     }
                 }
-                else if($json->status_code == "201"){
-                    // Filter payment type
-                    if($json->payment_type == "bank_transfer"){
-                        $transaction = Transaction::where('order_id', $orderid)->first();
-                        $transaction->status_id = 4;
-
-                        // Filter bank
-                        if(!empty($json->permata_va_number)){
-                            $transaction->va_bank = "permata";
-                            $transaction->va_number = $json->permata_va_number;
-                        }
-                        else if(!empty($json->va_numbers)){
-                            $transaction->va_bank = $json->va_numbers[0]->bank;
-                            $transaction->va_number = $json->va_numbers[0]->va_number;
-                        }
-
-                        $transaction->modified_on = $dateTimeNow->toDateTimeString();
-                        $transaction->save();
-                    }
-                    else if($json->payment_type == "echannel"){
-                        $transaction = Transaction::where('order_id', $orderid)->first();
-                        $transaction->bill_key = $json->bill_key;
-                        $transaction->biller_code = $json->biller_code;
-
-                        $transaction->modified_on = $dateTimeNow->toDateTimeString();
-                        $transaction->save();
-                    }
-                    else if($json->payment_type == "credit_card"){
-                        $transaction = Transaction::where('order_id', $orderid)->first();
-                        $transaction->status_id = 11;
-
-                        $transaction->modified_on = $dateTimeNow->toDateTimeString();
-                        $transaction->save();
-                    }
-                }
-                else if($json->status_code == "202"){
-                    $transaction = Transaction::where('order_id', $orderid)->first();
-                    $transaction->status_id = 10;
-                    $transaction->modified_on = $dateTimeNow->toDateTimeString();
-                    $transaction->save();
-                }
+                // Transaction type is INVEST PAYMENT
                 else{
-                    // Log error exception here
+                    $transaction = Transaction::where('order_id', $orderid)->first();
+
+                    if($json->status_code == "200"){
+                        if(($json->transaction_status == "capture" || $json->transaction_status =="accept") && $json->fraud_status == "accept"){
+                            $transaction->status_id = 5;
+
+                            // Filter payment type
+                            if($json->payment_type == "bank_transfer"){
+                                // Filter bank
+                                if(!empty($json->permata_va_number)){
+                                    $transaction->va_bank = "permata";
+                                    $transaction->va_number = $json->permata_va_number;
+                                }
+                                else if(!empty($json->va_numbers)){
+                                    $transaction->va_bank = $json->va_numbers[0]->bank;
+                                    $transaction->va_number = $json->va_numbers[0]->va_number;
+                                }
+                            }
+                            else if($json->payment_type == "echannel"){
+                                $transaction->va_bank = "mandiri";
+                                $transaction->bill_key = $json->bill_key;
+                                $transaction->biller_code = $json->biller_code;
+                            }
+
+                            $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+                    }
+                    else if($json->status_code == "201"){
+                        // Filter payment type
+                        if($json->payment_type == "bank_transfer"){
+                            $transaction->status_id = 4;
+
+                            // Filter bank
+                            if(!empty($json->permata_va_number)){
+                                $transaction->va_bank = "permata";
+                                $transaction->va_number = $json->permata_va_number;
+                            }
+                            else if(!empty($json->va_numbers)){
+                                $transaction->va_bank = $json->va_numbers[0]->bank;
+                                $transaction->va_number = $json->va_numbers[0]->va_number;
+                            }
+
+                            $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+                        else if($json->payment_type == "echannel"){
+                            $transaction->bill_key = $json->bill_key;
+                            $transaction->biller_code = $json->biller_code;
+
+                            $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+                        else if($json->payment_type == "credit_card"){
+                            $transaction->status_id = 11;
+
+                            $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                            $transaction->save();
+                        }
+                    }
+                    else if($json->status_code == "202"){
+                        $transaction->status_id = 10;
+                        $transaction->modified_on = $dateTimeNow->toDateTimeString();
+                        $transaction->save();
+                    }
+                    else{
+                        // Log error exception here
+                    }
                 }
+
             }, 5);
         }
         catch (\Exception $ex){

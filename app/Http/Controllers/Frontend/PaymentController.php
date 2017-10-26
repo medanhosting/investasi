@@ -32,7 +32,7 @@ class PaymentController extends Controller
             $paymentMethod = Input::get('checkout-payment-method-input');
 
             // Get unique order id
-            $orderId = uniqid();
+            $orderId = 'INVEST-'. uniqid();
 
             $investAmount = floatval(Input::get('checkout-invest-amount-input'));
             $adminFee = floatval(Input::get('checkout-admin-fee-input'));

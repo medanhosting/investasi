@@ -25,6 +25,7 @@
 
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/custom.css') }}" >
+    <link rel="stylesheet" href="{{ URL::asset('css/frontend/custom-bayu.css') }}" >
 
     <!-- Pie Chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

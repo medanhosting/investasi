@@ -8,9 +8,10 @@
             <div class="section-name">
                 <h2>Pembayaran</h2>
                 <div class="short-text">
-                    <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{ route('project-list') }}">Daftar Investasi</a>
-                        <i class="fa fa-angle-double-right"></i>Pembayaran
+                    <h5>
+                        <a href="{{route('index')}}">Beranda</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Dompet Saya</a>
+                        <i class="fa fa-angle-double-right"></i>Top Up Dompet
                     </h5>
                 </div>
             </div>
@@ -26,25 +27,16 @@
                         <img class="img-responsive" src="assets/img/causes/single-cause.jpg" alt="">
                     </div>
                     <div class="meta">
-                        <h2>Pembayaran Berhasil</h2>
+                        <h2>Pembayaran Gagal</h2>
                     </div>
                     <div class="clearfix">
                         <div class="foundings">
-                            @if($paymentMethod == 'credit_card')
-                                <p>Pembayaran kartu kredit anda telah berhasil diverifikasi</p>
-                            @else
-                                <p>Pembayaran bank transfer anda telah berhasil diajukan</p>
-                            @endif
+                            <p>Pembayaran anda gagal atau dibatalkan</p>
                         </div>
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
-                        @if($paymentMethod == 'credit_card')
-                            <a href="#" class="btn btn-big btn-solid" style="margin-left: 10px;">Daftar Investasi</a>
-                            <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
-                        @else
-                            <a href="#" class="btn btn-big btn-solid" style="margin-left: 10px;">Status Pembayaran</a>
-                            <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
-                        @endif
+                        <a href="{{ route('my-wallet') }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Kembali ke Dompet Saya</a>
+                        <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                     </div>
                 </div>
             </div>

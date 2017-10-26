@@ -49,3 +49,11 @@ function addCommas(nStr) {
     }
     return "Rp " + x1 + x2;
 }
+
+$('input[type=radio][name=amount]').change(function() {
+    var amount = parseInt(this.value);
+    var totalAmount = amount + 4000;
+    var totalAmountStr = addCommas(totalAmount);
+    $("#wallet-deposit-amount").html(addCommas(amount));
+    $("#wallet-deposit-cost").html(totalAmountStr);
+});
