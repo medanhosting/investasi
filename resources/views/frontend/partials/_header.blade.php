@@ -78,6 +78,11 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="mobile-area">
                             <div class="mobile-menu">
+
+                                @if(!(auth()->check()))
+                                    <a class="btn btn-solid"  href="{{ route('login') }}" style="margin-top:10%;">Login</a>
+                                @endif
+
                                 <nav id="mobile-nav">
                                     <ul>
                                         <li><a href="{{route('home')}}">Beranda </a></li>

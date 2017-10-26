@@ -232,10 +232,10 @@
                                 <div class="img-wrapper">
                                     <div class="overlay">
                                     </div>
-                                    <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt="">
+                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}"><img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt=""></a>
                                 </div>
                                 <div class="info-block">
-                                    <h4><a href="#">{{ $product->name }}</a></h4>
+                                    <h4><a href="{{ route('project-detail', ['id' => $product->id]) }}">{{ $product->name }}</a></h4>
                                     <p>{{ $product->description }}</p>
                                     <div class="foundings">
                                         <div class="progress-bar-wrapper min">

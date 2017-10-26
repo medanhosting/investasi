@@ -16,13 +16,17 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $category_id
  * @property string $name
  * @property int $user_id
+ * @property int $vendor_id
  * @property float $raising
  * @property float $external_commitment
  * @property float $raised
  * @property int $equity_offered
  * @property int $days_left
  * @property float $minimum_per_investor
- * @property string description
+ * @property string $description
+ * @property int $is_secondary
+ * @property string $meta_tag_description
+ * @property string $meta_tag_image
  * @property int $status_id
  * @property string $created_by
  * @property \Carbon\Carbon $created_on
@@ -30,6 +34,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \Carbon\Carbon $modified_on
  * 
  * @property \App\Models\Status $status
+ * @property \App\Models\Vendor $vendor
  * @property \Illuminate\Database\Eloquent\Collection $carts
  * @property \Illuminate\Database\Eloquent\Collection $transaction_details
  *
@@ -44,12 +49,14 @@ class Product extends Eloquent
 
 	protected $casts = [
 		'user_id' => 'int',
+		'vendor_id' => 'int',
 		'raising' => 'float',
 		'external_commitment' => 'float',
 		'raised' => 'float',
 		'equity_offered' => 'int',
 		'days_left' => 'int',
         'minimum_per_investor' => 'float',
+        'is_secondary' => 'int',
 		'status_id' => 'int'
 	];
 	protected $dates = [
@@ -62,6 +69,7 @@ class Product extends Eloquent
 		'name',
         'category_id',
         'user_id',
+        'vendor_id',
         'raising',
         'external_commitment',
         'raised',
@@ -69,6 +77,9 @@ class Product extends Eloquent
         'days_left',
         'minimum_per_investor',
         'description',
+        'is_secondary',
+        'meta_tag_description',
+        'meta_tag_image',
 		'status_id',
 		'created_by',
 		'created_on',
@@ -84,6 +95,11 @@ class Product extends Eloquent
     public function user(){
         return $this->belongsTo(\App\Models\User::class);
     }
+
+    public function vendor(){
+        return $this->belongsTo(\App\Models\Vendor::class);
+    }
+
 	public function carts()
 	{
 		return $this->hasMany(\App\Models\Cart::class);

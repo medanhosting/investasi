@@ -16,6 +16,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $id
  * @property string $title
  * @property string $alias
+ * @property int $category_id
  * @property string $description
  * @property int $read_count
  * @property int $status_id
@@ -44,6 +45,7 @@ class Blog extends Eloquent
         'title',
         'alias',
         'description',
+        'category_id',
         'read_count',
         'status_id',
         'created_by',
@@ -56,4 +58,9 @@ class Blog extends Eloquent
     {
         return $this->belongsTo(\App\Models\Status::class);
     }
+
+    public function category(){
+        return $this->belongsTo(\App\Models\Category::class);
+    }
+
 }

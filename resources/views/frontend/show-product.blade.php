@@ -101,7 +101,7 @@
                                                 <input type="radio" id="payment-2" name="payment" value="credit_card">
                                                 <label for="payment-2"><span></span>Kartu Kredit</label>
                                                 <input type="radio" id="payment-3" name="payment" value="bank_transfer">
-                                                <label for="payment-3"><span></span>Akun Virtual</label>
+                                                <label for="payment-3"><span></span>Bank Transfer</label>
                                             </div>
                                         </div>
                                         <div class="field col-sm-6 col-sm-offset-6 text-right" >

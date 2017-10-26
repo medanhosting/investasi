@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Category;
 use App\Models\Vendor;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -31,13 +32,16 @@ class BlogController extends Controller
 
 
     public function create(){
-        return View('admin.create-blog');
+        $categories = Category::all();
+
+        return View('admin.create-blog', compact('categories'));
     }
 
     public function store(Request $request){
 
         $validator = Validator::make($request->all(),[
             'title'              => 'required',
+            'category'              => 'required',
             'content'            => 'required']);
 
         if ($validator->fails()) {
@@ -53,12 +57,14 @@ class BlogController extends Controller
             'id'            => Uuid::generate(),
             'title'               => Input::get('title'),
             'description'              => Input::get('content'),
+            'category_id'              => Input::get('category'),
             'read_count'              => 0,
             'status_id'              => 1,
             'created_at'    => $dateTimeNow->toDateTimeString(),
         ]);
 
-        return View('admin.create-blog');
+        $categories = Category::all();
+        return View('admin.create-blog', compact('categories'));
     }
 
 }

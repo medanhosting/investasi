@@ -18,18 +18,6 @@
                                 <h4 class="list-group-item-heading">Step 2</h4>
                                 <p class="list-group-item-text">Phone Verification</p>
                             </a></li>
-                        <li class="disabled"><a href="#">
-                                <h4 class="list-group-item-heading">Step 3</h4>
-                                <p class="list-group-item-text">Photo Upload</p>
-                            </a></li>
-                        <li class="disabled"><a href="#">
-                                <h4 class="list-group-item-heading">Step 4</h4>
-                                <p class="list-group-item-text">Risk Profile</p>
-                            </a></li>
-                        <li class="disabled"><a href="#">
-                                <h4 class="list-group-item-heading">Step 5</h4>
-                                <p class="list-group-item-text">Set Your Address</p>
-                            </a></li>
                     </ul>
                 </div>
 

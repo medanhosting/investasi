@@ -55,9 +55,27 @@
                                 </div>
                             @endif
 
-                            <div class="form-group">
-                                <label for="input">Judul Artikel</label>
-                                <input type="text" class="form-input" id="input" name="title" value="Judul Artikel">
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Judul Artikel <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" class="form-control col-md-6 col-sm-6 col-xs-12" id="input" name="title" placeholder="Judul Artikel">
+                                </div>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Category <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select id="category" name="category" class="form-control col-md-7 col-xs-7">
+                                        <option value="-1">Select category</option>
+
+                                        @foreach($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @endforeach
+
+                                    </select>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="contents">Contents</label>
