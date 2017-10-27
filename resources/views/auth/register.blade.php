@@ -76,7 +76,7 @@
                                     </span>
                                 @endif
                             </div>
-                            <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('referral') ? ' has-error' : '' }}">
+                            <div class="field col-sm-12 {{ $errors->has('referral') ? ' has-error' : '' }}">
                                 <h4>Referral</h4>
                                 <input type="text" name="referral">
                                 @if ($errors->has('referral'))
@@ -85,9 +85,14 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="col-sm-12">
+                                <label>
+                                    <input type="checkbox" name="check1" id="check1" onclick="check()"> Dengan mendaftarkan diri pada investasi.me saya telah membaca dan mengetahui syarat dan ketentuan yang berlaku pada halaman Syarat & Ketentuan serta Kebijakan Privasi
+                                </label>
+                            </div>
                             <div class="field col-sm-12">
                                 <br/>
-                                <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Register</span></button>
+                                <button class="btn btn-big btn-solid" id="submit" disabled><i class="fa fa-paper-plane"></i><span>Register</span></button>
                             </div>
                         </form>
                     </div>
@@ -95,4 +100,16 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function check(){
+
+            if(document.getElementById("check1").checked){
+                document.getElementById("submit").disabled = false;
+            }
+            else if(document.getElementById("check1").checked == false){
+                document.getElementById("submit").disabled = true;
+            }
+        }
+    </script>
 @endsection
