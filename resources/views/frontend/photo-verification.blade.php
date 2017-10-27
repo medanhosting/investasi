@@ -41,6 +41,16 @@
                         {{ csrf_field() }}
                         {!! Form::file('verification-photo', array('id' => 'verification-photo', 'class' => 'file')) !!}
                         {!! Form::close() !!}
+
+                        <br/>
+                        <div class="widget-title">
+                            <h4>Unggah foto Signature Anda</h4>
+                        </div>
+                        <p class="first"></p>
+                        {!! Form::open(array('action' => 'Frontend\VerificationController@UploadPhoto', 'method' => 'POST', 'role' => 'form', 'enctype' => 'multipart/form-data', 'novalidate')) !!}
+                        {{ csrf_field() }}
+                        {!! Form::file('verification-photo', array('id' => 'verification-photo', 'class' => 'file')) !!}
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
