@@ -32,13 +32,14 @@
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
                             <h4>Penarikan Dana</h4>
+                            <span style="color:red;font-size:14px;">Nomor rekening untuk penarikan harus sama dengan nama yang terdaftar pada profil akun</span>
                         </div>
                         <form class="comment-form row altered" method="POST" action="{{ route('withdrawSubmit') }}">
                             {{ csrf_field() }}
 
 
                             <div class="field col-sm-12 {{ $errors->has('amount') ? ' has-error' : '' }}">
-                                <h5>Jumlah Penarikan</h5>
+                                <h4>Jumlah Penarikan</h4>
                                 <input type="number" name="amount">
                                 @if ($errors->has('amount'))
                                     <span class="help-block">
@@ -47,7 +48,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('acc_number') ? ' has-error' : '' }}">
-                                <h5>Nomor Rekening</h5>
+                                <h4>Nomor Rekening</h4>
                                 <input type="text" name="acc_number">
                                 @if ($errors->has('acc_number'))
                                     <span class="help-block">
@@ -56,7 +57,7 @@
                                 @endif
                             </div>
                             <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('acc_name') ? ' has-error' : '' }}">
-                                <h5>Nama Rekening</h5>
+                                <h4>Nama Rekening</h4>
                                 <input type="text" name="acc_name">
                                 @if ($errors->has('acc_name'))
                                     <span class="help-block">
@@ -65,7 +66,7 @@
                                 @endif
                             </div>
                             <div class="field col-sm-12 {{ $errors->has('bank') ? ' has-error' : '' }}">
-                                <h5>Bank</h5>
+                                <h4>Nama Bank</h4>
                                 {{--<select class="form-control" name="bank" id="bank">--}}
                                     {{--<option value="PT BCA (Bank Central Asia) TBK">PT BCA (Bank Central Asia) TBK</option>--}}
                                     {{--<option value="asdf">PT Bank Negara Indonesia (BNI)</option>--}}

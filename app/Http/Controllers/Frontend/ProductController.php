@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\GuestProspectus;
 use App\Models\Product;
+use App\Models\Vendor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
@@ -28,13 +29,22 @@ class ProductController extends Controller
 //        $userId = $user->id;
 
         $products = Product::where('is_secondary', 0)->get();
-        return View ('frontend.show-products', compact('products'));
+
+        $product_debts =Product::where('category_id','=', 1)->where('is_secondary','=', 0)->get();
+        $product_equities =Product::where('category_id','=', 2)->where('is_secondary','=', 0)->get();
+        $product_sharings =Product::where('category_id','=', 3)->where('is_secondary','=', 0)->get();
+
+        return View ('frontend.show-products', compact('product_debts', 'product_equities', 'product_sharings'));
     }
 
     public function ProductDetail($id)
     {
         $product = Product::find($id);
-        return View ('frontend.show-product', compact('product'));
+        $vendor = null;
+        if(!empty($product->vendor_id)){
+            $vendor = Vendor::find($product->vendor_id);
+        }
+        return View ('frontend.show-product', compact('product', 'vendor'));
     }
 
     public function DownloadFile($filename)

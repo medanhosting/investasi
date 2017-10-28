@@ -24,6 +24,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $days_left
  * @property float $minimum_per_investor
  * @property string $description
+ * @property string $image_path
  * @property int $is_secondary
  * @property string $meta_tag_description
  * @property string $meta_tag_image
@@ -77,6 +78,7 @@ class Product extends Eloquent
         'days_left',
         'minimum_per_investor',
         'description',
+        'image_path',
         'is_secondary',
         'meta_tag_description',
         'meta_tag_image',

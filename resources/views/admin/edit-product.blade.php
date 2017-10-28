@@ -250,7 +250,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                    {!! Form::file('product-featured', array('id' => 'product-featured', 'class' => 'file-loading', 'data-image-featured-path' => asset('storage/product/'. $imgFeatured))) !!}
+                                    {!! Form::file('product-featured', array('id' => 'product-featured', 'class' => 'file-loading', 'data-image-featured-path' => asset('storage'. $imgFeatured))) !!}
                                 </div>
                             </div>
 

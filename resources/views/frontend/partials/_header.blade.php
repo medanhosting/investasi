@@ -27,7 +27,7 @@
                             <span>Investasi </span>
                             <ul class="submenu">
                                 <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
-                                <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
+                                {{--<li><a href="{{route('secondary-market')}}">Secondary Market</a></li>--}}
                             </ul>
                         </li>
                         <li>
@@ -40,26 +40,30 @@
                             </ul>
                         </li>
                         <li>
-                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <ul class="submenu">
-
-                                @if(auth()->check())
-                                    <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
-                                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
-                                    <li><a href="{{route('my-wallet')}}">Dompet</a></li>
-                                    <li>
-                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                @else
-                                    <li><a href="{{ route('login') }}" >Login</a></li>
-                                    <li><a href="{{ route('register') }}" >Register</a></li>
-                                @endif
+                            @if(auth()->check())
+                            <span>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                                <ul class="submenu">
+                                <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
+                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                <li><a href="{{route('my-wallet')}}">Dompet</a></li>
+                                <li>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
                             </ul>
+                            @else
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <ul class="submenu">
+                                <li><a href="{{ route('login') }}" >Login</a></li>
+                                <li><a href="{{ route('register') }}" >Register</a></li>
+                            </ul>
+                            @endif
                         </li>
                     </ul>
                 </div>
@@ -89,7 +93,7 @@
                                         <li><a>Investasi </a>
                                             <ul>
                                                 <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
-                                                <li><a href="{{route('secondary-market')}}">Secondary Market</a></li>
+                                                {{--<li><a href="{{route('secondary-market')}}">Secondary Market</a></li>--}}
                                             </ul>
                                         </li>
                                         <li><a>Tentang</a>

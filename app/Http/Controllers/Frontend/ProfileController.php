@@ -31,6 +31,15 @@ class ProfileController extends Controller
         return View ('frontend.show-profile', compact('user'));
     }
 
+    public function Pendapatan()
+    {
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $transactions = Transaction::Where('user_id', $userId);
+        return View ('frontend.show-pendapatan', compact('transactions'));
+    }
+
 
     public function GoogleMap()
     {

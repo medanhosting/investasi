@@ -56,7 +56,7 @@
                                 <p>Rp. 5.000.000</p>
                                 <p>&nbsp;</p>
                             </div>
-                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary">
+                            <a href="{{route('pendapatan')}}" class="btn btn-min btn-secondary">
                                 <span>Lihat Semua</span></a>
                         </div>
                     </div>
@@ -232,11 +232,11 @@
                                 <div class="img-wrapper">
                                     <div class="overlay">
                                     </div>
-                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}"><img class="img-responsive" src="{{ URL::asset('frontend_images/causes/img-1.jpg') }}" alt=""></a>
+                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}"><img class="img-responsive" src="{{ URL::asset('storage/project'.$product->image_path) }}" alt=""></a>
                                 </div>
                                 <div class="info-block">
                                     <h4><a href="{{ route('project-detail', ['id' => $product->id]) }}">{{ $product->name }}</a></h4>
-                                    <p>{{ $product->description }}</p>
+                                    {{--<p>{{ $product->description }}</p>--}}
                                     <div class="foundings">
                                         <div class="progress-bar-wrapper min">
                                             <div class="progress-bar-outer">

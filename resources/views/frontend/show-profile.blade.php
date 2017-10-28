@@ -19,15 +19,15 @@
             <div class="row">
                 <div class="col-xs-12">
                     @if($user->status_id != 1)
-                        <h2>Lanjutkan Verifikasi Anda</h2>
+                        <h2>Status Verifikasi Anda</h2>
                         <div class="col-xs-12">
                             <ul class="nav nav-pills nav-justified thumbnail custom-color">
                                 <li><a href="#">
-                                        <h4 class="list-group-item-heading">Step 1</h4>
+                                        <h4 class="list-group-item-heading green">Step 1</h4>
                                         <p class="list-group-item-text">Email Verification</p>
                                     </a></li>
                                 <li><a href="#">
-                                        <h4 class="list-group-item-heading">Step 2</h4>
+                                        <h4 class="list-group-item-heading green">Step 2</h4>
                                         <p class="list-group-item-text">Phone Verification</p>
                                     </a></li>
                                 @if($user->status_id == 12 || $user->status_id == 13)
@@ -45,7 +45,7 @@
                                         </a></li>
                                 @elseif($user->status_id == 14)
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading">Step 3</h4>
+                                            <h4 class="list-group-item-heading green">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
                                         </a></li>
                                     <li class="active"><a href="#">
@@ -58,11 +58,11 @@
                                         </a></li>
                                 @elseif($user->status_id == 15)
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading">Step 3</h4>
+                                            <h4 class="list-group-item-heading green">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
                                         </a></li>
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading">Step 4</h4>
+                                            <h4 class="list-group-item-heading green">Step 4</h4>
                                             <p class="list-group-item-text">Risk Profile</p>
                                         </a></li>
                                     <li class="active"><a href="{{route('map')}}">
@@ -74,9 +74,11 @@
                             </ul>
                         </div>
                     @endif
+                    Lanjutkan verifikasi Anda untuk dapat menggunakan semua fitur investasi.me
                 </div>
 
                 <div class="col-xs-12">
+                    <h2>Profil Anda</h2>
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs">

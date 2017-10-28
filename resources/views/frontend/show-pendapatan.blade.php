@@ -6,10 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Portfolio</h2>
+                <h2>Pendapatan</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i>Portfolio</h5>
+                        <i class="fa fa-angle-double-right"></i>Pendapatan</h5>
                 </div>
             </div>
         </div>
@@ -21,18 +21,17 @@
                 <div class="panel with-nav-tabs panel-default">
                     <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
+                            <li class="active"><a href="#equity" data-toggle="tab">Saham</a></li>
                             <li><a href="#debt" data-toggle="tab">Debt Portfolio</a></li>
-                            <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
                     </div>
                     <div class="panel-body">
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="equity">
+                            <div class="tab-pane fade in active" id="debt">
 
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Equity</h2>
+                                        <h2>Debt</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content table-responsive">
@@ -41,49 +40,9 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama</th>
-                                                <th>Tanggal Beli</th>
-                                                <th>Jumlah Investasi</th>
-                                                <th>Jenis</th>
-                                                <th>Update Terkini</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @php( $idx = 1 )
-                                                @foreach($transactions as $trx)
-                                                    <tr>
-                                                        <td>{{ $idx }}</td>
-                                                        <td>{{ $trx->Product->name}}</td>
-                                                        <td>{{ $trx->created_on }}</td>
-                                                        <td>{{ $trx->total_price }}</td>
-                                                        <td>{{ $trx->Product->Category->name }}</td>
-                                                        <td>{{ $trx->created_on }}</td>
-                                                    </tr>
-                                                    @php( $idx++ )
-                                                        @endforeach
-                                            </tbody>
-                                        </table>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="debt">
-
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Debt</h2>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content table-responsive">
-                                        <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
-                                            <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama</th>
-                                                <th>Tanggal Beli</th>
-                                                <th>Jumlah Investasi</th>
-                                                <th>Update Pembayaran</th>
                                                 <th>Status Kolektibilitas</th>
+                                                <th>Total Bunga / Kupon Diterima</th>
+                                                <th>Tanggal Pembayaran Terakhir</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -92,18 +51,17 @@
                                                     <tr>
                                                         <td>{{ $idx }}</td>
                                                         <td>{{ $trx->Product->name}}</td>
-                                                        <td>{{ $trx->created_on }}</td>
-                                                        <td>{{ $trx->total_price }}</td>
-                                                        <td>{{ $trx->total_price }}</td>
                                                         @php($color = 'background-color: green')
                                                         <td style="{{$color}}">
 
                                                         </td>
-                                                    </tr>
+                                                        <td>{{ $trx->total_price }}</td>
+                                                        <td>{{ $trx->created_on }}</td>
                                                     @php( $idx++ )
-                                                        @endforeach
+                                                @endforeach
                                             </tbody>
                                         </table>
+
                                         <div class="col-md-6" style="text-align: right;">
                                             <p>Keterangan</p>
                                         </div>
@@ -113,12 +71,38 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="portfolio">
-                                <h2>Portfolio Breakdown</h2>
-                                {{--<div id="chart_wrap" style="position: relative; padding-bottom: 100%; height: 0; overflow:hidden;">--}}
-                                {{--<div id="chart_div" style="position: absolute; top: 0; left: 0; width:100%; height:100%;"></div>--}}
-                                {{--</div>--}}
-                                <div id="chart_wrap"><div id="chart_div"></div></div>
+                            <div class="tab-pane fade" id="equity">
+
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Saham</h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content table-responsive">
+                                        <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Total Dividen</th>
+                                                <th>Update Terkini</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @php( $idx = 1 )
+                                                @foreach($transactions as $trx)
+                                                    <tr>
+                                                        <td>{{ $idx }}</td>
+                                                        <td>{{ $trx->Product->name}}</td>
+                                                        <td>{{ $trx->total_price }}</td>
+                                                        <td>{{ $trx->created_on }}</td>
+                                                    </tr>
+                                                    @php( $idx++ )
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

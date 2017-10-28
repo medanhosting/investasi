@@ -26,6 +26,7 @@ Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 
 //profile
 Route::get('/my-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
+Route::get('/pendapatan', 'Frontend\ProfileController@Pendapatan')->name('pendapatan');
 
 //portfolio
 Route::get('/portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');

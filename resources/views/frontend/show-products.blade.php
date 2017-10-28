@@ -41,15 +41,15 @@
                                                 <th>Nama</th>
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
-                                                <th>Terkumpul</th>
+                                                <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
-                                                <th>Option</th>
+                                                <th>Detail</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @php( $idx = 1 )
-                                                @foreach($products as $product)
+                                                @foreach($product_debts as $product)
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                         @php( $percentage = number_format($percentage, 0) )
@@ -58,7 +58,8 @@
                                                                 <td>{{ $product->name }}</td>
                                                                 <td>Rp {{ $product->raising }}</td>
                                                                 <td>{{ $product->days_left }} </td>
-                                                                <td>Rp {{ $product->raised }}</td>
+                                                                {{--<td>Rp {{ $product->raised }}</td>--}}
+                                                                <td>Rp -</td>
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
                                                                 <td>
                                                                     <div class="progress-bar-inner">
@@ -94,15 +95,15 @@
                                                 <th>Nama</th>
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
-                                                <th>Terkumpul</th>
+                                                <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
-                                                <th>Option</th>
+                                                <th>Detail</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @php( $idx = 1 )
-                                                @foreach($products as $product)
+                                                @foreach($product_equities as $product)
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                     @php( $percentage = number_format($percentage, 0) )
@@ -111,7 +112,8 @@
                                                             <td>{{ $product->name }}</td>
                                                             <td>Rp {{ $product->raising }}</td>
                                                             <td>{{ $product->days_left }} </td>
-                                                            <td>Rp {{ $product->raised }}</td>
+                                                            {{--<td>Rp {{ $product->raised }}</td>--}}
+                                                            <td>Rp -</td>
                                                             <td>Rp {{ $product->minimum_per_investor }}</td>
                                                             <td>
                                                                 <div class="progress-bar-inner">
@@ -147,15 +149,15 @@
                                                 <th>Nama</th>
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
-                                                <th>Terkumpul</th>
+                                                <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
-                                                <th>Option</th>
+                                                <th>Detail</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @php( $idx = 1 )
-                                                @foreach($products as $product)
+                                                @foreach($product_sharings as $product)
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                         @php( $percentage = number_format($percentage, 0) )
@@ -164,7 +166,8 @@
                                                                 <td>{{ $product->name }}</td>
                                                                 <td>Rp {{ $product->raising }}</td>
                                                                 <td>{{ $product->days_left }} </td>
-                                                                <td>Rp {{ $product->raised }}</td>
+                                                                {{--<td>Rp {{ $product->raised }}</td>--}}
+                                                                <td>Rp -</td>
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
                                                                 <td>
                                                                     <div class="progress-bar-inner">

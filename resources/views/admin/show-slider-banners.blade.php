@@ -51,7 +51,7 @@
                             <tr>
                                 <td>{{ $idx }}</td>
                                 <td width="15%">
-                                    <img width="100%" src="{{ asset('storage\banner\\'. $banner->image_path) }}">
+                                    <img width="100%" src="{{ asset('storage'. $banner->image_path) }}">
                                 </td>
                                 <td>
                                     @if(!empty($banner->caption))

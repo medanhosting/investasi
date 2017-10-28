@@ -47,7 +47,7 @@
                             <tr>
                                 <td>First Side Banner</td>
                                 <td width="15%">
-                                    <img width="100%" src="{{ asset('storage\banner\\'. $banner1st->image_path) }}">
+                                    <img width="100%" src="{{ asset('storage'. $banner1st->image_path) }}">
                                 </td>
                                 <td>
                                     @if(!empty($banner1st->product_id))
