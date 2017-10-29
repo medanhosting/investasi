@@ -232,7 +232,9 @@
                                 <div class="img-wrapper">
                                     <div class="overlay">
                                     </div>
-                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}"><img class="img-responsive" src="{{ URL::asset('storage/project'.$product->image_path) }}" alt=""></a>
+                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}">
+                                        <img class="img-responsive" src="{{ URL::asset('storage/project/'.$product->image_path) }}" alt="">
+                                    </a>
                                 </div>
                                 <div class="info-block">
                                     <h4><a href="{{ route('project-detail', ['id' => $product->id]) }}">{{ $product->name }}</a></h4>

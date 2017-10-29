@@ -55,11 +55,11 @@
                         </div>
                     </div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="{{ URL::asset('frontend_images/causes/single-cause.jpg') }}" alt="">
+                        <img class="img-responsive" src="{{ URL::asset('storage/project/'.$product->image_path) }}" alt="" style="width: 1920px;">
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12">
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-12">
 
                             @if(auth()->check())
                                 <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
@@ -70,7 +70,7 @@
                                 <a href="#invest" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Investasi Sekarang</span></a>
 
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-xs-12">
                         <div class="short-stats clearfix">
                             <h5><i class="fa fa-clock-o"></i>{{$product->days_left}} Hari</h5>
                         </div>
