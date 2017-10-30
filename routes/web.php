@@ -235,8 +235,9 @@ Route::prefix('admin/dompet')->group(function(){
 
 // Blog
 Route::prefix('admin/blog')->group(function(){
+    Route::get('/', 'Admin\BlogController@index')->name('admin-blog-list');
     Route::get('/create', 'Admin\BlogController@create')->name('blog-create');
-    Route::post('/', 'Admin\BlogController@store');
+    Route::post('/create/save', 'Admin\BlogController@store');
 });
 
 // End admin Routing

@@ -30,6 +30,12 @@ class BlogController extends Controller
         $this->middleware('auth:user_admins');
     }
 
+    public function index(){
+        $blogs = Blog::all();
+
+        return View('admin.show-blogs', compact('blogs'));
+    }
+
 
     public function create(){
         $categories = Category::all();
