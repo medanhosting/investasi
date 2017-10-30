@@ -24,13 +24,23 @@
                     </ul>
                 </div>
 
-                <div class="col-md-12 ">
+                <div class="col-md-6 ">
+                    <div class="image-wrapper">
+                        <img class="img-responsive" src="{{asset('frontend_images/featured-image-11.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 ">
                     <div class="about-right-text">
                         <div class="widget-title">
-                            <h4>Sukses mengunggah foto</h4>
-                            <p>Mohon menunggu untuk melanjutkan verifikasi Anda dengan klik link di bawah ini!</p>
-                            <a href="{{route('verify-signature-photo')}}" class="btn btn-big btn-solid">Unggah Foto Signature</a>
+                            <h4>Unggah foto signature Anda seperti contoh </h4>
                         </div>
+                        <p class="first">Mengapa harus upload foto? karena ....... </p>
+                        <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptates dolor reprehenderit, deserunt, quibusdam repellat architecto blanditiis a, nulla inventore minima necessitatibus illum molestias, quas molestiae maiores tempora temporibus incidunt ea! Voluptate temporibus repellat nulla omnis nesciunt illum odit dicta fuga id!</p>
+                        <br/>
+                        {!! Form::open(array('action' => 'Frontend\VerificationController@UploadSignaturePhoto', 'method' => 'POST', 'role' => 'form', 'enctype' => 'multipart/form-data', 'novalidate')) !!}
+                        {{ csrf_field() }}
+                        {!! Form::file('signature-photo', array('id' => 'signature-photo', 'class' => 'file')) !!}
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>

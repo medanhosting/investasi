@@ -257,6 +257,8 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 // Photo Verification
 Route::get('/verifyphoto', 'Frontend\VerificationController@VerifyPhoto')->name("verify-photo");
 Route::post('/verifyphoto', 'Frontend\VerificationController@UploadPhoto');
+Route::get('/verifysignaturephoto', 'Frontend\VerificationController@VerifySignaturePhoto')->name("verify-signature-photo");
+Route::post('/verifysignaturephoto', 'Frontend\VerificationController@UploadSignaturePhoto');
 // Photo Verification
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -27,9 +27,9 @@
                 <div class="col-md-12 ">
                     <div class="about-right-text">
                         <div class="widget-title">
-                            <h4>Sukses mengunggah foto</h4>
-                            <p>Mohon menunggu untuk melanjutkan verifikasi Anda dengan klik link di bawah ini!</p>
-                            <a href="{{route('verify-signature-photo')}}" class="btn btn-big btn-solid">Unggah Foto Signature</a>
+                            <h4>Sukses mengunggah foto signature</h4>
+                            <p>Mohon menunggu untuk memverifikasi foto signature Anda</p>
+                            <a href="{{route('my-profile')}}" class="btn btn-big btn-solid">Kembali</a>
                         </div>
                     </div>
                 </div>

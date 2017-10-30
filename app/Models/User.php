@@ -48,6 +48,8 @@ class User extends Authenticatable
         'updated_at',
         'updated_by',
         'email_token',
+        'photo_verification',
+        'signature_verification',
         'username'
     ];
 

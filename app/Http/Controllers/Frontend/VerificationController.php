@@ -41,4 +41,31 @@ class VerificationController extends Controller
         $user->save();
         return View('frontend.photo-verification-done');
     }
+
+    public function verifySignaturePhoto(){
+        $user = Auth::user();
+        if($user->status_id == 18){
+            return back();
+        }
+        return View('frontend.signature-verification');
+    }
+
+    //Verify Signature Photo
+    public function uploadSignaturePhoto(Request $request){
+        $user = User::find(Auth::user()->id);
+        $user->status_id = 18;
+
+        // Get image extension
+        $img = Image::make($request->file('signature-photo'));
+        $extStr = $img->mime();
+        $ext = explode('/', $extStr, 2);
+
+        $filename = $user->first_name.'_'.$user->last_name.'_'.Carbon::now('Asia/Jakarta')->format('Ymdhms'). '_0.'. $ext[1];
+
+        $img->save(public_path('storage/signature_verification/'. $filename), 75);
+
+        $user->photo_validation = $filename;
+        $user->save();
+        return View('frontend.signature-verification-done');
+    }
 }
