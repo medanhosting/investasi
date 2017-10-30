@@ -52,6 +52,7 @@
                                     <th>Judul</th>
                                     <th>Kategori</th>
                                     <th>Terbaca</th>
+                                    <th>Status</th>
                                     <th>Tanggal Dibuat</th>
                                     <th>Opsi</th>
                                 </tr>
@@ -64,9 +65,17 @@
                                         <td>{{ $blog->title}}</td>
                                         <td>{{ $blog->category->name }}</td>
                                         <td>{{ $blog->read_count }}</td>
+                                        <td>
+                                            @if($blog->status_id == 1)
+                                                Publish
+                                            @else
+                                                Unpublish
+                                            @endif
+                                        </td>
                                         <td>{{ \Carbon\Carbon::parse($blog->created_at)->format('j F y')}}</td>
                                         <td>
-                                            <a href="#" class="btn btn-primary">Detil</a>
+                                            <a href="#" target="_blank" class="btn btn-primary">Detail</a>
+                                            <a href="{{ route('blog-edit', ['id' => $blog->id]) }}" target="_blank" class="btn btn-primary">Ubah</a>
                                         </td>
                                     </tr>
                                     @php ($idx++)
