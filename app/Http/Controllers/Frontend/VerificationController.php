@@ -64,7 +64,7 @@ class VerificationController extends Controller
 
         $img->save(public_path('storage/signature_verification/'. $filename), 75);
 
-        $user->photo_validation = $filename;
+        $user->signature_validation = $filename;
         $user->save();
         return View('frontend.signature-verification-done');
     }
