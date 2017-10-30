@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="row features">
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Investasi sekarang adalah list proyek yang dapat didanai, link ini sama seperti pada link investasi pada menu utama di header">
                         <div class="feature clearfix">
                             <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
                             <h4>Investasi sekarang</h4>
@@ -24,7 +24,8 @@
 						"><span>Lihat Semua</span></a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 ">
+
+                    <div class="col-md-3 col-sm-6 " data-toggle="tooltip" data-placement="bottom" title="Dompet saya adalah menu yang digunakan investor untuk melakukan deposit, memeriksa saldo maupun melakukan penarikan.">
                         <div class="feature clearfix">
                             <div class="icon_we"><i class="fa fa-money"></i></div>
                             <h4>Dompet Saya</h4>
@@ -36,7 +37,7 @@
 						"><span>Lihat Semua</span></a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Portfolio Saya adalah menu untuk investor memerika portfolio investasi yang mereka miliki.">
                         <div class="feature  clearfix">
                             <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                             <h4> Portfolio Saya </h4>
@@ -48,7 +49,7 @@
 						"><span>Lihat Semua</span></a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Pendapatan adalah menu investor melakukan pengecekan terhadap hasil keuntungan (kerugian) hasil bunga atau dividen atau bagi hasil dari investasinya.">
                         <div class="feature  clearfix">
                             <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
                             <h4>Pendapatan</h4>

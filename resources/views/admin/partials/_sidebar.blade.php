@@ -39,22 +39,22 @@
                     </li>
                     <li>
                         <a href="{{ route('dompet-request') }}">
-                            <i class="fa fa-exclamation-triangle"></i> Request Penarikan Dompet
+                            <i class="fa fa-exclamation-triangle"></i> Request Penarikan Dana
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('vendor-list') }}">
-                            <i class="fa fa-money"></i> Investor List
+                            <i class="fa fa-money"></i> Owner List
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('customer-list') }}">
-                            <i class="fa fa-users"></i> Customer List
+                            <i class="fa fa-users"></i> Investor List
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('dompet-list') }}">
-                            <i class="fa fa-money"></i> Dompet List
+                            <i class="fa fa-money"></i> Semua Penarikan Dana
                         </a>
                     </li>
                     <li><a><i class="fa fa-tags"></i> Produk Investasi <span class="fa fa-chevron-down"></span></a>
@@ -65,8 +65,8 @@
                     </li>
                     <li><a><i class="fa fa-tags"></i> Blog <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Show</a></li>
-                            <li><a href="{{route ('blog-create')}}">Tambah</a></li>
+                            <li><a href="{{ route('admin-blog-list') }}">Show</a></li>
+                            <li><a href="{{ route ('blog-create') }}">Tambah</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-edit"></i> Banner <span class="fa fa-chevron-down"></span></a>

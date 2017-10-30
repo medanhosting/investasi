@@ -152,6 +152,7 @@
                                                 <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
+                                                <th>Tanggal</th>
                                                 <th>Detail</th>
                                             </tr>
                                             </thead>
@@ -176,6 +177,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </td>
+                                                                <td>{{ $product->days_left }} </td>
                                                                 <td>
                                                                     <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
                                                                         <button class="btn btn-primary">Detail</button>
