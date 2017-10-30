@@ -188,7 +188,7 @@
 
     <!-- Modal Checkout -->
     <div class="modal fade" id="modal-checkout-confirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">
-        <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 {!! Form::open(array('action' => array('Frontend\PaymentController@pay', $product->id), 'method' => 'POST', 'role' => 'form')) !!}
                 {{ csrf_field() }}
@@ -207,7 +207,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <label class="pull-right">Jumlah Investasi:</label>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-3 col-sm-6">
                             <span id="checkout-invest-amount" class="pull-right">Rp 200.000</span>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <label class="pull-right">Biaya Admin:</label>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-3 col-sm-6">
                             <span id="checkout-admin-fee" class="pull-right">Rp 200.000</span>
                         </div>
                     </div>
@@ -223,8 +223,15 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <label class="pull-right">Total:</label>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-3 col-sm-6">
                             <span id="checkout-total-invest" class="pull-right">Rp 400.000</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p class="font-14" style="color:red;">
+                                Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                            </p>
                         </div>
                     </div>
                     {{ Form::hidden('checkout-invest-amount-input', '', array('id' => 'checkout-invest-amount-input')) }}
@@ -233,12 +240,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-error" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-solid">Bayar Sekarang</button>
+                    <button id="submit" type="submit" class="btn btn-solid">Bayar Sekarang</button>
                 </div>
 
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
-
 @endsection

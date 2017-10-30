@@ -23,7 +23,7 @@ function modalCheckout(){
         adminFee += 4000;
         $("#checkout-admin-fee-input").val(4000);
         $("#checkout-admin-fee").html("Rp 4.000");
-        $("#checkout-payment-method").html("Akun Virtual")
+        $("#checkout-payment-method").html("Bank Transfer")
     }
     else if(payment === "wallet"){
         $("#checkout-admin-fee-input").val(0);
