@@ -30,6 +30,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  */
 class WalletStatement extends Eloquent
 {
+    public $incrementing = false;
     public $timestamps = false;
 
     protected $casts = [

@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Session;
 
 class DompetController extends Controller
 {
@@ -45,24 +46,25 @@ class DompetController extends Controller
     }
 
     public function acceptOrder($id){
-        $trx = Transaction::find($id);
+        $trx = WalletStatement::find($id);
 
         $trx->status_id = 6;
         $trx->save();
 
-        return redirect::route('new-order-list');
+        Session::flash('message', 'Wallet Statement Accepted!');
+
+        return redirect::route('dompet-request');
     }
 
-    public function rejectOrder(Request $request){
-        $trx = Transaction::find(Input::get('reject-trx-id'));
+    public function rejectOrder($id){
+        $trx = WalletStatement::find($id);
 
         $trx->status_id = 10;
-        if(!empty(Input::get('reject-reason'))){
-            $trx->reject_note = Input::get('reject-reason');
-        }
         $trx->save();
 
-        return redirect::route('new-order-list');
+        Session::flash('message', 'Wallet Statement Rejected!');
+
+        return redirect::route('dompet-request');
     }
 
     public function payment(){

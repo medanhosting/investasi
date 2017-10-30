@@ -231,6 +231,8 @@ Route::prefix('admin/dompet')->group(function(){
     Route::get('/', 'Admin\DompetController@index')->name('dompet-list');
     Route::get('/request', 'Admin\DompetController@newRequest')->name('dompet-request');
     Route::get('/detail/{id}', 'Admin\TransactionController@detail')->name('transaction-detail');
+    Route::get('/accept/{id}', 'Admin\DompetController@AcceptOrder');
+    Route::get('/reject/{id}', 'Admin\DompetController@RejectOrder');
 });
 
 // Blog

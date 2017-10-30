@@ -25,16 +25,17 @@
                             <h2>Request Penarikan Dompet</h2>
                             <div class="clearfix"></div>
                         </div>
+                        @include('admin.partials._success')
                         <div class="x_content">
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                                 <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Tanggal</th>
-                                    <th>Deskripsi</th>
-                                    <th class="text-right">Jumlah</th>
-                                    <th>Option</th>
-                                </tr>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tanggal</th>
+                                        <th>Deskripsi</th>
+                                        <th class="text-right">Jumlah</th>
+                                        <th>Option</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                 @php( $idx = 1 )
@@ -45,8 +46,8 @@
                                             <td>{{ $statement->description }}</td>
                                             <td class="text-right">Rp {{ $statement->amount }}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Terima</a>
-                                                <a href="#" class="btn btn-danger">Tolak</a>
+                                                <a onclick="modalPop('{{ $statement->id }}', 'accept', '/admin/dompet/accept/')" class="btn btn-primary">Terima</a>
+                                                <a onclick="modalPop('{{ $statement->id }}', 'cancel', '/admin/dompet/reject/')" class="btn btn-danger">Tolak</a>
                                             </td>
 
                                         </tr>
@@ -63,6 +64,10 @@
         </div>
     </div>
     <!-- /page content -->
+
+    <!-- small modal -->
+    @include('admin.partials._small_modal')
+    <!-- /small modal -->
 
     <!-- footer -->
     @include('admin.partials._footer')
