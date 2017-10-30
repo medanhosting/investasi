@@ -4,3 +4,20 @@
     color: #444;
     margin-bottom: 10px;
 }
+
+.vendor-profile .nav-pills>li.active>a, .vendor-profile .nav-pills>li.active>a:focus, .vendor-profile .nav-pills>li.active>a:hover{
+    background-color: #ff7a00;
+}
+
+.vendor-profile .nav a{
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.vendor-profile .nav li:first-child a{
+    margin-right: 3px;
+}
+
+.vendor-profile .tab-content{
+    padding-top: 25px;
+}

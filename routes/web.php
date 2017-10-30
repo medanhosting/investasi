@@ -72,6 +72,9 @@ Route::prefix('/payment')->group(function (){
 //Referral
 Route::get('/referral', 'Frontend\ReferralController@ShowReferral');
 
+//Vendor
+Route::get('/vendor/{vendorObj}', 'Frontend\VendorController@show')->name('vendor-profile-show');
+
 //End Frontend Routing
 
 // Rajaongkir

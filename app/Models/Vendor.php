@@ -25,11 +25,13 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $modified_by
  *
  * @property \App\Models\Status $status
+ * @property \Illuminate\Database\Eloquent\Collection $products
  *
  * @package App\Models
  */
 class Vendor extends Eloquent
 {
+    public $incrementing = false;
     public $timestamps = false;
 
     protected $casts = [
@@ -42,6 +44,7 @@ class Vendor extends Eloquent
     ];
 
     protected $fillable = [
+        'id',
         'user_id',
         'name',
         'description',
@@ -56,9 +59,13 @@ class Vendor extends Eloquent
     {
         return $this->belongsTo(\App\Models\Status::class);
     }
+
     public function user()
     {
         return $this->belongsTo(\App\Models\User::class);
     }
 
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
 }

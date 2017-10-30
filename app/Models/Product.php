@@ -50,7 +50,6 @@ class Product extends Eloquent
 
 	protected $casts = [
 		'user_id' => 'int',
-		'vendor_id' => 'int',
 		'raising' => 'float',
 		'external_commitment' => 'float',
 		'raised' => 'float',
@@ -115,7 +114,6 @@ class Product extends Eloquent
     public function category(){
         return $this->belongsTo(\App\Models\Category::class);
     }
-
 
     public function product_image(){
 	    return $this->hasMany(\App\Models\ProductImage::class);

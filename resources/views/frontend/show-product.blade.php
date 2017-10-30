@@ -175,7 +175,7 @@
                         <h1>{{$vendor->name}}</h1>
                         {!! $vendor->description !!}
                         <p class="read-more" style="">
-                            <button href="#" class="btn btn-solid">LIHAT SELENGKAPNYA</button>
+                            <a href="{{ route('vendor-profile-show', ['vendorObj' => $vendor->id]) }}" class="btn btn-solid">LIHAT SELENGKAPNYA</a>
                         </p>
                     </div>
                 </div>
