@@ -10,15 +10,19 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Http\Controllers\Controller;
+use App\Mail\AcceptPenarikan;
 use App\Models\Transaction;
 use App\Models\TransferConfirmation;
+use App\Models\User;
 use App\Models\WalletStatement;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
 
 class DompetController extends Controller
 {
@@ -49,9 +53,15 @@ class DompetController extends Controller
         $trx = WalletStatement::find($id);
 
         $trx->status_id = 6;
+        $trx->date = Carbon::now('Asia/Jakarta');
         $trx->save();
 
         Session::flash('message', 'Wallet Statement Accepted!');
+
+        //Send Email
+        $userData = User::find($trx->user_id);
+        $acceptEmail = new AcceptPenarikan($trx, $userData);
+        Mail::to($userData->email)->send($acceptEmail);
 
         return redirect::route('dompet-request');
     }
@@ -60,6 +70,7 @@ class DompetController extends Controller
         $trx = WalletStatement::find($id);
 
         $trx->status_id = 10;
+        $trx->date = Carbon::now('Asia/Jakarta');
         $trx->save();
 
         Session::flash('message', 'Wallet Statement Rejected!');
