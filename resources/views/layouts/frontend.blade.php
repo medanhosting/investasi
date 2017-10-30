@@ -81,11 +81,6 @@
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-bayu.js') }}"></script>
 
 <script>
-    function adsModalFunction() {
-        $("#adsModal").modal()
-    }
-
-
     $('#datatable-responsive-debt').DataTable();
     $('#datatable-responsive-equity').DataTable();
     $('#datatable-responsive-sharing').DataTable();

@@ -268,6 +268,10 @@
     </div>
 
 <script>
+    function adsModalFunction() {
+        $("#adsModal").modal()
+    }
+
     $( document ).ready(function() {
         setTimeout(adsModalFunction, 60000);
     });

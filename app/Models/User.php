@@ -19,7 +19,9 @@ class User extends Authenticatable
     protected $casts = [
         'id' => 'string',
         'address_latitude' => 'float',
-        'address_longitude' => 'float'
+        'address_longitude' => 'float',
+        'wallet_amount' => 'float',
+        'investme_point' => 'float'
     ];
 
     protected $fillable = [
@@ -31,6 +33,9 @@ class User extends Authenticatable
         'username',
         'address_latitude',
         'address_longitude',
+        'wallet_amount',
+        'investme_point',
+        'income',
         'identity_number',
         'dob',
         'gender',
@@ -55,4 +60,17 @@ class User extends Authenticatable
         'password',
         'email_token'
     ];
+
+    public function getWalletAmountAttribute(){
+        return number_format($this->attributes['wallet_amount'],0, ",", ".");
+    }
+
+    public function getInvestmePointAttribute(){
+        return number_format($this->attributes['investme_point'],0, ",", ".");
+    }
+
+    public function getIncomeAttribute(){
+        return number_format($this->attributes['income'],0, ",", ".");
+    }
+
 }

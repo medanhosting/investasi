@@ -30,9 +30,9 @@ class WalletController extends Controller
     {
         $user = Auth::user();
         $userId = $user->id;
-
+        $user = User::find($userId);
         $statements = WalletStatement::where('user_id', $userId)->orderByDesc('created_on')->get();
-        return View ('frontend.show-wallet', compact('statements'));
+        return View ('frontend.show-wallet', compact('statements', 'user'));
     }
 
     public function DepositShow()

@@ -67,7 +67,7 @@
                                 <button type="button" data-toggle="modal" data-target="#prospektusModal" class="btn btn-big btn-solid "><span>Prospektus</span></button>
                             @endif
 
-                                <a href="#invest" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Investasi Sekarang</span></a>
+                            <a href="#invest" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Investasi Sekarang</span></a>
 
                     </div>
                     <div class="col-md-5 col-xs-12">

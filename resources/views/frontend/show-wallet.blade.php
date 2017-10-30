@@ -23,9 +23,13 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="row">
                         <div class="col-md-7 col-xs-12 center">
-                            <h2>
-                                <i class="fa fa-money fa-1x"></i> Rp 5.000.000
-                            </h2>
+                            <h3>
+                                <i class="fa fa-money fa-1x"></i> Dompet = Rp {{$user->wallet_amount}}
+                            </h3>
+                            <h3>
+                                <i class="fa fa-money fa-1x"></i> Investme Point = Rp {{$user->investme_point}}
+                            </h3>
+
                         </div>
                         <div class="col-md-5 col-xs-12 center" style="padding-top:3%;">
                             <a href="{{route('deposit')}}" class="btn btn-big btn-success">Top Up Dompet</a>
