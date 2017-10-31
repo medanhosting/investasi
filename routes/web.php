@@ -47,6 +47,7 @@ Route::post('/withdraw-submit', [
     'uses' => 'Frontend\WalletController@WithdrawSubmit',
     'as' => 'withdrawSubmit'
 ]);
+Route::get('/withdraw/cancel/{id}', 'Frontend\WalletController@cancelWithdrawRequest')->name('withdraw-cancel');
 
 //product
 Route::get('/project', 'Frontend\ProductController@ProductList')->name('project-list');
