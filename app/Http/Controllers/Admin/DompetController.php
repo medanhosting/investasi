@@ -69,7 +69,7 @@ class DompetController extends Controller
     public function rejectOrder($id){
         $trx = WalletStatement::find($id);
 
-        $trx->status_id = 10;
+        $trx->status_id = 7;
         $trx->date = Carbon::now('Asia/Jakarta');
         $trx->save();
 
