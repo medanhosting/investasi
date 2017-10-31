@@ -18,6 +18,19 @@
     #chart_wrap {
         padding-bottom: 75%;
     }
+
+    .page-banner {
+        padding-top: 10% !important;
+    }
+
+    .modal{
+        padding-top:40% !important;
+    }
+
+    #modal-checkout-confirm .modal-body{
+        height: 150px;
+        overflow-y: auto;
+    }
 }
 
 #chart_div {
@@ -132,7 +145,7 @@ h5 a:hover{
 
 /* change banner  */
 .page-banner {
-    height: 200px;
+    /*height: 200px;*/
     padding-top: 68px;
 }
 
@@ -244,4 +257,8 @@ p{
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+@media only screen and (max-device-width : 480px) {
+    /* Styles */
 }

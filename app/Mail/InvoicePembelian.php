@@ -18,16 +18,20 @@ class InvoicePembelian extends Mailable
     use Queueable, SerializesModels;
 
     protected $transaction;
+    protected $user;
+    protected $paymentMethod;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($transactionDB)
+    public function __construct($payment, $transactionDB, $user)
     {
         //
+        $this->paymentMethod = $payment;
         $this->transaction = $transactionDB;
+        $this->user = $user;
     }
 
     /**
@@ -39,6 +43,8 @@ class InvoicePembelian extends Mailable
     {
         return $this->view('email.invoice-pembelian')->with([
             'transaction' => $this->transaction,
+            'paymentMethod' => $this->paymentMethod,
+            'user' => $this->user,
         ]);
     }
 

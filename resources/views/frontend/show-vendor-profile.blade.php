@@ -41,7 +41,7 @@
                         <div id="bio" class="tab-pane fade in active">
                             {!! $vendor->description !!}
                         </div>
-                        <div id="project" class="tab-pane fade">
+                        <div id="project" class="tab-pane fade" style="padding-bottom: 40px;">
                             <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>

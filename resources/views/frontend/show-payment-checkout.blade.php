@@ -6,11 +6,11 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Detail Investasi</h2>
+                <h2>Pembayaran</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
                         <i class="fa fa-angle-double-right"></i><a href="{{route('project-list')}}">Daftar Investasi</a>
-                        <i class="fa fa-angle-double-right"></i>Detil
+                        <i class="fa fa-angle-double-right"></i>Pembayaran
                     </h5>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <a data-toggle="modal" data-target="#profileModal">
                             <img src="{{ URL::asset('frontend_images/default-profile.jpg') }}" style="height:50%;width:50%;">
                             <p class="font-14">
-                                By <b>{{ $product->Vendor->name }}</b> <br> {{$projectCount}} Project
+                                By Nama<br> 2 Project
                             </p>
                         </a>
                     </div>
@@ -61,13 +61,13 @@
                 <div class="col-md-4 col-xs-12">
                     <div class="col-md-7 col-xs-12">
 
-                            @if(auth()->check())
-                                <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
-                            @else
-                                <button type="button" data-toggle="modal" data-target="#prospektusModal" class="btn btn-big btn-solid "><span>Prospektus</span></button>
-                            @endif
+                        @if(auth()->check())
+                            <a href="{{route('download', ['filename' => 'test.pdf'])}}" class="btn btn-big btn-solid "><span>Prospektus</span></a>
+                        @else
+                            <button type="button" data-toggle="modal" data-target="#prospektusModal" class="btn btn-big btn-solid "><span>Prospektus</span></button>
+                        @endif
 
-                            <a href="#invest" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Investasi Sekarang</span></a>
+                        <a href="#invest" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Investasi Sekarang</span></a>
 
                     </div>
                     <div class="col-md-5 col-xs-12">
@@ -149,10 +149,9 @@
                             {{--</table>--}}
 
                             @if(auth()->check())
-                                {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
-                                <button type="button" data-toggle="modal" data-target="#readProspectusModal" data-backdrop="static" data-keyboard="false" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                <button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>
                             @else
-                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
                             @endif
 
                         </div>
@@ -183,31 +182,6 @@
                 </div>
                 <div class="modal-footer">
                     &nbsp;
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal prospectus read -->
-    <div class="modal fade" id="readProspectusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="padding-top:10%;">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Perhatian</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <p class="font-16" style="color:red;">
-                                Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-error" data-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-big btn-solid" data-dismiss="modal" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Lanjutkan</span></button>
                 </div>
             </div>
         </div>
@@ -256,9 +230,9 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <label>
-                                <input type="checkbox" name="check1" id="check1" onclick="check()"> Saya telah membaca dan memahami isi dari prospectus produk investasi ini, dan saya telah menyetujui syarat dan ketentuan dari investasi.me
-                            </label>
+                            <p class="font-14" style="color:red;">
+                                Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                            </p>
                         </div>
                     </div>
                     {{ Form::hidden('checkout-invest-amount-input', '', array('id' => 'checkout-invest-amount-input')) }}
@@ -267,25 +241,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-error" data-dismiss="modal">Tutup</button>
-                    <button id="submit" type="submit" class="btn btn-solid" disabled>Bayar Sekarang</button>
+                    <button id="submit" type="submit" class="btn btn-solid">Bayar Sekarang</button>
                 </div>
 
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    {{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f6e999249e3f1c"></script>--}}
-
-    <script type="text/javascript">
-        function check(){
-
-            if(document.getElementById("check1").checked){
-                document.getElementById("submit").disabled = false;
-            }
-            else if(document.getElementById("check1").checked == false){
-                document.getElementById("submit").disabled = true;
-            }
-        }
-    </script>
 @endsection

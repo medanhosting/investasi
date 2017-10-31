@@ -65,6 +65,8 @@
                                             <td class="text-right">Rp {{ $statement->amount }}</td>
                                             @if($statement->status_id == 3)
                                                 <td>Pending</td>
+                                            @elseif($statement->status_id == 7)
+                                                <td>Dibatalkan</td>
                                             @else
                                                 <td>Selesai</td>
                                             @endif
