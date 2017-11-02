@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Frontend;
 
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Vendor;
 
 class VendorController extends Controller
@@ -18,5 +19,15 @@ class VendorController extends Controller
         $vendor = $vendorObj;
 
         return View('frontend.show-vendor-profile', compact('vendor'));
+    }
+    public function RequestOwner(){
+        $categories = Category::all();
+
+        return View('frontend.create-owner-register', compact('categories'));
+    }
+    public function RequestUpdate(){
+        $categories = Category::all();
+
+        return View('frontend.create-update-product', compact('categories'));
     }
 }

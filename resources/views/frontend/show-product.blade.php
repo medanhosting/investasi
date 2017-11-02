@@ -84,7 +84,7 @@
             <div class="container" >
                 <div class="row">
 
-                    <div class="col-md-8 col-xs-12">
+                    <div class="col-md-12 col-xs-12">
                         <div class="donation clearfix">
                             <ul class="tabs-switcher nav nav-tabs clearfix">
                                 <li class="active">
@@ -96,67 +96,162 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane row active" id="tab-1">
-                                    <p class="col-xs-12">
-                                        {!! $vendor->description !!}
-                                    </p>
+                                    <div class="col-md-8 col-xs-12">
+                                        <p>
+                                            {!! $vendor->description !!}
+                                        </p>
+                                    </div>
+
+                                    <form class="donation-form col-md-4 col-xs-12 row">
+                                        <h3>Bantu Proyek Ini</h3>
+                                        <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;margin-bottom:10px;">
+                                            <h5>Jumlah Investasi</h5>
+                                            <div class="radio-inputs">
+                                                <input type="radio" id="amount-1" name="amount" value="50000" checked>
+                                                <label for="amount-1"><span></span>Rp 50.000</label>
+                                                <input type="radio" id="amount-2" name="amount" value="100000">
+                                                <label for="amount-2"><span></span>Rp 100.000</label>
+                                                <input type="radio" id="amount-3" name="amount" value="150000">
+                                                <label for="amount-3"><span></span>Rp 150.000</label>
+                                            </div>
+                                        </div>
+                                        <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;">
+                                            <h5>Pilihan Pembayaran</h5>
+                                            <div class="radio-inputs">
+                                                <input type="radio" id="payment-1" name="payment" value="wallet" checked>
+                                                <label for="payment-1"><span></span>Dompet</label>
+                                                <input type="radio" id="payment-2" name="payment" value="credit_card">
+                                                <label for="payment-2"><span></span>Kartu Kredit</label>
+                                                <input type="radio" id="payment-3" name="payment" value="bank_transfer">
+                                                <label for="payment-3"><span></span>Bank Transfer</label>
+                                            </div>
+                                        </div>
+                                        <div class="field col-sm-12 text-right" >
+                                            {{--<table class="bag_total">--}}
+                                            {{--<tr class="cart-subtotal clearfix">--}}
+                                            {{--<th>Sub total</th>--}}
+                                            {{--<td>Rp 5.000.000</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr class="shipping clearfix">--}}
+                                            {{--<th>Admin</th>--}}
+                                            {{--<td>Rp 30.000</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr class="total clearfix">--}}
+                                            {{--<th>Total</th>--}}
+                                            {{--<td>Rp 5.030.000</td>--}}
+                                            {{--</tr>--}}
+                                            {{--</table>--}}
+
+                                            @if(auth()->check())
+                                                {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
+                                                <button type="button" data-toggle="modal" data-target="#readProspectusModal" data-backdrop="static" data-keyboard="false" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                            @else
+                                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                            @endif
+
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="tab-pane row" id="tab-2">
-                                    <p class="col-xs-12">
+                                    <div class="col-md-12">
+                                        <a href="{{route('update-request')}}" class="btn btn-big btn-solid "><i class="fa fa-plus"></i><span>Tambah Update Proyek</span></a>
+                                    </div>
 
-                                    </p>
-                                </div>
+                                    <div class="container">
+                                        <div class="page-header">
+                                            <h1 id="timeline">Update Proyek</h1>
+                                        </div>
+                                        <ul class="timeline">
+                                            <li>
+                                                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Pembagian Keuntungan Perusahaan</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 9 Mei 2018</small></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>Produksi telah selesai dan akan dilakukan distribusi pembagian produk. Keuntungan akan diupdate dalam berita selanjutnya.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="timeline-inverted">
+                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Update Progress Pabrik</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3 Januari 2018</small></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>Tahap produksi telah memasuki progress 80% dan dalam waktu dekat produk dapat dipasarkan.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Proyek Dimulai</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 20 Juli 2017</small></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>Memasuki tahap produksi produk</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="timeline-inverted">
+                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Dana Terkumpul 100%</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 17 Juli 2017</small></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>Dana telah terkumpul 100% dan akan memasuki tahap produksi.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Update Foto dan Video</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 5 Juni 2017</small></p>
+                                                        </a>
+                                                    </div>
+                                                        <div class="timeline-body">
+                                                            <p>Owner melakukan update foto dan video dan data yang di tampilkan kepada investor merupakan data valid dari owner.</p>
+                                                        </div>
+                                                </div>
+                                            </li>
+                                            <li class="timeline-inverted">
+                                                <div class="timeline-badge success"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                                                <div class="timeline-panel">
+                                                    <div class="timeline-heading">
+                                                        <a href="#">
+                                                            <h4 class="timeline-title">Project Listing</h4>
+                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 Juni 2017</small></p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="timeline-body">
+                                                        <p>Proyek sudah melalui tahap verifikasi dari pihak investasi.me dan sudah dapat diinvestasi oleh para investor.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                             </div>
                         </div>
                     </div>
-                    <form class="donation-form col-md-4 col-xs-12 row">
-                        <h3>Bantu Proyek Ini</h3>
-                        <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;margin-bottom:10px;">
-                            <h5>Jumlah Investasi</h5>
-                            <div class="radio-inputs">
-                                <input type="radio" id="amount-1" name="amount" value="50000" checked>
-                                <label for="amount-1"><span></span>Rp 50.000</label>
-                                <input type="radio" id="amount-2" name="amount" value="100000">
-                                <label for="amount-2"><span></span>Rp 100.000</label>
-                                <input type="radio" id="amount-3" name="amount" value="150000">
-                                <label for="amount-3"><span></span>Rp 150.000</label>
-                            </div>
-                        </div>
-                        <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;">
-                            <h5>Pilihan Pembayaran</h5>
-                            <div class="radio-inputs">
-                                <input type="radio" id="payment-1" name="payment" value="wallet" checked>
-                                <label for="payment-1"><span></span>Dompet</label>
-                                <input type="radio" id="payment-2" name="payment" value="credit_card">
-                                <label for="payment-2"><span></span>Kartu Kredit</label>
-                                <input type="radio" id="payment-3" name="payment" value="bank_transfer">
-                                <label for="payment-3"><span></span>Bank Transfer</label>
-                            </div>
-                        </div>
-                        <div class="field col-sm-12 text-right" >
-                            {{--<table class="bag_total">--}}
-                            {{--<tr class="cart-subtotal clearfix">--}}
-                            {{--<th>Sub total</th>--}}
-                            {{--<td>Rp 5.000.000</td>--}}
-                            {{--</tr>--}}
-                            {{--<tr class="shipping clearfix">--}}
-                            {{--<th>Admin</th>--}}
-                            {{--<td>Rp 30.000</td>--}}
-                            {{--</tr>--}}
-                            {{--<tr class="total clearfix">--}}
-                            {{--<th>Total</th>--}}
-                            {{--<td>Rp 5.030.000</td>--}}
-                            {{--</tr>--}}
-                            {{--</table>--}}
-
-                            @if(auth()->check())
-                                {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
-                                <button type="button" data-toggle="modal" data-target="#readProspectusModal" data-backdrop="static" data-keyboard="false" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
-                            @else
-                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
-                            @endif
-
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

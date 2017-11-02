@@ -8,15 +8,13 @@
                     <div class="logo-wrap">
                         <a href="index.html">Investasi.me</a>
                     </div>
-                    <p>At vero eos et accusamus et iusto odio dignis
-                        simos ducimus  qui blanditiis praesentiumlo
-                        volupt </p>
+                    <p>Lebih dekat lagi terhubung dengan kami, ikuti dengan media sosial berikut ini.</p>
                     <div class="social-media-icons">
+                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
                         <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
                         <a href="#"><i class="fa fa-google-plus"></i><span>Google +</span></a>
-                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-                        <a href="#"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
-                        <a href="#"><i class="fa fa-skype"></i><span>Skype</span></a>
+                        <a href="#"><i class="fa fa-whatsapp "></i><span>Whatsapp</span></a>
+                        <a href="#"><i class="fa fa-instagram "></i><span>Instagram </span></a>
 
                     </div>
                 </div>
@@ -54,10 +52,10 @@
             <div class="col-md-6 col-sm-6">
                 <div class="subcribe widget clearfix">
                     <h4 class="title">Subscribe</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate provident amet reprehenderit!</p>
+                    <p>Dapatkan informasi terbaru seputar investasi.me, atau produk-produk pilihan kami.</p>
                     <form action="#">
                         <div class="field">
-                            <input type="email" name="e-mail" placeholder="Your E-mail">
+                            <input type="email" name="e-mail" placeholder="Email Anda">
                         </div>
                         <div class="field">
                             <button class="btn btn-min btn-solid"><span>Subscibe</span></button>

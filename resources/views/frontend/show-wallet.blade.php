@@ -27,7 +27,7 @@
                                 <i class="fa fa-money fa-1x"></i> Dompet = Rp {{$user->wallet_amount}}
                             </h3>
                             <h3>
-                                <i class="fa fa-money fa-1x"></i> Investme Point = Rp {{$user->investme_point}}
+                                <i class="fa fa-money fa-1x"></i> Investme Point = {{$user->investme_point}}
                             </h3>
 
                         </div>
