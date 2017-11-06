@@ -41,7 +41,6 @@
                                                 <th>Nama</th>
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
-                                                <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
                                                 <th>Detail</th>
@@ -59,7 +58,6 @@
                                                                 <td>Rp {{ $product->raising }}</td>
                                                                 <td>{{ $product->days_left }} </td>
                                                                 {{--<td>Rp {{ $product->raised }}</td>--}}
-                                                                <td>Rp -</td>
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
                                                                 <td>
                                                                     <div class="progress-bar-inner">
@@ -149,7 +147,6 @@
                                                 <th>Nama</th>
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
-                                                <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th>Progress</th>
                                                 <th>Tanggal</th>
@@ -168,7 +165,6 @@
                                                                 <td>Rp {{ $product->raising }}</td>
                                                                 <td>{{ $product->days_left }} </td>
                                                                 {{--<td>Rp {{ $product->raised }}</td>--}}
-                                                                <td>Rp -</td>
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
                                                                 <td>
                                                                     <div class="progress-bar-inner">

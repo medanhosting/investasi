@@ -18,6 +18,7 @@ Route::get('/about-us', 'Frontend\HomeController@AboutUs')->name('about');
 Route::get('/term-condition', 'Frontend\HomeController@TermCondition')->name('term-condition');
 Route::get('/privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
 Route::get('/tutorial', 'Frontend\HomeController@Tutorial')->name('tutorial');
+Route::get('/pengajuan', 'Frontend\HomeController@Pengajuan')->name('pengajuan');
 
 //blog
 Route::get('/blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
@@ -47,6 +48,7 @@ Route::post('/withdraw-submit', [
     'uses' => 'Frontend\WalletController@WithdrawSubmit',
     'as' => 'withdrawSubmit'
 ]);
+Route::get('/withdraw/cancel/{id}', 'Frontend\WalletController@cancelWithdrawRequest')->name('withdraw-cancel');
 
 //product
 Route::get('/project', 'Frontend\ProductController@ProductList')->name('project-list');
@@ -73,7 +75,10 @@ Route::prefix('/payment')->group(function (){
 Route::get('/referral', 'Frontend\ReferralController@ShowReferral');
 
 //Vendor
-Route::get('/vendor/{vendorObj}', 'Frontend\VendorController@show')->name('vendor-profile-show');
+Route::get('/owner/{vendorObj}', 'Frontend\VendorController@show')->name('vendor-profile-show');
+Route::get('/pengajuan-owner', 'Frontend\VendorController@RequestOwner')->name('owner-request');
+Route::get('/pengajuan-update', 'Frontend\VendorController@RequestUpdate')->name('update-request');
+
 
 //End Frontend Routing
 

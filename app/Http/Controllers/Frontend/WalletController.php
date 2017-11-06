@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Libs\Midtrans;
 use App\Libs\TransactionUnit;
+use App\Mail\RequestWithdrawInvestor;
 use App\Models\Cart;
 use App\Models\Transaction;
 use App\Models\User;
@@ -19,6 +20,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Webpatser\Uuid\Uuid;
@@ -155,15 +157,19 @@ class WalletController extends Controller
                 $bank = Input::get('bank');
                 //status 3=pending, 6=accepted, 7=rejected
                 $newStatement = WalletStatement::create([
-                    'id'            => Uuid::generate(),
-                    'user_id'       => $userId,
-                    'description'   => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
-                    'amount'          => $amount,
-                    'date'         => $dateTimeNow->toDateTimeString(),
-                    'status_id'        => 3,
-                    'created_on'    => $dateTimeNow->toDateTimeString()
+                    'id'                => Uuid::generate(),
+                    'user_id'           => $userId,
+                    'description'       => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
+                    'amount'            => $amount,
+                    'bank_name'         => $bank,
+                    'bank_acc_name'     => $accName,
+                    'bank_acc_number'   => $accNumber,
+                    'date'              => $dateTimeNow->toDateTimeString(),
+                    'status_id'         => 3,
+                    'created_on'        => $dateTimeNow->toDateTimeString()
                 ]);
-                $newStatement->save();
+
+                Mail::to('bayuindra091191@gmail.com')->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
             }
 
             //return ke page transaction
@@ -172,6 +178,14 @@ class WalletController extends Controller
         catch (\Exception $ex){
             Utilities::ExceptionLog('WalletWithdrawSubmit EX = '. $ex);
         }
+    }
 
+    public function CancelWithdrawRequest($id){
+        $wallet = WalletStatement::find($id);
+        $wallet->status_id = 7;
+        $wallet->updated_on = Carbon::now('Asia/Jakarta')->toDateTimeString();
+        $wallet->save();
+
+        return redirect()->route('my-wallet');
     }
 }

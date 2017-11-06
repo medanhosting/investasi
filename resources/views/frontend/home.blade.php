@@ -30,7 +30,7 @@
                             <div class="icon_we"><i class="fa fa-money"></i></div>
                             <h4>Dompet Saya</h4>
                             <div class="feature-div">
-                                <p>Rp. 5.000.000</p>
+                                <p>Rp. 25.000.000</p>
                                 <p>&nbsp;</p>
                             </div>
                             <a href="{{route('my-wallet')}}" class="btn btn-min btn-secondary
@@ -187,24 +187,73 @@
             <div class="row">
                 <!-- Blog Single -->
 
-                @for($i=0;$i<3;$i++)
-                    <div class="col-md-4 col-sm-6">
-                        <div class="blog-box">
-                            <div class="blog-top-desc">
-                                <div class="blog-date">
-                                    27 july 2017
-                                </div>
-                                <h4>This is News Title {{$i}}</h4>
-                                <i class="fa fa-user"></i> <strong>Admin</strong>
+                {{--@for($i=0;$i<3;$i++)--}}
+                    {{--<div class="col-md-4 col-sm-6">--}}
+                        {{--<div class="blog-box">--}}
+                            {{--<div class="blog-top-desc">--}}
+                                {{--<div class="blog-date">--}}
+                                    {{--27 july 2017--}}
+                                {{--</div>--}}
+                                {{--<h4>This is News Title {{$i}}</h4>--}}
+                                {{--<i class="fa fa-user"></i> <strong>Admin</strong>--}}
+                            {{--</div>--}}
+                            {{--<img src="{{ URL::asset('frontend_images/blog/img-1.jpg') }}" alt="">--}}
+                            {{--<div class="blog-btm-desc">--}}
+                                {{--<p>This is News highlight This is News highlight This is News highlight This is News highlight This is News highlight </p>--}}
+                                {{--<a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca  <i class="fa fa-arrow-right"></i> </a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+            {{--@endfor--}}
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="blog-box">
+                        <div class="blog-top-desc">
+                            <div class="blog-date">
+                                30 Okt 2017
                             </div>
-                            <img src="{{ URL::asset('frontend_images/blog/img-1.jpg') }}" alt="">
-                            <div class="blog-btm-desc">
-                                <p>This is News highlight This is News highlight This is News highlight This is News highlight This is News highlight </p>
-                                <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca  <i class="fa fa-arrow-right"></i> </a>
-                            </div>
+                            <h4>Industri Kerupuk 120 Tahun</h4>
+                            <i class="fa fa-user"></i> <strong>Admin</strong>
+                        </div>
+                        <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
+                        <div class="blog-btm-desc">
+                            <p>Industri kerupuk tradisional berusia 120 tahun di Indonesia </p>
+                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>
                         </div>
                     </div>
-            @endfor
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="blog-box">
+                        <div class="blog-top-desc">
+                            <div class="blog-date">
+                                22 Okt 2017
+                            </div>
+                            <h4>Inovasi Handphone Terbaru</h4>
+                            <i class="fa fa-user"></i> <strong>Admin</strong>
+                        </div>
+                        <img src="{{ URL::asset('storage/project/Gadget_Flextra.jpg') }}" alt="">
+                        <div class="blog-btm-desc">
+                            <p>Handphone pertama yang dapat dilipat  </p>
+                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="blog-box">
+                        <div class="blog-top-desc">
+                            <div class="blog-date">
+                                1 Nov 2017
+                            </div>
+                            <h4>Pabrik Plastik dengan Pelanggan Terbesr</h4>
+                            <i class="fa fa-user"></i> <strong>Admin</strong>
+                        </div>
+                        <img src="{{ URL::asset('storage/project/Plastik.jpg') }}" alt="">
+                        <div class="blog-btm-desc">
+                            <p>Pabrik plastik dengan pelanggan terbesar di Indonesia. </p>
+                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya <i class="fa fa-arrow-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
             <!-- Blog Single -->
 
             </div>

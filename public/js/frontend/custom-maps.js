@@ -7,9 +7,6 @@ function init() {
 
 var marker;
 $( document ).ready(function() {
-    setTimeout(adsModalFunction, 60000);
-
-
     var map = new GMaps({
         el: '#map',
         lat: -12.043333,

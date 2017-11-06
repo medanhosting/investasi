@@ -37,6 +37,7 @@
                                 <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>
                                 <li><a href="{{route('privacy-policy')}}">Kebijakan Privasi</a></li>
                                 <li><a href="{{route('contact')}}">Hubungi Kami</a></li>
+                                <li><a href="{{route('pengajuan')}}">Jadilah Partner Kami</a></li>
                             </ul>
                         </li>
                         <li>
@@ -102,6 +103,7 @@
                                                 <li><a href="{{route('term-condition')}}">Syarat & Ketentuan</a></li>
                                                 <li><a href="{{route('privacy-policy')}}">Kebijakan Privasi</a></li>
                                                 <li><a href="{{route('contact')}}">Hubungi Kami</a></li>
+                                                <li><a href="{{route('pengajuan')}}">Jadilah Partner Kami</a></li>
                                             </ul>
                                         </li>
                                         <li><a>Profil</a>

@@ -23,6 +23,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
+    <!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+
+    <!-- include summernote -->
+    <link rel="stylesheet" href="{{ URL::asset('css/admin/summernote/summernote.css') }}">
+
+    {{-- include timeline-dotted css --}}
+    <link rel="stylesheet" href="{{ URL::asset('css/frontend/timeline-dotted.css') }}" >
+
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/custom.css') }}" >
     <link rel="stylesheet" href="{{ URL::asset('css/frontend/custom-bayu.css') }}" >
@@ -33,6 +43,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -80,10 +91,45 @@
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-maps.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-bayu.js') }}"></script>
 
+{{-- js for wysiwyg editor --}}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+<script src="{{ URL::asset('js/admin/summernote/summernote.js') }}"></script>
+
 <script>
-    $('#datatable-responsive-debt').DataTable();
-    $('#datatable-responsive-equity').DataTable();
-    $('#datatable-responsive-sharing').DataTable();
+    $('#datatable-responsive-debt').DataTable({
+        "responsive": {
+            details: {
+                display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                type: ''
+            }
+        }
+    });
+    $('#datatable-responsive-equity').DataTable({
+        "responsive": {
+            details: {
+                display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                type: ''
+            }
+        }
+    });
+    $('#datatable-responsive-sharing').DataTable({
+        "responsive": {
+            details: {
+                display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                type: ''
+            }
+        }
+    });
+    $('#datatable-responsive').DataTable({
+        "responsive": {
+            details: {
+                display: $.fn.dataTable.Responsive.display.childRowImmediate,
+                type: ''
+            }
+        }
+    });
     $('#verification-photo').fileinput();
 
     /**
@@ -147,6 +193,19 @@
             tree.treeview();
         })
     })
+
+
+    $(function() {
+        $('.summernote').summernote({
+            height: 400
+        });
+//
+//        $('form').on('submit', function (e) {
+//            e.preventDefault();
+//            alert($('.summernote').summernote('code'));
+//            alert($('.summernote').val());
+//        });
+    });
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBROUPyS84INXyl7iqq0NxSLmHudbQ_Dc4&libraries=places&callback=init" async defer></script>
@@ -162,5 +221,6 @@
             type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 </script>
 <!--End of Zendesk Chat Script-->
+
 </body>
 </html>

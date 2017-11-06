@@ -50,11 +50,6 @@
                                 <div class="voluntee-image">
                                     <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture1.png') }}" alt="">
                                 </div>
-                                <ul class="socials">
-                                    <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                </ul>
                                 <span><a href="#" title="">Cheif Director</a></span>
                                 <h2><a href="#" title="">Steffen Fang</a></h2>
                                 <p>Berpengalaman lebih dari 17 tahun di bidang investasi & keuangan, baik sebagai advisor, banker,
@@ -73,12 +68,6 @@
                                 <div class="voluntee-image">
                                     <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture2.png') }}" alt="">
                                 </div>
-                                <ul class="socials">
-                                    <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
-                                </ul>
                                 <span><a href="#" title="">Cheif Director</a></span>
                                 <h2><a href="#" title="">Hevy Yafanny</a></h2>
                                 <p>Memulai karir sebagai auditor di Deloitte, Hevy Yafanny memiliki kemampuan & pengalaman yang tinggi
@@ -97,12 +86,6 @@
                                 <div class="voluntee-image">
                                     <img class="img-responsive" src="{{ URL::asset('frontend_images/Picture3.png') }}" alt="">
                                 </div>
-                                <ul class="socials">
-                                    <li><a href="#" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-
-                                </ul>
                                 <span><a href="#" title="">Cheif Director</a></span>
                                 <h2><a href="#" title="">Ryan Filbert</a></h2>
                                 <p> Ryan dikenal sebagai Praktisi dan Inspirator Investasi no 1 di Indonesia, Penulis Puluhan Buku Investasi

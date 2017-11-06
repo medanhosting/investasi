@@ -44,7 +44,8 @@ class ProductController extends Controller
         if(!empty($product->vendor_id)){
             $vendor = Vendor::find($product->vendor_id);
         }
-        return View ('frontend.show-product', compact('product', 'vendor'));
+        $projectCount = Product::where('vendor_id', $id)->count();
+        return View ('frontend.show-product', compact('product', 'vendor', 'projectCount'));
     }
 
     public function DownloadFile($filename)

@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="initial-scale=1.0"><meta name="format-detection" content="telephone=no"><title>Investasi.me - Pembelian</title><style type="text/css">.socialLinks {font-size: 6px;}
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="initial-scale=1.0"><meta name="format-detection" content="telephone=no"><title>Investasi.me - Permintaan Penarikan Dana</title><style type="text/css">.socialLinks {font-size: 6px;}
         .socialLinks a {display: inline-block;}
         .socialIcon {display: inline-block;vertical-align: top;padding-bottom: 0px;border-radius: 100%;}
         table.vb-row, table.vb-content {border-collapse: separate;}
@@ -73,45 +73,46 @@
 
                 <!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
                 <div class="oldwebkit" style="max-width: 570px;">
-                    <table width="570" border="0" cellpadding="0" cellspacing="9" class="vb-container halfpad" bgcolor="#ffffff" style="border-collapse: separate;border-spacing: 9px;padding-left: 9px;padding-right: 9px;width: 100%;max-width: 420px;background-color: #fff;">
+                    <table width="570" border="0" cellpadding="0" cellspacing="9" class="vb-container halfpad" bgcolor="#ffffff" style="border-collapse: separate;border-spacing: 9px;padding-left: 9px;padding-right: 9px;width: 100%;max-width: 570px;background-color: #fff;">
                         <tbody>
                         <tr>
-                            <td bgcolor="#ffffff" colspan="2" align="center" style="background-color: #ffffff; font-size: 22px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f; text-align: center;">
+                            <td bgcolor="#ffffff" align="center" style="background-color: #ffffff; font-size: 22px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f; text-align: center;">
                                 <span>Hai {{ $user->first_name . ' ' . $user->last_name }}</span>
-                                <br>
-                                <span>Berikut ini adalah pesanan kamu, </span>
                             </td>
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <b>Pilihan Pembayaran</b>
-                            </td>
-                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;text-align:right;">
-                                {{ $paymentMethod->description }}
+                                Kami menerima instruksi penarikan dana yang ditujukan ke Rekening {{ $statement->bank_name }} {{ $statement->bank_acc_number }} atas nama {{ $statement->bank_acc_name }}
                             </td>
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <b>Harga Produk/Proyek</b>
-                            </td>
-                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;text-align:right;">
-                                Rp {{ $transaction->total_price }}
+                                Kami telah menerima instruksi tersebut dan kami akan mengirimkan konfirmasi berhasil setelah penarikan berhasil diproses
                             </td>
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <b>Biaya Admin</b>
-                            </td>
-                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;text-align:right;">
-                                Rp {{ $transaction->admin_fee }}
+                                Bila Anda tidak merasa melakukan penarikan segera klik link berikut:
                             </td>
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <b>Total</b>
+                                <a href="{{ route('withdraw-cancel',['id' => $statement->id]) }}" style="text-decoration: underline">{{ route('withdraw-cancel',['id' => $statement->id]) }}</a>
                             </td>
-                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;text-align:right;">
-                                Rp {{ $transaction->total_payment }}
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
+                                Jika anda tidak melakukan permintaan ini, segera ganti password akun anda dan hubungi customer service.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
+                                IP: {{ $ipAddress }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
+                                Nama: {{ $user->first_name }} {{ $user->last_name }}
                             </td>
                         </tr>
                         </tbody>

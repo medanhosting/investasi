@@ -11,10 +11,13 @@ namespace App\Http\Controllers;
 
 use App\Libs\Utilities;
 use App\Libs\Veritrans;
+use App\Mail\InvoicePembelian;
 use App\Models\Transaction;
 use App\Models\TransactionWallet;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class MidtransController extends Controller
 {
@@ -143,6 +146,15 @@ class MidtransController extends Controller
 
                             $transaction->modified_on = $dateTimeNow->toDateTimeString();
                             $transaction->save();
+
+
+                            //Send Email,
+                            $transaction = Transaction::where('order_id', '59e813b28edfe')->first();
+                            $userData = User::find($transaction->user_id);
+                            $payment = PaymentMethod::find($transaction->payment_method_id);
+
+                            $acceptEmail = new InvoicePembelian($payment, $transaction, $userData);
+                            Mail::to($userData->email)->send($acceptEmail);
                         }
                     }
                     else if($json->status_code == "201"){
