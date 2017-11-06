@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -43,7 +44,21 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $this->validateLogin($request);
+        $rules = array(
+            'email'                 => 'required|email|not_contains',
+            'password'              => 'required',
+        );
+
+        $messages = array(
+            'not_contains' => 'Email tidak boleh memiliki karakter + !',
+        );
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+        //$this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -57,6 +72,10 @@ class LoginController extends Controller
         $credentials = $this->credentials($request);
 
         //Custom Logic
+        if(!User::where('email', $request->email)->exists()){
+            return Redirect::back()->withErrors(['msg' => ['Salah Username atau Password!']]);
+        }
+
         $userData = User::where('email', $request->email)->first();
 
         if($userData->status_id == 3){
@@ -65,7 +84,7 @@ class LoginController extends Controller
         }
         else if($userData->status_id == 11){
             Session::put("user-data", $userData);
-            return Redirect::route('verify-phone-show');
+            return Redirect::route('index');
         }
 
         if ($this->guard()->attempt($credentials, $request->has('remember'))) {
