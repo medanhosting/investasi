@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use PragmaRX\Google2FA\Google2FA;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -87,6 +90,14 @@ class LoginController extends Controller
             return Redirect::route('index');
         }
 
+        //Check if Google Authenticator
+        if($userData->google_authenticator == 1){
+            session()->put('id', $userData->id);
+            session()->put('email', $userData->email);
+            session()->put('password', Input::get('password'));
+            return View('auth.google-authenticator');
+        }
+
         if ($this->guard()->attempt($credentials, $request->has('remember'))) {
             return $this->sendLoginResponse($request);
         }
@@ -97,5 +108,30 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    public function GoogleAuthenticatorLogin(Request $request)
+    {
+        $secret = Input::get('secret');
+        $google2fa = new Google2FA();
+        $userId = session()->get('id');
+
+        $user = User::find($userId);
+
+        $valid = $google2fa->verifyKey($user->google2fa_secret, $secret);
+        if($valid){
+            $email = session()->get('email');
+            $password = session()->get('password');
+
+            if($this->guard()->attempt(['email' => $email, 'password' => $password]))
+            {
+                return Redirect::route('index');
+            }
+
+            return Redirect::route('login')->withErrors(['msg' => ['Something went Wrong!']]);
+        }
+        else{
+            return View('auth.google-authenticator')->withErrors(['msg' => ['Kode yang Anda masukan salah!']]);
+        }
     }
 }
