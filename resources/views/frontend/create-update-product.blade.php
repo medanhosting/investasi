@@ -24,7 +24,7 @@
                             </div>
                             <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('category') ? ' has-error' : '' }}">
                                 <h4>Kategori</h4>
-                                <select id="category" name="category">
+                                <select id="category" name="category" class="form-control">
                                     <option value="-1">Pilih Kategori</option>
 
                                     @foreach($categories as $category)
@@ -46,7 +46,7 @@
 
                             <div class="field col-sm-12">
                                 <br/>
-                                <button class="btn btn-big btn-solid" id="submit" disabled><i class="fa fa-paper-plane"></i><span>Submit</span></button>
+                                <button class="btn btn-big btn-solid" id="submit"><i class="fa fa-paper-plane"></i><span>Submit</span></button>
                             </div>
                         </form>
                     </div>

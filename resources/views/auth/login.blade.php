@@ -13,7 +13,7 @@
                         </div>
                         <form class="comment-form row altered" method="POST" action="{{ route('login') }}">
                             @if($errors->has('msg'))
-                                <div class="field col-sm-12">
+                                <div class="field col-sm-12 text-center">
                                     <span class="help-block" style="color: red;">{{$errors->first()}}</span>
                                 </div>
                             @endif

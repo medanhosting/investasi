@@ -149,7 +149,6 @@ class MidtransController extends Controller
 
 
                             //Send Email,
-                            $transaction = Transaction::where('order_id', '59e813b28edfe')->first();
                             $userData = User::find($transaction->user_id);
                             $payment = PaymentMethod::find($transaction->payment_method_id);
 

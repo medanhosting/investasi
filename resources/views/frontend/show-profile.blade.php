@@ -83,12 +83,41 @@
                         <div class="panel-heading">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#editProfile" data-toggle="tab">Ubah Profil</a></li>
+                                <li><a href="#security" data-toggle="tab">Keamanan</a></li>
                                 <li><a href="#password" data-toggle="tab">Ubah Password</a></li>
                                 <li><a href="#phoneNumber" data-toggle="tab">Ubah Nomor Telepon</a></li>
                             </ul>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
+                                <div class="tab-pane fade" id="security">
+                                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                                        <div class="comment-form-wrapper contact-from clearfix">
+                                            <div class="widget-title ">
+                                                <h4>Keamanan</h4>
+                                            </div>
+                                            <form class="comment-form row altered" method="POST" action="#">
+                                                {{ csrf_field() }}
+
+                                                <div class="field col-sm-12 {{ $errors->has('google') ? ' has-error' : '' }}">
+                                                    <h5>Google Authenticator</h5>
+                                                    <input type="text" name="google">
+                                                    @if ($errors->has('google'))
+                                                        <span class="help-block">
+                                                    <strong>{{ $errors->first('google') }}</strong>
+                                                </span>
+                                                    @endif
+                                                </div>
+
+                                                <div class="field col-sm-12">
+                                                    <br/>
+                                                    <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Submit</span></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="tab-pane fade in active" id="editProfile">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
@@ -133,6 +162,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="password">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
@@ -177,6 +207,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="phoneNumber">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
