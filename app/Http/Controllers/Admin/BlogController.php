@@ -48,7 +48,8 @@ class BlogController extends Controller
         $validator = Validator::make($request->all(),[
             'title'              => 'required',
             'category'              => 'required',
-            'content'            => 'required']);
+            'content'            => 'required'
+        ]);
 
         if ($validator->fails()) {
             $this->throwValidationException(

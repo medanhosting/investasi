@@ -18,6 +18,9 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $user_id
  * @property string $name
  * @property string $description
+ * @property string $bank_name
+ * @property string $bank_acc_name
+ * @property string $bank_acc_number
  * @property int $status_id
  * @property \Carbon\Carbon $created_on
  * @property string $created_by
@@ -48,6 +51,9 @@ class Vendor extends Eloquent
         'user_id',
         'name',
         'description',
+        'bank_name',
+        'bank_acc_name',
+        'bank_acc_number',
         'status_id',
         'created_on',
         'created_by',

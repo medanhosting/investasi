@@ -64,8 +64,8 @@
 
 <!-- Scripts -->
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
-<script type="text/javascript" src="{{ URL::asset('js/frontend/jquery2.min.js') }}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/frontend/jquery2.min.js') }}"></script>
 {{--<script type="text/javascript" src="{{ URL::asset('js/frontend/bootstrap.min.js') }}"></script>--}}
 
 <!-- bootstrap-file-input -->
@@ -91,6 +91,17 @@
 
 <!-- Resize js -->
 <script type="text/javascript" src="https://rawgit.com/louisremi/jquery-smartresize/master/jquery.throttledresize.js"></script>
+
+{{-- js for wysiwyg editor --}}
+<!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+
+<script src="{{ URL::asset('js/admin/summernote/summernote.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::asset('css/admin/summernote/summernote.css') }}">
 
 
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-maps.js') }}"></script>

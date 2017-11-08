@@ -86,8 +86,9 @@ Route::get('/referral', 'Frontend\ReferralController@ShowReferral');
 
 //Vendor
 Route::get('/owner/{vendorObj}', 'Frontend\VendorController@show')->name('vendor-profile-show');
-Route::get('/pengajuan-owner', 'Frontend\VendorController@RequestOwner')->name('owner-request');
 Route::get('/pengajuan-update', 'Frontend\VendorController@RequestUpdate')->name('update-request');
+Route::get('/pengajuan-owner', 'Frontend\VendorController@RequestOwner')->name('owner-request');
+Route::post('/pengajuan-owner', 'Frontend\VendorController@RequestOwnerSubmit')->name('owner-request-submit');
 
 
 //End Frontend Routing
