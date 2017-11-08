@@ -36,8 +36,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            @include('admin.partials._success')
-                            <h2>Investor Requests</h2>
+                            <h2>Admin List</h2>
                             {{--<ul class="nav navbar-right panel_toolbox">--}}
                             {{--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>--}}
                             {{--</li>--}}
@@ -60,29 +59,26 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>User Name</th>
-                                    <th>Company Name</th>
-                                    <th>Description</th>
-                                    <th>Created Date</th>
+                                    <th>Name</th>
+                                    <th>User's Name</th>
+                                    <th>Submited At</th>
                                     <th>Option</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @php( $idx = 1 )
-                                    @foreach($vendors as $vendor)
-                                        <tr>
-                                            <td>{{ $idx }}</td>
-                                            <td>{{ $vendor->user->first_name }} {{ $vendor->user->last_name }}</td>
-                                            <td>{{ $vendor->name }}</td>
-                                            <td>{{ $vendor->description }}</td>
-                                            <td>{{ \Carbon\Carbon::parse($user->created_on)->format('j M Y G:i:s') }}</td>
-                                            <td>
-                                                <a href="/admin/vendor/request-accept/{{ $vendor->id }}"class="btn btn-primary">Accept</a>
-                                                <a href="/admin/vendor/request-reject/{{ $vendor->id }}"class="btn btn-danger">Reject</a>
-                                            </td>
-                                        </tr>
-                                        @php( $idx++ )
-                                    @endforeach
+                                @foreach($allOwners as $owner)
+                                    <tr>
+                                        <td>{{ $idx }}</td>
+                                        <td>{{ $owner->name }}</td>
+                                        <td>{{ $owner->user->first_name . $owner->user->last_name }}</td>
+                                        <td>{{ \Carbon\Carbon::parse($owner->created_at)->format('j M Y G:i:s') }}</td>
+                                        <td>
+                                            <a href="/admin/owner/detail/{{ $owner->id }}" class="btn btn-primary">Detail</a>
+                                        </td>
+                                    </tr>
+                                    @php( $idx++ )
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

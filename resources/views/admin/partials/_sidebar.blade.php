@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('vendor-list') }}">
+                        <a href="{{ route('owner-list') }}">
                             <i class="fa fa-money"></i> Owner List
                         </a>
                     </li>

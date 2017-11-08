@@ -265,6 +265,12 @@ Route::prefix('admin/blog')->group(function(){
     Route::post('/edit/update/{id}', 'Admin\BlogController@update');
 });
 
+// Owner
+Route::prefix('admin/owner')->group(function(){
+    Route::get('/list', 'Admin\OwnerController@GetListedOwner')->name('owner-list');
+    Route::get('/detail/{id}', 'Admin\OwnerController@GetListedOwner')->name('owner-detail');
+});
+
 // End admin Routing
 
 // Sms Routing Start
