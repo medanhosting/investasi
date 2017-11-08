@@ -93,27 +93,54 @@
                                 <div class="tab-pane fade" id="security">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
-                                            <div class="widget-title ">
-                                                <h4>Keamanan</h4>
-                                            </div>
-                                            <form class="comment-form row altered" method="POST" action="#">
-                                                {{ csrf_field() }}
-
-                                                <div class="field col-sm-12 {{ $errors->has('google') ? ' has-error' : '' }}">
-                                                    <h5>Google Authenticator</h5>
-                                                    <input type="text" name="google">
-                                                    @if ($errors->has('google'))
-                                                        <span class="help-block">
-                                                    <strong>{{ $errors->first('google') }}</strong>
-                                                </span>
+                                            @if($user->google_authenticator == 0)
+                                                <div class="widget-title ">
+                                                    <h4>Keamanan</h4>
+                                                    <h5>Google QR Code</h5>
+                                                    <img src="{{ $google2fa_url }}" alt="">
+                                                    <p>Scan Gambar di atas untuk mengaktifkan Google Authenticator!</p>
+                                                </div>
+                                                <form class="comment-form row altered" method="POST" action="{{route('verify-google-authenticator')}}">
+                                                    @if($errors->has('msg'))
+                                                        <div class="field col-sm-12 text-center">
+                                                            <span class="help-block" style="color: red;">{{$errors->first()}}</span>
+                                                        </div>
                                                     @endif
-                                                </div>
+                                                    {{ csrf_field() }}
 
-                                                <div class="field col-sm-12">
-                                                    <br/>
-                                                    <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Submit</span></button>
+                                                    <div class="field col-sm-12">
+                                                        <h5>Code</h5>
+                                                        <input type="number" name="secret">
+                                                    </div>
+
+                                                    <div class="field col-sm-12">
+                                                        <br/>
+                                                        <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Submit</span></button>
+                                                    </div>
+                                                </form>
+                                            @else
+                                                <div class="widget-title ">
+                                                    <h4>Keamanan</h4>
+                                                    <p>Anda Sudah mengaktifkan Google authenticator Anda.</p>
+                                                    <p>Jika ingin menonaktifkan Google Authenticator Anda silahkan Memasukan Kode Google lalu Tekan Tombol Deactivate!</p>
                                                 </div>
-                                            </form>
+                                                <form class="comment-form row altered" method="POST" action="{{route('deactivate-google-authenticator')}}">
+                                                    @if($errors->has('msg'))
+                                                        <div class="field col-sm-12 text-center">
+                                                            <span class="help-block" style="color: red;">{{$errors->first()}}</span>
+                                                        </div>
+                                                    @endif
+                                                    {{ csrf_field() }}
+
+                                                    <div class="field col-sm-12">
+                                                        <input type="number" name="secret">
+                                                    </div>
+
+                                                    <div class="field col-sm-12">
+                                                        <button class="btn btn-big btn-solid"><i class="fa fa-paper-plane"></i><span>Deactivate</span></button>
+                                                    </div>
+                                                </form>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

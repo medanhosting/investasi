@@ -39,6 +39,11 @@ Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 Route::get('/my-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
 Route::get('/pendapatan', 'Frontend\ProfileController@Pendapatan')->name('pendapatan');
 
+//Google Authenticator
+Route::post('/google2fa', 'Frontend\ProfileController@VerifyGoogleAuthenticator')->name('verify-google-authenticator');
+Route::post('/google2fa-login', 'Auth\LoginController@GoogleAuthenticatorLogin')->name('login-google-authenticator');
+Route::post('/google2fa-deactivate', 'Frontend\ProfileController@DeactivateGoogleAuthenticator')->name('deactivate-google-authenticator');
+
 //portfolio
 Route::get('/portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');
 Route::get('/portfolio/{id}', 'Frontend\TransactionController@PortfolioDetail')->name('portfolio-detail');

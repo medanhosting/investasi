@@ -13,7 +13,9 @@ use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
+use PragmaRX\Google2FA\Google2FA;
 
 class ProfileController extends Controller
 {
@@ -24,11 +26,65 @@ class ProfileController extends Controller
 
     public function Profile()
     {
-        $user = Auth::user();
-        $userId = $user->id;
+        $authUser = Auth::user();
+        $userId = $authUser->id;
 
         $user = User::find($userId);
-        return View ('frontend.show-profile', compact('user'));
+        $google2fa_url = '';
+
+        //Generate Google Authenticator
+        if($user->google_authenticator == 0) {
+            $google2fa = new Google2FA();
+            $user->google2fa_secret = $google2fa->generateSecretKey();
+            $google2fa_url = $google2fa->getQRCodeGoogleUrl(
+                'PT. BAI',
+                $user->email,
+                $user->google2fa_secret
+            );
+
+            $user->save();
+        }
+
+        return View ('frontend.show-profile', compact('user', 'google2fa_url'));
+    }
+
+    public function VerifyGoogleAuthenticator(Request $request)
+    {
+        $secret = Input::get('secret');
+        $google2fa = new Google2FA();
+        $authUser = Auth::user();
+        $userId = $authUser->id;
+
+        $user = User::find($userId);
+
+        $valid = $google2fa->verifyKey($user->google2fa_secret, $secret);
+        if($valid){
+            $user->google_authenticator = 1;
+            $user->save();
+            return Redirect::route('my-profile');
+        }
+        else{
+            return Redirect::back()->withErrors(['msg' => ['Kode yang Anda masukan salah!']]);
+        }
+    }
+
+    public function DeactivateGoogleAuthenticator(Request $request)
+    {
+        $secret = Input::get('secret');
+        $google2fa = new Google2FA();
+        $userData = Auth::user();
+        $userId = $userData->id;
+        $user = User::find($userId);
+
+        $valid = $google2fa->verifyKey($user->google2fa_secret, $secret);
+        if($valid) {
+            $user->google_authenticator = 0;
+            $user->save();
+            return Redirect::route('my-profile');
+        }
+        else{
+            return Redirect::back()->withErrors(['msg' => ['Kode yang Anda masukan salah!']]);
+        }
     }
 
     public function Pendapatan()
