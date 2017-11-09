@@ -26,11 +26,28 @@
                                         <h4 class="list-group-item-heading green">Step 1</h4>
                                         <p class="list-group-item-text">Email Verification</p>
                                     </a></li>
-                                <li><a href="#">
-                                        <h4 class="list-group-item-heading green">Step 2</h4>
-                                        <p class="list-group-item-text">Phone Verification</p>
-                                    </a></li>
-                                @if($user->status_id == 12 || $user->status_id == 13)
+                                @if($user->status_id == 11)
+                                    <li class="active"><a href="{{route('verify-phone-show')}}">
+                                            <h4 class="list-group-item-heading green">Step 2</h4>
+                                            <p class="list-group-item-text">Phone Verification</p>
+                                        </a></li>
+                                    <li class="disabled"><a href="#">
+                                            <h4 class="list-group-item-heading">Step 3</h4>
+                                            <p class="list-group-item-text">Photo Upload</p>
+                                        </a></li>
+                                    <li class="disabled"><a href="#">
+                                            <h4 class="list-group-item-heading">Step 4</h4>
+                                            <p class="list-group-item-text">Risk Profile</p>
+                                        </a></li>
+                                    <li class="disabled"><a href="#">
+                                            <h4 class="list-group-item-heading">Step 5</h4>
+                                            <p class="list-group-item-text">Set Your Address</p>
+                                        </a></li>
+                                @elseif($user->status_id == 12 || $user->status_id == 13)
+                                    <li><a href="#">
+                                            <h4 class="list-group-item-heading green">Step 2</h4>
+                                            <p class="list-group-item-text">Phone Verification</p>
+                                        </a></li>
                                     <li class="active"><a href="{{route('verify-photo')}}">
                                             <h4 class="list-group-item-heading">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
@@ -45,6 +62,10 @@
                                         </a></li>
                                 @elseif($user->status_id == 14)
                                     <li><a href="#">
+                                            <h4 class="list-group-item-heading green">Step 2</h4>
+                                            <p class="list-group-item-text">Phone Verification</p>
+                                        </a></li>
+                                    <li><a href="#">
                                             <h4 class="list-group-item-heading green">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
                                         </a></li>
@@ -57,6 +78,10 @@
                                             <p class="list-group-item-text">Set Your Address</p>
                                         </a></li>
                                 @elseif($user->status_id == 15)
+                                    <li><a href="#">
+                                            <h4 class="list-group-item-heading green">Step 2</h4>
+                                            <p class="list-group-item-text">Phone Verification</p>
+                                        </a></li>
                                     <li><a href="#">
                                             <h4 class="list-group-item-heading green">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
@@ -81,7 +106,7 @@
                     <h2>Profil Anda</h2>
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
-                            <ul class="nav nav-tabs">
+                            <ul class="nav nav-tabs" >
                                 <li class="active"><a href="#editProfile" data-toggle="tab">Ubah Profil</a></li>
                                 <li><a href="#security" data-toggle="tab">Keamanan</a></li>
                                 <li><a href="#password" data-toggle="tab">Ubah Password</a></li>
