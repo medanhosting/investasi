@@ -36,7 +36,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Admin List</h2>
+                            <h2>Owners</h2>
                             {{--<ul class="nav navbar-right panel_toolbox">--}}
                             {{--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>--}}
                             {{--</li>--}}
@@ -54,6 +54,7 @@
                             {{--</ul>--}}
                             <div class="clearfix"></div>
                         </div>
+                        @include('admin.partials._success')
                         <div class="x_content">
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                                 <thead>
@@ -62,6 +63,7 @@
                                     <th>Name</th>
                                     <th>User's Name</th>
                                     <th>Submited At</th>
+                                    <th>Status</th>
                                     <th>Option</th>
                                 </tr>
                                 </thead>
@@ -73,6 +75,7 @@
                                         <td>{{ $owner->name }}</td>
                                         <td>{{ $owner->user->first_name . $owner->user->last_name }}</td>
                                         <td>{{ \Carbon\Carbon::parse($owner->created_at)->format('j M Y G:i:s') }}</td>
+                                        <td>{{ $owner->status->description }}</td>
                                         <td>
                                             <a href="/admin/owner/detail/{{ $owner->id }}" class="btn btn-primary">Detail</a>
                                         </td>

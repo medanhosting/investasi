@@ -268,7 +268,9 @@ Route::prefix('admin/blog')->group(function(){
 // Owner
 Route::prefix('admin/owner')->group(function(){
     Route::get('/list', 'Admin\OwnerController@GetListedOwner')->name('owner-list');
-    Route::get('/detail/{id}', 'Admin\OwnerController@GetListedOwner')->name('owner-detail');
+    Route::get('/detail/{id}', 'Admin\OwnerController@GetDetailOwner')->name('owner-detail');
+    Route::get('/accept/{id}', 'Admin\OwnerController@AcceptOwner')->name('owner-accept');
+    Route::get('/reject/{id}', 'Admin\OwnerController@RejectOwner')->name('owner-reject');
 });
 
 // End admin Routing
