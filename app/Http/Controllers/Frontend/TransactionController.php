@@ -21,8 +21,15 @@ class TransactionController extends Controller
         $user = Auth::user();
         $userId = $user->id;
 
-        $transactions = Transaction::Where('user_id', $userId);
-        return View ('frontend.show-portfolio', compact('transactions'));
+        $productSahamHasil = Product::select('id')->wherein('category_id', [1, 3])->where('status_id', 1)->get();
+        $productHutang = Product::select('id')->where('category_id', 2)->where('status_id', 1)->get();
+
+        $transactionPending = Transaction::where('user_id', $userId)->where('status_id', 3)->get();
+        $transactionSahamHasil = Transaction::where('user_id', $userId)->wherein('product_id', $productSahamHasil)->get();
+        $transactionHutang = Transaction::where('user_id', $userId)->wherein('product_id', $productHutang)->get();
+
+        return View ('frontend.show-portfolio', compact('transactionPending','transactionSahamHasil',
+            'transactionHutang'));
     }
 
     public function PortfolioDetail($id)

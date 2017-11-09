@@ -101,6 +101,7 @@ class VendorController extends Controller
 
         $userID = Uuid::generate();
         $vendorID = Uuid::generate();
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
 
 //        create new user
         $newUser = User::create([
@@ -113,6 +114,7 @@ class VendorController extends Controller
             'email_token' => base64_encode($request['email']),
             'status_id' => 3,
             'password' => bcrypt($request['password']),
+            'created_at'        => $dateTimeNow->toDateTimeString()
         ]);
 
 //        create new vendor
@@ -125,6 +127,7 @@ class VendorController extends Controller
             'bank_acc_name' => $request['acc_bank'],
             'bank_acc_number' => $request['no_rek'],
             'status_id' => 3,
+            'created_at'        => $dateTimeNow->toDateTimeString()
         ]);
 
         // Get image extension
@@ -151,6 +154,7 @@ class VendorController extends Controller
             'description' => $request['description'],
             'is_secondary' => 0,
             'status_id' => 3,
+            'created_on'        => $dateTimeNow->toDateTimeString()
         ]);
         // Get image extension
         $img = Image::make($request->file('project_image'));

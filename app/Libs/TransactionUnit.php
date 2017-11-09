@@ -34,6 +34,7 @@ class TransactionUnit
             $trxCreate = Transaction::create([
                 'id'                => Uuid::generate(),
                 'user_id'           => $userId,
+                'product_id'           => $cart->product_id,
                 'payment_method_id' => $paymentMethodInt,
                 'order_id'          => $orderId,
                 'total_payment'     => $cart->getOriginal('total_invest_amount'),

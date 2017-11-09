@@ -57,6 +57,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \App\Models\PaymentMethod $payment_method
  * @property \App\Models\Status $status
  * @property \App\Models\User $user
+ * @property \App\Models\Product $product_id
  * @property \Illuminate\Database\Eloquent\Collection $transaction_details
  *
  * @package App\Models
@@ -92,6 +93,7 @@ class Transaction extends Eloquent
     protected $fillable = [
         'id',
         'user_id',
+        'product_id',
         'payment_method_id',
         'va_bank',
         'va_number',
@@ -150,6 +152,11 @@ class Transaction extends Eloquent
     public function user()
     {
         return $this->belongsTo(\App\Models\User::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(\App\Models\Product::class);
     }
 
     public function transaction_details()

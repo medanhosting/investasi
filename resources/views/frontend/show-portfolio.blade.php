@@ -21,18 +21,60 @@
                 <div class="panel with-nav-tabs panel-default">
                     <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
+                            <li class="active"><a href="#pending" data-toggle="tab">Pending Transaksi</a></li>
+                            <li><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
                             <li><a href="#debt" data-toggle="tab">Debt Portfolio</a></li>
                             <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
                     </div>
                     <div class="panel-body">
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="equity">
+                            <div class="tab-pane fade in active" id="pending">
 
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Equity</h2>
+                                        <h2>Pending Transaksi</h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content table-responsive">
+                                        <table id="datatable-responsive-pending" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+                                            <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Tanggal Beli</th>
+                                                <th>Jumlah Investasi</th>
+                                                <th>Jenis</th>
+                                                <th>Update Terkini</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @php( $idx = 1 )
+                                                @foreach($transactionPending as $trx)
+                                                    <tr>
+                                                        <td>{{ $idx }}</td>
+                                                        <td>
+                                                            <a href="{{ route('project-detail', ['id' => $trx->product_id]) }}">{{ $trx->Product->name}}</a>
+                                                        </td>
+                                                        <td>{{ $trx->created_on }}</td>
+                                                        <td>{{ $trx->total_price }}</td>
+                                                        <td>{{ $trx->Product->Category->name }}</td>
+                                                        <td>Tahap Pengumpulan Dana</td>
+                                                    </tr>
+                                                    @php( $idx++ )
+                                                        @endforeach
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="equity">
+
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2>Saham / Bagi Hasil</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content table-responsive">
@@ -49,10 +91,12 @@
                                             </thead>
                                             <tbody>
                                             @php( $idx = 1 )
-                                                @foreach($transactions as $trx)
+                                                @foreach($transactionSahamHasil as $trx)
                                                     <tr>
                                                         <td>{{ $idx }}</td>
-                                                        <td>{{ $trx->Product->name}}</td>
+                                                        <td>
+                                                            <a href="{{ route('project-detail', ['id' => $trx->product_id]) }}">{{ $trx->Product->name}}</a>
+                                                        </td>
                                                         <td>{{ $trx->created_on }}</td>
                                                         <td>{{ $trx->total_price }}</td>
                                                         <td>{{ $trx->Product->Category->name }}</td>
@@ -71,7 +115,7 @@
 
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Debt</h2>
+                                        <h2>Hutang</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content table-responsive">
@@ -88,10 +132,12 @@
                                             </thead>
                                             <tbody>
                                             @php( $idx = 1 )
-                                                @foreach($transactions as $trx)
+                                                @foreach($transactionHutang as $trx)
                                                     <tr>
                                                         <td>{{ $idx }}</td>
-                                                        <td>{{ $trx->Product->name}}</td>
+                                                        <td>
+                                                            <a href="{{ route('project-detail', ['id' => $trx->product_id]) }}">{{ $trx->Product->name}}</a>
+                                                        </td>
                                                         <td>{{ $trx->created_on }}</td>
                                                         <td>{{ $trx->total_price }}</td>
                                                         <td>{{ $trx->total_price }}</td>
