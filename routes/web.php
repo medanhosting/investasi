@@ -273,6 +273,17 @@ Route::prefix('admin/owner')->group(function(){
     Route::get('/reject/{id}', 'Admin\OwnerController@RejectOwner')->name('owner-reject');
 });
 
+// Coupon
+Route::prefix('admin/coupon')->group(function(){
+    Route::get('/list', 'Admin\CouponController@index')->name('coupon-index');
+    Route::get('/create', 'Admin\CouponController@create')->name('coupon-create');
+    Route::post('/store', 'Admin\CouponController@store')->name('coupon-store');
+    Route::get('/edit/{id}', 'Admin\CouponController@edit')->name('coupon-edit');
+    Route::post('/update/{id}', 'Admin\CouponController@update')->name('coupon-update');
+    Route::get('/activate/{id}', 'Admin\CouponController@Activate')->name('coupon-activate');
+    Route::get('/deactivate/{id}', 'Admin\CouponController@Deactivate')->name('coupon-deactivate');
+});
+
 // End admin Routing
 
 // Sms Routing Start

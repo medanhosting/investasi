@@ -69,6 +69,12 @@
                             <li><a href="{{ route ('blog-create') }}">Tambah</a></li>
                         </ul>
                     </li>
+                    <li><a><i class="fa fa-credit-card"></i> Coupon <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('coupon-index') }}">Show</a></li>
+                            <li><a href="{{ route ('coupon-create') }}">Tambah</a></li>
+                        </ul>
+                    </li>
                     <li><a><i class="fa fa-edit"></i> Banner <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a>Slider Banner<span class="fa fa-chevron-down"></span></a>

@@ -195,6 +195,17 @@ function modalPop(id, mode, url){
         $("#small-modal-yes").attr('href', url + id);
         $("#small-modal").modal();
     }
+    else if(mode === "activate"){
+        var title = "Warning";
+        var content = "Are you sure you want to activate?"
+        var yes = "Activate"
+
+        $("#small-modal-title").html(title);
+        $("#small-modal-body").html(content);
+        $("#small-modal-yes").html(yes);
+        $("#small-modal-yes").attr('href', url + id);
+        $("#small-modal").modal();
+    }
     else if(mode === "transfer"){
         var title = "Warning";
         var content = "Are you sure you want to confirm?"
@@ -211,6 +222,18 @@ function modalPop(id, mode, url){
         var title = "Warning";
         var content = "Are you sure you want to delete?"
         var yes = "Delete"
+
+        $("#small-modal-yes").attr("class","btn btn-danger");
+        $("#small-modal-title").html(title);
+        $("#small-modal-body").html(content);
+        $("#small-modal-yes").html(yes);
+        $("#small-modal-yes").attr('href', url + id);
+        $("#small-modal").modal();
+    }
+    else if(mode === "deactivate"){
+        var title = "Warning";
+        var content = "Are you sure you want to deactivate?"
+        var yes = "Deactivate"
 
         $("#small-modal-yes").attr("class","btn btn-danger");
         $("#small-modal-title").html(title);

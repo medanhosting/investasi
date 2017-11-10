@@ -16,12 +16,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Edit Category</h2>
+                        <h2>Edit Coupon</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
                         <br />
-                        <form data-parsley-validate class="form-horizontal form-label-left" method="POST" action="/admin/category/{{ $category->id }}">
+                        <form data-parsley-validate class="form-horizontal form-label-left" method="POST" action="/admin/coupon/update/{{ $coupon->id }}">
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -29,9 +29,18 @@
                                     <label for="description">Category Name <span class="required">*</span></label>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12" value="{{ $category->name }}">
+                                    <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12" value="{{ $coupon->name }}">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="control-label col-md-3 col-sm-3 col-xs-12">
+                                    <label for="description">Category Name <span class="required">*</span></label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="number" id="name" name="amount" required="required" class="form-control col-md-7 col-xs-12" value="{{ $coupon->amount }}">
+                                </div>
+                            </div>
+
                             <div class="ln_solid"></div>
 
                             @if(count($errors))
