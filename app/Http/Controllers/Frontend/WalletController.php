@@ -25,11 +25,15 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Webpatser\Uuid\Uuid;
 use App\Libs\Utilities;
+use PragmaRX\Google2FA\Google2FA;
 
 class WalletController extends Controller
 {
     public function Wallet()
     {
+        if(!auth()->check()){
+            return redirect()->route('index');
+        }
         $user = Auth::user();
         $userId = $user->id;
         $user = User::find($userId);
@@ -39,6 +43,9 @@ class WalletController extends Controller
 
     public function DepositShow()
     {
+        if(!auth()->check()){
+            return redirect()->route('index');
+        }
         $user = Auth::user();
         $userId = $user->id;
 
@@ -123,10 +130,14 @@ class WalletController extends Controller
 
     public function WithdrawShow()
     {
+        if(!auth()->check()){
+            return redirect()->route('index');
+        }
         $user = Auth::user();
         $userId = $user->id;
+        $user = User::find($userId);
 
-        return View ('frontend.wallet-withdraw');
+        return View ('frontend.wallet-withdraw', compact('user'));
     }
 
     //withdraw process
@@ -140,36 +151,45 @@ class WalletController extends Controller
                 'amount'        => 'required',
                 'acc_number'    => 'required',
                 'acc_name'      => 'required',
-                'bank'          => 'required'
+                'bank'          => 'required',
+                'google'          => 'required'
             ]);
 
             if ($validator->fails()) {
-                $this->throwValidationException(
-                    $request, $validator
-                );
+                return back()->withErrors($validator)->withInput();
             }
             else {
-                $dateTimeNow = Carbon::now('Asia/Jakarta');
+                $secret = Input::get('google');
+                $google2fa = new Google2FA();
 
-                $amount = Input::get('amount');
-                $accNumber = Input::get('acc_number');
-                $accName = Input::get('acc_name');
-                $bank = Input::get('bank');
-                //status 3=pending, 6=accepted, 7=rejected
-                $newStatement = WalletStatement::create([
-                    'id'                => Uuid::generate(),
-                    'user_id'           => $userId,
-                    'description'       => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
-                    'amount'            => $amount,
-                    'bank_name'         => $bank,
-                    'bank_acc_name'     => $accName,
-                    'bank_acc_number'   => $accNumber,
-                    'date'              => $dateTimeNow->toDateTimeString(),
-                    'status_id'         => 3,
-                    'created_on'        => $dateTimeNow->toDateTimeString()
-                ]);
+                $user = User::find($userId);
+                $valid = $google2fa->verifyKey($user->google2fa_secret, $secret);
+                if($valid){
+                    $dateTimeNow = Carbon::now('Asia/Jakarta');
 
-                Mail::to('bayuindra091191@gmail.com')->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
+                    $amount = Input::get('amount');
+                    $accNumber = Input::get('acc_number');
+                    $accName = Input::get('acc_name');
+                    $bank = Input::get('bank');
+                    //status 3=pending, 6=accepted, 7=rejected
+                    $newStatement = WalletStatement::create([
+                        'id'                => Uuid::generate(),
+                        'user_id'           => $userId,
+                        'description'       => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
+                        'amount'            => $amount,
+                        'bank_name'         => $bank,
+                        'bank_acc_name'     => $accName,
+                        'bank_acc_number'   => $accNumber,
+                        'date'              => $dateTimeNow->toDateTimeString(),
+                        'status_id'         => 3,
+                        'created_on'        => $dateTimeNow->toDateTimeString()
+                    ]);
+
+                    Mail::to('bayuindra091191@gmail.com')->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
+                }
+                else{
+                    return Redirect::back()->withErrors(['google' => ['Kode yang Anda masukan salah!']]);
+                }
             }
 
             //return ke page transaction

@@ -24,20 +24,43 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    public function Profile()
+    public function Profile($tab)
     {
+        if(!auth()->check()){
+            return redirect()->route('index');
+        }
+
         $authUser = Auth::user();
         $userId = $authUser->id;
 
         $user = User::find($userId);
         $google2fa_url = '';
 
+        $isActiveProfile = ""; $isActiveSecurity = "";$isActivePassword = "";$isActivePhone = "";
+        $isActiveTabProfile = "";$isActiveTabSecurity = "";$isActiveTabPassword = "";$isActiveTabPhone = "";
+        if($tab == "profile") {
+            $isActiveProfile = "in active";
+            $isActiveTabProfile = "class=active";
+        }
+        else if($tab == "security") {
+        $isActiveSecurity = "in active";
+        $isActiveTabSecurity = "class=active";
+    }
+        else if($tab == "password") {
+            $isActivePassword = "in active";
+            $isActiveTabPassword = "class=active";
+        }
+        else if($tab == "phone") {
+            $isActivePhone = "in active";
+            $isActiveTabPhone = "class=active";
+        }
+
         //Generate Google Authenticator
         if($user->google_authenticator == 0) {
             $google2fa = new Google2FA();
             $user->google2fa_secret = $google2fa->generateSecretKey();
             $google2fa_url = $google2fa->getQRCodeGoogleUrl(
-                'PT. BAI',
+                'investasi.me - '.$user->username.' - ',
                 $user->email,
                 $user->google2fa_secret
             );
@@ -45,7 +68,20 @@ class ProfileController extends Controller
             $user->save();
         }
 
-        return View ('frontend.show-profile', compact('user', 'google2fa_url'));
+//        return View ('frontend.show-profile', compact('user', 'selectedTab', 'google2fa_url'));
+        $data = [
+            'user'=>$user,
+            'google2fa_url'=>$google2fa_url,
+            'isActiveProfile'=>$isActiveProfile,
+            'isActiveSecurity'=>$isActiveSecurity,
+            'isActivePassword'=>$isActivePassword,
+            'isActivePhone'=>$isActivePhone,
+            'isActiveTabProfile'=>$isActiveTabProfile,
+            'isActiveTabSecurity'=>$isActiveTabSecurity,
+            'isActiveTabPassword'=>$isActiveTabPassword,
+            'isActiveTabPhone'=>$isActiveTabPhone
+        ];
+        return View ('frontend.show-profile')->with($data);
     }
 
     public function VerifyGoogleAuthenticator(Request $request)
@@ -61,7 +97,7 @@ class ProfileController extends Controller
         if($valid){
             $user->google_authenticator = 1;
             $user->save();
-            return Redirect::route('my-profile');
+            return Redirect::route('my-profile', ['tab' => 'security']);
         }
         else{
             return Redirect::back()->withErrors(['msg' => ['Kode yang Anda masukan salah!']]);
@@ -80,7 +116,7 @@ class ProfileController extends Controller
         if($valid) {
             $user->google_authenticator = 0;
             $user->save();
-            return Redirect::route('my-profile');
+            return Redirect::route('my-profile', ['tab' => 'security']);
         }
         else{
             return Redirect::back()->withErrors(['msg' => ['Kode yang Anda masukan salah!']]);

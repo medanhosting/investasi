@@ -36,7 +36,7 @@ Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
 //Route::get('/blog/{id}', 'Frontend\HomeController@AboutUs')->name('About');
 
 //profile
-Route::get('/my-profile', 'Frontend\ProfileController@Profile')->name('my-profile');
+Route::get('/my-profile/{tab}', 'Frontend\ProfileController@Profile')->name('my-profile');
 Route::get('/pendapatan', 'Frontend\ProfileController@Pendapatan')->name('pendapatan');
 
 //Google Authenticator

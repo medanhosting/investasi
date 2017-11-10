@@ -18,6 +18,10 @@ class TransactionController extends Controller
 
     public function Portfolio()
     {
+        if(!auth()->check()){
+            return redirect()->route('index');
+        }
+
         $user = Auth::user();
         $userId = $user->id;
 

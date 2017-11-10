@@ -102,20 +102,34 @@
                     Lanjutkan verifikasi Anda untuk dapat menggunakan semua fitur investasi.me
                 </div>
 
+                {{--@php($isActiveProfile = ""; $isActiveSecurity = "";$isActivePassword = "";$isActivePhone = "";)--}}
+                {{--@php($isActiveTabProfile = "";$isActiveTabSecurity = "";$isActiveTabPassword = "";$isActiveTabPhone = "";)--}}
+                    {{--@if($selectedTab == "profile")--}}
+                         {{--@php($isActiveProfile = "in active"; $isActiveTabProfile = "class='active'";)--}}
+
+                    {{--@elseif($selectedTab == "security")--}}
+                         {{--@php($isActiveSecurity = "in active"; $isActiveTabSecurity = "class='active'";)--}}
+
+                    {{--@elseif($selectedTab == "password")--}}
+                         {{--@php($isActivePassword = "in active"; $isActiveTabPassword = "class='active'";)--}}
+
+                    {{--@elseif($selectedTab == "phone")--}}
+                        {{--@php($isActivePhone = "in active"; $isActiveTabPhone = "class='active'";)--}}
+                    {{--@endif--}}
                 <div class="col-xs-12">
                     <h2>Profil Anda</h2>
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs" >
-                                <li class="active"><a href="#editProfile" data-toggle="tab">Ubah Profil</a></li>
-                                <li><a href="#security" data-toggle="tab">Keamanan</a></li>
-                                <li><a href="#password" data-toggle="tab">Ubah Password</a></li>
-                                <li><a href="#phoneNumber" data-toggle="tab">Ubah Nomor Telepon</a></li>
+                                <li {{$isActiveTabProfile}}><a href="#editProfile" data-toggle="tab">Ubah Profil</a></li>
+                                <li {{$isActiveTabSecurity}}><a href="#security" data-toggle="tab">Keamanan</a></li>
+                                <li {{$isActiveTabPassword}}><a href="#password" data-toggle="tab">Ubah Password</a></li>
+                                <li {{$isActiveTabPhone}}><a href="#phoneNumber" data-toggle="tab">Ubah Nomor Telepon</a></li>
                             </ul>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
-                                <div class="tab-pane fade" id="security">
+                                <div class="tab-pane fade {{$isActiveSecurity}}" id="security">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
                                             @if($user->google_authenticator == 0)
@@ -170,7 +184,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade in active" id="editProfile">
+                                <div class="tab-pane fade {{$isActiveProfile}}" id="editProfile">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
                                             <div class="widget-title ">
@@ -215,7 +229,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="password">
+                                <div class="tab-pane fade {{$isActivePassword}}" id="password">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
                                             <div class="widget-title ">
@@ -260,7 +274,7 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="phoneNumber">
+                                <div class="tab-pane fade {{$isActivePhone}}" id="phoneNumber">
                                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                                         <div class="comment-form-wrapper contact-from clearfix">
                                             <div class="widget-title ">

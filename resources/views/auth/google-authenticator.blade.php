@@ -19,7 +19,7 @@
                             @endif
                             {{ csrf_field() }}
                             <div class="field col-sm-12">
-                                <h4>Code</h4>
+                                <h4>PIN Google Auth</h4>
                                 <input type="number" name="secret">
                             </div>
                             <div class="field col-sm-4">

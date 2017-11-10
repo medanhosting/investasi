@@ -46,7 +46,7 @@
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </span>
                                 <ul class="submenu">
-                                <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
+                                <li><a href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a></li>
                                 <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                                 <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                 <li>
@@ -110,7 +110,7 @@
                                             <ul class="single">
 
                                                 @if(auth()->check())
-                                                    <li><a href="{{route('my-profile')}}">Profil Saya</a></li>
+                                                    <li><a href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a></li>
                                                     <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                                                     <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                                     <li>
