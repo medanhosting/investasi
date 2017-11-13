@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Tue, 07 Nov 2017 02:48:16 +0000.
+ * Date: Mon, 13 Nov 2017 07:55:02 +0000.
  */
 
 namespace App\Models;
@@ -26,6 +26,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $updated_by
  * 
  * @property \App\Models\Category $category
+ * @property \App\Models\UserAdmin $user_admin
  * @property \App\Models\Product $product
  * @property \App\Models\Status $status
  * @property \Illuminate\Database\Eloquent\Collection $blog_urgents
@@ -43,7 +44,6 @@ class Blog extends Eloquent
 	];
 
 	protected $fillable = [
-	    'id',
 		'title',
 		'alias',
 		'description',
@@ -58,6 +58,11 @@ class Blog extends Eloquent
 	public function category()
 	{
 		return $this->belongsTo(\App\Models\Category::class);
+	}
+
+	public function user_admin()
+	{
+		return $this->belongsTo(\App\Models\UserAdmin::class, 'created_by');
 	}
 
 	public function product()

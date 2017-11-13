@@ -32,8 +32,8 @@ Route::get('/pengajuan', 'Frontend\HomeController@Pengajuan')->name('pengajuan')
 
 //blog
 Route::get('/blog-list', 'Frontend\BlogController@BlogList')->name('blog-list');
-Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
-//Route::get('/blog/{id}', 'Frontend\HomeController@AboutUs')->name('About');
+//Route::get('/blog', 'Frontend\BlogController@SingleBlog')->name('blog');
+Route::get('/blog/{id}', 'Frontend\BlogController@SingleBlog')->name('blog');
 
 //profile
 Route::get('/my-profile/{tab}', 'Frontend\ProfileController@Profile')->name('my-profile');
@@ -309,7 +309,7 @@ Route::get('/verifysignaturephoto', 'Frontend\VerificationController@VerifySigna
 Route::post('/verifysignaturephoto', 'Frontend\VerificationController@UploadSignaturePhoto');
 // Photo Verification
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/map', 'Frontend\ProfileController@GoogleMap')->name('map');
 Route::post('/map', 'Frontend\ProfileController@GoogleMapSubmit')->name('map-submit');

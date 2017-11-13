@@ -55,10 +55,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
-@include('frontend.partials._header')
-<!-- //HEADER -->
-
 @yield('body-content')
 
 @include('frontend.partials._modal-ads')

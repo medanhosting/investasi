@@ -90,7 +90,7 @@
 
                                 <nav id="mobile-nav">
                                     <ul>
-                                        <li><a href="{{route('home')}}">Beranda </a></li>
+                                        <li><a href="{{route('index')}}">Beranda </a></li>
                                         <li><a>Investasi </a>
                                             <ul>
                                                 <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>

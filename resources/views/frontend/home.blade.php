@@ -206,54 +206,73 @@
                     {{--</div>--}}
             {{--@endfor--}}
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                30 Okt 2017
+                @foreach($recentBlogs as $recentBlog)
+                    <div class="col-md-4 col-sm-6">
+                        <div class="blog-box">
+                            <div class="blog-top-desc">
+                                <div class="blog-date">
+                                    {{ \Carbon\Carbon::parse($recentBlog->created_at)->format('j M Y ') }}
+                                </div>
+                                <h4>{{$recentBlog->title}}</h4>
+                                <i class="fa fa-user"></i> <strong>{{$recentBlog->user_admin->first_name}} {{$recentBlog->user_admin->last_name}}</strong>
                             </div>
-                            <h4>Industri Kerupuk 120 Tahun</h4>
-                            <i class="fa fa-user"></i> <strong>Admin</strong>
-                        </div>
-                        <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Industri kerupuk tradisional berusia 120 tahun di Indonesia </p>
-                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>
+                            <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
+                            <div class="blog-btm-desc">
+                                <a href="{{ route('blog', ['id' => $recentBlog->id]) }}" class="btn btn-min btn-solid">
+                                    Baca Selengkapnya  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                22 Okt 2017
-                            </div>
-                            <h4>Inovasi Handphone Terbaru</h4>
-                            <i class="fa fa-user"></i> <strong>Admin</strong>
-                        </div>
-                        <img src="{{ URL::asset('storage/project/Gadget_Flextra.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Handphone pertama yang dapat dilipat  </p>
-                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc">
-                            <div class="blog-date">
-                                1 Nov 2017
-                            </div>
-                            <h4>Pabrik Plastik dengan Pelanggan Terbesr</h4>
-                            <i class="fa fa-user"></i> <strong>Admin</strong>
-                        </div>
-                        <img src="{{ URL::asset('storage/project/Plastik.jpg') }}" alt="">
-                        <div class="blog-btm-desc">
-                            <p>Pabrik plastik dengan pelanggan terbesar di Indonesia. </p>
-                            <a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya <i class="fa fa-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                {{--<div class="col-md-4 col-sm-6">--}}
+                    {{--<div class="blog-box">--}}
+                        {{--<div class="blog-top-desc">--}}
+                            {{--<div class="blog-date">--}}
+                                {{--30 Okt 2017--}}
+                            {{--</div>--}}
+                            {{--<h4>Industri Kerupuk 120 Tahun</h4>--}}
+                            {{--<i class="fa fa-user"></i> <strong>Admin</strong>--}}
+                        {{--</div>--}}
+                        {{--<img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">--}}
+                        {{--<div class="blog-btm-desc">--}}
+                            {{--<p>Industri kerupuk tradisional berusia 120 tahun di Indonesia </p>--}}
+                            {{--<a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-4 col-sm-6">--}}
+                    {{--<div class="blog-box">--}}
+                        {{--<div class="blog-top-desc">--}}
+                            {{--<div class="blog-date">--}}
+                                {{--22 Okt 2017--}}
+                            {{--</div>--}}
+                            {{--<h4>Inovasi Handphone Terbaru</h4>--}}
+                            {{--<i class="fa fa-user"></i> <strong>Admin</strong>--}}
+                        {{--</div>--}}
+                        {{--<img src="{{ URL::asset('storage/project/Gadget_Flextra.jpg') }}" alt="">--}}
+                        {{--<div class="blog-btm-desc">--}}
+                            {{--<p>Handphone pertama yang dapat dilipat  </p>--}}
+                            {{--<a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya  <i class="fa fa-arrow-right"></i> </a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-4 col-sm-6">--}}
+                    {{--<div class="blog-box">--}}
+                        {{--<div class="blog-top-desc">--}}
+                            {{--<div class="blog-date">--}}
+                                {{--1 Nov 2017--}}
+                            {{--</div>--}}
+                            {{--<h4>Pabrik Plastik dengan Pelanggan Terbesr</h4>--}}
+                            {{--<i class="fa fa-user"></i> <strong>Admin</strong>--}}
+                        {{--</div>--}}
+                        {{--<img src="{{ URL::asset('storage/project/Plastik.jpg') }}" alt="">--}}
+                        {{--<div class="blog-btm-desc">--}}
+                            {{--<p>Pabrik plastik dengan pelanggan terbesar di Indonesia. </p>--}}
+                            {{--<a href="{{route('blog')}}" class="btn btn-min btn-solid"> Baca Selengkapnya <i class="fa fa-arrow-right"></i> </a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             <!-- Blog Single -->
 
             </div>

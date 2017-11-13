@@ -6,7 +6,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="about widget clearfix">
                     <div class="logo-wrap">
-                        <a href="index.html">Investasi.me</a>
+                        <a href="{{route('index')}}">Investasi.me</a>
                     </div>
                     <p>Lebih dekat lagi terhubung dengan kami, ikuti dengan media sosial berikut ini.</p>
                     <div class="social-media-icons">

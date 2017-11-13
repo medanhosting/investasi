@@ -68,6 +68,7 @@ class BlogController extends Controller
             'read_count'    => 0,
             'status_id'     => 2,
             'created_at'    => $dateTimeNow->toDateTimeString(),
+            'created_by'    => Auth::guard('user_admins')->user()->id,
         ]);
 
         Session::flash('message', 'Blog telah berhasil dibuat!');
