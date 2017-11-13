@@ -263,6 +263,9 @@ Route::prefix('admin/blog')->group(function(){
     Route::post('/create/save', 'Admin\BlogController@store');
     Route::get('/edit/{id}', 'Admin\BlogController@edit')->name('blog-edit');
     Route::post('/edit/update/{id}', 'Admin\BlogController@update');
+    Route::get('/update', 'Admin\BlogController@indexUpdate')->name('admin-blog-update-list');
+    Route::get('/accept/{id}', 'Admin\BlogController@accept')->name('blog-accept');
+    Route::get('/reject/{id}', 'Admin\BlogController@reject')->name('blog-reject');
 });
 
 // Owner

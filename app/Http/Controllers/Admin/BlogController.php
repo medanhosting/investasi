@@ -70,6 +70,8 @@ class BlogController extends Controller
             'created_at'    => $dateTimeNow->toDateTimeString(),
         ]);
 
+        Session::flash('message', 'Blog telah berhasil dibuat!');
+
         $categories = Category::all();
         return View('admin.create-blog', compact('categories'));
     }
@@ -109,7 +111,44 @@ class BlogController extends Controller
         $blog->updated_at = $dateTimeNow->toDateTimeString();
         $blog->save();
 
+        Session::flash('message', 'Blog telah berhasil diubah!');
+
         return redirect()->route('admin-blog-list');
     }
 
+    public function indexUpdate(){
+        $blogs = Blog::where('status_id', 3)
+            ->whereNull('product_id')
+            ->get();
+
+        return View('admin.show-blog-updates', compact('blogs'));
+    }
+
+    public function accept($id){
+
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+        $blog = Blog::find($id);
+        $blog->status_id = 1;
+        $blog->updated_at = $dateTimeNow->toDateTimeString();
+        $blog->save();
+
+        Session::flash('message', 'Pembaharuan blog telah berhasil diterima!');
+
+        return redirect()->route('admin-blog-update-list');
+    }
+
+    public function reject($id){
+
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+        $blog = Blog::find($id);
+        $blog->status_id = 7;
+        $blog->updated_at = $dateTimeNow->toDateTimeString();
+        $blog->save();
+
+        Session::flash('message', 'Pembaharuan blog telah ditolak!');
+
+        return redirect()->route('admin-blog-update-list');
+    }
 }

@@ -242,6 +242,30 @@ function modalPop(id, mode, url){
         $("#small-modal-yes").attr('href', url + id);
         $("#small-modal").modal();
     }
+    else if(mode === "blog-update-reject"){
+        var title = "Peringatan";
+        var content = "Apakah anda yakin menolak pembaharuan blog ini?"
+        var yes = "Tolak"
+
+        $("#small-modal-yes").attr("class","btn btn-danger");
+        $("#small-modal-title").html(title);
+        $("#small-modal-body").html(content);
+        $("#small-modal-yes").html(yes);
+        $("#small-modal-yes").attr('href', url + id);
+        $("#small-modal").modal();
+    }
+    else if(mode === "blog-update-accept"){
+        var title = "Peringatan";
+        var content = "Apakah anda yakin menerima pembaharuan blog ini?"
+        var yes = "Terima"
+
+        $("#small-modal-yes").attr("class","btn btn-success");
+        $("#small-modal-title").html(title);
+        $("#small-modal-body").html(content);
+        $("#small-modal-yes").html(yes);
+        $("#small-modal-yes").attr('href', url + id);
+        $("#small-modal").modal();
+    }
 }
 
 function rejectModalPop(id){

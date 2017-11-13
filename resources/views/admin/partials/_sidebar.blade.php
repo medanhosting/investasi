@@ -67,6 +67,7 @@
                         <ul class="nav child_menu">
                             <li><a href="{{ route('admin-blog-list') }}">Show</a></li>
                             <li><a href="{{ route ('blog-create') }}">Tambah</a></li>
+                            <li><a href="{{ route ('admin-blog-update-list') }}">Pending</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-credit-card"></i> Coupon <span class="fa fa-chevron-down"></span></a>

@@ -37,12 +37,12 @@
                     <div class="x_panel">
                         <div class="x_title">
                             @include('admin.partials._success')
-                            <h2>Daftar Blog</h2>
-                            <div class="nav navbar-right">
-                                <a href="{{ route('blog-create') }}" class="btn btn-app">
-                                    <i class="fa fa-plus"></i> Tambah
-                                </a>
-                            </div>
+                            <h2>Daftar Pembaharuan Perusahaan</h2>
+                            {{--<div class="nav navbar-right">--}}
+                                {{--<a href="{{ route('blog-create') }}" class="btn btn-app">--}}
+                                    {{--<i class="fa fa-plus"></i> Tambah--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
@@ -50,10 +50,9 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Produk</th>
                                     <th>Judul</th>
                                     <th>Kategori</th>
-                                    <th>Terbaca</th>
-                                    <th>Status</th>
                                     <th>Tanggal Dibuat</th>
                                     <th>Opsi</th>
                                 </tr>
@@ -63,20 +62,19 @@
                                 @foreach($blogs as $blog)
                                     <tr>
                                         <td>{{ $idx}}</td>
-                                        <td>{{ $blog->title}}</td>
-                                        <td>{{ $blog->category->name }}</td>
-                                        <td>{{ $blog->read_count }}</td>
                                         <td>
-                                            @if($blog->status_id == 1)
-                                                Publish
+                                            @if(!empty($blog->product_id))
+                                                <a href="#">{{ $blog->product->name }}</a>
                                             @else
-                                                Unpublish
+                                                -
                                             @endif
                                         </td>
+                                        <td>{{ $blog->title}}</td>
+                                        <td>{{ $blog->category->name }}</td>
                                         <td>{{ \Carbon\Carbon::parse($blog->created_at)->format('j F y')}}</td>
                                         <td>
-                                            <a href="#" target="_blank" class="btn btn-primary">Detail</a>
-                                            <a href="{{ route('blog-edit', ['id' => $blog->id]) }}" target="_blank" class="btn btn-primary">Ubah</a>
+                                            <button class="btn btn-success" onclick="modalPop('{{ $blog->id }}', 'blog-update-accept', '/admin/blog/accept/')">Terima</button>
+                                            <button class="btn btn-danger" onclick="modalPop('{{ $blog->id }}', 'blog-update-reject', '/admin/blog/reject/')">Tolak</button>
                                         </td>
                                     </tr>
                                     @php ($idx++)
@@ -91,4 +89,5 @@
     </div>
     <!-- /page content -->
 
+    @include('admin.partials._small_modal')
 @endsection
