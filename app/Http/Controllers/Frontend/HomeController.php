@@ -24,58 +24,55 @@ class HomeController extends Controller
             $notReadBlogId = [];
             $blogUrgents = BlogUrgent::select('id')->where('status_id', 1)->get();
 
-        foreach($blogUrgents as $blogUrgent){
-            array_push($notReadBlogId, $blogUrgent->id);
-        }
+            foreach($blogUrgents as $blogUrgent){
+                array_push($notReadBlogId, $blogUrgent->id);
+            }
 
             //get user blog read list
             $blogReadUsers = BlogReadUser::where('user_id', $userId)
-                ->where('status_id', 1)
+//                ->where('status_id', 2)
                 ->wherein('blog_urgent_id', $notReadBlogId)
                 ->get();
 
+
             //delete already read blog
             foreach($blogReadUsers as $blogRead){
-                dd($blogRead->id);
                 if($blogRead->status_id == 2){
-                    unset($notReadBlogId[$blogRead->blog_urgent_id]);
+                    $notReadBlogId = array_diff($notReadBlogId, [$blogRead->blog_urgent_id]);
                 }
             }
-            dd($notReadBlogId);
+
             $blogReadFinalArr = [];
-            if(count($notReadBlogId) > 0){
-                for($i=0; $i<count($notReadBlogId); $i++){
+            if(count($blogReadUsers) > 0 || count($notReadBlogId) > 0) {
+                foreach ($notReadBlogId as $BlogId) {
+                    $blogReadUsers2 = BlogReadUser::where('user_id', $userId)
+                        ->where('blog_urgent_id', $BlogId)
+                        ->count();
+
                     //if already in DB, and not read
-                    if($blogReadUsers->where('blog_urgent_id', $notReadBlogId[0][$i]->id)->where('status_id', 1))
-                    {
-                        $blog = $blogReadUsers->where('blog_urgent_id', $notReadBlogId[0][$i]->id)->where('status_id', 1)->first();
+                    if ($blogReadUsers2 > 0) {
+                        $blog = $blogReadUsers->where('blog_urgent_id', $BlogId)->where('status_id', 1)->first();
 
                         $blogUrgent = BlogUrgent::find($blog->blog_urgent_id);
                         $blogDB = Blog::find($blogUrgent->Blog->id);
 
                         array_push($blogReadFinalArr, $blogDB->id);
-                    }
-                    //not yet save on database
-                    else
-                    {
+                    } //not yet save on database
+                    else {
                         $blogReadUserNew = BlogReadUser::create([
                             'user_id' => $userId,
-                            'blog_urgent_id' => $notReadBlogId[0][$i]->id,
+                            'blog_urgent_id' => $BlogId,
                             'status_id' => 1
                         ]);
 
-                        $blogUrgent = BlogUrgent::find($notReadBlogId[0][$i]->id);
+                        $blogUrgent = BlogUrgent::find($BlogId);
                         $blogDB = Blog::find($blogUrgent->Blog->id);
 
                         array_push($blogReadFinalArr, $blogDB->id);
 
-//                        foreach ($blogUrgents as $blogUrgent){
-//                            $blogRead = BlogReadUser::where('blog_urgent_id', $blogUrgent->id)->where('user_id', $userId)->get();
-//                        }
                     }
                 }
             }
-
             $blogReadUsers = Blog::wherein('id', $blogReadFinalArr)->get();
 
             return $blogReadUsers;

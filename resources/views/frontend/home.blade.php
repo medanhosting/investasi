@@ -217,10 +217,13 @@
                                 <i class="fa fa-user"></i> <strong>{{$recentBlog->user_admin->first_name}} {{$recentBlog->user_admin->last_name}}</strong>
                             </div>
                             <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
-                            <div class="blog-btm-desc">
-                                <a href="{{ route('blog', ['id' => $recentBlog->id]) }}" class="btn btn-min btn-solid">
-                                    Baca Selengkapnya  <i class="fa fa-arrow-right"></i>
-                                </a>
+                            <div class="read-more-description" style="height:250px;text-align: left;">
+                                {!! $recentBlog->description !!}
+                                <p class="read-more">
+                                    <a href="{{ route('blog', ['id' => $recentBlog->id]) }}" class="btn btn-min btn-solid">
+                                        Baca Selengkapnya  <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>

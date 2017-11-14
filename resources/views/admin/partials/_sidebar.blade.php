@@ -59,20 +59,20 @@
                     </li>
                     <li><a><i class="fa fa-tags"></i> Produk Investasi <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('product-list') }}">Show</a></li>
+                            <li><a href="{{ route('product-list') }}">Tampilkan</a></li>
                             {{--<li><a href="{{ route('product-create') }}">Tambah</a></li>--}}
                         </ul>
                     </li>
                     <li><a><i class="fa fa-tags"></i> Blog <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('admin-blog-list') }}">Show</a></li>
+                            <li><a href="{{ route('admin-blog-list') }}">Tampilkan</a></li>
                             <li><a href="{{ route ('blog-create') }}">Tambah</a></li>
                             <li><a href="{{ route ('admin-blog-update-list') }}">Pending</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-credit-card"></i> Coupon <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('coupon-index') }}">Show</a></li>
+                            <li><a href="{{ route('coupon-index') }}">Tampilkan</a></li>
                             <li><a href="{{ route ('coupon-create') }}">Tambah</a></li>
                         </ul>
                     </li>
@@ -80,7 +80,7 @@
                         <ul class="nav child_menu">
                             <li><a>Slider Banner<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li class="sub-menu"><a href="{{ route('slider-banner-list') }}">Show</a></li>
+                                    <li class="sub-menu"><a href="{{ route('slider-banner-list') }}">Tampilkan</a></li>
                                     <li><a href="{{ route('slider-banner-create') }}">Tambah</a></li>
                                 </ul>
                             </li>
@@ -93,18 +93,19 @@
                     </li>
                     <li><a><i class="fa fa-bar-chart"></i> Reports <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('report-form') }}">Show</a></li>
+                            <li><a href="{{ route('report-form') }}">Tampilkan</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-edit"></i> Status <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('status-list') }}">Show</a></li>
-                            <li><a href="{{ route('status-create') }}">Create</a></li>
+                            <li><a href="{{ route('status-list') }}">Tampilkan</a></li>
+                            <li><a href="{{ route('status-create') }}">Tambah</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-user-secret"></i> Admin <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ route('admin-list') }}">Show</a></li>
+                            <li><a href="{{ route('admin-list') }}">Tampilkan</a></li>
+                            <li><a href="{{ route('admin-create') }}">Tambah</a></li>
                         </ul>
                     </li>
                 </ul>

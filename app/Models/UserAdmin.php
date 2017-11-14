@@ -18,6 +18,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property string $first_name
  * @property string $last_name
  * @property int $status_id
+ * @property int $user_type
  * @property \Carbon\Carbon $created_on
  * @property string $created_by
  * @property \Carbon\Carbon $modified_on
@@ -47,6 +48,7 @@ class UserAdmin extends Authenticatable
         'last_name',
         'phone',
         'status_id',
+        'user_type',
         'created_at',
         'created_by',
         'updated_at',

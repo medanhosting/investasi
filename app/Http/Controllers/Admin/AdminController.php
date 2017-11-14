@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Webpatser\Uuid\Uuid;
 
 class AdminController extends Controller
 {
@@ -30,6 +31,44 @@ class AdminController extends Controller
         $users = UserAdmin::all();
 
         return View('admin.show-users', compact('users'));
+    }
+
+    public function create()
+    {
+        return View('admin.create-user');
+    }
+
+
+    public function store(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'first-name'          => 'required|max:50',
+            'last-name'              => 'required|max:50',
+            'email'              => 'required|email|max:100',
+            'type'              => 'required',
+            'password'              => 'required|min:6|max:20|same:password',
+            'password-confirmation' => 'required|same:password'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $userTypeId = Input::get('type');
+        $newAdmin = UserAdmin::create([
+            'id' =>Uuid::generate(),
+            'email'   => Input::get('email'),
+            'first_name'   => Input::get('first-name'),
+            'last_name'   => Input::get('last-name'),
+            'password'   => bcrypt(Input::get('password')),
+            'user_type'   => $userTypeId,
+            'status_id'   => 1
+        ]);
+        $newAdmin->save();
+
+        return Redirect::route('admin-list');
     }
 
     public function show($id){

@@ -225,6 +225,8 @@ Route::prefix('admin/report')->group(function(){
 // Admin
 Route::prefix('admin/user')->group(function(){
     Route::get('/list', 'Admin\AdminController@index')->name('admin-list');
+    Route::get('/tambah', 'Admin\AdminController@create')->name('admin-create');
+    Route::post('/', 'Admin\AdminController@store');
     Route::get('/show/{id}', 'Admin\AdminController@show')->name('admin-show');
     Route::get('/edit/{id}', 'Admin\AdminController@edit')->name('admin-edit');
     Route::post('/save/{id}', 'Admin\AdminController@update');
