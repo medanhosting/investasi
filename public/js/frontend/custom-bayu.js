@@ -57,3 +57,16 @@ $('input[type=radio][name=amount]').change(function() {
     $("#wallet-deposit-amount").html(addCommas(amount));
     $("#wallet-deposit-cost").html(totalAmountStr);
 });
+
+function onSelectTopUp(e){
+    if(e.value == "0"){
+        $("#custom_amount_section").show();
+    }
+    else{
+        $("#custom_amount_section").hide();
+    }
+}
+
+function modalWalletDeposit(){
+    $("#modal_wallet_deposit").modal();
+}

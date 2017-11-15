@@ -53,17 +53,44 @@ class WalletController extends Controller
         return View ('frontend.wallet-deposit', compact('statements'));
     }
 
-    public function DepositSubmit(Request $request){
-        $validator = Validator::make($request->all(),[
-            'amount'        => 'required',
-            'method'        => 'required'
-        ]);
-
-        if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+    public function DepositConfirm(Request $request){
+        if(Input::get('amount') == '-1'){
+            return redirect()->back()->withErrors('Pilih jumlah top up!', 'default')->withInput($request->all());
         }
+
+        if(Input::get('method') == '-1'){
+            return redirect()->back()->withErrors('Pilih metode top up!', 'default')->withInput($request->all());
+        }
+
+        if(Input::get('amount') == '0' && empty(Input::get('custom_amount'))){
+            return redirect()->back()->withErrors('Isi jumlah top up!', 'default')->withInput($request->all());
+        }
+
+        $amount = 0;
+        if(Input::get('amount') == '0'){
+            $amount = floatval(Input::get('custom_amount'));
+        }
+        else{
+            $amount = floatval(Input::get('amount'));
+        }
+
+        $amountStr = number_format($amount, 0, ",", ".");
+
+        // Get total top up
+        $totalAmount = $amount + 4000;
+        $totalAmountStr = number_format($totalAmount, 0, ",", ".");
+
+        $data = [
+            'amount'            => $amount,
+            'amountStr'         => $amountStr,
+            'totalAmount'       => $totalAmount,
+            'totalAmountStr'    => $totalAmountStr
+        ];
+
+        return View('frontend.wallet-deposit-confirm')->with($data);
+    }
+
+    public function DepositSubmit(Request $request){
 
         $user = Auth::user();
         $userId = $user->id;

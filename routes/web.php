@@ -55,6 +55,7 @@ Route::get('/secondary-market', 'Frontend\TransactionController@SecondaryMarkets
 //wallet
 Route::get('/my-wallet', 'Frontend\WalletController@Wallet')->name('my-wallet');
 Route::get('/deposit', 'Frontend\WalletController@DepositShow')->name('deposit');
+Route::post('/deposit/topup/confirm', 'Frontend\WalletController@DepositConfirm');
 Route::post('/deposit/topup', 'Frontend\WalletController@DepositSubmit');
 Route::get('/deposit/topup/success/{method}/{userId}', 'Frontend\WalletController@DepositSuccess');
 Route::get('/deposit/topup/failed', 'Frontend\WalletController@DepositFailed');
