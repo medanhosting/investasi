@@ -137,7 +137,12 @@
                                                     <h4>Keamanan</h4>
                                                     <h5>Google QR Code</h5>
                                                     <img src="{{ $google2fa_url }}" alt="">
-                                                    <p>Scan Gambar di atas untuk mengaktifkan Google Authenticator!</p>
+                                                    <form class="comment-form row altered">
+                                                    <div class="field col-sm-12">
+                                                        <input type="text" disabled="disabled" value="{{ $user->google2fa_secret }}"/>
+                                                    </div>
+                                                    </form>
+                                                    <p>Scan Gambar atau copy text di atas untuk mengaktifkan Google Authenticator!</p>
                                                 </div>
                                                 <form class="comment-form row altered" method="POST" action="{{route('verify-google-authenticator')}}">
                                                     @if($errors->has('msg'))
