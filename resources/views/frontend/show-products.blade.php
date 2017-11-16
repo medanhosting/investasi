@@ -33,7 +33,7 @@
                         <div class="tab-pane fade in active" id="debt">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content table-responsive">
+                                    <div class="x_content ">
                                         <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -85,7 +85,7 @@
                         <div class="tab-pane fade" id="equity">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content table-responsive">
+                                    <div class="x_content ">
                                         <table id="datatable-responsive-equity" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -139,7 +139,7 @@
                         <div class="tab-pane fade" id="sharing">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content table-responsive">
+                                    <div class="x_content ">
                                         <table id="datatable-responsive-sharing" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>

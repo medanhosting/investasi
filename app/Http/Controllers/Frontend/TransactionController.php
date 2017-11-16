@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Libs\UrgentNews;
 use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,12 @@ class TransactionController extends Controller
 
         $user = Auth::user();
         $userId = $user->id;
+        $blogs = UrgentNews::GetBlogList($userId);
+
+        if(count($blogs) > 0){
+            return View('frontend.show-blog-urgents', compact('blogs'));
+        }
+
 
         $productSahamHasil = Product::select('id')->wherein('category_id', [1, 3])->where('status_id', 1)->get();
         $productHutang = Product::select('id')->where('category_id', 2)->where('status_id', 1)->get();

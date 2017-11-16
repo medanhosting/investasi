@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Libs\UrgentNews;
 use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,11 @@ class ProfileController extends Controller
 
         $authUser = Auth::user();
         $userId = $authUser->id;
+        $blogs = UrgentNews::GetBlogList($userId);
+
+        if(count($blogs) > 0){
+            return View('frontend.show-blog-urgents', compact('blogs'));
+        }
 
         $user = User::find($userId);
         $google2fa_url = '';

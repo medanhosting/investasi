@@ -9,6 +9,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Libs\UrgentNews;
+use App\Models\Blog;
 use App\Models\GuestProspectus;
 use App\Models\Product;
 use App\Models\Vendor;
@@ -28,6 +30,15 @@ class ProductController extends Controller
 //        $user = Auth::user();
 //        $userId = $user->id;
 
+        if(auth()->check()){
+            $user = Auth::user();
+            $userId = $user->id;
+            $blogs = UrgentNews::GetBlogList($userId);
+
+            if(count($blogs) > 0){
+                return View('frontend.show-blog-urgents', compact('blogs'));
+            }
+        }
         $products = Product::where('is_secondary', 0)->get();
 
         $product_debts =Product::where('category_id','=', 1)->where('is_secondary','=', 0)->get();
@@ -41,11 +52,20 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $vendor = null;
+        $projectCount = 1;
         if(!empty($product->vendor_id)){
             $vendor = Vendor::find($product->vendor_id);
+            $projectCount = Product::where('vendor_id', $product->vendor_id)->count();
         }
-        $projectCount = Product::where('vendor_id', $id)->count();
-        return View ('frontend.show-product', compact('product', 'vendor', 'projectCount'));
+
+        $userId = null;
+        if(auth()->check()){
+            $user = Auth::user();
+            $userId = $user->id;
+        }
+        $projectNews = Blog::where('product_id', $id)->orderByDesc('created_at')->get();
+
+        return View ('frontend.show-product', compact('product', 'vendor', 'projectNews', 'projectCount', 'userId'));
     }
 
     public function DownloadFile($filename)

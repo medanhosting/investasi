@@ -24,12 +24,16 @@
             <div class="row cause">
                 <div class="col-md-8 col-xs-12">
                     <div class="col-md-3" style="text-align: center;">
-                        <a data-toggle="modal" data-target="#profileModal">
+                        <div class="col-md-12">
                             <img src="{{ URL::asset('frontend_images/default-profile.jpg') }}" style="height:50%;width:50%;">
                             <p class="font-14">
-                                By <b>{{ $product->Vendor->name }}</b> <br> {{$projectCount}} Project
+                                Oleh <b>{{ $product->Vendor->name }}</b> <br>
+                                {{$projectCount}} Project
                             </p>
-                        </a>
+                        </div>
+                        <div class="col-md-12">
+                            <button data-toggle="modal" data-target="#profileModal" class="btn btn-solid "><span>Lihat Selengkapnya</span></button>
+                        </div>
                     </div>
                     <div class="col-md-9">
                         <h2>{{$product->name}}</h2>
@@ -57,6 +61,12 @@
                     <div class="image-wrapper">
                         <img class="img-responsive" src="{{ URL::asset('storage/project/'.$product->image_path) }}" alt="" style="width: 1920px;">
                     </div>
+                    @if(!empty($product->youtube_link))
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/{{$product->youtube_link}}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    @endif
+
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="col-md-7 col-xs-12">
@@ -127,20 +137,6 @@
                                             </div>
                                         </div>
                                         <div class="field col-sm-12 text-right" >
-                                            {{--<table class="bag_total">--}}
-                                            {{--<tr class="cart-subtotal clearfix">--}}
-                                            {{--<th>Sub total</th>--}}
-                                            {{--<td>Rp 5.000.000</td>--}}
-                                            {{--</tr>--}}
-                                            {{--<tr class="shipping clearfix">--}}
-                                            {{--<th>Admin</th>--}}
-                                            {{--<td>Rp 30.000</td>--}}
-                                            {{--</tr>--}}
-                                            {{--<tr class="total clearfix">--}}
-                                            {{--<th>Total</th>--}}
-                                            {{--<td>Rp 5.030.000</td>--}}
-                                            {{--</tr>--}}
-                                            {{--</table>--}}
 
                                             @if(auth()->check())
                                                 {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
@@ -153,100 +149,63 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane row" id="tab-2">
-                                    <div class="col-md-12">
-                                        <a href="{{route('update-request')}}" class="btn btn-big btn-solid "><i class="fa fa-plus"></i><span>Tambah Update Proyek</span></a>
-                                    </div>
+                                    @if(auth()->check())
+                                        @if ($userId == $product->user_id)
+                                            <div class="col-md-12">
+                                                <a href="{{route('update-request')}}" class="btn btn-big btn-solid "><i class="fa fa-plus"></i><span>Tambah Update Proyek</span></a>
+                                            </div>
+                                        @endif
+                                    @endif
 
                                     <div class="container">
                                         <div class="page-header">
                                             <h1 id="timeline">Update Proyek</h1>
                                         </div>
                                         <ul class="timeline">
-                                            <li>
-                                                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Pembagian Keuntungan Perusahaan</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 9 Mei 2018</small></p>
-                                                        </a>
-                                                    </div>
-                                                    <div class="timeline-body">
-                                                        <p>Produksi telah selesai dan akan dilakukan distribusi pembagian produk. Keuntungan akan diupdate dalam berita selanjutnya.</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="timeline-inverted">
-                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Update Progress Pabrik</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3 Januari 2018</small></p>
-                                                        </a>
-                                                    </div>
-                                                    <div class="timeline-body">
-                                                        <p>Tahap produksi telah memasuki progress 80% dan dalam waktu dekat produk dapat dipasarkan.</p>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            @php($count = 0)
+                                            @if(count($projectNews) > 0)
+                                                @foreach($projectNews as $news)
 
-                                            <li>
-                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Proyek Dimulai</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 20 Juli 2017</small></p>
-                                                        </a>
-                                                    </div>
-                                                    <div class="timeline-body">
-                                                        <p>Memasuki tahap produksi produk</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="timeline-inverted">
-                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Dana Terkumpul 100%</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 17 Juli 2017</small></p>
-                                                        </a>
-                                                    </div>
-                                                    <div class="timeline-body">
-                                                        <p>Dana telah terkumpul 100% dan akan memasuki tahap produksi.</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="timeline-badge warning"><i class="glyphicon glyphicon-check "></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Update Foto dan Video</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 5 Juni 2017</small></p>
-                                                        </a>
-                                                    </div>
-                                                        <div class="timeline-body">
-                                                            <p>Owner melakukan update foto dan video dan data yang di tampilkan kepada investor merupakan data valid dari owner.</p>
+                                                        @if($count == count($projectNews) - 1)
+                                                            @php($className = "success" )
+                                                                @else
+                                                                    @php($className = "warning" )
+                                                                        @endif
+                                                @if($count%2 == 0)
+                                                    <li class="timeline-inverted">
+                                                        <div class="timeline-badge {{$className}}"><i class="glyphicon glyphicon-check"></i></div>
+                                                        <div class="timeline-panel">
+                                                            <div class="timeline-heading">
+                                                                <a href="{{ route('blog', ['id' => $news->id]) }}">
+                                                                    <h4 class="timeline-title">{{$news->title}}</h4>
+                                                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{ \Carbon\Carbon::parse($news->created_at)->format('j M Y ') }}</small></p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="timeline-body read-more-description" style="height: 50px;">
+                                                                {!! $news->description !!}
+                                                            </div>
                                                         </div>
-                                                </div>
-                                            </li>
-                                            <li class="timeline-inverted">
-                                                <div class="timeline-badge success"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-                                                <div class="timeline-panel">
-                                                    <div class="timeline-heading">
-                                                        <a href="#">
-                                                            <h4 class="timeline-title">Project Listing</h4>
-                                                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 Juni 2017</small></p>
-                                                        </a>
-                                                    </div>
-                                                    <div class="timeline-body">
-                                                        <p>Proyek sudah melalui tahap verifikasi dari pihak investasi.me dan sudah dapat diinvestasi oleh para investor.</p>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <div class="timeline-badge {{$className}}"><i class="glyphicon glyphicon-check"></i></div>
+                                                        <div class="timeline-panel">
+                                                            <div class="timeline-heading">
+                                                                <a href="{{ route('blog', ['id' => $news->id]) }}">
+                                                                    <h4 class="timeline-title">{{$news->title}}</h4>
+                                                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{ \Carbon\Carbon::parse($news->created_at)->format('j M Y ') }}</small></p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="timeline-body read-more-description" style="height: 50px;">
+                                                                {!! $news->description !!}
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                @endif
+                                                @php($count++)
+
+                                                @endforeach
+                                            @endif
                                         </ul>
                                     </div>
                             </div>

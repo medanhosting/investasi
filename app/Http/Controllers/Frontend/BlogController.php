@@ -30,11 +30,13 @@ class BlogController extends Controller
 
             $urgentBlogId = BlogUrgent::select('id')->where('blog_id', $id)->first();
 
-            $blogReadUser = BlogReadUser::where('user_id', $userId)
-                ->where('blog_urgent_id', $urgentBlogId->id)
-                ->first();
-            $blogReadUser->status_id = 2;
-            $blogReadUser->save();
+            if(!empty($urgentBlogId)){
+                $blogReadUser = BlogReadUser::where('user_id', $userId)
+                    ->where('blog_urgent_id', $urgentBlogId->id)
+                    ->first();
+                $blogReadUser->status_id = 2;
+                $blogReadUser->save();
+            }
         }
 
         $recentBlogs = Blog::where('status_id', 1)

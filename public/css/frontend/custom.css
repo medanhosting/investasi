@@ -13,6 +13,12 @@
     #chart_wrap {
         padding-bottom: 60%;
     }
+    .read-more-description{
+        margin-bottom: 25%;
+    }
+    .causes-wrapper-custom{
+        padding-top:0;
+    }
 }
 @media screen and (max-width: 465px)  {
     #chart_wrap {
@@ -31,6 +37,16 @@
         height: 150px;
         overflow-y: auto;
     }
+
+    .read-more-description{
+        margin-bottom: 25%;
+    }
+    .causes-wrapper-custom{
+        padding-top:0;
+    }
+}
+.feature-div{
+    height: 60px;
 }
 
 #chart_div {
@@ -259,6 +275,19 @@ p{
     opacity: 1;
 }
 
-@media only screen and (max-device-width : 480px) {
-    /* Styles */
+/* video responsive css */
+.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }

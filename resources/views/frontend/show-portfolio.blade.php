@@ -23,7 +23,7 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#pending" data-toggle="tab">Pending Transaksi</a></li>
                             <li><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
-                            <li><a href="#debt" data-toggle="tab">Debt Portfolio</a></li>
+                            <li><a href="#debt" data-toggle="tab">Hutang Portfolio</a></li>
                             <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
                     </div>

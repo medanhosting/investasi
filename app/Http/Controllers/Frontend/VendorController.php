@@ -156,6 +156,24 @@ class VendorController extends Controller
             'status_id' => 3,
             'created_on'        => $dateTimeNow->toDateTimeString()
         ]);
+        //get youtube code
+        $url = $request['youtube'];
+        if($url.contains('www.youtube.com')){
+            if($url.contains('embed')){
+                $splitedUrl = explode("www.youtube.com/embed/",$url);
+                $newProduct->youtube_link = $splitedUrl[0];
+
+            }
+            else if($url.contains('watch?')){
+                $splitedUrl = explode("www.youtube.com/watch?v=",$url);
+                $newProduct->youtube_link = $splitedUrl[0];
+            }
+        }
+        if($url.contains('youtu.be')){
+            $splitedUrl = explode("youtu.be/",$url);
+            $newProduct->youtube_link = $splitedUrl[0];
+        }
+
         // Get image extension
         $img = Image::make($request->file('project_image'));
         $extStr = $img->mime();

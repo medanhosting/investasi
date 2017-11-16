@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Libs\Midtrans;
 use App\Libs\TransactionUnit;
+use App\Libs\UrgentNews;
 use App\Mail\RequestWithdrawInvestor;
 use App\Models\Cart;
 use App\Models\Transaction;
@@ -36,6 +37,12 @@ class WalletController extends Controller
         }
         $user = Auth::user();
         $userId = $user->id;
+        $blogs = UrgentNews::GetBlogList($userId);
+
+        if(count($blogs) > 0){
+            return View('frontend.show-blog-urgents', compact('blogs'));
+        }
+
         $user = User::find($userId);
         $statements = WalletStatement::where('user_id', $userId)->orderByDesc('created_on')->get();
         return View ('frontend.show-wallet', compact('statements', 'user'));

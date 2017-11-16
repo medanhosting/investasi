@@ -24,6 +24,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $days_left
  * @property float $minimum_per_investor
  * @property string $description
+ * @property string $youtube_link
  * @property string $image_path
  * @property int $is_secondary
  * @property string $meta_tag_description
@@ -77,6 +78,7 @@ class Product extends Eloquent
         'days_left',
         'minimum_per_investor',
         'description',
+        'youtube_link',
         'image_path',
         'is_secondary',
         'meta_tag_description',
@@ -137,6 +139,31 @@ class Product extends Eloquent
     public function getMinimumPerInvestorAttribute(){
         if(!empty($this->attributes['minimum_per_investor'])){
             return number_format($this->attributes['minimum_per_investor'], 0, ",", ".");
+        }
+    }
+
+    public function getYoutubeLinkAttribute(){
+        if(!empty($this->attributes['youtube_link'])){
+            $url = $this->attributes['youtube_link'];
+            if($url.contains('www.youtube.com')){
+                if($url.contains('embed')){
+                    $splitedUrl = explode("www.youtube.com/embed/",$url);
+                    return $splitedUrl[0];
+
+                }
+                else if($url.contains('watch?')){
+                    $splitedUrl = explode("www.youtube.com/watch?v=",$url);
+                    return $splitedUrl[0];
+                }
+                else{
+                    $splitedUrl = explode("www.youtube.com",$url);
+                    return $splitedUrl[0];
+                }
+            }
+            if($url.contains('youtu.be')){
+                $splitedUrl = explode("youtu.be/",$url);
+                return $splitedUrl[0];
+            }
         }
     }
 }

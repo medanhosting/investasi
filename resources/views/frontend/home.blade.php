@@ -17,8 +17,8 @@
                             <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
                             <h4>Investasi sekarang</h4>
                             <div class="feature-div">
-                                <p>3 berjalan, 3 terbaru</p>
-                                <p>3 hampir selesai, 3 selesai</p>
+                                <p>{{$onGoingProducts}} berjalan, {{$recentProductCount}} terbaru</p>
+                                {{--<p>3 hampir selesai, 3 selesai</p>--}}
                             </div>
                             <a href="{{route('project-list')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
@@ -30,8 +30,7 @@
                             <div class="icon_we"><i class="fa fa-money"></i></div>
                             <h4>Dompet Saya</h4>
                             <div class="feature-div">
-                                <p>Rp. 25.000.000</p>
-                                <p>&nbsp;</p>
+                                <p>Rp. {{$user->wallet_amount}}</p>
                             </div>
                             <a href="{{route('my-wallet')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
@@ -42,8 +41,19 @@
                             <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                             <h4> Portfolio Saya </h4>
                             <div class="feature-div">
-                                <p>3 berjalan</p>
-                                <p>2 selesai</p>
+                                @if($pendingTransaction > 0 && $onGoingTransaction > 0)
+                                    <p>{{$pendingTransaction}} pending, {{$onGoingTransaction}} berjalan </p>
+                                @endif
+                                @if($pendingTransaction > 0)
+                                    <p>{{$pendingTransaction}} pending</p>
+                                @endif
+                                @if($onGoingTransaction > 0)
+                                    <p>{{$onGoingTransaction}} berjalan </p>
+                                @endif
+                                @if($finishTransaction > 0)
+                                    <p>{{$finishTransaction}} selesai</p>
+                                @endif
+
                             </div>
                             <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
@@ -54,8 +64,7 @@
                             <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
                             <h4>Pendapatan</h4>
                             <div class="feature-div">
-                                <p>Rp. 5.000.000</p>
-                                <p>&nbsp;</p>
+                                <p>Rp. {{$user->income}}</p>
                             </div>
                             <a href="{{route('pendapatan')}}" class="btn btn-min btn-secondary">
                                 <span>Lihat Semua</span></a>
@@ -176,7 +185,7 @@
     {{--</div>--}}
 
     <!-- Blog -->
-    <section  class="blog-area blog-post-wrapper">
+    <section  class="blog-area blog-post-wrapper" style="padding-bottom:0;">
         <div class="container">
             <div class="section-name one">
                 <h2>Berita Terbaru</h2>
@@ -283,7 +292,7 @@
     </section>
 
     <!-- Causes -->
-    <div class="causes-wrapper">
+    <div class="causes-wrapper causes-wrapper-custom">
         <div class="container">
             <div class="section-name one">
                 <h2>Proyek Terbaru</h2>
