@@ -31,8 +31,8 @@
                                 {{$projectCount}} Project
                             </p>
                         </div>
-                        <div class="col-md-12">
-                            <button data-toggle="modal" data-target="#profileModal" class="btn btn-solid "><span>Lihat Selengkapnya</span></button>
+                        <div class="col-md-12 center-button">
+                            <button data-toggle="modal" data-target="#profileModal" class="btn btn-solid "><span>Selengkapnya</span></button>
                         </div>
                     </div>
                     <div class="col-md-9">

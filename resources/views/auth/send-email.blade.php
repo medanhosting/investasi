@@ -19,7 +19,7 @@
                 <div class="col-md-6 col-md-offset-3">
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
-                            <p>Kami telah mengirimkan email verifikasi ke {{\Illuminate\Support\Facades\Session::flash('email')}}</p>
+                            <p>Kami telah mengirimkan email verifikasi ke {{$email}}</p>
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,8 @@ class EmailVerification extends Mailable
      */
     public function build()
     {
-        return $this->view('email.email')->with([
+        return $this->subject("Email Verifikasi Investasi me")
+            ->view('email.email')->with([
             'email_token' => $this->user->email_token,
         ]);
     }

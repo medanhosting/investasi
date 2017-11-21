@@ -80,14 +80,16 @@
         <div class="mobile-menu-area">
             <div class="container">
                 <div class="row">
+                    @if(!(auth()->check()))
+                        <a href="{{ route('login') }}">
+                            <button class="btn btn-solid" style="margin-top:10%;z-index:99999999999!important;">
+                                Login
+                            </button>
+                        </a>
+                    @endif
                     <div class="col-md-12 col-sm-12">
                         <div class="mobile-area">
                             <div class="mobile-menu">
-
-                                @if(!(auth()->check()))
-                                    <a class="btn btn-solid"  href="{{ route('login') }}" style="margin-top:10%;">Login</a>
-                                @endif
-
                                 <nav id="mobile-nav">
                                     <ul>
                                         <li><a href="{{route('index')}}">Beranda </a></li>

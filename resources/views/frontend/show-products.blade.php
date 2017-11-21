@@ -33,7 +33,7 @@
                         <div class="tab-pane fade in active" id="debt">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content ">
+                                    <div class="x_content table-responsive">
                                         <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -42,7 +42,7 @@
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
                                                 <th>Minimum</th>
-                                                <th>Progress</th>
+                                                <th class="hidden-xs hidden-sm">Progress</th>
                                                 <th>Detail</th>
                                             </tr>
                                             </thead>
@@ -85,7 +85,7 @@
                         <div class="tab-pane fade" id="equity">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content ">
+                                    <div class="x_content table-responsive">
                                         <table id="datatable-responsive-equity" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -95,7 +95,7 @@
                                                 <th>Sisa Hari</th>
                                                 <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
-                                                <th>Progress</th>
+                                                <th class="hidden-xs hidden-sm">Progress</th>
                                                 <th>Detail</th>
                                             </tr>
                                             </thead>
@@ -139,7 +139,7 @@
                         <div class="tab-pane fade" id="sharing">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
-                                    <div class="x_content ">
+                                    <div class="x_content table-responsive">
                                         <table id="datatable-responsive-sharing" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
@@ -148,7 +148,7 @@
                                                 <th>Total</th>
                                                 <th>Sisa Hari</th>
                                                 <th>Minimum</th>
-                                                <th>Progress</th>
+                                                <th class="hidden-xs hidden-sm">Progress</th>
                                                 <th>Tanggal</th>
                                                 <th>Detail</th>
                                             </tr>
@@ -173,7 +173,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </td>
-                                                                <td>{{ $product->days_left }} </td>
+                                                                <td>{{ $product->created_on }} </td>
                                                                 <td>
                                                                     <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
                                                                         <button class="btn btn-primary">Detail</button>

@@ -9,7 +9,7 @@
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
                             <h4>Berita Penting</h4>
-
+                            <span style="color:red">Harap membaca berita berikut ini untuk melanjutkan aktifitas di investasi.me.</span>
                             <div class="x_panel">
                                 <div class="x_content table-responsive">
                                     <table id="datatable-responsive-blog" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">

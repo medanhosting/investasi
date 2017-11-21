@@ -32,7 +32,8 @@ class AcceptPenarikan extends Mailable
      */
     public function build()
     {
-        return $this->view('email.accept-penarikan')->with([
+        return $this->subject("Penarikan Dana Diterima Investasi me")
+            ->view('email.accept-penarikan')->with([
             'statement' => $this->statement,
             'user' => $this->user,
         ]);

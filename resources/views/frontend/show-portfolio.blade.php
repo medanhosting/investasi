@@ -106,8 +106,6 @@
                                                         @endforeach
                                             </tbody>
                                         </table>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -161,10 +159,16 @@
                             </div>
                             <div class="tab-pane fade" id="portfolio">
                                 <h2>Portfolio Breakdown</h2>
-                                {{--<div id="chart_wrap" style="position: relative; padding-bottom: 100%; height: 0; overflow:hidden;">--}}
-                                {{--<div id="chart_div" style="position: absolute; top: 0; left: 0; width:100%; height:100%;"></div>--}}
-                                {{--</div>--}}
-                                <div id="chart_wrap"><div id="chart_div"></div></div>
+                                <h5>Dompet : Rp {{ $userDompet }}</h5>
+                                <h5>Investasi : Rp {{ $userInvestasi }}</h5>
+                                <h5>Pendapatan : Rp {{ $userPendapatan }}</h5>
+
+                                <input type="hidden" id="dompet" value="{{ $userDompet }}">
+                                <input type="hidden" id="investasi" value="{{ $userInvestasi }}">
+                                <input type="hidden" id="pendapatan" value="{{$userPendapatan }}">
+                                {{--<div id="chart_wrap"><div id="chart_div"></div></div>--}}
+                                <div id="chart_wrap"><div id="chart"></div></div>
+                                <p id="canvas_size"></p>
                             </div>
                         </div>
                     </div>
@@ -177,31 +181,74 @@
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
+//        $(window).on("throttledresize", function (event) {
+//            var options = {
+//                chartArea : {'left':'0', 'bottom':'10%', 'width': '50%', 'height': '50%'},
+//                legend: { position: 'left' }
+//            };
+//
+//            drawChart(options);
+//        });
+        $(window).on("throttledresize", function (event) {
+            drawChart();
+        });
 
         function drawChart() {
+            var dompetFormatedVal = $('#dompet').val();
+            var dompetVal = dompetFormatedVal.replace(".", "");
+
+            var investFormatedVal = $('#investasi').val();
+            var investVal = investFormatedVal.replace(".", "")
+
+            var pendapatanFormatedVal = $('#pendapatan').val();
+            var pendapatanVal = pendapatanFormatedVal.replace(".", "");
+
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Breakdown'],
-                ['Cash', 13],
-                ['Investasi', 6],
-                ['Earning', 4]
+                ['Dompet', parseInt(dompetVal)],
+                ['Investasi', parseInt(investVal)],
+                ['Pendapatan', parseInt(pendapatanVal)]
             ]);
+//            var data = new google.visualization.DataTable();
+//            data.addColumn('string', 'Description');
+//            data.addColumn('number', 'Amount');
+//            data.addRows([
+//                ['Dompet', parseInt(dompetVal)],
+//                ['Investasi', parseInt(investVal)],
+//                ['Pendapatan', parseInt(pendapatanVal)]
+//            ]);
 
-            var options = {
-                chartArea : {left:0, 'bottom':'10%', 'width': '100%', 'height': '100%'}
-            };
+            var chart = new google.visualization.PieChart(document.getElementById('chart'));
+            var widthWindow = $(window).width();
+            if(widthWindow < 480){
+                var options = {
+                    chartArea : {'left':'0', 'bottom':'10%', 'width': '75%', 'height': '75%'},
+                    legend:{alignment :'top'}
+                };
 
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
+                chart.draw(data, options);
+            }
+            else{
+                var options = {
+                    chartArea : {'left':'0', 'bottom':'10%', 'width': '100%', 'height': '100%'},
+                    legend: {position: 'labeled', alignment:'center'}
+                };
+
+                chart.draw(data, options);
+            }
         }
-        $(window).on("throttledresize", function (event) {
-            var options = {
-                width: '100%',
-                height: '100%'
-            };
 
-            var data = google.visualization.arrayToDataTable([]);
-            drawChart(data, options);
-        });
+//        $(window).on("throttledresize", function (event) {
+//            alert('adsf');
+//            var data = google.visualization.arrayToDataTable([]);
+//            drawChart(data, options);
+//        });
+//
+//        $(window).resize(function(){
+//            alert('adsf');
+//            var data = google.visualization.arrayToDataTable([]);
+//            drawChartMobile(data, options);
+//        });
     </script>
 
 @endsection

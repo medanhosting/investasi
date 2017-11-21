@@ -41,7 +41,8 @@ class InvoicePembelian extends Mailable
      */
     public function build()
     {
-        return $this->view('email.invoice-pembelian')->with([
+        return $this->subject("Invoice Pembelian Investasi me")
+            ->view('email.invoice-pembelian')->with([
             'transaction' => $this->transaction,
             'paymentMethod' => $this->paymentMethod,
             'user' => $this->user,

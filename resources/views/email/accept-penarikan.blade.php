@@ -112,7 +112,7 @@
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <b>Bukti Transfer</b> : ASDF
+                                <b>Bukti Transfer</b> :
                             </td>
                         </tr>
                         <tr>
