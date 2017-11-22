@@ -18,18 +18,18 @@
     <div class="about-page-wrapper">
         <div class="description container">
             <div class="row">
-                <div class="panel with-nav-tabs panel-default">
-                    <div class="panel-heading">
+                <div id="tabs" class="panel with-nav-tabs panel-default">
+                    <div  id="tabs" class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#pending" data-toggle="tab">Pending Transaksi</a></li>
-                            <li><a href="#equity" data-toggle="tab">Saham / Bagi Produk</a></li>
-                            <li><a href="#debt" data-toggle="tab">Hutang Portfolio</a></li>
+                            <li {{$isActiveTabPending}}><a href="{{route('portfolio', ['tab' => 'pending'])}}">Pending Transaksi</a></li>
+                            <li {{$isActiveTabEquity}}><a href="{{route('portfolio', ['tab' => 'equity'])}}">Saham / Bagi Produk</a></li>
+                            <li {{$isActiveTabDebt}}><a href="{{route('portfolio', ['tab' => 'debt'])}}">Hutang Portfolio</a></li>
                             <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
                     </div>
                     <div class="panel-body">
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="pending">
+                            <div class="tab-pane fade {{$isActivePending}}" id="pending">
 
                                 <div class="x_panel">
                                     <div class="x_title">
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="equity">
+                            <div class="tab-pane fade {{$isActiveEquity}}" id="equity">
 
                                 <div class="x_panel">
                                     <div class="x_title">
@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="debt">
+                            <div class="tab-pane fade {{$isActiveDebt}}" id="debt">
 
                                 <div class="x_panel">
                                     <div class="x_title">
@@ -152,7 +152,7 @@
                                             <p>Keterangan</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <img src="{{ URL::asset('frontend_images/keterangan.jpg') }}">
+                                            <img src="{{ URL::asset('frontend_images/keterangan.jpg') }}" style="width: 100%">
                                         </div>
                                     </div>
                                 </div>
@@ -181,14 +181,6 @@
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
-//        $(window).on("throttledresize", function (event) {
-//            var options = {
-//                chartArea : {'left':'0', 'bottom':'10%', 'width': '50%', 'height': '50%'},
-//                legend: { position: 'left' }
-//            };
-//
-//            drawChart(options);
-//        });
         $(window).on("throttledresize", function (event) {
             drawChart();
         });
@@ -209,15 +201,6 @@
                 ['Investasi', parseInt(investVal)],
                 ['Pendapatan', parseInt(pendapatanVal)]
             ]);
-//            var data = new google.visualization.DataTable();
-//            data.addColumn('string', 'Description');
-//            data.addColumn('number', 'Amount');
-//            data.addRows([
-//                ['Dompet', parseInt(dompetVal)],
-//                ['Investasi', parseInt(investVal)],
-//                ['Pendapatan', parseInt(pendapatanVal)]
-//            ]);
-
             var chart = new google.visualization.PieChart(document.getElementById('chart'));
             var widthWindow = $(window).width();
             if(widthWindow < 480){
@@ -237,18 +220,6 @@
                 chart.draw(data, options);
             }
         }
-
-//        $(window).on("throttledresize", function (event) {
-//            alert('adsf');
-//            var data = google.visualization.arrayToDataTable([]);
-//            drawChart(data, options);
-//        });
-//
-//        $(window).resize(function(){
-//            alert('adsf');
-//            var data = google.visualization.arrayToDataTable([]);
-//            drawChartMobile(data, options);
-//        });
     </script>
 
 @endsection

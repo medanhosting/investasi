@@ -20,7 +20,7 @@
                                 <p>{{$onGoingProducts}} berjalan, {{$recentProductCount}} terbaru</p>
                                 {{--<p>3 hampir selesai, 3 selesai</p>--}}
                             </div>
-                            <a href="{{route('project-list')}}" class="btn btn-min btn-secondary
+                            <a href="{{route('project-list', ['tab' => 'debt'])}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                 @endif
 
                             </div>
-                            <a href="{{route('portfolio')}}" class="btn btn-min btn-secondary
+                            <a href="{{route('portfolio', ['tab' => 'pending'])}}" class="btn btn-min btn-secondary
 						"><span>Lihat Semua</span></a>
                         </div>
                     </div>

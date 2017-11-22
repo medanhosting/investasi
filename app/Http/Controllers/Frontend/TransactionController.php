@@ -27,7 +27,7 @@ class TransactionController extends Controller
 
     }
 
-    public function Portfolio()
+    public function Portfolio($tab)
     {
         if(!auth()->check()){
             return redirect()->route('index');
@@ -54,8 +54,20 @@ class TransactionController extends Controller
         $userInvestasiFormated = number_format($userInvestasi,0, ",", ".");
 
 
-
-
+        $isActiveDebt = ""; $isActiveEquity = "";$isActivePending = "";
+        $isActiveTabDebt = "";$isActiveTabEquity = "";$isActiveTabPending = "";
+        if($tab == "debt") {
+            $isActiveDebt = "in active";
+            $isActiveTabDebt = "class=active";
+        }
+        else if($tab == "equity") {
+            $isActiveEquity = "in active";
+            $isActiveTabEquity = "class=active";
+        }
+        else if($tab == "pending") {
+            $isActivePending = "in active";
+            $isActiveTabPending = "class=active";
+        }
 //        return View ('frontend.show-portfolio',
 //            compact('transactionPending','transactionSahamHasil',
 //            'transactionHutang'));
@@ -65,7 +77,13 @@ class TransactionController extends Controller
             'transactionHutang'=>$transactionHutang,
             'userDompet'=>$userDompet,
             'userPendapatan'=>$userPendapatan,
-            'userInvestasi'=>$userInvestasiFormated
+            'userInvestasi'=>$userInvestasiFormated,
+            'isActiveDebt'=>$isActiveDebt,
+            'isActiveEquity'=>$isActiveEquity,
+            'isActivePending'=>$isActivePending,
+            'isActiveTabDebt'=>$isActiveTabDebt,
+            'isActiveTabEquity'=>$isActiveTabEquity,
+            'isActiveTabPending'=>$isActiveTabPending
         ];
         return View ('frontend.show-portfolio')->with($data);
     }

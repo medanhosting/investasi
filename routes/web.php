@@ -45,7 +45,7 @@ Route::post('/google2fa-login', 'Auth\LoginController@GoogleAuthenticatorLogin')
 Route::post('/google2fa-deactivate', 'Frontend\ProfileController@DeactivateGoogleAuthenticator')->name('deactivate-google-authenticator');
 
 //portfolio
-Route::get('/portfolio', 'Frontend\TransactionController@Portfolio')->name('portfolio');
+Route::get('/portfolio-list/{tab}', 'Frontend\TransactionController@Portfolio')->name('portfolio');
 Route::get('/portfolio/{id}', 'Frontend\TransactionController@PortfolioDetail')->name('portfolio-detail');
 
 //secondary market
@@ -67,7 +67,7 @@ Route::post('/withdraw-submit', [
 Route::get('/withdraw/cancel/{id}', 'Frontend\WalletController@cancelWithdrawRequest')->name('withdraw-cancel');
 
 //product
-Route::get('/project', 'Frontend\ProductController@ProductList')->name('project-list');
+Route::get('/project-list/{tab}', 'Frontend\ProductController@ProductList')->name('project-list');
 Route::get('/project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
 Route::get('/download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
 Route::post('/register-prospectus', [

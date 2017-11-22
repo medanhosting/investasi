@@ -26,7 +26,7 @@
                         <li>
                             <span>Investasi </span>
                             <ul class="submenu">
-                                <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
+                                <li><a href="{{route('project-list', ['tab' => 'debt'])}}">Daftar Investasi</a></li>
                                 {{--<li><a href="{{route('secondary-market')}}">Secondary Market</a></li>--}}
                             </ul>
                         </li>
@@ -47,7 +47,7 @@
                             </span>
                                 <ul class="submenu">
                                 <li><a href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a></li>
-                                <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                <li><a href="{{route('portfolio', ['tab' => 'pending'])}}">Portfolio</a></li>
                                 <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -95,7 +95,7 @@
                                         <li><a href="{{route('index')}}">Beranda </a></li>
                                         <li><a>Investasi </a>
                                             <ul>
-                                                <li><a href="{{route('project-list')}}">Daftar Investasi</a></li>
+                                                <li><a href="{{route('project-list', ['tab' => 'debt'])}}">Daftar Investasi</a></li>
                                                 {{--<li><a href="{{route('secondary-market')}}">Secondary Market</a></li>--}}
                                             </ul>
                                         </li>
@@ -113,7 +113,7 @@
 
                                                 @if(auth()->check())
                                                     <li><a href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a></li>
-                                                    <li><a href="{{route('portfolio')}}">Portfolio</a></li>
+                                                    <li><a href="{{route('portfolio', ['tab' => 'pending'])}}">Portfolio</a></li>
                                                     <li><a href="{{route('my-wallet')}}">Dompet</a></li>
                                                     <li>
                                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

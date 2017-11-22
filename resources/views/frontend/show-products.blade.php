@@ -20,17 +20,17 @@
     <div class="grid-cause-area list-cause-area">
         <div class="container">
 
-            <div class="panel with-nav-tabs panel-default">
+            <div id="tabs" class="panel with-nav-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#debt" data-toggle="tab">Saham</a></li>
-                        <li><a href="#equity" data-toggle="tab">Hutang</a></li>
-                        <li><a href="#sharing" data-toggle="tab">Bagi Hasil / Produk</a></li>
+                        <li {{$isActiveTabDebt}}><a href="{{route('project-list', ['tab' => 'debt'])}}" >Saham</a></li>
+                        <li {{$isActiveTabEquity}}><a href="{{route('project-list', ['tab' => 'equity'])}}" >Hutang</a></li>
+                        <li {{$isActiveTabSharing}}><a href="{{route('project-list', ['tab' => 'sharing'])}}" >Bagi Hasil / Produk</a></li>
                     </ul>
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="debt">
+                        <div class="tab-pane fade {{$isActiveDebt}}" id="debt">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
@@ -59,7 +59,7 @@
                                                                 <td>{{ $product->days_left }} </td>
                                                                 {{--<td>Rp {{ $product->raised }}</td>--}}
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
-                                                                <td>
+                                                                <td class="hidden-xs hidden-sm">
                                                                     <div class="progress-bar-inner">
                                                                         <div class="progress-bar">
                                                                             <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="equity">
+                        <div class="tab-pane fade {{$isActiveEquity}}" id="equity">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
@@ -113,7 +113,7 @@
                                                             {{--<td>Rp {{ $product->raised }}</td>--}}
                                                             <td>Rp -</td>
                                                             <td>Rp {{ $product->minimum_per_investor }}</td>
-                                                            <td>
+                                                            <td class="hidden-xs hidden-sm">
                                                                 <div class="progress-bar-inner">
                                                                     <div class="progress-bar">
                                                                         <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="sharing">
+                        <div class="tab-pane fade {{$isActiveSharing}}" id="sharing">
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
@@ -166,7 +166,7 @@
                                                                 <td>{{ $product->days_left }} </td>
                                                                 {{--<td>Rp {{ $product->raised }}</td>--}}
                                                                 <td>Rp {{ $product->minimum_per_investor }}</td>
-                                                                <td>
+                                                                <td class="hidden-xs hidden-sm">
                                                                     <div class="progress-bar-inner">
                                                                         <div class="progress-bar">
                                                                             <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>

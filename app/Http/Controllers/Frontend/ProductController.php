@@ -25,7 +25,7 @@ use App\Libs\Utilities;
 
 class ProductController extends Controller
 {
-    public function ProductList()
+    public function ProductList($tab)
     {
 //        $user = Auth::user();
 //        $userId = $user->id;
@@ -45,7 +45,36 @@ class ProductController extends Controller
         $product_equities =Product::where('category_id','=', 2)->where('is_secondary','=', 0)->get();
         $product_sharings =Product::where('category_id','=', 3)->where('is_secondary','=', 0)->get();
 
-        return View ('frontend.show-products', compact('product_debts', 'product_equities', 'product_sharings'));
+
+        $isActiveDebt = ""; $isActiveEquity = "";$isActiveSharing = "";
+        $isActiveTabDebt = "";$isActiveTabEquity = "";$isActiveTabSharing = "";
+        if($tab == "debt") {
+            $isActiveDebt = "in active";
+            $isActiveTabDebt = "class=active";
+        }
+        else if($tab == "equity") {
+            $isActiveEquity = "in active";
+            $isActiveTabEquity = "class=active";
+        }
+        else if($tab == "sharing") {
+            $isActiveSharing = "in active";
+            $isActiveTabSharing = "class=active";
+        }
+
+//        return View ('frontend.show-products', compact('product_debts', 'product_equities', 'product_sharings'));
+
+        $data = [
+            'product_debts'=>$product_debts,
+            'product_equities'=>$product_equities,
+            'product_sharings'=>$product_sharings,
+            'isActiveDebt'=>$isActiveDebt,
+            'isActiveEquity'=>$isActiveEquity,
+            'isActiveSharing'=>$isActiveSharing,
+            'isActiveTabDebt'=>$isActiveTabDebt,
+            'isActiveTabEquity'=>$isActiveTabEquity,
+            'isActiveTabSharing'=>$isActiveTabSharing
+        ];
+        return View ('frontend.show-products')->with($data);
     }
 
     public function ProductDetail($id)

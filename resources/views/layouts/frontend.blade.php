@@ -139,7 +139,7 @@
             }
         }
     });
-    $('#datatable-responsive-pending').DataTable({
+    $('#datatable-responsive-equity').DataTable({
         "responsive": {
             details: {
                 display: $.fn.dataTable.Responsive.display.childRowImmediate,
@@ -147,7 +147,7 @@
             }
         }
     });
-    $('#datatable-responsive-equity').DataTable({
+    $('#datatable-responsive-pending').DataTable({
         "responsive": {
             details: {
                 display: $.fn.dataTable.Responsive.display.childRowImmediate,
@@ -181,6 +181,7 @@
             }
         }
     });
+
     $('#verification-photo').fileinput();
 
     /**
@@ -234,6 +235,16 @@
         }
     });
 
+    //        $('.nav-tabs > li > a').on("click",function(e){
+    //            e.preventDefault();
+    //
+    //            $($.fn.dataTable.tables( true ) ).css('width', '100%');
+    //            $($.fn.dataTable.tables( true ) ).DataTable().columns.adjust().draw();
+    //        });
+    //        $('#tabs').tabs({
+    //            activate: recalculateDataTableResponsiveSize,
+    //            create: recalculateDataTableResponsiveSize
+    //        });
     /**
      *	The following snippet of code automatically converst
      *	any '.treeview' DOM elements into a treeview component.
