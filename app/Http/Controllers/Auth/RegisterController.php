@@ -116,7 +116,9 @@ class RegisterController extends Controller
         );
 
         $messages = array(
-            'not_contains' => 'Email tidak boleh memiliki karakter + !',
+            'not_contains' => 'Email can not have a + character',
+//            'username.unique'   => 'Username sudah pernah terdaftar',
+//            'phone.unique'   => 'Nomor Handphone sudah pernah terdaftar',
         );
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -172,7 +174,8 @@ class RegisterController extends Controller
 
         if($user->save()){
             Session::put("user-data", $user);
-            return Redirect::route('verify-phone-show');
+            return Redirect::route('index');
+//            return Redirect::route('verify-phone-show');
 //            return View('auth.send-email', compact('email'));
 //            return View('auth.email-confirm',['user'=>$user]);
         }

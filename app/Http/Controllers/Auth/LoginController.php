@@ -85,10 +85,10 @@ class LoginController extends Controller
             $email = $userData->email;
             return View('auth.send-email', compact('email'));
         }
-        else if($userData->status_id == 11){
-            Session::put("user-data", $userData);
-            return Redirect::route('index');
-        }
+//        else if($userData->status_id == 11){
+//            Session::put("user-data", $userData);
+//            return Redirect::route('index');
+//        }
 
         //Check if Google Authenticator
         if($userData->google_authenticator == 1){

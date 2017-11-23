@@ -35,6 +35,7 @@ class HomeController extends Controller
         $finishTransaction = null;
         $recentProductCount = null;
         $onGoingProducts = null;
+
         if(auth()->check()){
             $user = Auth::user();
             $userId = $user->id;
