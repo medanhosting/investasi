@@ -30,6 +30,13 @@ class TransactionUnit
             if($cart->payment_method == 'credit_card'){
                 $paymentMethodInt = 2;
             }
+            else if($cart->payment_method == 'wallet'){
+                $walletTemp = (double)$user->getOriginal('wallet_amount');
+                $user->wallet_amount = $walletTemp - (double)$cart->getOriginal('invest_amount');
+                $user->save();
+
+                $paymentMethodInt = 3;
+            }
 
             $trxCreate = Transaction::create([
                 'id'                => Uuid::generate(),

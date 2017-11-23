@@ -35,7 +35,7 @@
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
                         <a href="{{ route('project-detail', ['id' => $investId]) }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Kembali ke Halaman Investasi</a>
-                        <a href="{{ route('project-list') }}" class="btn btn-big btn-solid">Daftar Investasi</a>
+                        <a href="{{ route('project-list', ['tab' => 'debt']) }}" class="btn btn-big btn-solid">Daftar Investasi</a>
                     </div>
                 </div>
             </div>

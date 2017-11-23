@@ -23,7 +23,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property float $delivery_fee
  * @property float $admin_fee
  * @property string $order_id
- * @property int $payment_method
+ * @property string $payment_method
  *
  * @property \App\Models\Product $product
  * @property \App\Models\User $user
@@ -41,8 +41,7 @@ class Cart extends Eloquent
         'invest_amount' => 'float',
 		'total_invest_amount' => 'float',
         'delivery_fee' => 'float',
-        'admin_fee' => 'float',
-        'payment_method' => 'int'
+        'admin_fee' => 'float'
 	];
 
 	protected $fillable = [

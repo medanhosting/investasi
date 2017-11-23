@@ -9,7 +9,7 @@
                 <h2>Pembayaran</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{ route('project-list') }}">Daftar Investasi</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{ route('project-list', ['tab' => 'debt']) }}">Daftar Investasi</a>
                         <i class="fa fa-angle-double-right"></i>Pembayaran
                     </h5>
                 </div>
@@ -32,6 +32,8 @@
                         <div class="foundings">
                             @if($paymentMethod == 'credit_card')
                                 <p>Pembayaran kartu kredit anda telah berhasil diverifikasi</p>
+                            @elseif($paymentMethod == 'dompet')
+                                <p>Pembayaran dengan dompet anda telah berhasil</p>
                             @else
                                 <p>Pembayaran bank transfer anda telah berhasil diajukan</p>
                             @endif
@@ -39,10 +41,10 @@
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
                         @if($paymentMethod == 'credit_card')
-                            <a href="#" class="btn btn-big btn-solid" style="margin-left: 10px;">Daftar Investasi</a>
+                            <a href="{{ route('portfolio', ['tab' => 'pending']) }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Daftar Investasi</a>
                             <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                         @else
-                            <a href="#" class="btn btn-big btn-solid" style="margin-left: 10px;">Status Pembayaran</a>
+                            <a href="{{ route('portfolio', ['tab' => 'pending']) }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Status Pembayaran</a>
                             <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                         @endif
                     </div>

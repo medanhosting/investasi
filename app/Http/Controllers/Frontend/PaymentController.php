@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Libs\Midtrans;
 use App\Libs\TransactionUnit;
 use App\Models\Cart;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
@@ -73,8 +74,21 @@ class PaymentController extends Controller
 
                 return redirect($redirectUrl);
             }
+            //if pay with dompet
+            else{
+                $userDB = User::find($userId);
+                if($userDB->wallet_amount < $investAmount){
+                    $isSuccess = TransactionUnit::createTransaction($userId, $cart->id + 1, $cart->order_id);
 
-            dd("WALLET PAID!");
+                    $paymentMethod = 'dompet';
+                    return View('frontend.checkout-success', compact('paymentMethod'));
+                }
+                else{
+                    return View('frontend.checkout-failed', compact('investId'));
+                }
+
+            }
+
         }
         catch(\Exception $ex){
 
