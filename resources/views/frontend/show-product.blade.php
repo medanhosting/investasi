@@ -9,7 +9,7 @@
                 <h2>Detail Investasi</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{route('project-list')}}">Daftar Investasi</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('project-list', ['tab' => 'debt'])}}">Daftar Investasi</a>
                         <i class="fa fa-angle-double-right"></i>Detil
                     </h5>
                 </div>
@@ -261,7 +261,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-error" data-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-big btn-solid" data-dismiss="modal" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Lanjutkan</span></button>
+                    <button type="button" class="btn btn-solid" data-dismiss="modal" onclick="modalCheckout()"><i class="fa fa-archive"></i><span> Lanjutkan</span></button>
                 </div>
             </div>
         </div>
@@ -285,27 +285,27 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <label class="pull-right">Jumlah Investasi:</label>
+                        <div class="col-lg-offset-3 col-md-offset-3 col-lg-4 col-md-4 col-sm-12">
+                            <label>Jumlah Investasi:</label>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <span id="checkout-invest-amount" class="pull-right">Rp 200.000</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <label class="pull-right">Biaya Admin:</label>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <span id="checkout-admin-fee" class="pull-right">Rp 200.000</span>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <span id="checkout-invest-amount" ></span>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <label class="pull-right">Total:</label>
+                        <div class="col-lg-offset-3 col-md-offset-3 col-lg-4 col-md-4 col-sm-12">
+                            <label>Biaya Admin:</label>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6">
-                            <span id="checkout-total-invest" class="pull-right">Rp 400.000</span>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <span id="checkout-admin-fee"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-3 col-md-offset-3 col-lg-4 col-md-4 col-sm-12">
+                            <label>Total:</label>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <span id="checkout-total-invest"></span>
                         </div>
                     </div>
                     <div class="row">

@@ -71,20 +71,31 @@
             </td>
         </tr></tbody></table><table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#fff" style="background-color: #fff;" id="ko_titleBlock_3"><tbody><tr><td class="vb-outer" align="center" valign="top" bgcolor="#fff" style="padding-left: 9px;padding-right: 9px;background-color: #fff;">
 
-                <!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+                <!--[if (gte mso 9)|(lte ie 8)]><table align="left" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
                 <div class="oldwebkit" style="max-width: 570px;">
                     <table width="570" border="0" cellpadding="0" cellspacing="9" class="vb-container halfpad" bgcolor="#ffffff" style="border-collapse: separate;border-spacing: 9px;padding-left: 9px;padding-right: 9px;width: 100%;max-width: 570px;background-color: #fff;"><tbody><tr><td bgcolor="#ffffff" align="center" style="background-color: #ffffff; font-size: 22px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f; text-align: center;">
-                                <span>Click the Link To Verify Your Email</span>
+                                <span>
+                                    Yth. Bapak/Ibu,
+                                </span>
                             </td>
                         </tr></tbody></table></div>
                 <!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
             </td>
         </tr></tbody></table><table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#fff" style="background-color: #fff;" id="ko_textBlock_4"><tbody><tr><td class="vb-outer" align="center" valign="top" bgcolor="#fff" style="padding-left: 9px;padding-right: 9px;background-color: #fff;">
 
-                <!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+                <!--[if (gte mso 9)|(lte ie 8)]><table align="left" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
                 <div class="oldwebkit" style="max-width: 570px;">
-                    <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" style="border-collapse: separate;border-spacing: 18px;padding-left: 0;padding-right: 0;width: 100%;max-width: 570px;background-color: #fff;"><tbody><tr><td align="left" class="long-text links-color" style="text-align: left; font-size: 14px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                <p style="margin: 1em 0px;margin-bottom: 0px;margin-top: 0px;text-align: center;" data-mce-style="text-align: center;">Click the following link to verify your email <span style="color: rgb(129, 185, 81);" data-mce-style="color: #81b951;"><strong><a title="here" href="{{ url('/verifyemail/'.$email_token)}}" style="color: #81b951;text-decoration: underline;" data-mce-style="color: #81b951;">here</a></strong></span></p></td>
+                    <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" style="border-collapse: separate;border-spacing: 18px;padding-left: 0;padding-right: 0;width: 100%;max-width: 570px;background-color: #fff;"><tbody><tr>
+                            <td align="left" class="long-text links-color" style="text-align: left; font-size: 14px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
+                                <p style="margin: 1em 0px;margin-bottom: 0px;margin-top: 0px;text-align: center;" data-mce-style="text-align: center;">
+                                    Terima kasih telah mendaftar di investasi me.
+                                    Untuk menyelesaikan proses pendaftaran, kami membutuhkan konfirmasi alamat email anda.
+                                    Mohon membuka tautan di berikut untuk mengkonfirmasi data anda.
+                                    <span style="color: rgb(129, 185, 81);" data-mce-style="color: #81b951;">
+                                        <strong><a title="here" href="{{ url('/verifyemail/'.$email_token)}}" style="color: #81b951;text-decoration: underline;" data-mce-style="color: #81b951;">Klik Disini</a></strong>
+                                    </span>
+                                </p>
+                            </td>
                         </tr></tbody></table></div>
                 <!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
             </td>
