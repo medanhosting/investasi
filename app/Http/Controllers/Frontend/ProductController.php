@@ -81,10 +81,14 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $vendor = null;
+        $vendorDesc = null;
         $projectCount = 1;
         if(!empty($product->vendor_id)){
             $vendor = Vendor::find($product->vendor_id);
             $projectCount = Product::where('vendor_id', $product->vendor_id)->count();
+
+            //get description vendor
+            $vendorDesc = Utilities::TruncateString($vendor->description);
         }
 
         $userId = null;
@@ -94,7 +98,8 @@ class ProductController extends Controller
         }
         $projectNews = Blog::where('product_id', $id)->orderByDesc('created_at')->get();
 
-        return View ('frontend.show-product', compact('product', 'vendor', 'projectNews', 'projectCount', 'userId'));
+
+        return View ('frontend.show-product', compact('product', 'vendor', 'vendorDesc', 'projectNews', 'projectCount', 'userId'));
     }
 
     public function DownloadFile($filename)

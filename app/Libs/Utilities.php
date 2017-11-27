@@ -62,4 +62,17 @@ class Utilities
         $log->pushHandler(new StreamHandler(storage_path('logs/error.log')), Logger::ALERT);
         $log->info('exception', $logContent);
     }
+
+    public static function TruncateString($oldString){
+        $string = strip_tags($oldString);
+        if (strlen($string) > 150) {
+
+            // truncate string
+            $stringCut = substr($string, 0, 150);
+
+            // make sure it ends in a word so assassinate doesn't become ass...
+            $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'...';
+        }
+        return $string;
+    }
 }

@@ -238,9 +238,11 @@ p{
     text-align: center !important;
     margin: 0;
     line-height: 3;
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8), white);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(255, 255, 255, 0.8)),color-stop(1, white));
+    /*background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8), white);*/
+    /*background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(255, 255, 255, 0.8)),color-stop(1, white));*/
+    background-color: #f6f6f6;
 }
+
 
 /* Tooltip container */
 .tooltip {

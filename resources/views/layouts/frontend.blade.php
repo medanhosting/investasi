@@ -123,6 +123,9 @@
         $('.summernote').summernote({
             height: 400
         });
+
+        $('.at-svc-whatsapp').attr("href", "https://web.whatsapp.com/send?text=www.google.com");
+        $('.at-svc-whatsapp').attr("data-action", "share/whatsapp/share");
     });
 
     $('#datatable-responsive-debt').DataTable({

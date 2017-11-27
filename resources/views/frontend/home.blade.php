@@ -112,7 +112,7 @@
         </div>
     @endif
 
-    <!-- Special Cuase Paralax -->
+    <!-- News -->
     <section  class="blog-area blog-post-wrapper" style="padding-bottom:0;">
         <div class="container">
             <div class="section-name one">
@@ -133,8 +133,8 @@
                                 <i class="fa fa-user"></i> <strong>{{$recentBlog->user_admin->first_name}} {{$recentBlog->user_admin->last_name}}</strong>
                             </div>
                             <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
-                            <div class="read-more-description" style="height:250px;text-align: left;">
-                                {!! $recentBlog->description !!}
+                            <div class="read-more-description" style="height:170px;text-align: left;">
+                                {{ $highlightBlog[$recentBlog->id] }}
                                 <p class="read-more">
                                     <a href="{{ route('blog', ['id' => $recentBlog->id]) }}" class="btn btn-min btn-solid">
                                         Baca Selengkapnya  <i class="fa fa-arrow-right"></i>
@@ -149,7 +149,7 @@
         </div>
     </section>
 
-    <!-- Causes -->
+    <!-- New Project -->
     <div class="causes-wrapper causes-wrapper-custom">
         <div class="container">
             <div class="section-name one">
@@ -213,6 +213,23 @@
 
     $( document ).ready(function() {
         setTimeout(adsModalFunction, 60000);
+    });
+
+    $(document).ready(function() {
+
+        $('.read-more').each(function() {
+            var content = $(this).html();
+            alert("asdf");
+//        if(content.length > showChar) {
+//
+//            var c = content.substr(0, showChar);
+//            var h = content.substr(showChar, content.length - showChar);
+//
+//            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+//
+//            $(this).html(html);
+//        }
+        });
     });
 </script>
 @endsection

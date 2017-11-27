@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Libs\UrgentNews;
+use App\Libs\Utilities;
 use App\Mail\InvoicePembelian;
 use App\Models\Blog;
 use App\Models\BlogReadUser;
@@ -28,6 +29,12 @@ class HomeController extends Controller
             ->orderByDesc('created_at')
             ->take(3)
             ->get();
+        $highlightBlog = array();
+        foreach ($recentBlogs as $blog){
+            $string = Utilities::TruncateString($blog->description);
+
+            $highlightBlog = array_add($highlightBlog,$blog->id, $string);
+        }
 
         $user = null;
         $pendingTransaction = null;
@@ -58,6 +65,7 @@ class HomeController extends Controller
         $data = [
             'recentProducts' => $recentProducts,
             'recentBlogs' => $recentBlogs,
+            'highlightBlog' => $highlightBlog,
             'user' => $user,
             'pendingTransaction' => $pendingTransaction,
             'onGoingTransaction' => $onGoingTransaction,
