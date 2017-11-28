@@ -206,30 +206,4 @@
         </div>
     </div>
 
-<script>
-    function adsModalFunction() {
-        $("#adsModal").modal()
-    }
-
-    $( document ).ready(function() {
-        setTimeout(adsModalFunction, 60000);
-    });
-
-    $(document).ready(function() {
-
-        $('.read-more').each(function() {
-            var content = $(this).html();
-            alert("asdf");
-//        if(content.length > showChar) {
-//
-//            var c = content.substr(0, showChar);
-//            var h = content.substr(showChar, content.length - showChar);
-//
-//            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-//
-//            $(this).html(html);
-//        }
-        });
-    });
-</script>
 @endsection

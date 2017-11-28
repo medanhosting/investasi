@@ -123,9 +123,6 @@
         $('.summernote').summernote({
             height: 400
         });
-
-        $('.at-svc-whatsapp').attr("href", "https://web.whatsapp.com/send?text=www.google.com");
-        $('.at-svc-whatsapp').attr("data-action", "share/whatsapp/share");
     });
 
     $('#datatable-responsive-debt').DataTable({
@@ -271,7 +268,7 @@
 <!--End of Zendesk Chat Script-->
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f6e999249e3f1c"></script>
+{{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f6e999249e3f1c"></script>--}}
 
 
 </body>

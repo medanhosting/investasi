@@ -84,7 +84,21 @@
                         <div class="short-stats clearfix">
                             <h5><i class="fa fa-clock-o"></i>{{$product->days_left}} Hari</h5>
                             {{--<a href="https://web.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">Share via Whatsapp web</a>--}}
-                            <div class="addthis_inline_share_toolbox"></div>
+                            {{--<div class="addthis_inline_share_toolbox"></div>--}}
+
+                            <!-- AddToAny BEGIN -->
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                {{--<a class="a2a_dd" href="https://www.addtoany.com/share"></a>--}}
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_twitter"></a>
+                                <a class="a2a_button_google_plus"></a>
+                                <a class="a2a_button_whatsapp"></a>
+                                <a class="a2a_button_line"></a>
+                                <a class="a2a_button_telegram"></a>
+                                <a class="a2a_button_copy_link"></a>
+                            </div>
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                            <!-- AddToAny END -->
                         </div>
                     </div>
 
