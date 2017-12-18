@@ -75,7 +75,7 @@ class HomeController extends Controller
 
         ];
 
-        return View('frontend.home')->with($data);
+        return View('frontend.home-new')->with($data);
     }
 
     //
