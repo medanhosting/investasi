@@ -58,6 +58,19 @@
     .causes-wrapper-custom{
         padding-top:0;
     }
+
+    .homepage-section4{
+        width: 40% !important;
+    }
+
+    .homepage-section4-text{
+        height:125px !important;
+        width: 100%;
+    }
+
+    .homepage-footer-contact-us{
+        text-align: center !important;
+    }
 }
 .feature-div{
     height: 60px;
@@ -305,8 +318,74 @@ p{
 .navigation .menu-wrap .menu > li a, .navigation .menu-wrap .menu > li span{
     color: #ddd;
 }
+
+.fullpage_background {
+    background: url("../../frontend_images/homepage/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    max-height: 550px;
+    position: relative;
+    height:600px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.fullpage_background2 {
+    background: url("../../frontend_images/homepage/bg2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    padding: 5% !important;
+    margin: 0 !important;
+}
+.fullpage_background3 {
+    background: url("../../frontend_images/homepage/bg3.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    padding-top: 13% !important;
+    padding-bottom: 13% !important;
+    margin: 0 !important;
+}
+.fullpage_background4 {
+    background: url("../../frontend_images/homepage/bg4.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    padding: 5% !important;
+    margin: 0 !important;
+}
+.fullpage_background5 {
+    background: url("../../frontend_images/homepage/bg5.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    padding: 5% !important;
+    margin: 0 !important;
+}
+.homepage-section4{
+    width: 50%;
+}
+.homepage-section4-text{
+    height:225px;
+}
+
+.project-border{
+    border: 2px solid #ff7a00;
+    padding:10px;
+    margin:10px;
+    color:black;
+    transition: border-width 1s linear;
+}
+.project-border:hover { border-width: 5px; }
+
 .donet__area_img_edit {
-    background: url("../../frontend_images/featured-image-11.png") no-repeat center center;
+    background: url("../../frontend_images/homepage/bg2.jpg") no-repeat center center;
     background-size: 100%;
     max-height: 550px;
     position: relative;
@@ -346,6 +425,10 @@ p{
     color: white;
     text-decoration: underline;
 }
+.homepage-footer-contact-us{
+    text-align: right;
+}
+
 .subscribe-section{
     background-color: rgba(255, 255, 255, 0.7);
     padding-bottom: 2%;
@@ -354,7 +437,7 @@ p{
 .subscribe-form-div{
     background: #ff7a00 none repeat scroll 0 0;
     color:white;
-    height: 175px;
+    height: auto;
 }
 .subscribe-field{
     background-color: #ff7a00;

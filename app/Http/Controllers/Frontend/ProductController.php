@@ -99,7 +99,7 @@ class ProductController extends Controller
         $projectNews = Blog::where('product_id', $id)->orderByDesc('created_at')->get();
 
 
-        return View ('frontend.show-product', compact('product', 'vendor', 'vendorDesc', 'projectNews', 'projectCount', 'userId'));
+        return View ('frontend.show-product-new', compact('product', 'vendor', 'vendorDesc', 'projectNews', 'projectCount', 'userId'));
     }
 
     public function DownloadFile($filename)

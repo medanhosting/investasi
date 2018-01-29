@@ -67,7 +67,7 @@
     </div>
     <div class="footer-bar">
         <div class="container">
-            <h5>Copyright ©2017 Investasi.me. All Rights Reserved</h5>
+            <h5>Copyright ©2018 Investasi.me. All Rights Reserved</h5>
         </div>
     </div>
 </footer>

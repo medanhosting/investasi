@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         $recentBlogs = Blog::where('status_id', 1)
             ->orderByDesc('created_at')
-            ->take(3)
+            ->take(4)
             ->get();
         $highlightBlog = array();
         foreach ($recentBlogs as $blog){

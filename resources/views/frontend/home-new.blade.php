@@ -113,14 +113,11 @@
     @endif
 
     <!-- apa itu investasi.me -->
-    <div class="special-cause" style="padding: 0 !important;">
+    <div class="special-cause fullpage_background2">
         <div class="row">
-            <div class="col-md-6 col-xs-12 donet__area_img_edit">
-                <!--<img src="assets/img/featured-image-1.jpg" alt="" />-->
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:10%;">
-                    <h2>Apa itu Investasi.me</h2>
+            <div class="col-md-offset-6 col-md-6 col-xs-12">
+                <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:10%;margin-bottom: 5%;color:white !important;">
+                    <h2 style="color: white !important;">Apa itu Investasi.me</h2>
                     <h1>Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h1>
                     <span style="font-size:14px;">
                         Ada banyak potensi bisnis, usaha dan industri di Indonesia yang hingga saat ini belum dapat kesempatan untuk bisa
@@ -135,15 +132,14 @@
                     </span>
                 </div>
                 <div class="btns-wrapper">
-                    <a href="#" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Read More</span></a>
+                    <a href="#" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Baca Selanjutnya</span></a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- p2p lending -->
-    <div class="special-cause lending">
-        <div class="container">
+    <div class="special-cause fullpage_background3">
             <div class="row">
                 <div class="col-md-6 col-xs-12 donet__area" style="background: none; border: none;">
                     <div class="section-name parallax one" style="color: white !important;">
@@ -153,19 +149,15 @@
                         <span>*) Nilai tersebut adalah simulasi pinjaman dengan rating C dan di setahunkan</span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="#" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Daftar Sekarang</span></a>
+                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Daftar Sekarang</span></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xs-12 donet__area_img">
-                    <img src="{{ URL::asset('frontend_images/featured-image-1.jpg') }}" alt="" />
-                </div>
             </div>
-        </div>
     </div>
 
     <!-- langkah -->
-    <div class="team-wrapper">
-        <div class="container">
+    <div class="special-cause fullpage_background4">
+        <div class="row">
             <div class="section-name one">
                 <div class="short-text">
                     <h5 style="color: white !important;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></h5>
@@ -175,250 +167,121 @@
 
             <div class="team-members row">
                 <div class="col-md-3 col-sm-6 col-xs-12 hidden-sm">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <div style="display: table; height: 225px; #position: relative; overflow: hidden;">
-                                    <div style=
-                                         "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-                                        <div style=" #position: relative; #top: -50%">
-                                            <h2>Memberikan bantuan</h2>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
+                        <div style=
+                             "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+                            <div style=" #position: relative; #top: -50%; color: white !important;">
+                                <h2>Memberikan bantuan</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-1.jpg') }}" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-1.jpg') }}" alt=""></a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-1.jpg') }}"alt=""></a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4">
                 </div>
             </div>
             <div class="team-members row">
                 <div class="col-md-3 col-sm-6 col-xs-12 hidden-sm">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <div style="display: table; height: 225px; #position: relative; overflow: hidden;">
-                                    <div style=
-                                         "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-                                        <div style=" #position: relative; #top: -50%">
-                                            <h2>Meminjamkan</h2>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
+                        <div style=
+                             "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+                            <div style=" #position: relative; #top: -50%;color: white !important;">
+                                <h2>Meminjamkan</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-1.jpg') }}"alt=""></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-2.jpg') }}" alt=""></a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-member">
-                        <div class="best-volunteer">
-                            <div class="voluntee-image">
-                                <a href="#" title=""><img src="{{ URL::asset('frontend_images/best-volunte-3.jpg') }}" alt=""></a>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4">
                 </div>
             </div>
         </div>
     </div>
 
     <!-- proyek -->
-    <div class="causes-wrapper">
-        <div class="container">
-            <div class="section-name one">
+    <div class="special-cause fullpage_background5">
+        <div class="row">
+            <div class="one">
                 <h2>Proyek Berjalan Saat ini</h2>
-                <div class="short-text">
-                    <h5>Lihat daftar proyek yang dapat Anda danai hari ini</h5>
+                <br>
+                <h3>Lihat daftar proyek yang dapat Anda danai hari ini</h3>
                 </div>
             </div>
+                <div style="margin: 40px; !important">
+
+                    @foreach($recentProducts as $product)
+
+                        @php( $togo = $product->getOriginal('raising') - $product->getOriginal('raised') )
+                        @php( $togo = number_format($togo,0, ",", ".") )
+                        @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
+                        @php( $percentage = number_format($percentage, 0) )
+                        <a href="{{ route('project-detail', ['id' => $product->id]) }}">
+                            <div class="col-md-12 project-border">
+                                <div class="col-md-2">
+                                    <span>Nama Project</span>
+                                    <br>
+                                    <span style="color: #ff7a00">{{ $product->name }}</span>
+                                    <br>
+                                    <span>Jenis Project</span>
+                                </div>
+                                <div class="col-md-2">
+                                    Nominal
+                                    <br>
+                                    <span style="color: #ff7a00">{{ $product->raising }}</span>
+                                </div>
+                                <div class="col-md-2">
+                                    Rating Rate
+                                    <br>
+                                    <span style="color: #ff7a00">A 14%</span>
+                                </div>
+                                <div class="col-md-2">
+                                    Waktu
+                                    <br>
+                                    <span style="color: #ff7a00">1 tahun</span>
+                                </div>
+                                <div class="col-md-2">
+                                    Progress {{$percentage}}&
+                                    <br>
+                                    <div class="progress-bar-wrapper min">
+                                        <div class="progress-bar-outer">
+                                            <div class="progress-bar-inner">
+                                                <div class="progress-bar">
+                                                    <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    Masa Penawaran
+                                    <br>
+                                    <span style="color: #ff7a00">{{ $product->days_left }} hari lagi</span>
+                                </div>
+
+                            </div>
+                        </a>
+
+                    @endforeach
+                </div>
+
+                <div>
+                    <a href="{{route('project-list', ['tab' => 'debt'])}}" class="btn btn-min btn-solid"><span>Berikan Bantuan</span></a>
+                    <a class="btn btn-min btn-solid" style="background-color: white !important;color: #ff7a00 !important;"><span>Daftarkan Proyek</span></a>
+                </div>
         </div>
-        <div class="causes">
-            <div class="causes-list" style="margin: 40px; !important">
-                <div class="col-md-12" style="border: 2px solid #ff7a00;padding:10px;margin:10px;">
-                    <div class="col-md-2">
-                        <span>Nama Project</span>
-                        <br>
-                        <span style="color: #ff7a00">Nama Project</span>
-                        <br>
-                        <span>Jenis Project</span>
-                    </div>
-                    <div class="col-md-2">
-                        Nominal
-                        <br>
-                        <span style="color: #ff7a00">Nominal</span>
-                    </div>
-                    <div class="col-md-2">
-                        Rating Rate
-                        <br>
-                        <span style="color: #ff7a00">A 14%</span>
-                    </div>
-                    <div class="col-md-2">
-                        Waktu
-                        <br>
-                        <span style="color: #ff7a00">1 tahun</span>
-                    </div>
-                    <div class="col-md-2">
-                        Progress 70&
-                        <br>
-                        <div class="progress-bar-wrapper min">
-                            <div class="progress-bar-outer">
-                                <div class="progress-bar-inner">
-                                    <div class="progress-bar">
-                                        <span data-percent="70"><span class="pretng">70%</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        Masa Penawaran
-                        <br>
-                        <span style="color: #ff7a00">20 hari lagi</span>
-                    </div>
 
-                </div>
-                <div class="col-md-12" style="border: 2px solid #ff7a00;padding:10px;margin:10px;">
-                    <div class="col-md-2">
-                        <span>Nama Project</span>
-                        <br>
-                        <span style="color: #ff7a00">Nama Project</span>
-                        <br>
-                        <span>Jenis Project</span>
-                    </div>
-                    <div class="col-md-2">
-                        Nominal
-                        <br>
-                        <span style="color: #ff7a00">Nominal</span>
-                    </div>
-                    <div class="col-md-2">
-                        Rating Rate
-                        <br>
-                        <span style="color: #ff7a00">A 14%</span>
-                    </div>
-                    <div class="col-md-2">
-                        Waktu
-                        <br>
-                        <span style="color: #ff7a00">1 tahun</span>
-                    </div>
-                    <div class="col-md-2">
-                        Progress 70&
-                        <br>
-                        <div class="progress-bar-wrapper min">
-                            <div class="progress-bar-outer">
-                                <div class="progress-bar-inner">
-                                    <div class="progress-bar">
-                                        <span data-percent="70"><span class="pretng">70%</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        Masa Penawaran
-                        <br>
-                        <span style="color: #ff7a00">20 hari lagi</span>
-                    </div>
-
-                </div>
-                <div class="col-md-12" style="border: 2px solid #ff7a00;padding:10px;margin:10px;">
-                    <div class="col-md-2">
-                        <span>Nama Project</span>
-                        <br>
-                        <span style="color: #ff7a00">Nama Project</span>
-                        <br>
-                        <span>Jenis Project</span>
-                    </div>
-                    <div class="col-md-2">
-                        Nominal
-                        <br>
-                        <span style="color: #ff7a00">Nominal</span>
-                    </div>
-                    <div class="col-md-2">
-                        Rating Rate
-                        <br>
-                        <span style="color: #ff7a00">A 14%</span>
-                    </div>
-                    <div class="col-md-2">
-                        Waktu
-                        <br>
-                        <span style="color: #ff7a00">1 tahun</span>
-                    </div>
-                    <div class="col-md-2">
-                        Progress 70&
-                        <br>
-                        <div class="progress-bar-wrapper min">
-                            <div class="progress-bar-outer">
-                                <div class="progress-bar-inner">
-                                    <div class="progress-bar">
-                                        <span data-percent="70"><span class="pretng">70%</span> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        Masa Penawaran
-                        <br>
-                        <span style="color: #ff7a00">20 hari lagi</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <div>
-                <button class="btn btn-min btn-solid"><span>Berikan Bantuan</span></button>
-                <button class="btn btn-min btn-solid" style="background-color: white !important;color: #ff7a00 !important;"><span>Daftarkan Proyek</span></button>
-            </div>
-        </div>
-    </div>
 
     <!-- Blog -->
     <section  class="blog-area blog-post-wrapper" style="background: #ff7a00 none repeat scroll 0 0; color:white">
@@ -430,66 +293,24 @@
                 </div>
             </div>
             <div class="row">
+
+            @foreach($recentBlogs as $recentBlog)
                 <!-- Blog Single -->
                 <div class="col-md-3 col-sm-6">
                     <div class="blog-box">
-                        <div class="blog-top-desc"><strong> 17 july - Kategori : Progress Project</strong>
+                        <div class="blog-top-desc"><strong> {{ \Carbon\Carbon::parse($recentBlog->created_at)->format('j M Y ') }} - Kategori : Progress Project</strong>
                         </div>
-                        <img src="assets/img/blog/img-2.jpg" alt="">
+                        <img src="{{ URL::asset('storage/project/Kerupuk_Top.jpg') }}" alt="">
                         <div class="blog-btm-desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.
-                                - <a href="#" class="read-more">Read More</a>
+                                {{ $highlightBlog[$recentBlog->id] }}
+                                - <a href="{{ route('blog', ['id' => $recentBlog->id]) }}" class="read-more">Baca Selanjutnya</a>
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Blog Single -->
-                <!-- Blog Single -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc"><strong> 20 Okt - Kategori : Project Start</strong>
-                        </div>
-                        <img src="assets/img/blog/img-2.jpg" alt="">
-                        <div class="blog-btm-desc">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.
-                                - <a href="#" class="read-more">Read More</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Single -->
-                <!-- Blog Single -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc"><strong> 15 Okt - Kategori : Blog</strong>
-                        </div>
-                        <img src="assets/img/blog/img-2.jpg" alt="">
-                        <div class="blog-btm-desc">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.
-                                - <a href="#" class="read-more">Read More</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Single -->
-                <!-- Blog Single -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="blog-box">
-                        <div class="blog-top-desc"><strong> 5 Okt - Kategori : Progress Project</strong>
-                        </div>
-                        <img src="assets/img/blog/img-2.jpg" alt="">
-                        <div class="blog-btm-desc">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum unde iure veniam.
-                                - <a href="#" class="read-more">Read More</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Single -->
+            @endforeach
 
             </div>
         </div>

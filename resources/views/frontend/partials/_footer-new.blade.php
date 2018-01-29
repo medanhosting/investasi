@@ -9,10 +9,10 @@
                 <h2>Dapatkan Berita & Informasi Terbaru ke Email Anda</h2>
                 <form action="#">
                     <div class="col-md-offset-2 col-md-3 col-sm-12 field">
-                        <input type="text" name="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
+                        <input style="margin-bottom: 5%;" type="text" name="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
-                        <input type="email" name="e-mail" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
+                        <input style="margin-bottom: 5%;" type="email" name="e-mail" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
                         <button class="btn btn-min btn-solid subscribe-submit"><span>Kirim</span></button>
@@ -23,27 +23,29 @@
         &nbsp;
     </div>
     <div class="container subscribe-footer">
-        <div class="col-md-12" style="padding-bottom: 5%;">
+        <div class="col-md-12" style="padding-top: 3%;padding-bottom: 3%;">
             <img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:250px">
-            <br>
-            <br>
-            <h2>Terdaftar dan diawasi oleh</h2>
-            <br>
-            <img src="{{ URL::asset('frontend_images/logo.png') }}" style="width:250px">
-            <br>
+            {{--<br>--}}
+            {{--<br>--}}
+            {{--<h2>Terdaftar dan diawasi oleh</h2>--}}
+            {{--<br>--}}
+            {{--<img src="{{ URL::asset('frontend_images/homepage/ojk.png') }}" style="width:250px">--}}
+            {{--<br>--}}
         </div>
 
-        <div class="col-md-6" style="text-align: right;">
+        <div class="col-md-6 col-sm-12 homepage-footer-contact-us">
             <button class="btn btn-big btn-solid" >Hubungi Kami</button>
         </div>
-        <div class="col-md-6" style="text-align: left;">
+        <div class="col-md-6 col-sm-12" style="text-align: left;">
             PT BURSA AKSELERASI INDONESIA
             <br>
-            Menara Satrio Lantai 14
+            Menara Satrio Lantai 14 unit 5
             <br>
             Jalan Prof. DR. Satrio Kav. 1-4 Blok C4
             <br>
             Kel. Kuningan Timur, Kec. Setiabudi, Jakarta Selatan 12950, Indonesia
+            <br>
+            Telepon (021)25981342
         </div>
     </div>
     <div class="footer-bar" style="background: white; color: #ff7a00;margin-top: 0;font-size: 16px !important;">
@@ -56,7 +58,7 @@
         <i class="fa fa-linkedin" aria-hidden="true"></i>
         <br><br>
         <div class="container">
-            <h5>2017 © All Rights Reserved | Privacy Policy</h5>
+            <h5>2018 © All Rights Reserved | Privacy Policy</h5>
         </div>
     </div>
 </footer>
