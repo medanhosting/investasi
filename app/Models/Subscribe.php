@@ -30,6 +30,7 @@ class Subscribe extends Eloquent
 	protected $fillable = [
 		'name',
 		'email',
-		'date'
+		'date',
+        'status_id'
 	];
 }

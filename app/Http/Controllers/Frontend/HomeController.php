@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Libs\UrgentNews;
 use App\Libs\Utilities;
 use App\Mail\InvoicePembelian;
+use App\Mail\Subscribe;
 use App\Models\Blog;
 use App\Models\BlogReadUser;
 use App\Models\BlogUrgent;
@@ -17,6 +18,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Validator;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -103,5 +106,31 @@ class HomeController extends Controller
     }
     public function Pengajuan(){
         return View('frontend.apply-owner');
+    }
+
+    public function Subscribe(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name'  => 'required',
+            'email' => 'required|email|not_contains'
+        ]);
+
+        if ($validator->fails())
+            return response()->json(['success' => false, 'error' => 'exception']);
+
+        $name = $request->get('name');
+        $email = $request->get('email');
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+        \App\Models\Subscribe::create([
+            'name'      => $name,
+            'email'     => $email,
+            'date'      => $dateTimeNow->toDateTimeString(),
+            'status_id' => 1,
+        ]);
+
+//        $subscribeEmail = new Subscribe($name, $email);
+//        Mail::to($email)->send($subscribeEmail);
+
+        return response()->json(['success' => true]);
     }
 }

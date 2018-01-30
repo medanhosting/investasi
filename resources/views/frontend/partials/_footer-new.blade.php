@@ -7,17 +7,17 @@
         <div class="section-name one  subscribe-section">
             <div class="subcribe widget clearfix">
                 <h2>Dapatkan Berita & Informasi Terbaru ke Email Anda</h2>
-                <form action="#">
+                {!! Form::open(['url'=>'subscribeEmail','id'=>'subscribe-form'])!!}
                     <div class="col-md-offset-2 col-md-3 col-sm-12 field">
-                        <input style="margin-bottom: 5%;" type="text" name="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
+                        <input style="margin-bottom: 5%;" type="text" name="name" id="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
-                        <input style="margin-bottom: 5%;" type="email" name="e-mail" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
+                        <input style="margin-bottom: 5%;" type="email" name="email" id="email" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
-                        <button class="btn btn-min btn-solid subscribe-submit"><span>Kirim</span></button>
+                        {!! Form::submit('Kirim',['class'=>'btn btn-min btn-solid subscribe-submit'])!!}
                     </div>
-                </form>
+                {!! Form::close() !!}
             </div>
         </div>
         &nbsp;
@@ -61,4 +61,24 @@
             <h5>2018 © All Rights Reserved | Privacy Policy</h5>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding-top: 10%;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{--<h4 class="modal-title" id="myModalLabel">Success</h4>--}}
+                </div>
+                <div class="modal-body text-center">
+                    Berhasil Subscribe!
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </footer>
+
+<script>
+    var urlLink = '{{route('subscribeEmail')}}';
+</script>

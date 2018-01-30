@@ -70,3 +70,43 @@ function onSelectTopUp(e){
 function modalWalletDeposit(){
     $("#modal_wallet_deposit").modal();
 }
+
+$(function(){
+    $('#subscribe-form').on('submit',function(e){
+
+        e.preventDefault();
+        var name = '';
+        if($('#name').length > 0){
+            name = $('#name').val();
+        }
+        var email = '';
+        if($('#email').length > 0){
+            email = $('#email').val();
+        }
+
+        $.ajax({
+            url     : urlLink,
+            method  : 'POST',
+            data    : {
+                // _token: CSRF_TOKEN,
+                name  : name,
+                email : email
+            },
+            headers:
+                {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+            success : function(response){
+                if(response.success === true){
+                    $('#modal-success').modal();
+                }
+                else{
+                    alert("There's something wrong!");
+                }
+            },
+            error:function(){
+                alert('error');
+            }
+        });
+    });
+});
