@@ -71,6 +71,10 @@
     .homepage-footer-contact-us{
         text-align: center !important;
     }
+
+    .top_logo{
+        width:99% !important;
+    }
 }
 .feature-div{
     height: 60px;
@@ -319,6 +323,13 @@ p{
     color: #ddd;
 }
 
+.top_logo{
+    width:50%;
+}
+
+.features-wrapper.one .features {
+    margin-top: 20px !important;
+}
 .fullpage_background {
     background: url("../../frontend_images/homepage/bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;

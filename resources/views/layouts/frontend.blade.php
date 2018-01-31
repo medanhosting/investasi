@@ -61,7 +61,7 @@
 
 @include('frontend.partials._modal-ads')
 <!-- FOOTER -->
-@include('frontend.partials._footer')
+@include('frontend.partials._footer-new')
 <!-- //FOOTER -->
 
 <!-- Scripts -->
@@ -123,6 +123,15 @@
         $('.summernote').summernote({
             height: 400
         });
+    });
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > 1050) {
+            $('.submenu').attr("style","position: fixed;z-index: 90;top: 105px;width: 80%;background: white;");
+
+
+        } else {
+            $('.submenu').removeAttr("style");
+        }
     });
 
     $('#datatable-responsive-debt').DataTable({
@@ -256,16 +265,31 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBROUPyS84INXyl7iqq0NxSLmHudbQ_Dc4&libraries=places&callback=init" async defer></script>
 <script type="text/javascript" src="{{ URL::asset('js/frontend/gmaps.js') }}"></script>
 
+
 <!-- ZOPIM Live Chat -->
-<!--Start of Zendesk Chat Script-->
+{{--<!--Start of Zendesk Chat Script-->--}}
+{{--<script type="text/javascript">--}}
+{{--window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=--}}
+{{--d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.--}}
+{{--_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");--}}
+{{--$.src="https://v2.zopim.com/?5DR2k2P8dAZxMsdjIfGMPxZySekfGBLC";z.t=+new Date;$.--}}
+{{--type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");--}}
+{{--</script>--}}
+{{--<!--End of Zendesk Chat Script-->--}}
+
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-        $.src="https://v2.zopim.com/?5DR2k2P8dAZxMsdjIfGMPxZySekfGBLC";z.t=+new Date;$.
-            type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5a6ade9d4b401e45400c6944/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
 </script>
-<!--End of Zendesk Chat Script-->
+<!--End of Tawk.to Script-->
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 {{--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f6e999249e3f1c"></script>--}}

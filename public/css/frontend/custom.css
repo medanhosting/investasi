@@ -58,7 +58,16 @@
     .causes-wrapper-custom{
         padding-top:0;
     }
+
+    .top_logo{
+        width:99% !important;
+    }
 }
+
+.top_logo{
+    width:70%;
+}
+
 .feature-div{
     height: 60px;
 }
@@ -314,4 +323,47 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.product-info:hover{
+    background: rgba(255, 122, 0, .8);
+}
+
+/* custom css for new home design */
+.navigation{
+    background: #2e3436 !important;
+    color: #ddd;
+}
+.navigation .menu-wrap .menu > li a, .navigation .menu-wrap .menu > li span{
+    color: #ddd;
+}
+
+/* footer section */
+.homepage-footer-contact-us{
+    text-align: right;
+}
+
+.subscribe-section{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+.subscribe-form-div{
+    background: #ff7a00 none repeat scroll 0 0;
+    color:white;
+    height: auto;
+}
+.subscribe-field{
+    background-color: #ff7a00;
+    width: 100% !important;
+}
+.subscribe-submit{
+    background-color: white !important;
+    color: #ff7a00 !important;
+    width: 75% !important;
+}
+.subscribe-footer{
+    text-align: center;
+    border-bottom: 10px solid #ff7a00;
+    padding-bottom: 10px;
 }

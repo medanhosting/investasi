@@ -4,11 +4,11 @@
     @if(auth()->check())
         <!-- Features -->
         <div class="features-wrapper one">
-            <div class="container">
+            <div class="container" style="margin-top: 40px;">
                 <div class="section-name one">
                     <h2>Halo</h2>
                     <div class="short-text">
-                        <h5>Selamat Datang, {{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}</h5>
+                        <h5 style="color:#444 !important;">Selamat Datang, {{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}</h5>
                     </div>
                 </div>
                 <div class="row features">

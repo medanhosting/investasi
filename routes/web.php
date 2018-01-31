@@ -84,6 +84,7 @@ Route::get('/project-request', 'Frontend\ProductController@ProductList')->name('
 
 //payment
 Route::prefix('/payment')->group(function (){
+    Route::get('/checkout/{id}', 'Frontend\PaymentController@checkout')->name('checkout');
     Route::post('/confirm/{investId}', 'Frontend\PaymentController@pay');
     Route::get('/success/cc/{userId}', 'Frontend\PaymentController@successCC');
     Route::get('/success/va', 'Frontend\PaymentController@successVA');

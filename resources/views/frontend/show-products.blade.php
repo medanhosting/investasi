@@ -52,32 +52,30 @@
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                         @php( $percentage = number_format($percentage, 0) )
-                                                            <tr>
-                                                                <td>{{ $idx }}</td>
-                                                                <td>{{ $product->name }}</td>
-                                                                <td>Rp {{ $product->raising }}</td>
-                                                                <td>{{ $product->days_left }} </td>
-                                                                {{--<td>Rp {{ $product->raised }}</td>--}}
-                                                                <td>Rp {{ $product->minimum_per_investor }}</td>
-                                                                <td class="hidden-xs hidden-sm">
-                                                                    <div class="progress-bar-inner">
-                                                                        <div class="progress-bar">
-                                                                            <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
-                                                                        <button class="btn btn-primary">Detail</button>
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
+                                                                    <tr>
+                                                                        <td>{{ $idx }}</td>
+                                                                        <td>{{ $product->name }}</td>
+                                                                        <td>Rp {{ $product->raising }}</td>
+                                                                        <td>{{ $product->days_left }} </td>
+                                                                        {{--<td>Rp {{ $product->raised }}</td>--}}
+                                                                        <td>Rp {{ $product->minimum_per_investor }}</td>
+                                                                        <td class="hidden-xs hidden-sm">
+                                                                            <div class="progress-bar-inner">
+                                                                                <div class="progress-bar">
+                                                                                    <span data-percent="{{$percentage}}"><span class="pretng">{{$percentage}}%</span> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="{{ route('project-detail', ['id' => $product->id]) }}">
+                                                                                <button class="btn btn-primary">Detail</button>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
                                                             @php( $idx++ )
                                                                 @endforeach
                                             </tbody>
                                         </table>
-
-
                                     </div>
                                 </div>
                             </div>

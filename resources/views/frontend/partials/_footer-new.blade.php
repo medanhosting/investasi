@@ -70,13 +70,25 @@
                     {{--<h4 class="modal-title" id="myModalLabel">Success</h4>--}}
                 </div>
                 <div class="modal-body text-center">
-                    Berhasil Subscribe!
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                    </div>
+                    <img src="{{ URL::asset('frontend_images/homepage/submit-subscribe.png') }}">
+                    <br><br>
+                    Kami telah mendaftarkan email Anda paga sistem kami.
+                    <br><br>
+                    Cek email Anda sekarang dan lakukan konfirmasi alamat email Anda.
+                    <br><br>
+                    Apabila Anda tidak menemukan email tersebut silahkan cek pada spam folder Anda.
+                    <br><br>
+                    Bila Anda mendapatkan email apapun dari kami silahkan hubungi info@investasi.me
+                    <br><br>
+                    Terima kasih
+
+                    {{--<div class="modal-footer">--}}
+                        {{--<button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>
+    </div>
 </footer>
 
 <script>

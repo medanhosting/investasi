@@ -5,7 +5,7 @@
         <div class="container" >
             <div class="row">
                 @if(auth()->check())
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a style="color:white;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="logo-wrap col-md-3 col-xs-6">
-                    <a href="{{route('index')}}"><img src="{{ URL::asset('frontend_images/logo-white.png') }}" style="width:50%"></a>
+                    <a href="{{route('index')}}"><img src="{{ URL::asset('frontend_images/logo-white.png') }}" class="top_logo"></a>
                     {{--<a href="index.html">Investasi.me</a>--}}
                 </div>
                 <div class="menu-wrap col-md-8 ">

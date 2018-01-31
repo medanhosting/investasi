@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Libs\Midtrans;
 use App\Libs\TransactionUnit;
 use App\Models\Cart;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,6 +21,12 @@ use Illuminate\Support\Facades\Input;
 
 class PaymentController extends Controller
 {
+    public function checkout($id){
+        $product = Product::find($id);
+
+        return View('frontend.checkout', compact('product'));
+    }
+
     public function pay(Request $request, $investId){
         try{
 //            dd(Input::get('checkout-invest-amount-input'). " - ". Input::get('checkout-admin-fee-input'). " - ". Input::get('checkout-payment-method-input'));
