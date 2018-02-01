@@ -33,6 +33,9 @@
     .causes-wrapper-custom{
         padding-top:0;
     }
+    .subscribe_popup_image{
+        width: 70%;
+    }
 }
 @media screen and (max-width: 465px)  {
     #chart_wrap {
@@ -62,10 +65,26 @@
     .top_logo{
         width:99% !important;
     }
+    .subscribe_popup_image{
+        width: 45%;
+    }
 }
 
 .top_logo{
     width:70%;
+}
+
+.project-border{
+    border: 2px solid #ff7a00;
+    padding:10px;
+    margin:10px;
+    color:black;
+    transition: border-width 0.5s linear;
+}
+.project-border:hover { border-width: 5px; }
+
+.row-clickable{
+    cursor: pointer;
 }
 
 .feature-div{

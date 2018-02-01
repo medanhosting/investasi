@@ -23,6 +23,11 @@
     height:100%;
 }
 
+@media screen and (min-width: 752px) and (max-width: 1023px)  {
+    .homepage-section4{
+        width: 30% !important;
+    }
+}
 @media screen and (min-width: 466px) and (max-width: 751px)  {
     #chart_wrap {
         padding-bottom: 60%;
@@ -32,6 +37,12 @@
     }
     .causes-wrapper-custom{
         padding-top:0;
+    }
+    .subscribe_popup_image{
+        width: 70%;
+    }
+    .homepage-section4{
+        width: 30% !important;
     }
 }
 @media screen and (max-width: 465px)  {
@@ -74,6 +85,9 @@
 
     .top_logo{
         width:99% !important;
+    }
+    .subscribe_popup_image{
+        width: 45%;
     }
 }
 .feature-div{
@@ -394,6 +408,10 @@ p{
     transition: border-width 1s linear;
 }
 .project-border:hover { border-width: 5px; }
+
+.row-clickable{
+    cursor: pointer;
+}
 
 .donet__area_img_edit {
     background: url("../../frontend_images/homepage/bg2.jpg") no-repeat center center;

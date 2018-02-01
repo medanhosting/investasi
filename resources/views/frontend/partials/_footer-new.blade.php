@@ -9,10 +9,10 @@
                 <h2>Dapatkan Berita & Informasi Terbaru ke Email Anda</h2>
                 {!! Form::open(['url'=>'subscribeEmail','id'=>'subscribe-form'])!!}
                     <div class="col-md-offset-2 col-md-3 col-sm-12 field">
-                        <input style="margin-bottom: 5%;" type="text" name="name" id="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
+                        <input style="margin-bottom: 5%;color:white;" type="text" name="name" id="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
-                        <input style="margin-bottom: 5%;" type="email" name="email" id="email" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
+                        <input style="margin-bottom: 5%;color:white;" type="email" name="email" id="email" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
                     </div>
                     <div class="col-md-3 col-sm-12 field">
                         {!! Form::submit('Kirim',['class'=>'btn btn-min btn-solid subscribe-submit'])!!}
@@ -70,7 +70,7 @@
                     {{--<h4 class="modal-title" id="myModalLabel">Success</h4>--}}
                 </div>
                 <div class="modal-body text-center">
-                    <img src="{{ URL::asset('frontend_images/homepage/submit-subscribe.png') }}">
+                    <img class="subscribe_popup_image" src="{{ URL::asset('frontend_images/homepage/submit-subscribe.png') }}">
                     <br><br>
                     Kami telah mendaftarkan email Anda paga sistem kami.
                     <br><br>

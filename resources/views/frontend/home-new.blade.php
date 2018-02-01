@@ -166,7 +166,7 @@
             </div>
 
             <div class="team-members row">
-                <div class="col-md-3 col-sm-6 col-xs-12 hidden-sm">
+                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
                     <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
@@ -176,18 +176,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
+                    <h2 style="color: white !important;">Memberikan bantuan</h2>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4">
                 </div>
             </div>
             <div class="team-members row">
-                <div class="col-md-3 col-sm-6 col-xs-12 hidden-sm">
+                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
                     <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
@@ -197,13 +200,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
+                    <h2 style="color: white !important;">Meminjamkan</h2>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4">
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 center">
+                <div class="col-md-3 col-sm-12 col-xs-12 center">
                     <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4">
                 </div>
             </div>

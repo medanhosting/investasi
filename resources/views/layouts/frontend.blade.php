@@ -123,10 +123,14 @@
         $('.summernote').summernote({
             height: 400
         });
+
+        $('.row-clickable').on('click', function () {
+            window.location = $(this).data("href");
+        } );
     });
     $(window).bind('scroll', function () {
         if ($(window).scrollTop() > 1050) {
-            $('.submenu').attr("style","position: fixed;z-index: 90;top: 105px;width: 80%;background: white;");
+            $('.submenu').attr("style","position: fixed;z-index: 90;top: 105px;width: 80%;background: white;padding: 1%;");
 
 
         } else {

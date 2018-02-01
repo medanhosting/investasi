@@ -34,7 +34,7 @@
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
-                                        <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+                                        <table id="datatable-responsive-debt" class="table table-striped table-hover dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
                                                 <th>No</th>
@@ -43,16 +43,17 @@
                                                 <th>Sisa Hari</th>
                                                 <th>Minimum</th>
                                                 <th class="hidden-xs hidden-sm">Progress</th>
-                                                <th>Detail</th>
+                                                {{--<th>Detail</th>--}}
                                             </tr>
                                             </thead>
                                             <tbody>
+
                                             @php( $idx = 1 )
                                                 @foreach($product_debts as $product)
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                         @php( $percentage = number_format($percentage, 0) )
-                                                                    <tr>
+                                                            <tr class="row-clickable" data-href='{{ route('project-detail', ['id' => $product->id]) }}'>
                                                                         <td>{{ $idx }}</td>
                                                                         <td>{{ $product->name }}</td>
                                                                         <td>Rp {{ $product->raising }}</td>
@@ -66,11 +67,11 @@
                                                                                 </div>
                                                                             </div>
                                                                         </td>
-                                                                        <td>
-                                                                            <a href="{{ route('project-detail', ['id' => $product->id]) }}">
-                                                                                <button class="btn btn-primary">Detail</button>
-                                                                            </a>
-                                                                        </td>
+                                                                        {{--<td>--}}
+                                                                            {{--<a href="{{ route('project-detail', ['id' => $product->id]) }}">--}}
+                                                                                {{--<button class="btn btn-primary">Detail</button>--}}
+                                                                            {{--</a>--}}
+                                                                        {{--</td>--}}
                                                                     </tr>
                                                             @php( $idx++ )
                                                                 @endforeach
@@ -84,7 +85,7 @@
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
-                                        <table id="datatable-responsive-equity" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+                                        <table id="datatable-responsive-equity" class="table table-striped table-hover dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
                                                 <th>No</th>
@@ -94,7 +95,7 @@
                                                 <th>Bunga/Kupon</th>
                                                 <th>Minimum</th>
                                                 <th class="hidden-xs hidden-sm">Progress</th>
-                                                <th>Detail</th>
+                                                {{--<th>Detail</th>--}}
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -103,7 +104,7 @@
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                     @php( $percentage = number_format($percentage, 0) )
-                                                        <tr>
+                                                        <tr class="row-clickable" data-href='{{ route('project-detail', ['id' => $product->id]) }}'>
                                                             <td>{{ $idx }}</td>
                                                             <td>{{ $product->name }}</td>
                                                             <td>Rp {{ $product->raising }}</td>
@@ -118,11 +119,11 @@
                                                                     </div>
                                                                 </div>
                                                             </td>
-                                                            <td>
-                                                                <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
-                                                                    <button class="btn btn-primary">Detail</button>
-                                                                </a>
-                                                            </td>
+                                                            {{--<td>--}}
+                                                                {{--<a href="{{ route('project-detail', ['id' => $product->id]) }}" >--}}
+                                                                    {{--<button class="btn btn-primary">Detail</button>--}}
+                                                                {{--</a>--}}
+                                                            {{--</td>--}}
                                                         </tr>
                                                     @php( $idx++ )
                                                 @endforeach
@@ -138,7 +139,7 @@
                             <div class="col-md-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_content table-responsive">
-                                        <table id="datatable-responsive-sharing" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+                                        <table id="datatable-responsive-sharing" class="table table-striped table-hover dt-responsive nowrap" width="100%" cellspacing="0">
                                             <thead>
                                             <tr>
                                                 <th>No</th>
@@ -148,7 +149,7 @@
                                                 <th>Minimum</th>
                                                 <th class="hidden-xs hidden-sm">Progress</th>
                                                 <th>Tanggal</th>
-                                                <th>Detail</th>
+                                                {{--<th>Detail</th>--}}
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -157,7 +158,7 @@
 
                                                     @php( $percentage = ($product->getOriginal('raised') * 100) / $product->getOriginal('raising') )
                                                         @php( $percentage = number_format($percentage, 0) )
-                                                            <tr>
+                                                            <tr class="row-clickable" data-href='{{ route('project-detail', ['id' => $product->id]) }}'>
                                                                 <td>{{ $idx }}</td>
                                                                 <td>{{ $product->name }}</td>
                                                                 <td>Rp {{ $product->raising }}</td>
@@ -172,11 +173,11 @@
                                                                     </div>
                                                                 </td>
                                                                 <td>{{ $product->created_on }} </td>
-                                                                <td>
-                                                                    <a href="{{ route('project-detail', ['id' => $product->id]) }}" >
-                                                                        <button class="btn btn-primary">Detail</button>
-                                                                    </a>
-                                                                </td>
+                                                                {{--<td>--}}
+                                                                    {{--<a href="{{ route('project-detail', ['id' => $product->id]) }}" >--}}
+                                                                        {{--<button class="btn btn-primary">Detail</button>--}}
+                                                                    {{--</a>--}}
+                                                                {{--</td>--}}
                                                             </tr>
                                                             @php( $idx++ )
                                                                 @endforeach
