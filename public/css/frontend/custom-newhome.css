@@ -24,7 +24,7 @@
 }
 
 @media screen and (min-width: 752px) and (max-width: 1023px)  {
-    .homepage-section4{
+    .homepage-responsive-img{
         width: 30% !important;
     }
 }
@@ -41,7 +41,7 @@
     .subscribe_popup_image{
         width: 70%;
     }
-    .homepage-section4{
+    .homepage-responsive-img{
         width: 30% !important;
     }
 }
@@ -70,11 +70,11 @@
         padding-top:0;
     }
 
-    .homepage-section4{
+    .homepage-responsive-img{
         width: 40% !important;
     }
 
-    .homepage-section4-text{
+    .homepage-responsive-img-text{
         height:125px !important;
         width: 100%;
     }
@@ -393,10 +393,10 @@ p{
     padding: 5% !important;
     margin: 0 !important;
 }
-.homepage-section4{
+.homepage-responsive-img{
     width: 50%;
 }
-.homepage-section4-text{
+.homepage-responsive-img-text{
     height:225px;
 }
 

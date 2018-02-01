@@ -6,69 +6,49 @@
         <div class="features-wrapper one">
             <div class="container" style="margin-top: 40px;">
                 <div class="section-name one">
-                    <h2>Halo</h2>
-                    <div class="short-text">
-                        <h5 style="color:#444 !important;">Selamat Datang, {{ \Illuminate\Support\Facades\Auth::user()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}</h5>
-                    </div>
+                    <h2>
+                        Halo Selamat Datang , {{ \Illuminate\Support\Facades\Auth::User()->first_name }} {{ \Illuminate\Support\Facades\Auth::user()->last_name }}
+                        <br>
+                        Saat ini Anda memiliki {{$onGoingProducts}} proyek berjalan
+                    </h2>
                 </div>
                 <div class="row features">
-                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Investasi sekarang adalah list proyek yang dapat didanai, link ini sama seperti pada link investasi pada menu utama di header">
-                        <div class="feature clearfix">
-                            <div class="icon_we"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
-                            <h4>Investasi sekarang</h4>
-                            <div class="feature-div">
-                                <p>{{$onGoingProducts}} berjalan, {{$recentProductCount}} terbaru</p>
-                                {{--<p>3 hampir selesai, 3 selesai</p>--}}
+                    <div class="col-md-4 col-sm-12" data-toggle="tooltip" data-placement="bottom" title="Investasi sekarang adalah list proyek yang dapat didanai, link ini sama seperti pada link investasi pada menu utama di header">
+                        <a href="{{route('project-list', ['tab' => 'debt'])}}">
+                            <div class="feature clearfix">
+                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-1.png') }}">
+                                <h4>Danai Proyek</h4>
+                                <div class="feature-div">
+                                    <p>Saat ini terdapat {{$recentProductCount}} proyek bisa Anda danai</p>
+                                    {{--<p>3 hampir selesai, 3 selesai</p>--}}
+                                </div>
                             </div>
-                            <a href="{{route('project-list', ['tab' => 'debt'])}}" class="btn btn-min btn-secondary
-						"><span>Lihat Semua</span></a>
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="col-md-3 col-sm-6 " data-toggle="tooltip" data-placement="bottom" title="Dompet saya adalah menu yang digunakan investor untuk melakukan deposit, memeriksa saldo maupun melakukan penarikan.">
-                        <div class="feature clearfix">
-                            <div class="icon_we"><i class="fa fa-money"></i></div>
-                            <h4>Dompet Saya</h4>
-                            <div class="feature-div">
-                                <p>Rp. {{$user->wallet_amount}}</p>
-                            </div>
-                            <a href="{{route('my-wallet')}}" class="btn btn-min btn-secondary
-						"><span>Lihat Semua</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Portfolio Saya adalah menu untuk investor memerika portfolio investasi yang mereka miliki.">
-                        <div class="feature  clearfix">
-                            <div class="icon_we"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
-                            <h4> Portfolio Saya </h4>
-                            <div class="feature-div">
-                                @if($pendingTransaction > 0 && $onGoingTransaction > 0)
-                                    <p>{{$pendingTransaction}} pending, {{$onGoingTransaction}} berjalan </p>
-                                @endif
-                                @if($pendingTransaction > 0)
-                                    <p>{{$pendingTransaction}} pending</p>
-                                @endif
-                                @if($onGoingTransaction > 0)
-                                    <p>{{$onGoingTransaction}} berjalan </p>
-                                @endif
-                                @if($finishTransaction > 0)
-                                    <p>{{$finishTransaction}} selesai</p>
-                                @endif
+                    <div class="col-md-4 col-sm-12 " data-toggle="tooltip" data-placement="bottom" title="Dompet saya adalah menu yang digunakan investor untuk melakukan deposit, memeriksa saldo maupun melakukan penarikan.">
 
+                        <a href="{{route('my-wallet')}}">
+                            <div class="feature clearfix">
+                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-2.png') }}">
+                                <h4>Penarikan & Penambahan Dompet</h4>
+                                <div class="feature-div">
+                                    <p>Saldo Anda saat ini Rp. {{$user->wallet_amount}}</p>
+                                </div>
                             </div>
-                            <a href="{{route('portfolio', ['tab' => 'pending'])}}" class="btn btn-min btn-secondary
-						"><span>Lihat Semua</span></a>
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-md-3 col-sm-6" data-toggle="tooltip" data-placement="bottom" title="Pendapatan adalah menu investor melakukan pengecekan terhadap hasil keuntungan (kerugian) hasil bunga atau dividen atau bagi hasil dari investasinya.">
-                        <div class="feature  clearfix">
-                            <div class="icon_we"><i class="fa fa-money" aria-hidden="true"></i></div>
-                            <h4>Pendapatan</h4>
-                            <div class="feature-div">
-                                <p>Rp. {{$user->income}}</p>
+                    <div class="col-md-4 col-sm-12" data-toggle="tooltip" data-placement="bottom" title="Pendapatan adalah menu investor melakukan pengecekan terhadap hasil keuntungan (kerugian) hasil bunga atau dividen atau bagi hasil dari investasinya.">
+
+                        <a href="{{route('pendapatan')}}">
+                            <div class="feature  clearfix">
+                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-3.png') }}">
+                                <h4>Ringkasan Akun Anda </h4>
+                                <div class="feature-div">
+                                    <p>Monitor pendapatan Anda disini</p>
+                                </div>
                             </div>
-                            <a href="{{route('pendapatan')}}" class="btn btn-min btn-secondary">
-                                <span>Lihat Semua</span></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -167,7 +147,7 @@
 
             <div class="team-members row">
                 <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
+                    <div class="homepage-responsive-img-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                             <div style=" #position: relative; #top: -50%; color: white !important;">
@@ -180,18 +160,18 @@
                     <h2 style="color: white !important;">Memberikan bantuan</h2>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-responsive-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-responsive-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-responsive-img">
                 </div>
             </div>
             <div class="team-members row">
                 <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-section4-text" style="display: table; #position: relative; overflow: hidden;">
+                    <div class="homepage-responsive-img-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                             <div style=" #position: relative; #top: -50%;color: white !important;">
@@ -204,13 +184,13 @@
                     <h2 style="color: white !important;">Meminjamkan</h2>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-responsive-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-responsive-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-responsive-img">
                 </div>
             </div>
         </div>
