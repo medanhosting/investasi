@@ -1,5 +1,8 @@
 .page-banner{
-    background: #BD562a !important;
+    background: #ff7a00 !important;
+}
+.parallax-mask{
+    background: rgba(36, 40, 47, 0.09) !important;
 }
 
 /*#chart_wrap {*/
@@ -68,6 +71,18 @@
     .subscribe_popup_image{
         width: 45%;
     }
+}
+
+
+.custom-input-login {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 3px;
+    padding: 0 15px;
+    color: rgba(0, 0, 255, 0.85);
 }
 
 .top_logo{
@@ -318,7 +333,6 @@ p{
     visibility: visible;
     opacity: 1;
 }
-
 /* video responsive css */
 .video-container {
     position:relative;
@@ -332,7 +346,7 @@ p{
     position:absolute;
     top:0;
     left:0;
-    width:100%;
+    width:80%;
     height:100%;
 }
 

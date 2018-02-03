@@ -103,6 +103,8 @@
 
 <script src="{{ URL::asset('js/admin/summernote/summernote.js') }}"></script>
     <link rel="stylesheet" href="{{ URL::asset('css/admin/summernote/summernote.css') }}">
+<!-- autoNumeric -->
+<script src="{{ URL::asset('js/autoNumeric/autoNumeric.min.js') }}"></script>
 
 
 <script type="text/javascript" src="{{ URL::asset('js/frontend/custom-maps.js') }}"></script>
@@ -129,13 +131,19 @@
         } );
     });
     $(window).bind('scroll', function () {
-        if ($(window).scrollTop() > 1050) {
-            $('.submenu').attr("style","position: fixed;z-index: 90;top: 105px;width: 80%;background: white;padding: 1%;");
+        if ($(window).scrollTop() > 850) {
+            $('.submenu').attr("style","position: fixed;z-index: 90;top: 105px;left:0;background: #f2f2f2;padding-top: 1%;");
 
 
         } else {
             $('.submenu').removeAttr("style");
         }
+    });
+
+    numberFormat = new AutoNumeric('.price-format > input', {
+        decimalCharacter: ',',
+        digitGroupSeparator: '.',
+        decimalPlaces: 0
     });
 
     $('#datatable-responsive-debt').DataTable({

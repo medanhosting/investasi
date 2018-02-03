@@ -1,41 +1,51 @@
 function modalCheckout(){
     // Set invest amount
-    var invest = $("input[name=amount]:checked").val();
-    var investStr = addCommas(invest);
-    $("#checkout-invest-amount").html(investStr);
-    $("#checkout-invest-amount-input").val(invest);
+    // var invest = $("input[name=amount]:checked").val();
+    var invest = $("#amount").val();
+    invest = invest.replace('.', '');
 
-    var adminFee = 0;
+    if(invest%250000 === 0 && invest >= 500000){
+        $(".error-div").hide();
 
-    // Set admin fee
-    var payment = $("input[name=payment]:checked").val();
-    $("#checkout-payment-method-input").val(payment);
-    if(payment === "credit_card"){
-        var investFeeInt = (parseInt(invest) / 100) * 3;
-        $("#checkout-admin-fee-input").val(investFeeInt);
-        adminFee += investFeeInt;
-        investStr = addCommas(investFeeInt);
-        $("#checkout-admin-fee").html(investStr);
+        var investStr = addCommas(invest);
+        $("#checkout-invest-amount").html(investStr);
+        $("#checkout-invest-amount-input").val(invest);
 
-        $("#checkout-payment-method").html("Kartu Kredit")
+        var adminFee = 0;
+
+        // Set admin fee
+        var payment = $("input[name=payment]:checked").val();
+        $("#checkout-payment-method-input").val(payment);
+        if(payment === "credit_card"){
+            var investFeeInt = (parseInt(invest) / 100) * 3;
+            $("#checkout-admin-fee-input").val(investFeeInt);
+            adminFee += investFeeInt;
+            investStr = addCommas(investFeeInt);
+            $("#checkout-admin-fee").html(investStr);
+
+            $("#checkout-payment-method").html("Kartu Kredit")
+        }
+        else if(payment === "bank_transfer"){
+            adminFee += 4000;
+            $("#checkout-admin-fee-input").val(4000);
+            $("#checkout-admin-fee").html("Rp 4.000");
+            $("#checkout-payment-method").html("Bank Transfer")
+        }
+        else if(payment === "wallet"){
+            $("#checkout-admin-fee-input").val(0);
+            $("#checkout-admin-fee").html("GRATIS");
+            $("#checkout-payment-method").html("Dompet")
+        }
+
+        // Set total invest amount
+        var total = parseInt(invest) + adminFee;
+        $("#checkout-total-invest").html(addCommas(total));
+
+        $("#modal-checkout-confirm").modal();
     }
-    else if(payment === "bank_transfer"){
-        adminFee += 4000;
-        $("#checkout-admin-fee-input").val(4000);
-        $("#checkout-admin-fee").html("Rp 4.000");
-        $("#checkout-payment-method").html("Bank Transfer")
+    else{
+        $(".error-div").show();
     }
-    else if(payment === "wallet"){
-        $("#checkout-admin-fee-input").val(0);
-        $("#checkout-admin-fee").html("GRATIS");
-        $("#checkout-payment-method").html("Dompet")
-    }
-
-    // Set total invest amount
-    var total = parseInt(invest) + adminFee;
-    $("#checkout-total-invest").html(addCommas(total));
-
-    $("#modal-checkout-confirm").modal();
 }
 
 function addCommas(nStr) {

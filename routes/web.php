@@ -73,6 +73,7 @@ Route::get('/withdraw/cancel/{id}', 'Frontend\WalletController@cancelWithdrawReq
 //product
 Route::get('/project-list/{tab}', 'Frontend\ProductController@ProductList')->name('project-list');
 Route::get('/project/{id}', 'Frontend\ProductController@ProductDetail')->name('project-detail');
+Route::get('/wishlist/{id}', 'Frontend\ProductController@wishlist')->name('wishlist');
 Route::get('/download/{filename}', 'Frontend\ProductController@DownloadFile')->name('download');
 Route::post('/register-prospectus', [
     'uses' => 'Frontend\ProductController@GetProspectus',

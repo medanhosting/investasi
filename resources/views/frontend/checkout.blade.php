@@ -26,23 +26,29 @@
                         <img class="img-responsive" src="assets/img/causes/single-cause.jpg" alt="">
                     </div>
                     <div class="meta">
-                        <h2>Pembayaran Berhasil</h2>
+                        <h2>Danai Sekarang</h2>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <form class="donation-form">
-                            <h3>Danai Sekarang</h3>
-                            <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;margin-bottom:10px;">
-                                <h5>Masukkan Jumlah Pendanaan</h5>
+                            <h3>Masukkan Jumlah Pendanaan</h3>
+                            <div class="field col-sm-12 text-center error-div" style="display: none;">
+                                <span class="help-block" style="color: red;">Nominal harus kelipatan dari Rp 250.000 dan minimal Rp 500.000</span>
+                            </div>
+                            <div class="field col-sm-12 price-format">
+                                <h5>Nominal</h5>
+                                <input id="amount" type="text" name="amount">
+                                <h5>Minimum Pendanaan : Rp 500.000</h5>
+                                <h5>Kelipatan : Rp 250.000</h5>
                                 <div class="radio-inputs">
-                                    <input type="radio" id="amount-1" name="amount" value="50000" checked>
-                                    <label for="amount-1"><span></span>Rp 50.000</label>
-                                    <input type="radio" id="amount-2" name="amount" value="100000">
-                                    <label for="amount-2"><span></span>Rp 100.000</label>
-                                    <input type="radio" id="amount-3" name="amount" value="150000">
-                                    <label for="amount-3"><span></span>Rp 150.000</label>
+                                    {{--<input type="radio" id="amount-1" name="amount" value="50000" checked>--}}
+                                    {{--<label for="amount-1"><span></span>Rp 50.000</label>--}}
+                                    {{--<input type="radio" id="amount-2" name="amount" value="100000">--}}
+                                    {{--<label for="amount-2"><span></span>Rp 100.000</label>--}}
+                                    {{--<input type="radio" id="amount-3" name="amount" value="150000">--}}
+                                    {{--<label for="amount-3"><span></span>Rp 150.000</label>--}}
                                 </div>
                             </div>
-                            <div class="field col-sm-12" style="background-color: #D3D3D3; padding-bottom:30px;">
+                            <div class="field col-sm-12">
                                 <h5>Pilihan Sumber Dana</h5>
                                 <div class="radio-inputs">
                                     <input type="radio" id="payment-1" name="payment" value="wallet" checked>
@@ -53,12 +59,20 @@
                                     <label for="payment-3"><span></span>Bank Transfer</label>
                                 </div>
                             </div>
+                            <div class="field col-sm-12">
+                                <div class="col-sm-12">
+                                    <h5 style="color:red;">
+                                        Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                                    </h5>
+                                </div>
+                            </div>
                             <div class="field col-sm-12 text-right" >
                                 @if(auth()->check())
                                     {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
-                                    <button type="button" data-toggle="modal" data-target="#readProspectusModal" data-backdrop="static" data-keyboard="false" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                    {{--<button type="button" data-toggle="modal" data-target="#readProspectusModal" data-backdrop="static" data-keyboard="false" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Bayar</span></button>--}}
+                                    <button type="button" onclick="modalCheckout()" class="btn btn-big btn-solid "><span>Proses Sekarang</span></button>
                                 @else
-                                    <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                    <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><span>Proses Sekarang</span></button>
                                 @endif
                             </div>
                         </form>

@@ -51,15 +51,16 @@ class HomeController extends Controller
             $userId = $user->id;
             $blogs = UrgentNews::GetBlogList($userId);
 
-            if(count($blogs) > 0){
-                return View('frontend.show-blog-urgents', compact('blogs'));
-            }
-
             $user = User::find($userId);
             $pendingTransaction = Transaction::where('user_id', $userId)->where('status_id', 3)->count();
             $onGoingTransaction = Transaction::where('user_id', $userId)->where('status_id', 5)->count();
             $finishTransaction = Transaction::where('user_id', $userId)->where('status_id', 9)->count();
 
+            if(count($blogs) > 0){
+                if($pendingTransaction > 0 || $onGoingTransaction > 0 || $finishTransaction > 0){
+                    return View('frontend.show-blog-urgents', compact('blogs'));
+                }
+            }
 
             $recentProductCount = Product::where('status_id', 1)->orderByDesc('created_on')->take(5)->count();
             $onGoingProducts = Product::where('status_id', 1)->count();

@@ -24,8 +24,11 @@
 }
 
 @media screen and (min-width: 752px) and (max-width: 1023px)  {
-    .homepage-responsive-img{
-        width: 30% !important;
+    .homepage-section1-img{
+        width: 15% !important;
+    }
+    .homepage-section4-img{
+        width: 25% !important;
     }
 }
 @media screen and (min-width: 466px) and (max-width: 751px)  {
@@ -41,8 +44,11 @@
     .subscribe_popup_image{
         width: 70%;
     }
-    .homepage-responsive-img{
-        width: 30% !important;
+    .homepage-section1-img{
+        width: 25% !important;
+    }
+    .homepage-section4-img{
+        width: 25% !important;
     }
 }
 @media screen and (max-width: 465px)  {
@@ -70,11 +76,14 @@
         padding-top:0;
     }
 
-    .homepage-responsive-img{
-        width: 40% !important;
+    .homepage-section1-img{
+        width: 35% !important;
+    }
+    .homepage-section4-img{
+        width: 35% !important;
     }
 
-    .homepage-responsive-img-text{
+    .homepage-section4-img-text{
         height:125px !important;
         width: 100%;
     }
@@ -90,6 +99,18 @@
         width: 45%;
     }
 }
+
+.custom-input-login {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 3px;
+    padding: 0 15px;
+    color: rgba(0, 0, 255, 0.85);
+}
+
 .feature-div{
     height: 60px;
 }
@@ -254,8 +275,6 @@ p{
     color:green;
 }
 
-
-
 /* Tooltip container */
 .tooltip {
     position: relative;
@@ -341,23 +360,29 @@ p{
     width:50%;
 }
 
+.features-wrapper.one{
+    background: #fff none repeat scroll 0 0 !important;
+}
+
 .features-wrapper.one .features {
     margin-top: 20px !important;
 }
+
 .fullpage_background {
-    background: url("../../frontend_images/homepage/bg.jpg") no-repeat center center fixed;
+    background: url("../../frontend_images/homepage/bg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100%;
-    max-height: 550px;
-    position: relative;
-    height:600px;
-    padding: 0 !important;
+    /*background-size: 100%;*/
+    /*max-height: 610px;*/
+    /*position: relative;*/
+    height:100%;
+    padding-top: 18% !important;
+    padding-bottom: 13% !important;
     margin: 0 !important;
 }
 .fullpage_background2 {
-    background: url("../../frontend_images/homepage/bg2.jpg") no-repeat center center;
+    background: url("../../frontend_images/homepage/bg2-light.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -371,9 +396,6 @@ p{
     -moz-background-size: cover;
     -o-background-size: cover;
     height: 100%;
-    padding-top: 13% !important;
-    padding-bottom: 13% !important;
-    margin: 0 !important;
 }
 .fullpage_background4 {
     background: url("../../frontend_images/homepage/bg4.jpg") no-repeat center center;
@@ -393,14 +415,26 @@ p{
     padding: 5% !important;
     margin: 0 !important;
 }
-.homepage-responsive-img{
-    width: 50%;
+
+.homepage-section1-img{
+    width: 35%;
 }
-.homepage-responsive-img-text{
+
+.homepage-section3-h1{
+    font-family: inherit !important;
+    font-size: 36px !important;
+    font-weight: normal !important;
+}
+
+.homepage-section4-img{
+    width: 60%;
+}
+.homepage-section4-img-text{
     height:225px;
 }
 
 .project-border{
+    background: white;
     border: 2px solid #ff7a00;
     padding:10px;
     margin:10px;

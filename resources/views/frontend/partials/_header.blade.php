@@ -12,7 +12,8 @@
                         {{ csrf_field() }}
                     </form>
                 @else
-                    <a style="color:white;" href="{{ route('login') }}" >Login</a>
+                    {{--<a style="color:white;" href="{{ route('login') }}" >Login</a>--}}
+                    <a style="color:white;cursor:pointer;" data-toggle="modal" data-target="#loginModalPopup">Login</a>
                     &nbsp;&nbsp;
                     <a style="color:white;" href="{{ route('register') }}" >Register</a>
                 @endif
@@ -138,3 +139,4 @@
     </nav>
 
 </header>
+@include('frontend.partials._modal-login')

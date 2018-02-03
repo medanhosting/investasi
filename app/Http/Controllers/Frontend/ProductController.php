@@ -14,6 +14,7 @@ use App\Models\Blog;
 use App\Models\GuestProspectus;
 use App\Models\Product;
 use App\Models\Vendor;
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
@@ -98,8 +99,14 @@ class ProductController extends Controller
         }
         $projectNews = Blog::where('product_id', $id)->orderByDesc('created_at')->get();
 
+        $userWishlist = Wishlist::where('user_id', $userId)->where("product_id", $id)->first();
 
-        return View ('frontend.show-product-new', compact('product', 'vendor', 'vendorDesc', 'projectNews', 'projectCount', 'userId'));
+        $isWishlist = 0;
+        if($userWishlist){
+            $isWishlist = 1;
+        }
+
+        return View ('frontend.show-product-new', compact('product', 'vendor', 'vendorDesc', 'projectNews', 'projectCount', 'userId', 'isWishlist'));
     }
 
     public function DownloadFile($filename)
@@ -150,5 +157,30 @@ class ProductController extends Controller
 
 //        $file_path = public_path('files/'.$filename);
 //        return response()->download($file_path);
+    }
+
+    public function wishlist($id){
+        $userId = null;
+        if(auth()->check()){
+            $user = Auth::user();
+            $userId = $user->id;
+        }
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+        $userWishlist = Wishlist::where('user_id', $userId)->where("product_id", $id)->first();
+
+        if($userWishlist){
+            $deletedWishlist = Wishlist::destroy($userWishlist->id);
+        }
+        else{
+//        create new wishlist
+            $newUser = Wishlist::create([
+                'product_id' =>$id,
+                'user_id' => $userId,
+                'date' => $dateTimeNow->toDateTimeString()
+            ]);
+        }
+
+        return redirect()->route('project-detail', ['id' => $id]);
     }
 }

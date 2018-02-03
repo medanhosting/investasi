@@ -76,7 +76,8 @@ class LoginController extends Controller
 
         //Custom Logic
         if(!User::where('email', $request->email)->exists()){
-            return Redirect::back()->withErrors(['msg' => ['Salah Username atau Password!']]);
+            return View("auth.login")->withErrors(['msg' => ['Salah Username atau Password!']]);
+//            return Redirect::back()->withErrors(['msg' => ['Salah Username atau Password!']]);
         }
 
         $userData = User::where('email', $request->email)->first();

@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row cause">
                 <div class="col-md-12 col-xs-12">
-                    <div class="col-md-3" style="float: left;">
+                    <div class="col-md-2" style="float: left;">
                         <div class="col-md-12">
                             <img src="{{ URL::asset('frontend_images/default-profile.jpg') }}" style="height:30%;width:30%;border-radius: 50%;">
                             <p class="font-14">
@@ -35,7 +35,7 @@
                             {{--<button data-toggle="modal" data-target="#profileModal" class="btn btn-solid "><span>Selengkapnya</span></button>--}}
                         {{--</div>--}}
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <h2>{{$product->name}}</h2>
 
                         <p>{{$product->description}}</p>
@@ -43,17 +43,17 @@
 
                 </div>
                 <div class="col-md-12 col-xs-12" style="margin-top: 2%;">
-                    <div class="col-md-8 col-xs-12">
+                    <div class="col-md-7 col-xs-12" style="padding-left: 5%;">
                         @if(!empty($product->youtube_link))
                             <div class="video-container">
                                 <iframe src="https://www.youtube.com/embed/{{$product->youtube_link}}" frameborder="0" allowfullscreen></iframe>
                             </div>
                         @else
-                            <img class="img-responsive" src="{{ URL::asset('storage/project/'.$product->image_path) }}" alt="" style="width: 1920px;">
+                            <img class="img-responsive" src="{{ URL::asset('storage/project/'.$product->image_path) }}" alt="" style="width: 80%;">
                         @endif
                     </div>
 
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-md-5 col-xs-12">
                         <div class="col-md-12">
                             <div class="progress-bar-wrapper min">
                                 <div class="progress-bar-outer">
@@ -78,7 +78,7 @@
                             @if(auth()->check())
                                 <a href="{{route('checkout',['id' => $product->id])}}" class="btn btn-big btn-solid" style="width:100%;"><i class="fa fa-archive"></i><span>Danai Sekarang</span></a>
                             @else
-                                <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid" style="width:100%;"><i class="fa fa-archive"></i><span>Danai Sekarang</span></button>
+                                <button type="button" data-toggle="modal" data-target="#loginModalPopup" class="btn btn-big btn-solid" style="width:100%;"><i class="fa fa-archive"></i><span>Danai Sekarang</span></button>
                             @endif
 
                         </div>
@@ -135,11 +135,17 @@
                                 @if(auth()->check())
                                     <a href="{{route('checkout',['id' => $product->id])}}" class="col-md-6 btn btn-big btn-solid" style="margin-bottom:18px;"><span>Danai Sekarang</span></a>
                                 @else
-                                    <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
+                                    <button type="button" data-toggle="modal" data-target="#loginModalPopup" class="btn btn-big btn-solid"><i class="fa fa-archive"></i><span>Bayar</span></button>
                                 @endif
                             </div>
                             <div class="col-md-4 text-center" style="margin-top:18px;color:#4a4a4a;">
-                                <a href="#" style="color:#4a4a4a;"><i class="fa fa-heart"></i>&nbsp;&nbsp;<span> Tandai Halaman Ini</span></a>
+                                <a href="{{route('wishlist', ['id'=>$product->id])}}" style="color:#4a4a4a;"><i class="fa fa-heart"></i>&nbsp;&nbsp;
+                                    @if($isWishlist == 0)
+                                        <span> Tandai Halaman Ini</span>
+                                    @else
+                                        <span> Hapus Tanda Halaman Ini</span>
+                                    @endif
+                                </a>
                             </div>
                         </div>
                     </div>

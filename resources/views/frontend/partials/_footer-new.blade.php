@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12 homepage-footer-contact-us">
-            <button class="btn btn-big btn-solid" >Hubungi Kami</button>
+            <button class="btn btn-big btn-solid" data-toggle="modal" data-target="#contactUsPopup">Hubungi Kami</button>
         </div>
         <div class="col-md-6 col-sm-12" style="text-align: left;">
             PT BURSA AKSELERASI INDONESIA
@@ -90,6 +90,7 @@
         </div>
     </div>
 </footer>
+@include('frontend.partials._modal-contact-us')
 
 <script>
     var urlLink = '{{route('subscribeEmail')}}';

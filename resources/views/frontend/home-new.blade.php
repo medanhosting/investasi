@@ -16,7 +16,7 @@
                     <div class="col-md-4 col-sm-12" data-toggle="tooltip" data-placement="bottom" title="Investasi sekarang adalah list proyek yang dapat didanai, link ini sama seperti pada link investasi pada menu utama di header">
                         <a href="{{route('project-list', ['tab' => 'debt'])}}">
                             <div class="feature clearfix">
-                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-1.png') }}">
+                                <img class="homepage-section1-img" src="{{ URL::asset('frontend_images/homepage/login-1.png') }}">
                                 <h4>Danai Proyek</h4>
                                 <div class="feature-div">
                                     <p>Saat ini terdapat {{$recentProductCount}} proyek bisa Anda danai</p>
@@ -30,7 +30,7 @@
 
                         <a href="{{route('my-wallet')}}">
                             <div class="feature clearfix">
-                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-2.png') }}">
+                                <img class="homepage-section1-img" src="{{ URL::asset('frontend_images/homepage/login-2.png') }}">
                                 <h4>Penarikan & Penambahan Dompet</h4>
                                 <div class="feature-div">
                                     <p>Saldo Anda saat ini Rp. {{$user->wallet_amount}}</p>
@@ -42,7 +42,7 @@
 
                         <a href="{{route('pendapatan')}}">
                             <div class="feature  clearfix">
-                                <img class="homepage-responsive-img" src="{{ URL::asset('frontend_images/homepage/login-3.png') }}">
+                                <img class="homepage-section1-img" src="{{ URL::asset('frontend_images/homepage/login-3.png') }}">
                                 <h4>Ringkasan Akun Anda </h4>
                                 <div class="feature-div">
                                     <p>Monitor pendapatan Anda disini</p>
@@ -54,10 +54,30 @@
             </div>
         </div>
     @else
+
+        <!-- apa itu investasi.me -->
+        <div class="special-cause fullpage_background">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:10%;margin-bottom: 5%;color:white !important; margin-left: 15%;">
+                        <h1 style="color: white !important;">Selamat Datang</h1>
+                        <br>
+                        <h3 style="color: white !important;line-height: 25px;">
+                            Kembangkanlah Proyek & <br>
+                            Bisnis di Indonesia menjadi lebih baik <br>
+                            Berikan Pinjaman dengan return yang menarik <br>
+                            Ataupun ajukan pinjaman dengan rate yang bersahabat
+                        </h3>
+                        <br><br>
+                        <a href="#" class="btn btn-big btn-solid "><span style="font-size: 16px;">Apa itu </span>&nbsp;<span> Investasi.me</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- basic-slider start -->
-        <div class="slider-section">
-            <div class="slider-active owl-carousel">
-                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner1.jpg') }});background-size: 100%;">
+        {{--<div class="slider-section">--}}
+            {{--<div class="slider-active owl-carousel">--}}
+                {{--<div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner1.jpg') }});background-size: 100%;">--}}
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Apakah Anda tau? </h2>--}}
@@ -66,8 +86,8 @@
                             {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
                         {{--</div>--}}
                     {{--</div>--}}
-                </div>
-                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner2.jpg') }});background-size: 100%;">
+                {{--</div>--}}
+                {{--<div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner2.jpg') }});background-size: 100%;">--}}
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Sukses dimulai dari hal kecil  </h2>--}}
@@ -76,9 +96,9 @@
                             {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
                         {{--</div>--}}
                     {{--</div>--}}
-                </div>
+                {{--</div>--}}
 
-                <div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner3.jpg') }});background-size: 100%;">
+                {{--<div class="single-slider slider-screen nrbop" style="background-image: url({{ URL::asset('frontend_images/slides/Banner3.jpg') }});background-size: 100%;">--}}
                     {{--<div class="container">--}}
                         {{--<div class="slider-content text-white">--}}
                             {{--<h2 class="b_faddown1 cd-headline clip is-full-width" >Berinvestasilah pada proyek terbaru kami </h2>--}}
@@ -87,18 +107,21 @@
                             {{--<div class="slider_button b_faddown3"><a href="#">Investasi Sekarang</a></div>--}}
                         {{--</div>--}}
                     {{--</div>--}}
-                </div>
-            </div>
-        </div>
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
     @endif
 
     <!-- apa itu investasi.me -->
     <div class="special-cause fullpage_background2">
         <div class="row">
             <div class="col-md-offset-6 col-md-6 col-xs-12">
-                <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:10%;margin-bottom: 5%;color:white !important;">
-                    <h2 style="color: white !important;">Apa itu Investasi.me</h2>
-                    <h1>Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h1>
+                <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:5%;margin-bottom: 3%;">
+                    {{--<h2 style="color: white !important;">Apa itu Investasi.me</h2>--}}
+                    <h1>Apa itu Investasi.me</h1>
+                    <h2 style="color:black;">Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h2>
+                    <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
+                    <br>
                     <span style="font-size:14px;">
                         Ada banyak potensi bisnis, usaha dan industri di Indonesia yang hingga saat ini belum dapat kesempatan untuk bisa
                         menjadi lebih besar dan lebih cepat berkembang.<br>
@@ -112,7 +135,7 @@
                     </span>
                 </div>
                 <div class="btns-wrapper">
-                    <a href="#" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Baca Selanjutnya</span></a>
+                    <a href="#" class="btn btn-big btn-solid "><span>Baca Selanjutnya</span></a>
                 </div>
             </div>
         </div>
@@ -121,15 +144,17 @@
     <!-- p2p lending -->
     <div class="special-cause fullpage_background3">
             <div class="row">
-                <div class="col-md-6 col-xs-12 donet__area" style="background: none; border: none;">
-                    <div class="section-name parallax one" style="color: white !important;">
+                <div class="col-md-6 col-xs-12 donet__area" style="background: none; border: none;padding-left: 10%;">
+                    <div class="section-name parallax one" style="color: white !important; padding-bottom:5%;">
                         <h2>P2P Lending </h2>
-                        <h1>Ayo Partisipasi Sekarang</h1>
+                        <h1 class="homepage-section3-h1">Ayo Partisipasi Sekarang</h1>
+                        <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
+                        <br>
                         <h2>Dapatkan return atas bantuan yang Anda berikan hinggi 20%*</h2>
                         <span>*) Nilai tersebut adalah simulasi pinjaman dengan rating C dan di setahunkan</span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><i class="fa fa-archive"></i><span>Daftar Sekarang</span></a>
+                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><span style="font-size: 20px;">Daftar Sekarang</span></a>
                     </div>
                 </div>
             </div>
@@ -140,14 +165,14 @@
         <div class="row">
             <div class="section-name one">
                 <div class="short-text">
-                    <h5 style="color: white !important;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></h5>
+                    <span style="color: white !important;font-size: 24px;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></span>
                 </div>
-                <h2 style="color: white !important;">Langkah Mudah dalam Memulai</h2>
+                <h1 style="color: white !important;font-size:70px;">Langkah Mudah dalam Memulai</h1>
             </div>
 
-            <div class="team-members row">
+            <div class="team-members row" style="padding: 5% 10% 0 10%;">
                 <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-responsive-img-text" style="display: table; #position: relative; overflow: hidden;">
+                    <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                             <div style=" #position: relative; #top: -50%; color: white !important;">
@@ -160,18 +185,18 @@
                     <h2 style="color: white !important;">Memberikan bantuan</h2>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4-img">
                 </div>
             </div>
-            <div class="team-members row">
+            <div class="team-members row" style="padding: 0 10% 0 10%;">
                 <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-responsive-img-text" style="display: table; #position: relative; overflow: hidden;">
+                    <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
                         <div style=
                              "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                             <div style=" #position: relative; #top: -50%;color: white !important;">
@@ -184,13 +209,13 @@
                     <h2 style="color: white !important;">Meminjamkan</h2>
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4-img">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-responsive-img">
+                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4-img">
                 </div>
             </div>
         </div>
@@ -220,7 +245,7 @@
                                     <br>
                                     <span style="color: #ff7a00">{{ $product->name }}</span>
                                     <br>
-                                    <span>Jenis Project</span>
+                                    <span>{{ $product->Category->name }}</span>
                                 </div>
                                 <div class="col-md-2">
                                     Nominal
@@ -264,7 +289,7 @@
 
                 <div>
                     <a href="{{route('project-list', ['tab' => 'debt'])}}" class="btn btn-min btn-solid"><span>Berikan Bantuan</span></a>
-                    <a class="btn btn-min btn-solid" style="background-color: white !important;color: #ff7a00 !important;"><span>Daftarkan Proyek</span></a>
+                    <a href="https://goo.gl/forms/EzQ4QPgIWnmLp6ry1" class="btn btn-min btn-solid" style="background-color: white !important;color: #ff7a00 !important;"><span>Daftarkan Proyek</span></a>
                 </div>
         </div>
 

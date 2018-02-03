@@ -98,9 +98,9 @@
                                         <div class="col-md-6" style="text-align: right;">
                                             <p>Keterangan</p>
                                         </div>
-                                        <div class="col-md-6">
-                                            <img src="{{ URL::asset('frontend_images/keterangan.jpg') }}">
-                                        </div>
+                                        {{--<div class="col-md-6">--}}
+                                            {{--<img src="{{ URL::asset('frontend_images/keterangan.jpg') }}">--}}
+                                        {{--</div>--}}
                                     </div>
                                 </div>
                             </div>
