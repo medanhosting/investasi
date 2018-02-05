@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="comment-form-wrapper contact-from clearfix">
-                                <form class="comment-form row altered" method="POST" action="{{ route('login') }}">
+                                <form class="comment-form row altered" method="POST" action="{{ route('contact-submit') }}">
                                     @if($errors->has('msg'))
                                         <div class="field col-sm-12 text-center">
                                             <span class="help-block" style="color: red;">{{$errors->first()}}</span>
@@ -45,14 +45,14 @@
                                     </span>
                                         @endif
                                     </div>
-                                    <div class="field col-sm-12 {{ $errors->has('question') ? ' has-error' : '' }}" style="margin-top: 30px;padding: 0 30px;">
+                                    <div class="field col-sm-12 {{ $errors->has('description') ? ' has-error' : '' }}" style="margin-top: 30px;padding: 0 30px;">
                                         <h4>Pertanyaan</h4>
                                         <textarea>
 
                                         </textarea>
-                                        @if ($errors->has('question'))
+                                        @if ($errors->has('description'))
                                             <span class="help-block">
-                                        <strong>{{ $errors->first('question') }}</strong>
+                                        <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                         @endif
                                     </div>

@@ -29,6 +29,7 @@ Route::get('/term-condition', 'Frontend\HomeController@TermCondition')->name('te
 Route::get('/privacy-policy', 'Frontend\HomeController@PrivacyPolicy')->name('privacy-policy');
 Route::get('/tutorial', 'Frontend\HomeController@Tutorial')->name('tutorial');
 Route::get('/pengajuan', 'Frontend\HomeController@Pengajuan')->name('pengajuan');
+Route::post('/contact-us-submit', 'Frontend\HomeController@ContactUsSumbit')->name('contact-submit');
 Route::post('/subscribe-email', [
     'uses' => 'Frontend\HomeController@Subscribe',
     'as' => 'subscribeEmail'

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Libs\UrgentNews;
 use App\Libs\Utilities;
+use App\Mail\ContactUs;
 use App\Mail\InvoicePembelian;
 use App\Mail\Subscribe;
 use App\Models\Blog;
@@ -129,9 +130,34 @@ class HomeController extends Controller
             'status_id' => 1,
         ]);
 
-//        $subscribeEmail = new Subscribe($name, $email);
-//        Mail::to($email)->send($subscribeEmail);
+        $subscribeEmail = new Subscribe($name, $email);
+        Mail::to($email)->send($subscribeEmail);
 
         return response()->json(['success' => true]);
+    }
+
+    public function ContactUsSumbit(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name'  => 'required',
+            'email' => 'required|email|not_contains',
+            'phone' => 'required',
+            'description' => 'required'
+        ]);
+
+        if ($validator->fails())
+//            return response()->json(['success' => false, 'error' => 'exception']);
+            return redirect()->route('index');
+
+        $name = $request->get('name');
+        $email = $request->get('email');
+        $phone = $request->get('phone');
+        $description = $request->get('description');
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
+
+        $contactUsEmail = new ContactUs($name, $email, $phone, $description);
+        Mail::to("contact@investasi.me")->send($contactUsEmail);
+
+//        return response()->json(['success' => true]);
+        return redirect()->route('index');
     }
 }

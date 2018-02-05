@@ -77,12 +77,12 @@
                         <tbody>
                         <tr>
                             <td bgcolor="#ffffff" align="center" style="background-color: #ffffff; font-size: 22px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f; text-align: center;">
-                                <span>Hai {{ $name }}</span>
+                                <span>User bernama {{ $name }} dengan email {{ $email }}} dan handphone {{ $phone }}</span>
                             </td>
                         </tr>
                         <tr>
                             <td bgcolor="#ffffff" style="background-color: #ffffff; font-size: 16px; font-family: Verdana, Geneva, sans-serif; color: #3f3f3f;">
-                                Terima kasih telah subscribe Investasi.me!!!
+                                {{ $description }}
                             </td>
                         </tr>
                         </tbody>
