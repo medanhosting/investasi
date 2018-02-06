@@ -43,14 +43,19 @@
                                 </div>
                             @endif
 
-                            <div class="form-group"> <!-- Top Up Amounts -->
+                            {{--<div class="form-group"> <!-- Top Up Amounts -->--}}
+                                {{--<label for="amount" class="control-label">Jumlah Top Up</label>--}}
+                                {{--<select class="form-control" name="amount" id="amount" onchange="onSelectTopUp(this)">--}}
+                                    {{--<option value="-1">Pilih Jumlah Top Up!</option>--}}
+                                    {{--<option value="100000">Rp 100.000</option>--}}
+                                    {{--<option value="1000000">Rp 1.000.000</option>--}}
+                                    {{--<option value="0">Jumlah lain</option>--}}
+                                {{--</select>--}}
+                            {{--</div>--}}
+
+                            <div class="form-group price-format" id="amount_section" style="display: none;"> <!-- Custom Top Up Amount-->
                                 <label for="amount" class="control-label">Jumlah Top Up</label>
-                                <select class="form-control" name="amount" id="amount" onchange="onSelectTopUp(this)">
-                                    <option value="-1">Pilih Jumlah Top Up!</option>
-                                    <option value="100000">Rp 100.000</option>
-                                    <option value="1000000">Rp 1.000.000</option>
-                                    <option value="0">Jumlah lain</option>
-                                </select>
+                                <input type="text" class="form-control" id="amount" name="amount" placeholder="Jumlah top up">
                             </div>
 
                             <div class="form-group"> <!-- Payment Methods -->
@@ -59,11 +64,6 @@
                                     <option value="-1">Pilih Metode!</option>
                                     <option value="bank_transfer">Transfer Bank (Biaya Admin Rp 4.000)</option>
                                 </select>
-                            </div>
-
-                            <div class="form-group" id="custom_amount_section" style="display: none;"> <!-- Custom Top Up Amount-->
-                                <label for="custom_amount" class="control-label">Jumlah Lain</label>
-                                <input type="text" class="form-control" id="custom_amount" name="custom_amount" placeholder="Jumlah top up">
                             </div>
 
                             <div class="form-group text-center"> <!-- Submit Button -->

@@ -61,25 +61,27 @@ class WalletController extends Controller
     }
 
     public function DepositConfirm(Request $request){
-        if(Input::get('amount') == '-1'){
-            return redirect()->back()->withErrors('Pilih jumlah top up!', 'default')->withInput($request->all());
-        }
+//        if(Input::get('amount') == '-1'){
+//            return redirect()->back()->withErrors('Pilih jumlah top up!', 'default')->withInput($request->all());
+//        }
 
         if(Input::get('method') == '-1'){
             return redirect()->back()->withErrors('Pilih metode top up!', 'default')->withInput($request->all());
         }
 
-        if(Input::get('amount') == '0' && empty(Input::get('custom_amount'))){
+        if(empty(Input::get('amount')) || Input::get('amount') === '0'){
             return redirect()->back()->withErrors('Isi jumlah top up!', 'default')->withInput($request->all());
         }
 
-        $amount = 0;
-        if(Input::get('amount') == '0'){
-            $amount = floatval(Input::get('custom_amount'));
-        }
-        else{
-            $amount = floatval(Input::get('amount'));
-        }
+//        $amount = 0;
+//        if(Input::get('amount') == '0'){
+//            $amount = floatval(Input::get('custom_amount'));
+//        }
+//        else{
+//            $amount = floatval(Input::get('amount'));
+//        }
+
+        $amount = floatval(Input::get('amount'));
 
         $amountStr = number_format($amount, 0, ",", ".");
 
