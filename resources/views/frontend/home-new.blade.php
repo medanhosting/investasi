@@ -110,19 +110,19 @@
                 {{--</div>--}}
             {{--</div>--}}
         {{--</div>--}}
-    @endif
 
-    <!-- apa itu investasi.me -->
-    <div class="special-cause fullpage_background2">
-        <div class="row">
-            <div class="col-md-offset-6 col-md-6 col-xs-12">
-                <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:5%;margin-bottom: 3%;">
-                    {{--<h2 style="color: white !important;">Apa itu Investasi.me</h2>--}}
-                    <h1>Apa itu Investasi.me</h1>
-                    <h2 style="color:black;">Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h2>
-                    <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
-                    <br>
-                    <span style="font-size:14px;">
+
+        <!-- apa itu investasi.me -->
+        <div class="special-cause fullpage_background2">
+            <div class="row">
+                <div class="col-md-offset-6 col-md-6 col-xs-12">
+                    <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:5%;margin-bottom: 3%;">
+                        {{--<h2 style="color: white !important;">Apa itu Investasi.me</h2>--}}
+                        <h1>Apa itu Investasi.me</h1>
+                        <h2 style="color:black;">Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h2>
+                        <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
+                        <br>
+                        <span style="font-size:14px;">
                         Ada banyak potensi bisnis, usaha dan industri di Indonesia yang hingga saat ini belum dapat kesempatan untuk bisa
                         menjadi lebih besar dan lebih cepat berkembang.<br>
                         Investasi.me hadir untuk bisa mempertemukan semua masyarakat Indonesi yang memiliki semangat sama untuk
@@ -133,16 +133,16 @@
                         dengan bunga maupun bagi hasil yang ringan bagi usaha Anda. <br>
                         Anda dan kami ada untuk membuat kita semua maju bersama!
                     </span>
-                </div>
-                <div class="btns-wrapper">
-                    <a href="#" class="btn btn-big btn-solid "><span>Baca Selanjutnya</span></a>
+                    </div>
+                    <div class="btns-wrapper">
+                        <a href="#" class="btn btn-big btn-solid "><span>Baca Selanjutnya</span></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- p2p lending -->
-    <div class="special-cause fullpage_background3">
+        <!-- p2p lending -->
+        <div class="special-cause fullpage_background3">
             <div class="row">
                 <div class="col-md-6 col-xs-12 donet__area" style="background: none; border: none;padding-left: 10%;">
                     <div class="section-name parallax one" style="color: white !important; padding-bottom:5%;">
@@ -158,68 +158,69 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <!-- langkah -->
-    <div class="special-cause fullpage_background4">
-        <div class="row">
-            <div class="section-name one">
-                <div class="short-text">
-                    <span style="color: white !important;font-size: 24px;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></span>
+        <!-- langkah -->
+        <div class="special-cause fullpage_background4">
+            <div class="row">
+                <div class="section-name one">
+                    <div class="short-text">
+                        <span style="color: white !important;font-size: 24px;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></span>
+                    </div>
+                    <h1 style="color: white !important;font-size:70px;">Langkah Mudah dalam Memulai</h1>
                 </div>
-                <h1 style="color: white !important;font-size:70px;">Langkah Mudah dalam Memulai</h1>
-            </div>
 
-            <div class="team-members row" style="padding: 5% 10% 0 10%;">
-                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
-                        <div style=
-                             "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-                            <div style=" #position: relative; #top: -50%; color: white !important;">
-                                <h2>Memberikan bantuan</h2>
+                <div class="team-members row" style="padding: 5% 10% 0 10%;">
+                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
+                        <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
+                            <div style=
+                                 "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+                                <div style=" #position: relative; #top: -50%; color: white !important;">
+                                    <h2>Memberikan bantuan</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
+                        <h2 style="color: white !important;">Memberikan bantuan</h2>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4-img">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4-img">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4-img">
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
-                    <h2 style="color: white !important;">Memberikan bantuan</h2>
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4-img">
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4-img">
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4-img">
-                </div>
-            </div>
-            <div class="team-members row" style="padding: 0 10% 0 10%;">
-                <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
-                    <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
-                        <div style=
-                             "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-                            <div style=" #position: relative; #top: -50%;color: white !important;">
-                                <h2>Meminjamkan</h2>
+                <div class="team-members row" style="padding: 0 10% 0 10%;">
+                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-sm">
+                        <div class="homepage-section4-img-text" style="display: table; #position: relative; overflow: hidden;">
+                            <div style=
+                                 "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+                                <div style=" #position: relative; #top: -50%;color: white !important;">
+                                    <h2>Meminjamkan</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
-                    <h2 style="color: white !important;">Meminjamkan</h2>
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4-img">
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4-img">
-                </div>
-                <div class="col-md-3 col-sm-12 col-xs-12 center">
-                    <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4-img">
+                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
+                        <h2 style="color: white !important;">Meminjamkan</h2>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4-img">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4-img">
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 center">
+                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4-img">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
 
     <!-- proyek -->
     <div class="special-cause fullpage_background5">

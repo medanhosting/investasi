@@ -8,7 +8,6 @@
                 <div class="col-xs-12">
                     <ul class="nav nav-pills nav-justified thumbnail custom-color">
                         <li class="active"><a href="#">
-                                <h4 class="list-group-item-heading">Step 1</h4>
                                 <p class="list-group-item-text">Email Verification</p>
                             </a></li>
                     </ul>

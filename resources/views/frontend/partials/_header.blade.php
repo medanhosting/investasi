@@ -5,6 +5,8 @@
         <div class="container" >
             <div class="row">
                 @if(auth()->check())
+                    <a style="color:white;cursor:pointer;" href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a>
+                    &nbsp;&nbsp;
                     <a style="color:white;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>
@@ -50,6 +52,10 @@
                                 <li><a href="{{route('pengajuan')}}">Jadilah Partner Kami</a></li>
                             </ul>
                         </li>
+                        {{--<li>--}}
+                            {{--<span><a href="{{route('blog-list')}}">Blog</a></span>--}}
+                        {{--</li>--}}
+
                         {{--<li>--}}
                             {{--@if(auth()->check())--}}
                             {{--<span>--}}
@@ -106,6 +112,10 @@
                                                 <li><a href="{{route('pengajuan')}}">Jadilah Partner Kami</a></li>
                                             </ul>
                                         </li>
+                                        {{--<li>--}}
+                                            {{--<a href="{{route('blog-list')}}">Blog</a>--}}
+                                        {{--</li>--}}
+
                                         {{--<li><a>Profil</a>--}}
                                             {{--<ul class="single">--}}
 

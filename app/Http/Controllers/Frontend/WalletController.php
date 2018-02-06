@@ -219,7 +219,7 @@ class WalletController extends Controller
                         'created_on'        => $dateTimeNow->toDateTimeString()
                     ]);
 
-                    Mail::to('bayuindra091191@gmail.com')->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
+                    Mail::to($user->email)->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
                 }
                 else{
                     return Redirect::back()->withErrors(['google' => ['Kode yang Anda masukan salah!']]);
@@ -231,6 +231,7 @@ class WalletController extends Controller
         }
         catch (\Exception $ex){
             Utilities::ExceptionLog('WalletWithdrawSubmit EX = '. $ex);
+            return $ex;
         }
     }
 

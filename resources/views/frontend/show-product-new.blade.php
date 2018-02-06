@@ -141,9 +141,9 @@
                             <div class="col-md-4 text-center" style="margin-top:18px;color:#4a4a4a;">
                                 <a href="{{route('wishlist', ['id'=>$product->id])}}" style="color:#4a4a4a;"><i class="fa fa-heart"></i>&nbsp;&nbsp;
                                     @if($isWishlist == 0)
-                                        <span> Tandai Halaman Ini</span>
+                                        <span> Tambah Favorit</span>
                                     @else
-                                        <span> Hapus Tanda Halaman Ini</span>
+                                        <span> Hilangkan Favorit</span>
                                     @endif
                                 </a>
                             </div>

@@ -10,15 +10,12 @@
                 <div class="col-xs-12">
                     <ul class="nav nav-pills nav-justified thumbnail custom-color">
                         <li><a href="#">
-                                <h4 class="list-group-item-heading">Step 1</h4>
                                 <p class="list-group-item-text">Email Verification</p>
                             </a></li>
                         <li><a href="#">
-                                <h4 class="list-group-item-heading">Step 2</h4>
                                 <p class="list-group-item-text">Phone Verification</p>
                             </a></li>
                         <li class="active"><a href="#">
-                                <h4 class="list-group-item-heading">Step 3</h4>
                                 <p class="list-group-item-text">Photo Upload</p>
                             </a></li>
                     </ul>

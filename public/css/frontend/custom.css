@@ -1,5 +1,7 @@
 .page-banner{
     background: #ff7a00 !important;
+    height:200px;
+    margin-top: 50px;
 }
 .parallax-mask{
     background: rgba(36, 40, 47, 0.09) !important;

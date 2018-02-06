@@ -26,7 +26,9 @@
                             <h4>Submit Proyek/Produk Anda</h4>
                         </div>
                         <p class="first">
-                            Apakah Anda ingin mengajukan produk atau proyek ke website kami? hubungi kami melalui chat box atau email untuk informasi lebih lanjut.
+                            Apakah Anda ingin mengajukan produk atau proyek ke website kami?
+                            <a href="https://goo.gl/forms/EzQ4QPgIWnmLp6ry1"> Klik disini </a>
+                            atau hubungi kami melalui chat box atau email untuk informasi lebih lanjut.
                         </p>
                         <br>
                         <br>

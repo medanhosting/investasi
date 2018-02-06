@@ -63,6 +63,8 @@
                                 <div class="col-sm-12">
                                     <h5 style="color:red;">
                                         Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                                        <br>
+                                        <a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Prospektus</span></a>
                                     </h5>
                                 </div>
                             </div>
@@ -175,7 +177,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label>
-                                <input type="checkbox" name="check1" id="check1" onclick="check()"> Saya telah membaca dan memahami isi dari prospectus produk investasi ini, dan saya telah menyetujui syarat dan ketentuan dari investasi.me
+                                <input type="checkbox" name="check1" id="check1" onclick="check()">
+                                Saya telah membaca dan memahami isi dari prospektus produk investasi ini
+                                (<a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Prospektus</span></a>),
+                                dan saya telah menyetujui <a href="{{route('term-condition')}}">syarat dan ketentuan</a> dari investasi.me
+
                             </label>
                         </div>
                     </div>
