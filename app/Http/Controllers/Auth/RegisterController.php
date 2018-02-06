@@ -174,7 +174,7 @@ class RegisterController extends Controller
 
         if($user->save()){
             Session::put("user-data", $user);
-            return Redirect::route('index');
+            return Redirect::route('login');
 //            return Redirect::route('verify-phone-show');
 //            return View('auth.send-email', compact('email'));
 //            return View('auth.email-confirm',['user'=>$user]);

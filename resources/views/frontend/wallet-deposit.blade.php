@@ -53,7 +53,7 @@
                                 {{--</select>--}}
                             {{--</div>--}}
 
-                            <div class="form-group price-format" id="amount_section" style="display: none;"> <!-- Custom Top Up Amount-->
+                            <div class="form-group price-format" id="amount_section"> <!-- Custom Top Up Amount-->
                                 <label for="amount" class="control-label">Jumlah Top Up</label>
                                 <input type="text" class="form-control" id="amount" name="amount" placeholder="Jumlah top up">
                             </div>

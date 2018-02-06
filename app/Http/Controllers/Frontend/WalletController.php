@@ -81,7 +81,8 @@ class WalletController extends Controller
 //            $amount = floatval(Input::get('amount'));
 //        }
 
-        $amount = floatval(Input::get('amount'));
+        $amount = (double) str_replace('.','', Input::get('amount'));
+//        $amount = floatval(Input::get('amount'));
 
         $amountStr = number_format($amount, 0, ",", ".");
 
@@ -109,7 +110,8 @@ class WalletController extends Controller
         // Get unique order id
         $orderId = 'WALLET-'. uniqid();
 
-        $amount = floatval(Input::get('amount'));
+//        $amount = floatval(Input::get('amount'));
+        $amount = (double) str_replace('.','', Input::get('amount'));
 
         // Delete existing cart
         $carts = Cart::where('user_id', $userId)
@@ -141,12 +143,12 @@ class WalletController extends Controller
         if($paymentMethod == 'bank_transfer'){
             $isSuccess = TransactionUnit::createTransactionTopUp($userId, $cartCreate->id, $orderId);
         }
-
         //set data to request
         $transactionDataArr = Midtrans::setRequestData($userId, $paymentMethod, $orderId, $cartCreate);
 
         //sending to midtrans
         $redirectUrl = Midtrans::sendRequest($transactionDataArr);
+
 
         return redirect($redirectUrl);
     }
@@ -203,7 +205,8 @@ class WalletController extends Controller
                 if($valid){
                     $dateTimeNow = Carbon::now('Asia/Jakarta');
 
-                    $amount = Input::get('amount');
+                    $amount = (double) str_replace('.','', Input::get('amount'));
+//                    $amount = Input::get('amount');
                     $accNumber = Input::get('acc_number');
                     $accName = Input::get('acc_name');
                     $bank = Input::get('bank');

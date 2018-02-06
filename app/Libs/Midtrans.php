@@ -206,6 +206,12 @@ class Midtrans
 
             return $redirectUrl;
         }
+        if($request->getStatusCode() == 201){
+            $collect = json_decode($request->getBody());
+            $redirectUrl = $collect->redirect_url;
+
+            return $redirectUrl;
+        }
 
     }
 }

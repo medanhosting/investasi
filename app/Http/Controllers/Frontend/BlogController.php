@@ -24,6 +24,7 @@ class BlogController extends Controller
     public function SingleBlog($id){
 
         $singleBlog = Blog::find($id);
+        $isUrgent = 0;
         if(auth()->check()){
             $user = Auth::user();
             $userId = $user->id;
@@ -37,6 +38,7 @@ class BlogController extends Controller
                 $blogReadUser->status_id = 2;
                 $blogReadUser->save();
             }
+            $isUrgent = 1;
         }
 
         $recentBlogs = Blog::where('status_id', 1)
@@ -63,6 +65,6 @@ class BlogController extends Controller
         }
 
 
-        return View('frontend.show-blog', compact('singleBlog', 'recentBlogs','relatedBlogs'));
+        return View('frontend.show-blog', compact('singleBlog', 'recentBlogs','relatedBlogs','isUrgent'));
     }
 }

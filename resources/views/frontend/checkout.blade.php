@@ -63,9 +63,11 @@
                                 <div class="col-sm-12">
                                     <h5 style="color:red;">
                                         Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
-                                        <br>
-                                        <a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Prospektus</span></a>
                                     </h5>
+                                    <h4>
+                                        <br>
+                                        <a href="{{route('download', ['filename' => 'test.pdf'])}}">Download Prospektus</a>
+                                    </h4>
                                 </div>
                             </div>
                             <div class="field col-sm-12 text-right" >
@@ -86,7 +88,7 @@
                             Kami adalah sebuah portal yang mempertemukan pikah yang membutuhkan
                             bantuan pendanaan dengan pihak yang mau memberikan bantuan akan pendanaan.
                             <br>
-                            Investasi.me dengna standarisasi yang baku telah melakukan studi kelayaran
+                            Investasi.me dengan standarisasi yang baku telah melakukan studi kelayaran
                             pada semua pihak yang mendaftarkan kebutuhan pendanaannya di portal kami.
                             Namun bukan berarti risiko akan proyek maupun pekerjaan yang dilakukan oleh
                             pihak yang menerima modal menjadi bebas risiko kepada pihak yang memberikan bantuan.
@@ -180,7 +182,7 @@
                                 <input type="checkbox" name="check1" id="check1" onclick="check()">
                                 Saya telah membaca dan memahami isi dari prospektus produk investasi ini
                                 (<a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Prospektus</span></a>),
-                                dan saya telah menyetujui <a href="{{route('term-condition')}}">syarat dan ketentuan</a> dari investasi.me
+                                dan saya telah menyetujui <a target="_blank" href="{{route('term-condition')}}">syarat dan ketentuan</a> dari investasi.me
 
                             </label>
                         </div>

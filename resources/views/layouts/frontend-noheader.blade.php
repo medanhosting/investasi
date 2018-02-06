@@ -59,7 +59,7 @@
 
 @include('frontend.partials._modal-ads')
 <!-- FOOTER -->
-@include('frontend.partials._footer')
+{{--@include('frontend.partials._footer')--}}
 <!-- //FOOTER -->
 
 <!-- Scripts -->

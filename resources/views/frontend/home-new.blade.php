@@ -328,4 +328,24 @@
         </div>
     </section>
 
+    <!-- Subscribe -->
+    <div class="subscribe-form-div">
+        <div class="section-name one  subscribe-section">
+            <div class="subcribe widget clearfix">
+                <h2>Dapatkan Berita & Informasi Terbaru ke Email Anda</h2>
+                {!! Form::open(['url'=>'subscribeEmail','id'=>'subscribe-form'])!!}
+                <div class="col-md-offset-2 col-md-3 col-sm-12 field">
+                    <input style="margin-bottom: 5%;color:white;" type="text" name="name" id="name" class="subscribe-field" placeholder="Ketikkan nama Anda disini">
+                </div>
+                <div class="col-md-3 col-sm-12 field">
+                    <input style="margin-bottom: 5%;color:white;" type="email" name="email" id="email" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
+                </div>
+                <div class="col-md-3 col-sm-12 field">
+                    {!! Form::submit('Kirim',['class'=>'btn btn-min btn-solid subscribe-submit'])!!}
+                </div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+        &nbsp;
+    </div>
 @endsection

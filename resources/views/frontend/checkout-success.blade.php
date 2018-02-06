@@ -18,7 +18,7 @@
     </div>
 
     <!-- Causes Wrapper -->
-    <div class="causes-page-wrapper single-cause">
+    <div class="single-cause">
         <div class="container" style="margin-bottom: 20px;">
             <div class="row cause">
                 <div class="col-md-10 col-md-offset-1">

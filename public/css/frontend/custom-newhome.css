@@ -505,6 +505,9 @@ p{
 .subscribe-field{
     background-color: #ff7a00;
     width: 100% !important;
+    height: 45px;
+    border-radius: 3px;
+    padding: 0 15px;
 }
 .subscribe-submit{
     background-color: white !important;

@@ -51,9 +51,9 @@
                                 {{ csrf_field() }}
 
 
-                                <div class="field col-sm-12 {{ $errors->has('amount') ? ' has-error' : '' }}">
+                                <div class="field col-sm-12 price-format {{ $errors->has('amount') ? ' has-error' : '' }}">
                                     <h4>Jumlah Penarikan</h4>
-                                    <input type="number" name="amount">
+                                    <input type="text" name="amount">
                                     @if ($errors->has('amount'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('amount') }}</strong>

@@ -2,7 +2,15 @@ function modalCheckout(){
     // Set invest amount
     // var invest = $("input[name=amount]:checked").val();
     var invest = $("#amount").val();
-    invest = invest.replace('.', '');
+
+    while(true)
+    if(invest.includes('.')){
+        invest = invest.replace('.', '');
+    }
+    else{
+        break;
+    }
+    // alert(invest);
 
     if(invest%250000 === 0 && invest >= 500000){
         $(".error-div").hide();

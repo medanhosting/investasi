@@ -22,6 +22,10 @@
         <div class="container">
             <div class="row">
                 <div class="blog-posts col-md-8">
+                    @if($isUrgent == 1)
+                        <h3 style="color:red;">Harap Baca Blog berikut ini. Untuk melanjutkan tekan tombol di bawah</h3>
+                        <br><br>
+                    @endif
                     <div class="blog-post single-post">
                         <a href="{{ route('blog', ['id' => $singleBlog->id]) }}"><h2>{{$singleBlog->title}}</h2></a>
                         <div class="meta">
@@ -34,6 +38,11 @@
                         </div>
                         {!! $singleBlog->description !!}
                     </div>
+
+                        @if($isUrgent == 1)
+                            <br>
+                            <a href="{{route('index')}}" class="btn btn-big btn-solid" style="margin-bottom:18px;"><span>Lanjutkan</span></a>
+                        @endif
                 </div>
 
                 <!-- sidebar -->

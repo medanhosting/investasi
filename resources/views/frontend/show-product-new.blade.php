@@ -226,24 +226,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 product-info">
-                        <h3>Informasi Pinjaman</h3>
-                        <br><br>
-                        <span>Lama Pinjaman : </span>
-                        <br><br>
-                        <span>Suku Bunga : </span>
-                        <br><br>
-                        <span>Jatuh Tempo Pinjaman : {{$product->days_left}} </span>
-                        <br><br>
-                        <span>Industri : </span>
-                        <br><br>
-                        <span>Anggunan : </span>
-                        {{--<br><br>--}}
-                        {{--<h3>Keterangan Tambahan</h3>--}}
-                        {{--<br><br>--}}
-                        {{--<span>Pinjaman ini memiliki </span>--}}
-
-                    </div>
+                    <a href="{{route('checkout',['id' => $product->id])}}">
+                        <div class="col-md-3 col-xs-12 product-info">
+                            <h3>Informasi Pinjaman</h3>
+                            <br><br>
+                            <span>Lama Pinjaman : </span>
+                            <br><br>
+                            <span>Suku Bunga : </span>
+                            <br><br>
+                            <span>Jatuh Tempo Pinjaman : {{$product->days_left}} </span>
+                            <br><br>
+                            <span>Industri : </span>
+                            <br><br>
+                            <span>Anggunan : </span>
+                            {{--<br><br>--}}
+                            {{--<h3>Keterangan Tambahan</h3>--}}
+                            {{--<br><br>--}}
+                            {{--<span>Pinjaman ini memiliki </span>--}}
+                        </div>
+                    </a>
             </div>
         </div>
     </div>
