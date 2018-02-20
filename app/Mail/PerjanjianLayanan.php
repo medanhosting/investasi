@@ -13,7 +13,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class InvoicePembelian extends Mailable
+class PerjanjianLayanan extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -43,8 +43,8 @@ class InvoicePembelian extends Mailable
      */
     public function build()
     {
-        return $this->subject("Invoice Pembelian Investasi me")
-            ->view('email.invoice-pembelian')->with([
+        return $this->subject("Perjanjian Layanan Pinjam Meminjam di Investasi me")
+            ->view('email.perjanjian-layanan')->with([
             'transaction' => $this->transaction,
             'paymentMethod' => $this->paymentMethod,
             'product' => $this->product,

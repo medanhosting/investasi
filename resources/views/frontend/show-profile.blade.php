@@ -23,75 +23,58 @@
                         <div class="col-xs-12">
                             <ul class="nav nav-pills nav-justified thumbnail custom-color">
                                 <li><a href="#">
-                                        <h4 class="list-group-item-heading green">Step 1</h4>
-                                        <p class="list-group-item-text">Email Verification</p>
+                                        <p class="list-group-item-text green">Email Verification</p>
                                     </a></li>
                                 @if($user->status_id == 11)
                                     <li class="active"><a href="{{route('verify-phone-show')}}">
-                                            <h4 class="list-group-item-heading green">Step 2</h4>
-                                            <p class="list-group-item-text">Phone Verification</p>
+                                            <p class="list-group-item-text green">Phone Verification</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 4</h4>
                                             <p class="list-group-item-text">Risk Profile</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 5</h4>
                                             <p class="list-group-item-text">Set Your Address</p>
                                         </a></li>
                                 @elseif($user->status_id == 12 || $user->status_id == 13)
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 2</h4>
-                                            <p class="list-group-item-text">Phone Verification</p>
+                                            <p class="list-group-item-text green">Phone Verification</p>
                                         </a></li>
                                     <li class="active"><a href="{{route('verify-photo')}}">
-                                            <h4 class="list-group-item-heading">Step 3</h4>
                                             <p class="list-group-item-text">Photo Upload</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 4</h4>
                                             <p class="list-group-item-text">Risk Profile</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 5</h4>
                                             <p class="list-group-item-text">Set Your Address</p>
                                         </a></li>
                                 @elseif($user->status_id == 14)
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 2</h4>
-                                            <p class="list-group-item-text">Phone Verification</p>
+                                            <p class="list-group-item-text green">Phone Verification</p>
                                         </a></li>
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 3</h4>
-                                            <p class="list-group-item-text">Photo Upload</p>
+                                            <p class="list-group-item-text green">Photo Upload</p>
                                         </a></li>
                                     <li class="active"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 4</h4>
                                             <p class="list-group-item-text">Risk Profile</p>
                                         </a></li>
                                     <li class="disabled"><a href="#">
-                                            <h4 class="list-group-item-heading">Step 5</h4>
                                             <p class="list-group-item-text">Set Your Address</p>
                                         </a></li>
                                 @elseif($user->status_id == 15)
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 2</h4>
-                                            <p class="list-group-item-text">Phone Verification</p>
+                                            <p class="list-group-item-text green">Phone Verification</p>
                                         </a></li>
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 3</h4>
-                                            <p class="list-group-item-text">Photo Upload</p>
+                                            <p class="list-group-item-text green">Photo Upload</p>
                                         </a></li>
                                     <li><a href="#">
-                                            <h4 class="list-group-item-heading green">Step 4</h4>
-                                            <p class="list-group-item-text">Risk Profile</p>
+                                            <p class="list-group-item-text green">Risk Profile</p>
                                         </a></li>
                                     <li class="active"><a href="{{route('map')}}">
-                                            <h4 class="list-group-item-heading">Step 5</h4>
                                             <p class="list-group-item-text">Set Your Address</p>
                                         </a></li>
                                 @endif

@@ -18,7 +18,7 @@
     </div>
 
     <!-- Causes Wrapper -->
-    <div class="causes-page-wrapper single-cause">
+    <div class="single-cause">
         <div class="container" style="margin-bottom: 20px;">
             <div class="row cause">
                 <div class="col-md-10 col-md-offset-1">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
-                        <a href="{{ route('my-wallet') }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Dompet Saya</a>
+                        <a href="{{ route('my-wallet') }}" class="btn btn-big btn-solid">Dompet Saya</a>
                         <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                     </div>
                 </div>

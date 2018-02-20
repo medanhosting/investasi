@@ -23,8 +23,23 @@ class PaymentController extends Controller
 {
     public function checkout($id){
         $product = Product::find($id);
+        if(!auth()->check()){
+            return redirect()->route('project-detail', ['id' => $id]);
+        }
+        $user = Auth::user();
+        $userId = $user->id;
+        $userData = User::find($userId);
+        $notCompletedData = 1;
+        if($userData->identity_number== null &&
+            $userData->dob == null &&
+            $userData->address_ktp== null &&
+            $userData->kecamatan_ktp== null &&
+            $userData->postal_code_ktp== null)
+        {
+            $notCompletedData = 0;
+        }
 
-        return View('frontend.checkout', compact('product'));
+        return View('frontend.checkout', compact('product', 'userData', 'notCompletedData'));
     }
 
     public function pay(Request $request, $investId){
@@ -44,6 +59,21 @@ class PaymentController extends Controller
 
             $investAmount = floatval(Input::get('checkout-invest-amount-input'));
             $adminFee = floatval(Input::get('checkout-admin-fee-input'));
+            $isNotComplete = Input::get('checkout-notCompletedData');
+
+            if($isNotComplete == 0){
+                $user = User::find($userId);
+
+                $user->identity_number = Input::get('checkout-KTP');
+                $user->citizen = Input::get('checkout-citizen');
+                $user->address_ktp = Input::get('checkout-address');
+                $user->kecamatan_ktp = Input::get('checkout-city');
+                $user->province_ktp = Input::get('checkout-province');
+                $user->postal_code_ktp = Input::get('checkout-zip');
+
+                $user->save();
+
+            }
 
             // Delete existing cart
             $carts = Cart::where('product_id', $investId)
@@ -75,9 +105,10 @@ class PaymentController extends Controller
 
                 //set data to request
                 $transactionDataArr = Midtrans::setRequestData($userId, Input::get('checkout-payment-method-input'), $orderId, $cartCreate);
-
+//                dd($transactionDataArr);
                 //sending to midtrans
                 $redirectUrl = Midtrans::sendRequest($transactionDataArr);
+//                dd($redirectUrl);
 
                 return redirect($redirectUrl);
             }

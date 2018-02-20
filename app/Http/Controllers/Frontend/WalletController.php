@@ -14,7 +14,7 @@ use App\Libs\TransactionUnit;
 use App\Libs\UrgentNews;
 use App\Mail\RequestWithdrawInvestor;
 use App\Models\Cart;
-use App\Models\Transaction;
+use App\Models\TransactionWallet;
 use App\Models\User;
 use App\Models\WalletStatement;
 use Carbon\Carbon;
@@ -44,8 +44,9 @@ class WalletController extends Controller
         }
 
         $user = User::find($userId);
-        $statements = WalletStatement::where('user_id', $userId)->orderByDesc('created_on')->get();
-        return View ('frontend.show-wallet', compact('statements', 'user'));
+        $statementsWithdraw = WalletStatement::where('user_id', $userId)->orderByDesc('created_on')->get();
+        $statementsTopup = TransactionWallet::where('user_id', $userId)->orderByDesc('created_at')->get();
+        return View ('frontend.show-wallet', compact('statementsWithdraw','statementsTopup', 'user'));
     }
 
     public function DepositShow()

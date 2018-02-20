@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="field col-sm-12 {{ $errors->has('description') ? ' has-error' : '' }}" style="margin-top: 30px;padding: 0 30px;">
                                         <h4>Pertanyaan</h4>
-                                        <textarea>
+                                        <textarea id="description" name="description">
 
                                         </textarea>
                                         @if ($errors->has('description'))

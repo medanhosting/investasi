@@ -264,7 +264,7 @@
                                     <span style="color: #ff7a00">1 tahun</span>
                                 </div>
                                 <div class="col-md-2">
-                                    Progress {{$percentage}}&
+                                    Progress {{$percentage}}%
                                     <br>
                                     <div class="progress-bar-wrapper min">
                                         <div class="progress-bar-outer">

@@ -17,8 +17,8 @@ Route::get('/testing', function (){
     $userData = User::find($transaction->user_id);
     $payment = PaymentMethod::find($transaction->payment_method_id);
 
-    $acceptEmail = new InvoicePembelian($payment, $transaction, $userData);
-    Mail::to($userData->email)->send($acceptEmail);
+    $acceptEmail = new PerjanjianPinjaman($payment, $transaction, $userData);
+    Mail::to("yansen626@gmail.com")->send($acceptEmail);
 
 })->name('invoice');
 //Home, contact us, term, etc
@@ -100,8 +100,6 @@ Route::get('/referral', 'Frontend\ReferralController@ShowReferral');
 //Vendor
 Route::get('/owner/{vendorObj}', 'Frontend\VendorController@show')->name('vendor-profile-show');
 Route::get('/pengajuan-update', 'Frontend\VendorController@RequestUpdate')->name('update-request');
-Route::get('/pengajuan-owner', 'Frontend\VendorController@RequestOwner')->name('owner-request');
-Route::post('/pengajuan-owner', 'Frontend\VendorController@RequestOwnerSubmit')->name('owner-request-submit');
 
 
 //End Frontend Routing
@@ -252,9 +250,13 @@ Route::get('/admin/logout', 'Auth\LoginAdminController@logout')->name('admin-log
 // Vendor
 Route::prefix('admin/vendor')->group(function(){
     Route::get('/', 'Admin\VendorController@index')->name('vendor-list');
+    Route::get('/detail/{id}', 'Admin\VendorController@GetDetailVendor')->name('vendor-detail');
     Route::get('/request', 'Admin\VendorController@RequestList')->name('vendor-request');
     Route::get('/request-accept/{id}', 'Admin\VendorController@AcceptRequest');
     Route::get('/request-reject/{id}', 'Admin\VendorController@RejectRequest');
+
+    Route::get('/pengajuan-owner', 'Admin\VendorController@RequestOwner')->name('vendor-request-form');
+    Route::post('/pengajuan-owner', 'Admin\VendorController@RequestOwnerSubmit')->name('vendor-request-submit');
 });
 
 // Wallet
@@ -278,13 +280,13 @@ Route::prefix('admin/blog')->group(function(){
     Route::get('/reject/{id}', 'Admin\BlogController@reject')->name('blog-reject');
 });
 
-// Owner
-Route::prefix('admin/owner')->group(function(){
-    Route::get('/list', 'Admin\OwnerController@GetListedOwner')->name('owner-list');
-    Route::get('/detail/{id}', 'Admin\OwnerController@GetDetailOwner')->name('owner-detail');
-    Route::get('/accept/{id}', 'Admin\OwnerController@AcceptOwner')->name('owner-accept');
-    Route::get('/reject/{id}', 'Admin\OwnerController@RejectOwner')->name('owner-reject');
-});
+//// Owner
+//Route::prefix('admin/owner')->group(function(){
+//    Route::get('/list', 'Admin\OwnerController@GetListedOwner')->name('owner-list');
+//    Route::get('/detail/{id}', 'Admin\OwnerController@GetDetailOwner')->name('owner-detail');
+//    Route::get('/accept/{id}', 'Admin\OwnerController@AcceptOwner')->name('owner-accept');
+//    Route::get('/reject/{id}', 'Admin\OwnerController@RejectOwner')->name('owner-reject');
+//});
 
 // Coupon
 Route::prefix('admin/coupon')->group(function(){
@@ -323,3 +325,8 @@ Route::post('/verifysignaturephoto', 'Frontend\VerificationController@UploadSign
 
 Route::get('/map', 'Frontend\ProfileController@GoogleMap')->name('map');
 Route::post('/map', 'Frontend\ProfileController@GoogleMapSubmit')->name('map-submit');
+
+Route::post('/checkout-notification', [
+    'uses' => 'MidtransController@notification',
+    'as' => 'checkoutNotification'
+]);

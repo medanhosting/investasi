@@ -10,6 +10,22 @@ function modalCheckout(){
     else{
         break;
     }
+
+    var notComplete = $("#notCompletedData").val();
+    if(notComplete === '0'){
+        var KTP = $("#KTP").val();
+        $("#checkout-KTP").val(KTP);
+        var citizen = $("#citizen").val();
+        $("#checkout-citizen").val(citizen);
+        var address = $("#address-home").val();
+        $("#checkout-address").val(address);
+        var city = $("#city").val();
+        $("#checkout-city").val(city);
+        var province = $("#province").val();
+        $("#checkout-province").val(province);
+        var zip = $("#zip").val();
+        $("#checkout-zip").val(zip);
+    }
     // alert(invest);
 
     if(invest%250000 === 0 && invest >= 500000){

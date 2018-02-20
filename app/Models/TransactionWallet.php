@@ -75,4 +75,8 @@ class TransactionWallet extends Eloquent
 	{
 		return $this->belongsTo(\App\Models\Status::class);
 	}
+
+    public function getAmountAttribute(){
+        return number_format($this->attributes['amount'],0, ",", ".");
+    }
 }

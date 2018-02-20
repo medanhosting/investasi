@@ -1,6 +1,15 @@
-@extends('layouts.frontend')
+{{--@extends('layouts.frontend')--}}
+@extends('layouts.admin')
 
-@section('body-content')
+{{--@section('body-content')--}}
+    @section('dashboard')
+
+    <!-- sidebar -->
+    @include('admin.partials._sidebar')
+    <!-- sidebar -->
+
+    <!-- top navigation -->
+    @include('admin.partials._navigation')
     <!-- contact wrapper -->
     <div class="contact-page-wrapper">
         <div class="container">

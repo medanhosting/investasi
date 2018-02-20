@@ -12,6 +12,9 @@ namespace App\Http\Controllers;
 use App\Libs\Utilities;
 use App\Libs\Veritrans;
 use App\Mail\InvoicePembelian;
+use App\Mail\PerjanjianLayanan;
+use App\Mail\PerjanjianPinjaman;
+use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\TransactionWallet;
 use App\Models\User;
@@ -151,8 +154,15 @@ class MidtransController extends Controller
                             //Send Email,
                             $userData = User::find($transaction->user_id);
                             $payment = PaymentMethod::find($transaction->payment_method_id);
+                            $product = Product::find($transaction->product);
 
-                            $acceptEmail = new InvoicePembelian($payment, $transaction, $userData);
+                            $acceptEmail = new InvoicePembelian($payment, $transaction, $product, $userData);
+                            Mail::to($userData->email)->send($acceptEmail);
+
+                            $acceptEmail = new PerjanjianLayanan($payment, $transaction, $product, $userData);
+                            Mail::to($userData->email)->send($acceptEmail);
+
+                            $acceptEmail = new PerjanjianPinjaman($payment, $transaction, $product, $userData);
                             Mail::to($userData->email)->send($acceptEmail);
                         }
                     }

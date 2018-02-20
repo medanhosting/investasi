@@ -14,17 +14,25 @@
         <!-- top tiles -->
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Registered Customers</span>
+                <span class="count_top"><i class="fa fa-user"></i> Customer Terdaftar</span>
                 <div class="count">{{ $customerTotal }}</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-money"></i> Total Success Transactions</span>
-                <div class="count">{{ $trxTotal }}</div>
+                <span class="count_top"><i class="fa fa-money"></i> Transaksi Baru</span>
+                <div class="count">{{ $newOrderTotal }}</div>
             </div>
-            {{--<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">--}}
-                {{--<span class="count_top"><i class="fa fa-dollar"></i> Total Incomes</span>--}}
-                {{--<div class="count green">25 Millions</div>--}}
-            {{--</div>--}}
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-money"></i> Pembayaran Baru</span>
+                <div class="count">{{ $onGoingPaymentTotal }}</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-dollar"></i> Penarikan Dompet</span>
+                <div class="count">{{ $walletWithdraw }}</div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-money"></i> Pembayaran Bank Transfer</span>
+                <div class="count">{{ $onGoingPaymentBankTotal }}</div>
+            </div>
             {{--<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">--}}
                 {{--<span class="count_top"><i class="fa fa-user"></i> Total Females</span>--}}
                 {{--<div class="count">4,567</div>--}}
@@ -49,7 +57,7 @@
 
                     <div class="row x_title">
                         <div class="col-md-6">
-                            <h3>Welcome</h3>
+                            <h3>Selamat Datang</h3>
                         </div>
                         {{--<div class="col-md-6">--}}
                             {{--<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">--}}
@@ -64,7 +72,7 @@
                             <div class="alert alert-info alert-dismissible fade in" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                                 </button>
-                                <strong>Hi!</strong> There is nothing needs your attentions
+                                <strong>Halo!</strong> Saat ini tidak ada yang memerlukan tindakan Anda
                             </div>
                         @endif
 
@@ -73,11 +81,11 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                                 </button>
                                 @if($newOrderTotal > 1)
-                                There are {{ $newOrderTotal }} new orders
+                                Terdapat {{ $newOrderTotal }} transaksi baru
                                 @else
-                                    There is {{ $newOrderTotal }} new order
+                                    Terdapawt {{ $newOrderTotal }} transaksi baru
                                 @endif
-                                , please take a look <a style="color: dodgerblue;" href="{{ route('new-order-list') }}"><strong>here</strong></a>
+                                , Anda dapat mengecek <a style="color: dodgerblue;" href="{{ route('new-order-list') }}"><strong>disini</strong></a>
                             </div>
                         @endif
 
@@ -86,11 +94,11 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
                                 </button>
                                 @if($onGoingPaymentTotal > 1)
-                                    There are {{ $onGoingPaymentTotal }} new payments
+                                    Terdapat {{ $onGoingPaymentTotal }} pembayaran baru
                                 @else
-                                    There is {{ $onGoingPaymentTotal }} new payment
+                                    Terdapat {{ $onGoingPaymentTotal }} pembayaran baru
                                 @endif
-                                    , you can check {{ $onGoingPaymentTotal > 1 ? 'their':'its' }} status <a style="color: orange;" href="{{ route('payment-list') }}"><strong>here</strong></a>
+                                    , Anda dapat mengecek statusnya <a style="color: orange;" href="{{ route('payment-list') }}"><strong>disini</strong></a>
                             </div>
                         @endif
                     </div>

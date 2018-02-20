@@ -29,7 +29,7 @@
                     </li>
                     <li>
                         <a href="{{ route('vendor-request') }}">
-                            <i class="fa fa-exclamation-triangle"></i> Request Investor
+                            <i class="fa fa-exclamation-triangle"></i> Request Vendor
                         </a>
                     </li>
                     <li>
@@ -43,14 +43,16 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('owner-list') }}">
-                            <i class="fa fa-money"></i> Owner List
+                        <a href="{{ route('customer-list') }}">
+                            <i class="fa fa-money"></i> Investor List
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('customer-list') }}">
-                            <i class="fa fa-users"></i> Investor List
-                        </a>
+                    <li><a><i class="fa fa-tags"></i> Vendor List <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ route('vendor-list') }}">Tampilkan</a></li>
+                            <li><a href="{{ route('vendor-request-form') }}">Tambah</a></li>
+                            {{--<li><a href="{{ route('product-create') }}">Tambah</a></li>--}}
+                        </ul>
                     </li>
                     <li>
                         <a href="{{ route('dompet-list') }}">
