@@ -11,16 +11,7 @@
 |
 */
 
-Route::get('/testing', function (){
-    //Send Email,
-    $transaction = Transaction::where('order_id', '59e813b28edfe')->first();
-    $userData = User::find($transaction->user_id);
-    $payment = PaymentMethod::find($transaction->payment_method_id);
-
-    $acceptEmail = new PerjanjianPinjaman($payment, $transaction, $userData);
-    Mail::to("yansen626@gmail.com")->send($acceptEmail);
-
-})->name('invoice');
+Route::get('/testing', "Frontend\TestingController@TestingSendEmail")->name('testing');
 //Home, contact us, term, etc
 Route::get('/', 'Frontend\HomeController@Home')->name('index');
 Route::get('/contact-us', 'Frontend\HomeController@ContactUs')->name('contact');

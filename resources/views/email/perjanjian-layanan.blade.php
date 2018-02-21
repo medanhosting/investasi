@@ -26,24 +26,24 @@
 <P ALIGN=CENTER STYLE="margin-bottom: 0.14in; line-height: 110%">
     <B>PERJANJIAN LAYANAN PINJAM MEMINJAM UANG BERBASIS TEKNOLOGI</B></P>
 <P ALIGN=CENTER STYLE="margin-bottom: 0.14in; line-height: 110%"><B>No.
-    </B><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+    </B><SPAN><B>[●]</B></SPAN></P>
 <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">Perjanjian
     Layanan Pinjam Meminjam Uang Berbasis Teknologi ini dibuat dan
-    ditandatangani pada tanggal <SPAN STYLE="background: #ffff00">[●]</SPAN>
+    ditandatangani pada tanggal <SPAN><b>[●]</b></SPAN>
     (“<B>Perjanjian</B>”) oleh dan antara:</P>
 <OL>
     <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
-            <SPAN STYLE="background: #ffff00">[●] </SPAN>, suatu perseroan
+            <SPAN LANG="en-GB"><B>PT Bursa Akselerasi Indonesia</B></SPAN>, suatu perseroan
             terbatas yang didirikan berdasarkan hukum <SPAN LANG="en-US">Negara
-	</SPAN>Republik Indonesia, yang memiliki domisili di <SPAN STYLE="background: #ffff00">[●]</SPAN>
+	</SPAN>Republik Indonesia, yang memiliki domisili di <SPAN><B>Jakarta</B></SPAN>
             (“<B>Penyelenggara</B>”); dan</P>
     <LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
-            <SPAN STYLE="background: #ffff00">[●]</SPAN>, warga negara <SPAN STYLE="background: #ffff00">[●]</SPAN>,
-            bertempat tinggal di <SPAN STYLE="background: #ffff00">[●]</SPAN>,
-            pemegang Kartu Tanda Penduduk No. <SPAN STYLE="background: #ffff00">[●]</SPAN>
-            <SPAN LANG="en-GB">[</SPAN><SPAN LANG="en-GB"><B>PT </B></SPAN><SPAN STYLE="background: #ffff00">[●]</SPAN><SPAN LANG="en-GB">,
+            <SPAN ><B>[●] </B></SPAN>, warga negara <SPAN ><B>[●] </B></SPAN>,
+            bertempat tinggal di <SPAN><B>[●] </B></SPAN>,
+            pemegang Kartu Tanda Penduduk No. <SPAN><B>[●] </B></SPAN>
+            <SPAN LANG="en-GB"><B>[PT Bursa Akselerasi Indonesia</B></SPAN><SPAN LANG="en-GB">,
 	</SPAN>sebuah perseoan terbatas yang didirikan berdasarkan hukum
-            Negara Republik Indonesia, beralamat di <SPAN STYLE="background: #ffff00">[●]</SPAN>]
+            Negara Republik Indonesia, beralamat di <SPAN><B>[●]</B></SPAN>]
             (“<B>Pemberi Pinjaman</B>”).
         </P>
 </OL>
@@ -103,7 +103,7 @@ ketentuan-ketentuan berikut:</SPAN></P>
                     lain, (i) pagu maksimum pinjaman (ii) jangka waktu Pinjaman (iii)
                     suku bunga (iv) denda keterlambatan dan (v) kesediaan Penerima
                     Pinjaman untuk menerima Pinjaman apabila dana yang terkumpul selama
-                    masa penawaran sedikitnya </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                    masa penawaran sedikitnya </FONT></FONT><SPAN><b>[●]</b></SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
                     dari nilai Pinjaman.</FONT></FONT></FONT></FONT></P>
 <P ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
     “<B>Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi</B>”
@@ -131,7 +131,7 @@ ketentuan-ketentuan berikut:</SPAN></P>
     Pemberi Pinjaman dalam penyediaan Pinjaman<SPAN LANG="en-US">;</SPAN>
 </P>
 <P ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
-    “<B>Situs</B>”<B> </B>berarti situs [www.Penyelenggara.co.id]
+    “<B>Situs</B>”<B> </B>berarti situs [www.investasi.me]
     yang dikelola oleh Penyelenggara<SPAN LANG="en-US">;</SPAN></P>
 <P ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
     “<B>Tingkat Pengembalian Dana</B>”<B> </B>berarti nilai yang
@@ -402,7 +402,7 @@ Pinjaman berdasarkan Perjanjian ini adalah:</SPAN></FONT></FONT></FONT></FONT></
 	Penerima Pinjaman telah melakukan pembayaran atas Pinjaman yang
 	diterimanya dari Pemberi Pinjaman, maka Penyelenggara akan
 	memperhitungkan jumlah tersebut dalam Rekening Virtual Pemberi
-	Pinjaman setelah </SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Hari
+	Pinjaman setelah </SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Hari
 	Kerja sejak </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="id-ID">tanggal
 	pembayaran dilakukan. </SPAN></FONT></FONT></FONT></FONT>
         </P>
@@ -464,7 +464,7 @@ berdasarkan hukum Negara Republik Indonesia.</SPAN></P>
     dalam waktu 1 (satu) bulan dari tanggal Pihak yang satu
     memberitahukan kepada Pihak lainnya bahwa terdapat Sengketa, Para
     Pihak setuju bahwa Sengketa tersebut akan dirujuk ke dan akhirnya
-    diselesaikan pada <SPAN STYLE="background: #ffff00">Pengadilan Negeri
+    diselesaikan pada <SPAN>Pengadilan Negeri
 Jakarta Selatan</SPAN>.</P>
 <P ALIGN=JUSTIFY STYLE="margin-left: 0.49in; margin-bottom: 0.14in; line-height: 110%">
 <SPAN STYLE="background: #ffffff">Terlepas dari ketentuan mana pun
@@ -493,23 +493,23 @@ Pinjaman.</SPAN></P>
     <TR VALIGN=TOP>
         <TD WIDTH=288 STYLE="border: none; padding: 0in">
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">Penyelenggara:</P>
-            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">U.p: <SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">U.p: <SPAN>[●]</SPAN></P>
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Alamat Surat
                 Elektronik:</P>
-            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN>[●]</SPAN></P>
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><BR><BR>
             </P>
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">No. Telp:</P>
-            <P ALIGN=JUSTIFY><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY><SPAN>[●]</SPAN></P>
         </TD>
         <TD WIDTH=285 STYLE="border: none; padding: 0in">
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">Pemberi Pinjaman:</P>
-            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">U.p: <SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in">U.p: <SPAN>[●]</SPAN></P>
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">Alamat Surat
                 Elektronik:</P>
-            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in"><SPAN>[●]</SPAN></P>
             <P ALIGN=JUSTIFY STYLE="margin-bottom: 0.11in">No. Telp:</P>
-            <P ALIGN=JUSTIFY><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P ALIGN=JUSTIFY><SPAN>[●]</SPAN></P>
         </TD>
     </TR>
 </TABLE>

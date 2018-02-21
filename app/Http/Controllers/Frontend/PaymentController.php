@@ -67,7 +67,7 @@ class PaymentController extends Controller
                 $user->identity_number = Input::get('checkout-KTP');
                 $user->citizen = Input::get('checkout-citizen');
                 $user->address_ktp = Input::get('checkout-address');
-                $user->kecamatan_ktp = Input::get('checkout-city');
+                $user->city_ktp = Input::get('checkout-city');
                 $user->province_ktp = Input::get('checkout-province');
                 $user->postal_code_ktp = Input::get('checkout-zip');
 

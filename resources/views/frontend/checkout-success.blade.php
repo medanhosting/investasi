@@ -41,7 +41,7 @@
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
                         @if($paymentMethod == 'credit_card')
-                            <a href="{{ route('portfolio', ['tab' => 'pending']) }}" class="btn btn-big btn-solid">Daftar Investasi</a>
+                            <a href="{{ route('portfolio', ['tab' => 'pending']) }}" class="btn btn-big btn-solid">Portfolio Saya</a>
                             <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                         @else
                             <a href="{{ route('portfolio', ['tab' => 'pending']) }}" class="btn btn-big btn-solid">Status Pembayaran</a>

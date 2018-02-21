@@ -55,12 +55,12 @@
                                     <label for="payment-1"><span></span>Dompet</label>
                                     <input type="radio" id="payment-2" name="payment" value="credit_card">
                                     <label for="payment-2"><span></span>Kartu Kredit</label>
-                                    <input type="radio" id="payment-3" name="payment" value="bank_transfer">
-                                    <label for="payment-3"><span></span>Bank Transfer</label>
+                                    {{--<input type="radio" id="payment-3" name="payment" value="bank_transfer">--}}
+                                    {{--<label for="payment-3"><span></span>Bank Transfer</label>--}}
                                 </div>
                             </div>
 
-                            <input id="notCompletedData" name="notCompletedData" value="{{$notCompletedData}}" type="hidden">
+                            <input id="notCompletedData" value="{{$notCompletedData}}" type="hidden">
                             <div class="field col-sm-12">
                                 <div class="col-sm-12">
                                     <h5 style="color:red;">
@@ -117,7 +117,7 @@
                         <form class="comment-form row altered">
                             <div class="field col-sm-12">
                                 <h5>Nomor KTP</h5>
-                                <input id="KTP" type="text" name="KTP">
+                                <input id="KTP" type="text">
                             </div>
                             {{--<div class="field col-sm-4">--}}
                                 {{--<h5>Tanggal Lahir</h5>--}}
@@ -133,7 +133,7 @@
                             {{--</div>--}}
                             <div class="field col-sm-12">
                                 <h5>Kewarganegaraan</h5>
-                                <select class="form-control" name="citizen" id="citizen">
+                                <select class="form-control" id="citizen">
                                     <option value="-1">Pilih Kewarganegaraan!</option>
                                     <option value="Indonesia">Warga Negara Indonesia</option>
                                     <option value="Asing">Warga Negara Asing</option>
@@ -141,22 +141,21 @@
                             </div>
                             <div class="field col-sm-12">
                                 <h5>Alamat</h5>
-                                <input id="address-home" type="text" name="address">
+                                <input id="address-home" type="text">
                             </div>
                             <div class="field col-sm-12">
                                 <h5>Kota</h5>
-                                <input id="city" type="text" name="city">
+                                <input id="city" type="text">
                             </div>
                             <div class="field col-sm-12">
                                 <h5>Provinsi</h5>
-                                <input id="province" type="text" name="province">
+                                <input id="province" type="text">
                             </div>
                             <div class="field col-sm-12">
                                 <h5>Kode Pos</h5>
-                                <input id="zip" type="text" name="zip">
+                                <input id="zip" type="text">
                             </div>
 
-                            <input id="checkout-notCompletedData" name="checkout-notCompletedData" value="{{$notCompletedData}}" type="hidden">
                             <div class="field col-sm-12 text-right" >
                                 @if(auth()->check())
                                     {{--<button type="button" class="btn btn-big btn-solid" onclick="modalCheckout()"><i class="fa fa-archive"></i><span>Bayar</span></button>--}}

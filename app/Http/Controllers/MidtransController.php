@@ -14,6 +14,7 @@ use App\Libs\Veritrans;
 use App\Mail\InvoicePembelian;
 use App\Mail\PerjanjianLayanan;
 use App\Mail\PerjanjianPinjaman;
+use App\Models\PaymentMethod;
 use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\TransactionWallet;
@@ -34,23 +35,25 @@ class MidtransController extends Controller
         {
             $json_result = file_get_contents('php://input');
             $json = json_decode($json_result);
-            $vt = new Veritrans;
-            $notif = $vt->status($json->order_id);
 
-            $orderid = $notif->order_id;
+            Utilities::ExceptionLog($json);
+
+            $vt = new Veritrans;
+//            $notif = $vt->status($json->order_id);
+
+            $orderid = $json->order_id;
+
+            sleep(15);
 
             DB::transaction(function() use ($orderid, $json){
 
-                Utilities::ExceptionLog($json);
-                Utilities::ExceptionLog($orderid);
+//                Utilities::ExceptionLog($orderid);
 
                 $dateTimeNow = Carbon::now('Asia/Jakarta');
 
-                sleep(5);
-
                 $type = explode('-', $orderid);
 
-                // Transaction type is WALLET TOP UP
+                // Transaction type is WALLET TOP UP START
                 if($type[0] == 'WALLET'){
                     $transaction = TransactionWallet::where('order_id', $orderid)->first();
 
@@ -121,11 +124,13 @@ class MidtransController extends Controller
                         // Log error exception here
                     }
                 }
-                // Transaction type is INVEST PAYMENT
+                // Transaction type is WALLET TOP UP END
+                // Transaction type is INVEST PAYMENT START
                 else{
                     $transaction = Transaction::where('order_id', $orderid)->first();
 
                     if($json->status_code == "200"){
+                        Utilities::ExceptionLog($orderid.", status_code:200");
                         if(($json->transaction_status == "capture" || $json->transaction_status =="accept") && $json->fraud_status == "accept"){
                             $transaction->status_id = 5;
 
@@ -156,17 +161,19 @@ class MidtransController extends Controller
                             $payment = PaymentMethod::find($transaction->payment_method_id);
                             $product = Product::find($transaction->product);
 
-                            $acceptEmail = new InvoicePembelian($payment, $transaction, $product, $userData);
-                            Mail::to($userData->email)->send($acceptEmail);
+                            $invoiceEmail = new InvoicePembelian($payment, $transaction, $product, $userData);
+                            Mail::to($userData->email)->send($invoiceEmail);
 
-                            $acceptEmail = new PerjanjianLayanan($payment, $transaction, $product, $userData);
-                            Mail::to($userData->email)->send($acceptEmail);
 
-                            $acceptEmail = new PerjanjianPinjaman($payment, $transaction, $product, $userData);
-                            Mail::to($userData->email)->send($acceptEmail);
+                            $perjanjianLayananEmail = new PerjanjianLayanan($payment, $transaction, $product, $userData);
+                            Mail::to($userData->email)->send($perjanjianLayananEmail);
+
+                            $perjanjianPinjamanEmail = new PerjanjianPinjaman($payment, $transaction, $product, $userData);
+                            Mail::to($userData->email)->send($perjanjianPinjamanEmail);
                         }
                     }
                     else if($json->status_code == "201"){
+                        Utilities::ExceptionLog($orderid.", status_code:201");
                         // Filter payment type
                         if($json->payment_type == "bank_transfer"){
                             $transaction->status_id = 4;
@@ -192,6 +199,7 @@ class MidtransController extends Controller
                             $transaction->save();
                         }
                         else if($json->payment_type == "credit_card"){
+                            Utilities::ExceptionLog($orderid.", payment_type: credit_card");
                             $transaction->status_id = 11;
 
                             $transaction->modified_on = $dateTimeNow->toDateTimeString();
@@ -207,7 +215,7 @@ class MidtransController extends Controller
                         // Log error exception here
                     }
                 }
-
+                // Transaction type is INVEST PAYMENT END
             }, 5);
         }
         catch (\Exception $ex){

@@ -31,16 +31,16 @@
     <P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
         <SPAN STYLE="text-transform: uppercase"><B>PERJANJIAN PINJAMAN </B></SPAN>ini
         (selanjutnya disebut sebagai “<B>Perjanjian Pinjaman</B>”)
-        dibuat dan ditandatangani pada hari <SPAN STYLE="background: #ffff00">[●]</SPAN>,
-        tanggal <SPAN STYLE="background: #ffff00">[●]</SPAN> oleh dan
+        dibuat dan ditandatangani pada hari <SPAN><b>[●]</b></SPAN>,
+        tanggal <SPAN><b>[●]</b></SPAN> oleh dan
         antara:</P>
     <OL>
         <LI><P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
-                <B>PT </B><SPAN LANG="id-ID"><B>[Fintech]</B></SPAN><SPAN LANG="id-ID">,
+                <B>PT </B><SPAN LANG="id-ID"><B>Bursa Akselerasi Indonesia</B></SPAN><SPAN LANG="id-ID">,
 		sebuah </SPAN>perseroan<SPAN LANG="id-ID"> terbatas yang didirikan
 		berdasarkan hukum Negara Republik Indonesia, beralamat di</SPAN>
-                <SPAN STYLE="background: #ffff00">[●]</SPAN> <SPAN LANG="en-GB">yang
-		dalam hal ini diwakili oleh </SPAN><SPAN STYLE="background: #ffff00">[●]</SPAN><SPAN LANG="en-GB">
+                <SPAN><b>[●]</b></SPAN> <SPAN LANG="en-GB">yang
+		dalam hal ini diwakili oleh </SPAN><SPAN><b>[●]</b></SPAN><SPAN LANG="en-GB">
 		</SPAN>dalam kedudukannya selaku Direktur yang dalam hal ini
                 bertindak selaku penerima kuasa dari <SPAN LANG="id-ID">Pemberi
 		Pinjaman. </SPAN> <SPAN LANG="id-ID"> </SPAN>
@@ -51,9 +51,9 @@
         kuasa, pengganti dan penerima pengalihannya);</P>
     <OL START=2>
         <LI><P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%"><A NAME="_GoBack"></A>
-                [<SPAN STYLE="background: #ffff00">[●]</SPAN>, Warga Negara
-                Indonesia, pemegang Kartu Tanda Penduduk nomor <SPAN STYLE="background: #ffff00">[●]</SPAN>
-                yang beralamat di <SPAN STYLE="background: #ffff00">[●]</SPAN>
+                [<SPAN><b>[●]</b></SPAN>, Warga Negara
+                Indonesia, pemegang Kartu Tanda Penduduk nomor <SPAN><b>[●]</b></SPAN>
+                yang beralamat di <SPAN><b>[●]</b></SPAN>
                 (untuk selanjutnya disebut sebagai “<B>Penerima Pinjaman</B>”)]</P>
     </OL>
     <P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
@@ -67,7 +67,7 @@
     <OL TYPE=A>
         <LI><P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.15in; line-height: 110%">
                 Penerima Pinjaman memiliki keinginan untuk meminjam dana sejumlah
-                Rp <SPAN STYLE="background: #ffff00">[●]</SPAN> <SPAN STYLE="background: #ffff00">(●)</SPAN>
+                Rp <SPAN><b>[●]</b></SPAN> <SPAN STYLE="background: #ffff00">(●)</SPAN>
                 dari Pemberi Pinjaman.</P>
         <LI><P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0.15in; line-height: 110%">
                 Pemberi Pinjaman telah setuju untuk <SPAN LANG="id-ID">memberikan</SPAN>
@@ -109,9 +109,9 @@
 	Situs;</SPAN></FONT></FONT></FONT></FONT></P>
     <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
         “<B>Pinjaman”</B> adalah Pinjaman yang diberikan oleh Pemberi
-        Pinjaman melalui <B>[Fintech]</B><SPAN LANG="id-ID"><B> </B></SPAN>kepada
-        Penerima Pinjaman sebesar Rp <SPAN STYLE="background: #ffff00">[●]</SPAN>
-        (<SPAN STYLE="background: #ffff00">[●]</SPAN> Rupiah);
+        Pinjaman melalui <B>PT Bursa Akselerasi Indonesia</B><SPAN LANG="id-ID"><B> </B></SPAN>kepada
+        Penerima Pinjaman sebesar Rp <SPAN><b>[●]</b></SPAN>
+        (<SPAN><b>[●]</b></SPAN> Rupiah);
     </P>
     <P ALIGN=JUSTIFY STYLE="margin-left: 0.51in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
         “<FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Hari
@@ -149,10 +149,13 @@
     <P ALIGN=JUSTIFY STYLE="margin-left: 0.51in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
         “<FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Penyelenggara</B></FONT></FONT><FONT FACE="Calibri, serif"><SPAN LANG="en-US">”
 	</SPAN></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">adalah
-	PT </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>[Fintech]
-                        </B></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">sebuah
+	</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">PT Bursa Akselerasi Indonesia
+                    </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">sebuah
 	perseroan terbatas yang didirikan berdasarkan hukum Negara Republik
-	Indonesia, beralamat di </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US"><SPAN STYLE="background: #ffff00">[●]</SPAN></SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.
+	Indonesia, beralamat di </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
+	<SPAN>Menara Satrio Lantai 14 unit 5
+	Jalan Prof. DR. Satrio Kav. 1-4 Blok C4
+	Kel. Kuningan Timur, Kec. Setiabudi, Jakarta Selatan 12950, Indonesia</SPAN></SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">.
 	</SPAN></FONT></FONT></FONT></FONT>
     </P>
     <P ALIGN=JUSTIFY STYLE="margin-left: 0.51in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
@@ -171,7 +174,7 @@
 	Pinjaman untuk menerima Pinjaman apabila dana yang terkumpul selama
 	</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">m</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">asa
 	</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">p</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">enawaran
-	sedikitnya </SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
+	sedikitnya </SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
 	dari nilai </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">pinjaman
                         yang diajukan oleh Penerima Pinjaman</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
 	dan Lampiran III Perjanjian Pinjaman ini.</SPAN></FONT></FONT></FONT></FONT></P>
@@ -204,7 +207,7 @@
 	</B></SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Escrow</B></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">”
 	sebagaimana yang didefinisikan pada Pasal 4.1.2;</SPAN></FONT></FONT></FONT></FONT></P>
     <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
-        “<B>Situs</B>” adalah situs www.<B> </B><SPAN STYLE="background: #ffff00">[●]</SPAN>.id
+        “<B>Situs</B>” adalah situs www.investasi.me
         yang dikelola oleh <SPAN LANG="id-ID">Penyelenggara</SPAN>;
     </P>
     <P ALIGN=JUSTIFY STYLE="margin-left: 0.51in; margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
@@ -256,14 +259,14 @@
 	Perjanjian Pinjaman ini</SPAN> dan yang terdapat dalam Situs
         <SPAN LANG="id-ID">termasuk Syarat dan Ketentuan Umum, Pemberi
 	Pinjaman telah setuju untuk menyediakan </SPAN>suatu Pinjaman dalam
-        jumlah sebesar Rp <SPAN STYLE="background: #ffff00">[●]</SPAN>
-        (<SPAN STYLE="background: #ffff00">[●]</SPAN> Rupiah).</P>
+        jumlah sebesar Rp <SPAN><b>[●]</b></SPAN>
+        (<SPAN><b>[●]</b></SPAN> Rupiah).</P>
     <OL START=3>
         <LI><P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0.14in; line-height: 110%">
                 <SPAN STYLE="text-transform: uppercase"><B>JANGKA WAKTU PINJAMAN</B></SPAN></P>
     </OL>
     <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-left: 0.5in; margin-bottom: 0.14in; line-height: 110%">
-        Jangka waktu Pinjaman ditetapkan selama <SPAN STYLE="background: #ffff00">[●]</SPAN>
+        Jangka waktu Pinjaman ditetapkan selama <SPAN><b>[●]</b></SPAN>
         terhitung sejak tanggal pengiriman atas seluruh jumlah Pinjaman
         secara penuh dan dapat diperpanjang sesuai dengan kesepakatan dari
         Para Pihak (“<B>Jangka Waktu Pinjaman</B>”).</P>
@@ -357,7 +360,7 @@
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">lebih
                                 cepat dari waktu yang ditetapkan dengan </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">melakukan
 		permohonan untuk itu melalui Akun Penerima Pinjaman </SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">sedikitnya
-                            </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Hari
+                            </FONT></FONT><SPAN><b>[●]</b></SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Hari
 		Kerja sebelum tanggal pelunasan dipercepat yang direncakan
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">(“</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>Pelunasan
                                     Dipercepat</B></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">”).</FONT></FONT></FONT></FONT></P>
@@ -377,23 +380,23 @@
     <OL TYPE=a>
         <LI><P ALIGN=JUSTIFY STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
                 <FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Untuk
-                                masa angsuran berjalan kurang dari atau sama dengan </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+                                masa angsuran berjalan kurang dari atau sama dengan </FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">bulan:
-                            </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
-                            </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+                            </FONT></FONT><SPAN><b>[●]</b></SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                            </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">persen)
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">dari
                                 sisa utang pokok yang tercatat pada saat pelunasan ditambah biaya
                                 administrasi </FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">sebesar
-		</SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
-                        <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+		</SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN>
+                        <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Rupiah)</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">;</FONT></FONT></FONT></FONT></P>
         <LI><P ALIGN=JUSTIFY STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 110%">
                 <FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Untuk
-                                masa angsuran berjalan lebih dari </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+                                masa angsuran berjalan lebih dari </FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">bulan:
-                            </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+                            </FONT></FONT><SPAN><b>[●]</b></SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">(</SPAN></FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">persen)
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">dari
                                 sisa utang pokok yang tercatat pada saat pelunasan. </FONT></FONT></FONT></FONT>
@@ -460,8 +463,8 @@
                                 </B></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">Komisi
 		Layanan Situs</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
                                 </B></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">sebesar
-                            </FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
-                                (</FONT></FONT><SPAN STYLE="background: #ffff00">[●]</SPAN>
+                            </FONT></FONT><SPAN><b>[●]</b></SPAN> <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">
+                                (</FONT></FONT><SPAN><b>[●]</b></SPAN>
                         <FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">persen)
                                 dari jumlah Pinjaman</FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="en-US">
 		</SPAN></FONT></FONT><FONT FACE="Calibri, serif"><FONT SIZE=2 STYLE="font-size: 11pt">yang
@@ -730,26 +733,26 @@
             <TD WIDTH=287 STYLE="border: none; padding: 0in">
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">Pemberi
                     Pinjaman:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">U.p: <SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">U.p: <SPAN><b>[●]</b></SPAN></P>
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">Alamat
                     Surat Elektronik:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><SPAN STYLE="background: #ffff00">[●]</SPAN><FONT COLOR="#0563c1"><SPAN LANG="id-ID"><U>
+                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><SPAN><b>[●]</b></SPAN><FONT COLOR="#0563c1"><SPAN LANG="id-ID"><U>
 				</U></SPAN></FONT>
                 </P>
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">No.
                     Telp:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+                <P LANG="en-US" ALIGN=JUSTIFY><SPAN><b>[●]</b></SPAN></P>
             </TD>
             <TD WIDTH=287 STYLE="border: none; padding: 0in">
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">Penerima
                     Pinjaman:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">U.p: <SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">U.p: <SPAN><b>[●]</b></SPAN></P>
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">Alamat
                     Surat Elektronik:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+                <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in"><SPAN><b>[●]</b></SPAN></P>
                 <P LANG="en-US" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">No.
                     Telp:</P>
-                <P LANG="en-US" ALIGN=JUSTIFY><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+                <P LANG="en-US" ALIGN=JUSTIFY><SPAN><b>[●]</b></SPAN></P>
             </TD>
         </TR>
     </TABLE>
@@ -945,10 +948,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -958,10 +961,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -971,10 +974,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -984,10 +987,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -997,10 +1000,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -1010,10 +1013,10 @@
             </OL>
         </TD>
         <TD WIDTH=273 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
         <TD WIDTH=185 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western" ALIGN=CENTER><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
 </TABLE>
@@ -1040,7 +1043,7 @@
             <P LANG="en-GB" CLASS="western"><B>:</B></P>
         </TD>
         <TD WIDTH=341 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -1052,7 +1055,7 @@
             <P LANG="en-GB" CLASS="western"><B>:</B></P>
         </TD>
         <TD WIDTH=341 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
 </TABLE>
@@ -1079,7 +1082,7 @@
             <P LANG="en-GB" CLASS="western">:</P>
         </TD>
         <TD WIDTH=305 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -1091,7 +1094,7 @@
             <P LANG="en-GB" CLASS="western">:</P>
         </TD>
         <TD WIDTH=305 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -1102,7 +1105,7 @@
             <P LANG="en-GB" CLASS="western">:</P>
         </TD>
         <TD WIDTH=305 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
     <TR VALIGN=TOP>
@@ -1114,7 +1117,7 @@
             <P LANG="en-GB" CLASS="western">:</P>
         </TD>
         <TD WIDTH=305 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-            <P LANG="en-GB" CLASS="western"><SPAN STYLE="background: #ffff00">[●]</SPAN></P>
+            <P LANG="en-GB" CLASS="western"><SPAN><b>[●]</b></SPAN></P>
         </TD>
     </TR>
 </TABLE>

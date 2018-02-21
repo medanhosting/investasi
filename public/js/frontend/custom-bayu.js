@@ -12,6 +12,7 @@ function modalCheckout(){
     }
 
     var notComplete = $("#notCompletedData").val();
+    $("#checkout-notCompletedData").val(notComplete);
     if(notComplete === '0'){
         var KTP = $("#KTP").val();
         $("#checkout-KTP").val(KTP);
