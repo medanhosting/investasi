@@ -28,12 +28,10 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Invoice</th>
+                                    {{--<th>Invoice</th>--}}
                                     <th>Customer Name</th>
                                     <th>Payment Method</th>
-                                    <th>Delivery</th>
                                     <th>Total Price</th>
-                                    <th>Delivery Fee</th>
                                     <th>Payment Code</th>
                                     <th>Total Payment</th>
                                     <th>Order Date</th>
@@ -45,12 +43,10 @@
                                 @foreach($transactions as $trx)
                                     <tr>
                                         <td>{{ $idx }}</td>
-                                        <td>{{ $trx->invoice }}</td>
+{{--                                        <td>{{ $trx->invoice }}</td>--}}
                                         <td>{{ $trx->user->first_name }}&nbsp;{{ $trx->user->last_name }}</td>
-                                        <td>{{ $trx->payment_method->type }} - {{ $trx->payment_method->description }}</td>
-                                        <td>{{ strtoupper($trx->courier) }} {{ $trx->delivery_type }}</td>
+                                        <td>{{ $trx->payment_method->description }}</td>
                                         <td>Rp {{ $trx->total_price }}</td>
-                                        <td>Rp {{ $trx->delivery_fee }}</td>
                                         <td>
                                             @if(!empty($trx->payment_code))
                                                 {{ $trx->payment_code }}
@@ -59,6 +55,8 @@
                                             @endif
                                         </td>
                                         <td>Rp {{ $trx->total_payment }}</td>
+                                        <td>
+                                            {{ \Carbon\Carbon::parse($trx->created_on)->format('j F y')}}</td>
                                         <td>
                                             <a onclick="modalPop('{{ $trx->id }}', 'accept', '/admin/neworder/accept/')" class="btn btn-success">Accept</a>
                                             <a onclick="rejectModalPop('{{ $trx->id }}')" class="btn btn-danger">Reject</a>

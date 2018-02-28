@@ -7,6 +7,8 @@
                 @if(auth()->check())
                     <a style="color:white;cursor:pointer;" href="{{route('my-profile', ['tab' => 'profile'])}}">Profil Saya</a>
                     &nbsp;&nbsp;
+                    <a style="color:white;cursor:pointer;" href="{{route('portfolio', ['tab' => 'pending'])}}">Portfolio Saya</a>
+                    &nbsp;&nbsp;
                     <a style="color:white;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>

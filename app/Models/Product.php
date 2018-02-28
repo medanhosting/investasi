@@ -37,6 +37,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * 
  * @property \App\Models\Status $status
  * @property \App\Models\Vendor $vendor
+ * @property \App\Models\User $user
  * @property \Illuminate\Database\Eloquent\Collection $carts
  * @property \Illuminate\Database\Eloquent\Collection $transaction_details
  *

@@ -13,23 +13,6 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <div class="">
-            <div class="page-title">
-                {{--<div class="title_left">--}}
-                {{--<h3>Users <small>Some examples to get you started</small></h3>--}}
-                {{--</div>--}}
-
-                {{--<div class="title_right">--}}
-                {{--<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">--}}
-                {{--<div class="input-group">--}}
-                {{--<input type="text" class="form-control" placeholder="Search for...">--}}
-                {{--<span class="input-group-btn">--}}
-                {{--<button class="btn btn-default" type="button">Go!</button>--}}
-                {{--</span>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-            </div>
-
             <div class="clearfix"></div>
 
             <div class="row">
@@ -49,11 +32,11 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
+                                    <th>Product Name</th>
                                     <th>Category</th>
-                                    <th>User Name</th>
-                                    <th>Company Name</th>
-                                    <th>Raised</th>
+                                    {{--<th>User Name</th>--}}
+                                    {{--<th>Vendor Name</th>--}}
+                                    <th>Raising </th>
                                     <th>Created Date</th>
                                     <th>Featured Photo</th>
                                     <th>Option</th>
@@ -66,19 +49,22 @@
                                             <td>{{ $idx}}</td>
                                             <td>{{ $product->name}}</td>
                                             <td>{{ $product->category->name }}</td>
-                                            <td>{{ $product->user->first_name }} {{ $product->user->last_name }}</td>
-                                            <td>{{ $product->name}}</td>
-                                            <td>{{ $product->raised}}</td>
+{{--                                            <td>{{ $product->user->first_name }} {{ $product->user->last_name }}</td>--}}
+{{--                                            <td>{{ $product->name}}</td>--}}
+                                            <td>Rp {{ $product->raising}}</td>
                                             <td>
                                                 {{ \Carbon\Carbon::parse($product->created_on)->format('j F y')}}
                                             </td>
                                             {{--<td width="15%">--}}
                                                 {{--<img width="100%" src="{{ asset('storage\product\\'. $product->product_image()->where('featured', 1)->first()->path) }}">--}}
                                             {{--</td>--}}
-                                            <td>ini fotonya</td>
+                                            <td><img src="{{ URL::asset('storage/project/'.$product->image_path) }}" width="100"></td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Terima</a>
-                                                <a href="#" class="btn btn-danger">Tolak</a>
+
+                                                <a href="/admin/vendor/request-accept/{{ $product->vendor_id }}"class="btn btn-success">Accept</a>
+                                                <a href="/admin/vendor/request-reject/{{ $product->vendor_id }}"class="btn btn-danger">Reject</a>
+                                                {{--<a href="#" class="btn btn-primary">Terima</a>--}}
+                                                {{--<a href="#" class="btn btn-danger">Tolak</a>--}}
                                             </td>
                                         </tr>
                                         @php ($idx++)

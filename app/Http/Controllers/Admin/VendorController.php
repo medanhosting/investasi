@@ -56,28 +56,31 @@ class VendorController extends Controller
 
 
     public function AcceptRequest($id){
-        $product = Product::find($id);
-        $product->status_id = 1;
-        $product->save();
 
-        $vendor = Vendor::find($product->vendor_id);
+        $vendor = Vendor::find($id);
         $vendor->status_id = 1;
         $vendor->save();
 
-        Session::flash('message', 'Vendor dan Project Accepted!');
+
+        $product = Product::where('vendor_id', $id)->first();
+        $product->status_id = 1;
+        $product->save();
+
+        Session::flash('message', 'Vendor and Project Accepted!');
         return Redirect::route('vendor-request');
     }
 
     public function RejectRequest($id){
-        $product = Product::find($id);
-        $product->status_id = 7;
-        $product->save();
-
-        $vendor = Vendor::find($product->vendor_id);
+        $vendor = Vendor::find($id);
         $vendor->status_id = 7;
         $vendor->save();
 
-        Session::flash('message', 'Vendor dan Project Rejected!');
+
+        $product = Product::where('vendor_id', $id)->first();
+        $product->status_id = 7;
+        $product->save();
+
+        Session::flash('message', 'Vendor and Project Rejected!');
         return Redirect::route('vendor-request');
     }
 

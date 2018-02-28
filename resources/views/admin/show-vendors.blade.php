@@ -61,7 +61,7 @@
                                     <th>No</th>
                                     <th>User Name</th>
                                     <th>Company Name</th>
-                                    <th>Description</th>
+                                    {{--<th>Description</th>--}}
                                     <th>Created Date</th>
                                     <th>Option</th>
                                 </tr>
@@ -73,7 +73,7 @@
                                             <td>{{ $idx }}</td>
                                             <td>{{ $vendor->user->first_name }} {{ $vendor->user->last_name }}</td>
                                             <td>{{ $vendor->name }}</td>
-                                            <td>{{ $vendor->description }}</td>
+                                            {{--<td>{{ $vendor->description }}</td>--}}
                                             <td>{{ \Carbon\Carbon::parse($vendor->created_at)->format('j M Y G:i:s') }}</td>
                                             <td>
                                                 <a href="/admin/vendor/detail/{{ $vendor->id }}" class="btn btn-primary">Detail</a>

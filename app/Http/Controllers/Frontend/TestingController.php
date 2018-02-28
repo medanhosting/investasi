@@ -45,16 +45,13 @@ class TestingController extends Controller
 
             $pdf = PDF::loadView('email.perjanjian-layanan', $data);
             $pdf2 = PDF::loadView('email.perjanjian-pinjaman', $data);
+            Mail::send('email.surat-perjanjian', $data, function($message) use($pdf,$pdf2, $userData)
+            {
+                $message->to($userData->email)->subject('test surat perjanjian');
 
-            $invoiceEmail = new InvoicePembelian($payment, $transaction, $product, $userData);
-            Mail::to($userData->email)
-                ->send($invoiceEmail)
-                ->attachData($pdf, 'Perjanjian Layanan.pdf', [
-                    'mime' => 'application/pdf',
-                ])
-                ->attachData($pdf2, 'Perjanjian Pinjaman.pdf', [
-                    'mime' => 'application/pdf',
-                ]);
+                $message->attachData($pdf->output(), "Perjanjian Layanan.pdf");
+                $message->attachData($pdf2->output(), "Perjanjian Pinjaman.pdf");
+            });
 
             return "success";
         }

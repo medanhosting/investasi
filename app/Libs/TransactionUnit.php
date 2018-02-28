@@ -25,7 +25,7 @@ class TransactionUnit
             $user = User::find($userId);
 
             $dateTimeNow = Carbon::now('Asia/Jakarta');
-
+            $invoice = Utilities::GenerateInvoice();
             $paymentMethodInt = 1;
             if($cart->payment_method == 'credit_card'){
                 $paymentMethodInt = 2;
@@ -41,6 +41,7 @@ class TransactionUnit
             $trxCreate = Transaction::create([
                 'id'                => Uuid::generate(),
                 'user_id'           => $userId,
+                'invoice'           => $invoice,
                 'product_id'           => $cart->product_id,
                 'payment_method_id' => $paymentMethodInt,
                 'order_id'          => $orderId,

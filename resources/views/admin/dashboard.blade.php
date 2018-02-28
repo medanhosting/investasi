@@ -14,8 +14,8 @@
         <!-- top tiles -->
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Customer Terdaftar</span>
-                <div class="count">{{ $customerTotal }}</div>
+                <span class="count_top"><i class="fa fa-user"></i> Investor Baru Terdaftar</span>
+                <div class="count">{{ $newCustomerTotal }}</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fa fa-money"></i> Transaksi Baru</span>
@@ -70,35 +70,28 @@
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         @if($newOrderTotal == 0 && $onGoingPaymentTotal == 0)
                             <div class="alert alert-info alert-dismissible fade in" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                                </button>
                                 <strong>Halo!</strong> Saat ini tidak ada yang memerlukan tindakan Anda
                             </div>
                         @endif
 
                         @if($newOrderTotal > 0)
                             <div class="alert alert-warning alert-dismissible fade in" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                                </button>
-                                @if($newOrderTotal > 1)
                                 Terdapat {{ $newOrderTotal }} transaksi baru
-                                @else
-                                    Terdapawt {{ $newOrderTotal }} transaksi baru
-                                @endif
                                 , Anda dapat mengecek <a style="color: dodgerblue;" href="{{ route('new-order-list') }}"><strong>disini</strong></a>
                             </div>
                         @endif
 
                         @if($onGoingPaymentTotal > 0)
-                            <div class="alert alert-info alert-dismissible fade in" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-                                </button>
-                                @if($onGoingPaymentTotal > 1)
-                                    Terdapat {{ $onGoingPaymentTotal }} pembayaran baru
-                                @else
-                                    Terdapat {{ $onGoingPaymentTotal }} pembayaran baru
-                                @endif
-                                    , Anda dapat mengecek statusnya <a style="color: orange;" href="{{ route('payment-list') }}"><strong>disini</strong></a>
+                            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                                Terdapat {{ $onGoingPaymentTotal }} pembayaran baru
+                                    , Anda dapat mengecek statusnya <a style="color: dodgerblue;" href="{{ route('payment-list') }}"><strong>disini</strong></a>
+                            </div>
+                        @endif
+
+                        @if($walletWithdraw > 0)
+                            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                                Terdapat {{ $walletWithdraw }} penarikan dompet baru
+                                    , Anda dapat mengecek statusnya <a style="color: dodgerblue;" href="{{ route('payment-list') }}"><strong>disini</strong></a>
                             </div>
                         @endif
                     </div>
