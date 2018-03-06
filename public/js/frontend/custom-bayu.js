@@ -27,10 +27,12 @@ function modalCheckout(){
         var zip = $("#zip").val();
         $("#checkout-zip").val(zip);
     }
+
     // alert(invest);
 
     if(invest%250000 === 0 && invest >= 500000){
         $(".error-div").hide();
+        $(".error-div-wallet").hide();
 
         var investStr = addCommas(invest);
         $("#checkout-invest-amount").html(investStr);
@@ -49,24 +51,44 @@ function modalCheckout(){
             $("#checkout-admin-fee").html(investStr);
 
             $("#checkout-payment-method").html("Kartu Kredit")
+
+            // Set total invest amount
+            var total = parseInt(invest) + adminFee;
+            $("#checkout-total-invest").html(addCommas(total));
+
+            $("#modal-checkout-confirm").modal();
         }
         else if(payment === "bank_transfer"){
             adminFee += 4000;
             $("#checkout-admin-fee-input").val(4000);
             $("#checkout-admin-fee").html("Rp 4.000");
             $("#checkout-payment-method").html("Bank Transfer")
+
+            // Set total invest amount
+            var total = parseInt(invest) + adminFee;
+            $("#checkout-total-invest").html(addCommas(total));
+
+            $("#modal-checkout-confirm").modal();
         }
         else if(payment === "wallet"){
-            $("#checkout-admin-fee-input").val(0);
-            $("#checkout-admin-fee").html("GRATIS");
-            $("#checkout-payment-method").html("Dompet")
+
+            var walletVal = $("#wallet").val();
+            if(walletVal < invest){
+                $(".error-div-wallet").show();
+            }
+            else{
+                $("#checkout-admin-fee-input").val(0);
+                $("#checkout-admin-fee").html("GRATIS");
+                $("#checkout-payment-method").html("Dompet")
+
+                // Set total invest amount
+                var total = parseInt(invest) + adminFee;
+                $("#checkout-total-invest").html(addCommas(total));
+
+                $("#modal-checkout-confirm").modal();
+            }
         }
 
-        // Set total invest amount
-        var total = parseInt(invest) + adminFee;
-        $("#checkout-total-invest").html(addCommas(total));
-
-        $("#modal-checkout-confirm").modal();
     }
     else{
         $(".error-div").show();

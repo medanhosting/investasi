@@ -91,7 +91,7 @@
                         @if($walletWithdraw > 0)
                             <div class="alert alert-warning alert-dismissible fade in" role="alert">
                                 Terdapat {{ $walletWithdraw }} penarikan dompet baru
-                                    , Anda dapat mengecek statusnya <a style="color: dodgerblue;" href="{{ route('payment-list') }}"><strong>disini</strong></a>
+                                    , Anda dapat mengecek statusnya <a style="color: dodgerblue;" href="{{ route('dompet-request') }}"><strong>disini</strong></a>
                             </div>
                         @endif
                     </div>

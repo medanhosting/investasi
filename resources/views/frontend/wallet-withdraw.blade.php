@@ -9,7 +9,7 @@
                 <h2>Penarikan Dana</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Dompet Saya</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Total Dana Saya</a>
                         <i class="fa fa-angle-double-right"></i>Penarikan Dana
                     </h5>
                 </div>
@@ -24,7 +24,7 @@
 
                 <div class="col-md-12 col-xs-12 text-center">
                     <h2>
-                        Dompet Anda<br> Rp {{$user->wallet_amount}}
+                        Total Dana Anda<br> Rp {{$user->wallet_amount}}
                     </h2>
                 </div>
                 @if($user->google_authenticator == 0)

@@ -93,6 +93,8 @@ class TransactionUnit
             // Delete cart
             $cart->delete();
 
+
+
             return true;
         }
         catch(\Exception $ex){

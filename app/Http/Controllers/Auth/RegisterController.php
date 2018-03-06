@@ -171,14 +171,15 @@ class RegisterController extends Controller
     {
         $user = User::where('email_token',$token)->first();
         $user->status_id = 11;
+        $user->save();
 
-        if($user->save()){
-            Session::put("user-data", $user);
-            return Redirect::route('login');
-//            return Redirect::route('verify-phone-show');
-//            return View('auth.send-email', compact('email'));
-//            return View('auth.email-confirm',['user'=>$user]);
-        }
+        Session::put("user-data", $user);
+        return Redirect::route('login');
+//        if($user->save()){
+////            return Redirect::route('verify-phone-show');
+////            return View('auth.send-email', compact('email'));
+////            return View('auth.email-confirm',['user'=>$user]);
+//        }
     }
 
 

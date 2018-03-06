@@ -309,16 +309,16 @@ PINJAMAN</span></p>
     <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
 110%'><b><span lang=EN-GB style='text-transform:uppercase'>PERJANJIAN PINJAMAN </span></b><span
                 lang=EN-GB>ini (selanjutnya disebut sebagai “<b>Perjanjian Pinjaman</b>”)
-dibuat dan ditandatangani pada hari <span style='background:yellow'>[&#9679;]</span>,
-tanggal <span style='background:yellow'>[&#9679;]</span> oleh dan antara:</span></p>
+dibuat dan ditandatangani pada hari <span style='background:yellow'>[asdffdsa]</span>,
+tanggal <span style='background:yellow'>[asdffdsa]</span> oleh dan antara:</span></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><span lang=IN>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><span lang=IN>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><b>PT </b><b><span lang=IN>[Fintech]</span></b><span lang=IN>, sebuah
 </span>perseroan<span lang=IN> terbatas yang didirikan berdasarkan hukum Negara
 Republik Indonesia, beralamat di</span><span lang=IN> </span><span
-                style='background:yellow'>[&#9679;]</span> <span lang=EN-GB>yang dalam hal ini
-diwakili oleh </span><span style='background:yellow'>[&#9679;]</span> dalam
+                style='background:yellow'>[asdffdsa]</span> <span lang=EN-GB>yang dalam hal ini
+diwakili oleh </span><span style='background:yellow'>[asdffdsa]</span> dalam
         kedudukannya selaku Direktur yang dalam hal ini bertindak selaku penerima kuasa
         dari <span lang=IN>Pemberi Pinjaman. </span><span lang=IN> </span><span
                 lang=IN> </span></p>
@@ -328,10 +328,10 @@ diwakili oleh </span><span style='background:yellow'>[&#9679;]</span> dalam
         penerima pengalihannya);</p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-</span>[<span style='background:yellow'>[&#9679;]</span>, Warga Negara
-        Indonesia, pemegang Kartu Tanda Penduduk nomor <span style='background:yellow'>[&#9679;]</span>
-        yang beralamat di <span style='background:yellow'>[&#9679;]</span> (untuk
+line-height:110%'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>[<span style='background:yellow'>[asdffdsa]</span>, Warga Negara
+        Indonesia, pemegang Kartu Tanda Penduduk nomor <span style='background:yellow'>[asdffdsa]</span>
+        yang beralamat di <span style='background:yellow'>[asdffdsa]</span> (untuk
         selanjutnya disebut sebagai “<b>Penerima Pinjaman</b>”)]</p>
 
     <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
@@ -346,7 +346,7 @@ margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;line-height:110%'><spa
                 lang=EN-GB>A.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-GB>Penerima Pinjaman memiliki keinginan untuk
 meminjam dana sejumlah </span><span lang=EN-GB>Rp </span><span lang=EN-GB
-                                                               style='background:yellow'>[&#9679;]</span><span lang=EN-GB> <span
+                                                               style='background:yellow'>[asdffdsa]</span><span lang=EN-GB> <span
                     style='background:yellow'>(&#9679;)</span> </span><span lang=EN-GB>dari Pemberi
 Pinjaman.</span></p>
 
@@ -364,7 +364,7 @@ setuju untuk mengadakan Perjanjian Pinjaman ini berdasarkan syarat-syarat dan
 ketentuan-ketentuan berikut:</span></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>DEFINISI DAN INTERPRETASI </b></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
@@ -394,8 +394,8 @@ dengan penggunaan layanan Situs;</span></p>
 
     <p class=MsoListParagraph style='text-align:justify;line-height:110%'>“<b>Pinjaman”</b>
         adalah Pinjaman yang diberikan oleh Pemberi Pinjaman melalui <b>[Fintech]</b><b>
-        </b>kepada Penerima Pinjaman sebesar Rp <span style='background:yellow'>[&#9679;]</span>
-        (<span style='background:yellow'>[&#9679;]</span> Rupiah); </p>
+        </b>kepada Penerima Pinjaman sebesar Rp <span style='background:yellow'>[asdffdsa]</span>
+        (<span style='background:yellow'>[asdffdsa]</span> Rupiah); </p>
 
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;margin-left:
 36.7pt;text-align:justify;line-height:110%'><span style='font-size:11.0pt;
@@ -458,7 +458,7 @@ kecuali informasi yang diberikan tersebut dinyatakan sebagai rahasia;</span></p>
                     lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>[Fintech]
 </span></b><span style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>sebuah
 perseroan terbatas yang didirikan berdasarkan hukum Negara Republik Indonesia,
-beralamat di <span style='background:yellow'>[&#9679;]</span>. </span></p>
+beralamat di <span style='background:yellow'>[asdffdsa]</span>. </span></p>
 
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;margin-left:
 36.75pt;text-align:justify;line-height:110%'><span style='font-size:11.0pt;
@@ -478,7 +478,7 @@ line-height:110%;font-family:"Calibri","sans-serif"'>m</span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>asa
 </span><span lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>p</span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>enawaran
-sedikitnya </span><span lang=IN style='background:yellow'>[&#9679;]</span><span
+sedikitnya </span><span lang=IN style='background:yellow'>[asdffdsa]</span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>
 dari nilai </span><span lang=IN style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'>pinjaman yang diajukan oleh Penerima
@@ -522,7 +522,7 @@ line-height:110%;font-family:"Calibri","sans-serif"'> “<b>Rekening </b></span
 sebagaimana yang didefinisikan pada Pasal 4.1.2;</span></p>
 
     <p class=MsoListParagraph style='text-align:justify;line-height:110%'>“<b>Situs</b>”
-        adalah situs www.<b> </b><span style='background:yellow'>[&#9679;]</span>.id
+        adalah situs www.<b> </b><span style='background:yellow'>[asdffdsa]</span>.id
         yang dikelola oleh <span lang=IN>Penyelenggara</span>; </p>
 
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;margin-left:
@@ -569,7 +569,7 @@ line-height:110%'><span lang=IN>1.4<span style='font:7.0pt "Times New Roman"'>&n
         ini beserta lampirannya.</p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b><span style='text-transform:uppercase'>PENYEDIAAN PINJAMAN DAN
 TUJUAN</span> PENGGUNAAN PINJAMAN</b></p>
 
@@ -577,20 +577,20 @@ TUJUAN</span> PENGGUNAAN PINJAMAN</b></p>
                 lang=IN>Dengan tunduk pada ketentuan-ketentuan dari Perjanjian Pinjaman ini</span>
         dan yang terdapat dalam Situs <span lang=IN>termasuk Syarat dan Ketentuan Umum,
 Pemberi Pinjaman telah setuju untuk menyediakan </span>suatu Pinjaman dalam
-        jumlah sebesar Rp <span style='background:yellow'>[&#9679;]</span> (<span
-                style='background:yellow'>[&#9679;]</span> Rupiah).</p>
+        jumlah sebesar Rp <span style='background:yellow'>[asdffdsa]</span> (<span
+                style='background:yellow'>[asdffdsa]</span> Rupiah).</p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b><span style='text-transform:uppercase'>JANGKA WAKTU PINJAMAN</span></b></p>
 
     <p class=MsoListParagraph style='text-align:justify;line-height:110%'>Jangka
-        waktu Pinjaman ditetapkan selama <span style='background:yellow'>[&#9679;]</span>
+        waktu Pinjaman ditetapkan selama <span style='background:yellow'>[asdffdsa]</span>
         terhitung sejak tanggal pengiriman atas seluruh jumlah Pinjaman secara penuh dan
         dapat diperpanjang sesuai dengan kesepakatan dari Para Pihak (“<b>Jangka Waktu Pinjaman</b>”).</p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b><span style='text-transform:uppercase'>PEMBAYARAN</span> PINJAMAN
             DAN PELUNASAN DIPERCEPAT</b></p>
 
@@ -710,7 +710,7 @@ cepat dari waktu yang ditetapkan dengan </span><span style='font-size:11.0pt;
 line-height:110%;font-family:"Calibri","sans-serif"'>melakukan permohonan untuk
 itu melalui Akun Penerima Pinjaman </span><span lang=IN style='font-size:11.0pt;
 line-height:110%;font-family:"Calibri","sans-serif"'>sedikitnya </span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>Hari
 Kerja sebelum tanggal pelunasan dipercepat yang direncakan </span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>(“<b>Pelunasan
@@ -741,21 +741,21 @@ font-family:"Calibri","sans-serif"'>: </span></p>
                     style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=IN style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'>Untuk masa angsuran berjalan kurang dari
-atau sama dengan </span><span lang=IN style='background:yellow'>[&#9679;]</span><span
+atau sama dengan </span><span lang=IN style='background:yellow'>[asdffdsa]</span><span
                 lang=IN> </span><span lang=IN style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'> </span><span lang=IN style='font-size:
 11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>bulan: </span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>(</span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>persen)
 </span><span lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>dari
 sisa utang pokok yang tercatat pada saat pelunasan ditambah biaya administrasi </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>sebesar
-</span><span lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+</span><span lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>(</span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>Rupiah)</span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>;</span></p>
 
@@ -765,11 +765,11 @@ sisa utang pokok yang tercatat pada saat pelunasan ditambah biaya administrasi <
                     style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=IN style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'>Untuk masa angsuran berjalan lebih dari </span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>bulan:
-</span><span lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+</span><span lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>(</span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>persen)
 </span><span lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>dari
 sisa utang pokok yang tercatat pada saat pelunasan. </span></p>
@@ -788,7 +788,7 @@ kepada Penerima Pinjaman</span><span lang=IN style='font-size:11.0pt;
 line-height:110%;font-family:"Calibri","sans-serif"'>.  </span></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>SUKU BUNGA, BIAYA-BIAYA DAN DENDA KETERLAMBATAN </b></p>
 
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;margin-left:
@@ -838,9 +838,9 @@ font-family:"Calibri","sans-serif"'>Penerima Pinjaman akan membayar kepada Penye
 Layanan Situs</span><b><span style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'> </span></b><span lang=IN style='font-size:
 11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>sebesar </span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'> (</span><span
-                lang=IN style='background:yellow'>[&#9679;]</span><span lang=IN> </span><span
+                lang=IN style='background:yellow'>[asdffdsa]</span><span lang=IN> </span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>persen)
 dari jumlah Pinjaman</span><span lang=IN style='font-size:11.0pt;line-height:
 110%;font-family:"Calibri","sans-serif"'> </span><span lang=IN
@@ -887,7 +887,7 @@ mengenakan denda keterlambatan kepada Penerima Pinjaman sebagaimana diatur pada
 Ketentuan-ketentuan Pinjaman. </span></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>PEMULIHAN PINJAMAN</b></p>
 
     <p class=MsoListParagraph style='text-align:justify;line-height:110%'><span
@@ -903,7 +903,7 @@ sehubungan dengan </span>Pinjaman yang telah lewat Tanggal Jatuh Tempo,
         dan telah melewati Tanggal Jatuh Tempo. </p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>HAL YANG DILARANG</b></p>
 
     <p style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;margin-left:
@@ -921,7 +921,7 @@ pelengkapnya) kepada pihak manapun</span><span style='font-size:11.0pt;
 line-height:110%;font-family:"Calibri","sans-serif"'>; </span></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>PERNYATAAN DAN JAMINAN </b></p>
 
     <p class=MsoBodyTextIndent style='margin-bottom:10.0pt;line-height:110%'><span
@@ -996,7 +996,7 @@ text-indent:-36.0pt;line-height:110%'>(g)<span style='font:7.0pt "Times New Roma
 line-height:110%'><b>&nbsp;</b></p>
 
     <p class=MsoListParagraph style='text-align:justify;text-indent:-36.0pt;
-line-height:110%'><b>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+line-height:110%'><b>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></b><b>WANPRESTASI </b></p>
 
     <p class=MsoBodyTextIndent style='margin-bottom:10.0pt;line-height:110%'><span
@@ -1138,29 +1138,29 @@ tersebut akan dikirimkan melalui faks atau surat sesuai dengan Pasal 11.1 ini. <
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify;
   line-height:110%'>Pemberi Pinjaman:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify;
-  line-height:110%'>U.p: <span style='background:yellow'>[&#9679;]</span></p>
+  line-height:110%'>U.p: <span style='background:yellow'>[asdffdsa]</span></p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'>Alamat
                     Surat Elektronik:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'><span
-                            style='background:yellow'>[&#9679;]</span><u><span style='color:#0563C1'> </span></u></p>
+                            style='background:yellow'>[asdffdsa]</span><u><span style='color:#0563C1'> </span></u></p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'>No.
                     Telp:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'><span
-                            style='background:yellow'>[&#9679;]</span></p>
+                            style='background:yellow'>[asdffdsa]</span></p>
             </td>
             <td width=301 valign=top style='width:225.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify;
   line-height:110%'>Penerima Pinjaman:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify;
-  line-height:110%'>U.p: <span style='background:yellow'>[&#9679;]</span></p>
+  line-height:110%'>U.p: <span style='background:yellow'>[asdffdsa]</span></p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'>Alamat
                     Surat Elektronik:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'><span
-                            style='background:yellow'>[&#9679;]</span></p>
+                            style='background:yellow'>[asdffdsa]</span></p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify'>No.
                     Telp:</p>
                 <p class=MsoListParagraph style='margin-left:0cm;text-align:justify;
-  line-height:110%'><span style='background:yellow'>[&#9679;]</span></p>
+  line-height:110%'><span style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
     </table>
@@ -1307,7 +1307,7 @@ dibuat dan ditandatangani</span><span lang=IN> secara basah.</span></p>
         <tr>
             <td width=301 valign=top style='width:225.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
-  110%'><span lang=EN-GB>Nama    :<span style='background:yellow'> [&#9679;]</span>
+  110%'><span lang=EN-GB>Nama    :<span style='background:yellow'> [asdffdsa]</span>
    </span></p>
                 <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
   110%'><span lang=EN-GB>Jabatan : Kuasa</span></p>
@@ -1372,14 +1372,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1394,14 +1394,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1416,14 +1416,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1438,14 +1438,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1460,14 +1460,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1482,14 +1482,14 @@ line-height:110%'><b><span lang=EN-GB>JADWAL PEMBAYARAN PINJAMAN</span></b></p>
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
             <td width=200 valign=top style='width:150.3pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
   text-align:center;line-height:normal'><span lang=EN-GB style='background:
-  yellow'>[&#9679;]</span></p>
+  yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
     </table>
@@ -1530,7 +1530,7 @@ line-height:110%'><b><span lang=EN-GB>REKENING ESCROW</span></b></p>
             <td width=355 valign=top style='width:266.55pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+  normal'><span lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1549,7 +1549,7 @@ line-height:110%'><b><span lang=EN-GB>REKENING ESCROW</span></b></p>
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+  normal'><span lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
     </table>
@@ -1590,7 +1590,7 @@ line-height:110%'><b><span lang=EN-GB>Ketentuan-ketentuan Pinjaman </span></b></
             <td width=319 valign=top style='width:239.55pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:10.0pt;line-height:110%'><span
-                            lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+                            lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1609,7 +1609,7 @@ line-height:110%'><b><span lang=EN-GB>Ketentuan-ketentuan Pinjaman </span></b></
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:10.0pt;line-height:110%'><span
-                            lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+                            lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1627,7 +1627,7 @@ line-height:110%'><b><span lang=EN-GB>Ketentuan-ketentuan Pinjaman </span></b></
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:10.0pt;line-height:110%'><span
-                            lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+                            lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
         <tr>
@@ -1646,7 +1646,7 @@ line-height:110%'><b><span lang=EN-GB>Ketentuan-ketentuan Pinjaman </span></b></
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoNormal style='margin-bottom:10.0pt;line-height:110%'><span
-                            lang=EN-GB style='background:yellow'>[&#9679;]</span></p>
+                            lang=EN-GB style='background:yellow'>[asdffdsa]</span></p>
             </td>
         </tr>
     </table>

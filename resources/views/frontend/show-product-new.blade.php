@@ -6,10 +6,10 @@
         <div class="container">
             <div class="parallax-mask"></div>
             <div class="section-name">
-                <h2>Detail Investasi</h2>
+                <h2>Detail Proyek</h2>
                 <div class="short-text">
                     <h5><a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{route('project-list', ['tab' => 'debt'])}}">Daftar Investasi</a>
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('project-list', ['tab' => 'debt'])}}">Daftar Proyek</a>
                         <i class="fa fa-angle-double-right"></i>Detil
                     </h5>
                 </div>
@@ -85,9 +85,9 @@
                         <div class="col-md-12 col-xs-12" style="margin-top: 5%;">
                             <div class="col-md-7" style="font-size:16px !important;">
                                 @if(auth()->check())
-                                    <a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Prospektus</span></a>
+                                    <a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Product Disclosure Statement</span></a>
                                 @else
-                                    <a data-toggle="modal" data-target="#prospektusModal">Download Prospektus</a>
+                                    <a data-toggle="modal" data-target="#prospektusModal">Download Product Disclosure Statement</a>
                                 @endif
                             </div>
                             <div class="col-md-5">

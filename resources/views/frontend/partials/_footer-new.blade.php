@@ -28,13 +28,13 @@
         </div>
     </div>
     <div class="footer-bar" style="background: white; color: #ff7a00;margin-top: 0;font-size: 16px !important;">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <a href="https://www.facebook.com/investasime-1033332290157898" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         &nbsp;&nbsp;&nbsp;
-        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <a href="https://twitter.com/investasime7771" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         &nbsp;&nbsp;&nbsp;
-        <i class="fa fa-google-plus" aria-hidden="true"></i>
+        <a href="https://www.instagram.com/investasime7777/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         &nbsp;&nbsp;&nbsp;
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <a href="https://www.youtube.com/channel/UCLV2VznCGF7XFSzjuKARzrQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         <br><br>
         <div class="container">
             <h5>2018 © All Rights Reserved | Privacy Policy</h5>

@@ -22,7 +22,7 @@
                     <div  id="tabs" class="panel-heading">
                         <ul class="nav nav-tabs">
                             <li {{$isActiveTabPending}}><a href="{{route('portfolio', ['tab' => 'pending'])}}">Pending Transaksi</a></li>
-                            <li {{$isActiveTabEquity}}><a href="{{route('portfolio', ['tab' => 'equity'])}}">Saham / Bagi Produk</a></li>
+{{--                            <li {{$isActiveTabEquity}}><a href="{{route('portfolio', ['tab' => 'equity'])}}">Saham / Bagi Produk</a></li>--}}
                             <li {{$isActiveTabDebt}}><a href="{{route('portfolio', ['tab' => 'debt'])}}">Hutang Portfolio</a></li>
                             <li><a href="#portfolio" data-toggle="tab">Portfolio Breakdown</a></li>
                         </ul>
@@ -70,45 +70,45 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade {{$isActiveEquity}}" id="equity">
+                            {{--<div class="tab-pane fade {{$isActiveEquity}}" id="equity">--}}
 
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Saham / Bagi Hasil</h2>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content table-responsive">
-                                        <table id="datatable-responsive-equity" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
-                                            <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama</th>
-                                                <th>Tanggal Beli</th>
-                                                <th>Jumlah Investasi</th>
-                                                <th>Jenis</th>
-                                                <th>Update Terkini</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @php( $idx = 1 )
-                                                @foreach($transactionSahamHasil as $trx)
-                                                    <tr>
-                                                        <td>{{ $idx }}</td>
-                                                        <td>
-                                                            <a href="{{ route('project-detail', ['id' => $trx->product_id]) }}">{{ $trx->Product->name}}</a>
-                                                        </td>
-                                                        <td>{{ $trx->created_on }}</td>
-                                                        <td>{{ $trx->total_price }}</td>
-                                                        <td>{{ $trx->Product->Category->name }}</td>
-                                                        <td>{{ $trx->created_on }}</td>
-                                                    </tr>
-                                                    @php( $idx++ )
-                                                        @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                                {{--<div class="x_panel">--}}
+                                    {{--<div class="x_title">--}}
+                                        {{--<h2>Saham / Bagi Hasil</h2>--}}
+                                        {{--<div class="clearfix"></div>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="x_content table-responsive">--}}
+                                        {{--<table id="datatable-responsive-equity" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">--}}
+                                            {{--<thead>--}}
+                                            {{--<tr>--}}
+                                                {{--<th>No</th>--}}
+                                                {{--<th>Nama</th>--}}
+                                                {{--<th>Tanggal Beli</th>--}}
+                                                {{--<th>Jumlah Investasi</th>--}}
+                                                {{--<th>Jenis</th>--}}
+                                                {{--<th>Update Terkini</th>--}}
+                                            {{--</tr>--}}
+                                            {{--</thead>--}}
+                                            {{--<tbody>--}}
+                                            {{--@php( $idx = 1 )--}}
+                                                {{--@foreach($transactionSahamHasil as $trx)--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>{{ $idx }}</td>--}}
+                                                        {{--<td>--}}
+                                                            {{--<a href="{{ route('project-detail', ['id' => $trx->product_id]) }}">{{ $trx->Product->name}}</a>--}}
+                                                        {{--</td>--}}
+                                                        {{--<td>{{ $trx->created_on }}</td>--}}
+                                                        {{--<td>{{ $trx->total_price }}</td>--}}
+                                                        {{--<td>{{ $trx->Product->Category->name }}</td>--}}
+                                                        {{--<td>{{ $trx->created_on }}</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--@php( $idx++ )--}}
+                                                        {{--@endforeach--}}
+                                            {{--</tbody>--}}
+                                        {{--</table>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                             <div class="tab-pane fade {{$isActiveDebt}}" id="debt">
 
                                 <div class="x_panel">

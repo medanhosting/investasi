@@ -34,6 +34,9 @@
                             <div class="field col-sm-12 text-center error-div" style="display: none;">
                                 <span class="help-block" style="color: red;">Nominal harus kelipatan dari Rp 250.000 dan minimal Rp 500.000</span>
                             </div>
+                            <div class="field col-sm-12 text-center error-div-wallet" style="display: none;">
+                                <span class="help-block" style="color: red;">Nominal harus lebih kecil dari dompet Anda</span>
+                            </div>
                             <div class="field col-sm-12 price-format">
                                 <h5>Nominal</h5>
                                 <input id="amount" type="text" name="amount">
@@ -50,6 +53,7 @@
                             </div>
                             <div class="field col-sm-12">
                                 <h5>Pilihan Sumber Dana</h5>
+                                <h5>Dompet Anda Rp {{$userData->wallet_amount}}</h5>
                                 <div class="radio-inputs">
                                     <input type="radio" id="payment-1" name="payment" value="wallet" checked>
                                     <label for="payment-1"><span></span>Dompet</label>
@@ -61,14 +65,15 @@
                             </div>
 
                             <input id="notCompletedData" value="{{$notCompletedData}}" type="hidden">
+                            <input id="wallet" value="{{$userData->wallet_amount}}" type="hidden">
                             <div class="field col-sm-12">
                                 <div class="col-sm-12">
                                     <h5 style="color:red;">
-                                        Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                                        Catatan<br>Harap membaca Product Disclosure Statement dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
                                     </h5>
                                     <h4>
                                         <br>
-                                        <a href="{{route('download', ['filename' => 'test.pdf'])}}">Download Prospektus</a>
+                                        <a href="{{route('download', ['filename' => 'test.pdf'])}}">Download Product Disclosure Statement</a>
                                     </h4>
                                 </div>
                             </div>
@@ -185,7 +190,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <p class="font-16" style="color:red;">
-                                Catatan<br>Harap membaca Prospektus dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
+                                Catatan<br>Harap membaca Product Disclosure Statement dari tiap produk, terutama yang berhubungan dengan aturan dan resiko berinvestasi.
                             </p>
                         </div>
                     </div>
@@ -244,7 +249,7 @@
                             <label>
                                 <input type="checkbox" name="check1" id="check1" onclick="check()">
                                 Saya telah membaca dan memahami isi dari prospektus produk investasi ini
-                                (<a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Prospektus</span></a>),
+                                (<a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Product Disclosure Statement</span></a>),
                                 dan saya telah menyetujui <a target="_blank" href="{{route('term-condition')}}">syarat dan ketentuan</a> dari investasi.me
 
                             </label>

@@ -6,11 +6,11 @@
     <div class="container">
         <div class="parallax-mask"></div>
         <div class="section-name">
-            <h2>Top Up Dompet</h2>
+            <h2>Top Up Dana</h2>
             <div class="short-text">
                 <h5><a href="{{route('index')}}">Beranda</a>
-                    <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Dompet Saya</a>
-                    <i class="fa fa-angle-double-right"></i>Top Up Dompet
+                    <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Total Dana Saya</a>
+                    <i class="fa fa-angle-double-right"></i>Top Up Dana
                 </h5>
             </div>
         </div>

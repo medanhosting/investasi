@@ -42,8 +42,8 @@ class ProductController extends Controller
         }
         $products = Product::where('is_secondary', 0)->get();
 
-        $product_debts =Product::where('category_id','=', 1)->where('is_secondary','=', 0)->where('status_id','=', 1)->get();
-        $product_equities =Product::where('category_id','=', 2)->where('is_secondary','=', 0)->where('status_id','=', 1)->get();
+        $product_debts =Product::where('category_id','=', 2)->where('is_secondary','=', 0)->where('status_id','=', 1)->get();
+        $product_equities =Product::where('category_id','=', 1)->where('is_secondary','=', 0)->where('status_id','=', 1)->get();
         $product_sharings =Product::where('category_id','=', 3)->where('is_secondary','=', 0)->where('status_id','=', 1)->get();
 
 

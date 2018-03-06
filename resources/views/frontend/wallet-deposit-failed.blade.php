@@ -10,8 +10,8 @@
                 <div class="short-text">
                     <h5>
                         <a href="{{route('index')}}">Beranda</a>
-                        <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Dompet Saya</a>
-                        <i class="fa fa-angle-double-right"></i>Top Up Dompet
+                        <i class="fa fa-angle-double-right"></i><a href="{{route('my-wallet')}}">Total Dana Saya</a>
+                        <i class="fa fa-angle-double-right"></i>Top Up Dana
                     </h5>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="info-block" style="margin: 0; padding: 0;">
-                        <a href="{{ route('my-wallet') }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Kembali ke Dompet Saya</a>
+                        <a href="{{ route('my-wallet') }}" class="btn btn-big btn-solid" style="margin-left: 10px;">Kembali ke Dana Saya</a>
                         <a href="{{ route('index') }}" class="btn btn-big btn-solid">Beranda</a>
                     </div>
                 </div>

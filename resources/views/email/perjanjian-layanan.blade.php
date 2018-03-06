@@ -177,30 +177,30 @@ BERBASIS TEKNOLOGI</span></b></p>
 
     <p class=MsoNormal align=center style='margin-bottom:10.0pt;text-align:center;
 line-height:110%'><b><span lang=IN>No. </span></b><span lang=IN
-                                                        style='background:yellow'>[&#9679;]</span></p>
+                                                        style='background:yellow'>[asdffdsa]</span></p>
 
     <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
 110%'><span lang=IN>Perjanjian Layanan Pinjam Meminjam Uang Berbasis Teknologi ini
-dibuat dan ditandatangani pada tanggal <span style='background:yellow'>[&#9679;]</span>
+dibuat dan ditandatangani pada tanggal <span style='background:yellow'>[asdffdsa]</span>
 (“<b>Perjanjian</b>”) oleh dan antara:</span></p>
 
     <p class=MsoListParagraph style='margin-bottom:10.0pt;text-align:justify;
 text-indent:-36.0pt;line-height:110%'><span lang=IN>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=IN style='background:yellow'>[&#9679;] </span><span
+</span></span><span lang=IN>PT Bursa Akselerasi Indonesia </span><span
                 lang=IN>, suatu perseroan terbatas yang didirikan berdasarkan hukum </span>Negara
-        <span lang=IN>Republik Indonesia, yang memiliki domisili di <span
-                    style='background:yellow'>[&#9679;]</span> (“<b>Penyelenggara</b>”); dan</span></p>
+        <span lang=IN>Republik Indonesia, yang memiliki domisili di <span>
+                Menara Satrio Lantai 14 unit 5, Jalan Prof. DR. Satrio Kav. 1-4 Blok C4, Kel. Kuningan Timur, Kec. Setiabudi, Jakarta Selatan 12950</span> (“<b>Penyelenggara</b>”); dan</span></p>
 
     <p class=MsoListParagraph style='margin-bottom:10.0pt;text-align:justify;
 text-indent:-36.0pt;line-height:110%'><span lang=IN>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span lang=IN style='background:yellow'>[&#9679;]</span><span
-                lang=IN>, warga negara <span style='background:yellow'>[&#9679;]</span>,
-bertempat tinggal di <span style='background:yellow'>[&#9679;]</span>, pemegang
-Kartu Tanda Penduduk No. <span style='background:yellow'>[&#9679;]</span> </span><span
-                lang=EN-GB>[<b>PT </b></span><span lang=IN style='background:yellow'>[&#9679;]</span><span
+</span></span><span lang=IN>{{ $user->first_name }} {{ $user->last_name }}</span><span
+                lang=IN>, warga negara <span>{{$user->citizen}}</span>,
+bertempat tinggal di <span>{{$user->address_ktp}}, {{$user->city_ktp}}, {{$user->postal_code_ktp}}</span>, pemegang
+Kartu Tanda Penduduk No. <span>{{ $user->identity_number }}</span> </span><span
+                lang=EN-GB>[<b>PT </b></span><span lang=IN style='background:yellow'>[asdffdsa]</span><span
                 lang=EN-GB>, </span><span lang=IN>sebuah perseoan terbatas yang didirikan
 berdasarkan hukum Negara Republik Indonesia, beralamat di </span><span lang=IN
-                                                                       style='background:yellow'>[&#9679;]</span><span lang=IN>] (“<b>Pemberi Pinjaman</b>”).
+                                                                       style='background:yellow'>[asdffdsa]</span><span lang=IN>] (“<b>Pemberi Pinjaman</b>”).
 </span></p>
 
     <p class=MsoNormal style='margin-bottom:10.0pt;text-align:justify;line-height:
@@ -275,7 +275,7 @@ dari permohonan pinjaman yang telah diajukan termasuk informasi sehubungan
 dengan, antara lain, (i) pagu maksimum pinjaman (ii) jangka waktu Pinjaman
 (iii) suku bunga (iv) denda keterlambatan dan (v) kesediaan Penerima Pinjaman
 untuk menerima Pinjaman apabila dana yang terkumpul selama masa penawaran
-sedikitnya </span><span lang=IN style='background:yellow'>[&#9679;]</span><span
+sedikitnya </span><span lang=IN style='background:yellow'>[asdffdsa]</span><span
                 lang=IN style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>
 dari nilai Pinjaman.</span></p>
 
@@ -641,7 +641,7 @@ PENGEMBALIAN DANA</span></b></p>
 font-family:"Calibri","sans-serif"'>Jika Penerima Pinjaman telah melakukan
 pembayaran atas Pinjaman yang diterimanya dari Pemberi Pinjaman, maka Penyelenggara
 akan memperhitungkan jumlah tersebut dalam Rekening Virtual Pemberi Pinjaman setelah
-</span><span lang=EN-GB style='background:yellow'>[&#9679;]</span><span
+</span><span lang=EN-GB>maksimum 2 (dua)</span><span
                 style='font-size:11.0pt;line-height:110%;font-family:"Calibri","sans-serif"'>Hari
 Kerja sejak </span><span lang=IN style='font-size:11.0pt;line-height:110%;
 font-family:"Calibri","sans-serif"'>tanggal pembayaran dilakukan. </span></p>
@@ -720,8 +720,8 @@ harus, sedapat mungkin, </span><span lang=IN>diselesaikan</span><span lang=IN>
 secara musyawarah oleh Para Pihak. Jika Sengketa itu tidak dapat diselesaikan
 secara musyawarah dalam waktu 1 (satu) bulan dari tanggal Pihak yang satu
 memberitahukan kepada Pihak lainnya bahwa terdapat Sengketa, Para Pihak setuju
-bahwa Sengketa tersebut akan dirujuk ke dan akhirnya diselesaikan pada <span
-                    style='background:yellow'>Pengadilan Negeri Jakarta Selatan</span>.</span></p>
+bahwa Sengketa tersebut akan dirujuk ke dan akhirnya diselesaikan pada
+            <span>Pengadilan Negeri Jakarta Selatan</span>.</span></p>
 
     <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:10.0pt;
 margin-left:35.45pt;text-align:justify;line-height:110%'><span class=longtext><span
@@ -753,17 +753,17 @@ kepada Para Pihak dengan alamat sebagai berikut:</span></p>
   10.0pt;margin-left:0cm;text-align:justify;line-height:110%'><span lang=IN>Penyelenggara:</span></p>
                 <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
   10.0pt;margin-left:0cm;text-align:justify;line-height:110%'><span lang=IN>U.p:
-  </span><span lang=IN style='background:yellow'>[&#9679;]</span></p>
+  </span><span lang=IN style='background:yellow'>[asdffdsa]</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
   justify;line-height:normal'><span lang=IN>Alamat Surat Elektronik:</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
-  justify;line-height:normal'><span lang=IN style='background:yellow'>[&#9679;]</span></p>
+  justify;line-height:normal'><span lang=IN>info@investasi.me</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
   justify;line-height:normal'><span lang=IN>&nbsp;</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
   justify;line-height:normal'><span lang=IN>No. Telp:</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
-  justify;line-height:normal'><span lang=IN style='background:yellow'>[&#9679;]</span></p>
+  justify;line-height:normal'><span lang=IN>(021)25981342 </span></p>
             </td>
             <td width=301 valign=top style='width:225.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
                 <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
@@ -771,16 +771,15 @@ kepada Para Pihak dengan alamat sebagai berikut:</span></p>
   Pinjaman:</span></p>
                 <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
   10.0pt;margin-left:0cm;text-align:justify;line-height:110%'><span lang=IN>U.p:
-  </span><span lang=IN style='background:yellow'>[&#9679;]</span></p>
+  </span><span lang=IN>{{ $user->first_name }} {{ $user->last_name }}</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
   justify;line-height:normal'><span lang=IN>Alamat Surat Elektronik:</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
-  justify;line-height:normal'><span lang=IN style='background:yellow'>[&#9679;]</span></p>
+  justify;line-height:normal'><span lang=IN>{{ $user->email }}</span></p>
                 <p class=MsoListParagraph style='margin:0cm;margin-bottom:.0001pt;text-align:
   justify;line-height:normal'><span lang=IN>No. Telp:</span></p>
                 <p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
-  10.0pt;margin-left:0cm;text-align:justify;line-height:110%'><span lang=IN
-                                                                    style='background:yellow'>[&#9679;]</span></p>
+  10.0pt;margin-left:0cm;text-align:justify;line-height:110%'><span lang=IN>{{ $user->phone }}</span></p>
             </td>
         </tr>
     </table>
