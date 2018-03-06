@@ -26,19 +26,22 @@
                         <div class="col-sm-4 widget">
                             <h4>Alamat</h4>
                             <i class="fa fa-map-marker"></i>
-                            <p>Adress no. 29, Some Street, Some Country</p>
+                            <br>
+                            Menara Satrio Lantai 14 unit 5
+                            <br>
+                            Jalan Prof. DR. Satrio Kav. 1-4 Blok C4
+                            <br>
+                            Kel. Kuningan Timur, Kec. Setiabudi, Jakarta Selatan 12950, Indonesia
                         </div>
                         <div class="col-sm-4 widget">
                             <h4>Nomor Telepon</h4>
                             <i class="fa fa-phone"></i>
-                            <p>+40 712 345 678</p>
-                            <p>+40 712 345 876</p>
+                            <p>(021)25981342</p>
                         </div>
                         <div class="col-sm-4 widget">
                             <h4>E-mail</h4>
                             <i class="fa fa-envelope"></i>
-                            <p>spam.Kindness@mail.com</p>
-                            <p>spam.Kindness@mail.com</p>
+                            <p>contact@investasi.me</p>
                         </div>
                     </div>
                 </div>

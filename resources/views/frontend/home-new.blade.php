@@ -31,9 +31,9 @@
                         <a href="{{route('my-wallet')}}">
                             <div class="feature clearfix">
                                 <img class="homepage-section1-img" src="{{ URL::asset('frontend_images/homepage/login-2.png') }}">
-                                <h4>Penarikan & Penambahan Dompet</h4>
+                                <h4>Penarikan & Penambahan Dana</h4>
                                 <div class="feature-div">
-                                    <p>Saldo Anda saat ini Rp. {{$user->wallet_amount}}</p>
+                                    <p>Total Dana Anda saat ini Rp. {{$user->wallet_amount}}</p>
                                 </div>
                             </div>
                         </a>
