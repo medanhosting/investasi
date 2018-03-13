@@ -72,7 +72,7 @@
                                         <b>Status:</b><br/>
                                         @if($transaction->status_id == 3)
                                             <b>New Order</b>
-                                        @if($transaction->status_id == 4)
+                                        @elseif($transaction->status_id == 4)
                                             <b>Payment Verification</b>
                                         @elseif($transaction->status_id == 5)
                                             <b>Payment Confirmed</b>

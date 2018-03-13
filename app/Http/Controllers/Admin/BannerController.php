@@ -48,9 +48,7 @@ class BannerController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return back()->withErrors($validator)->withInput();
         }
 
         if(Input::get('options') == 'yes'){
@@ -114,9 +112,7 @@ class BannerController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return back()->withErrors($validator)->withInput();
         }
 
         if(Input::get('options') == 'yes'){

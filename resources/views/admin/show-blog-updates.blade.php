@@ -37,7 +37,7 @@
                     <div class="x_panel">
                         <div class="x_title">
                             @include('admin.partials._success')
-                            <h2>Daftar Pembaharuan Perusahaan</h2>
+                            <h2>Daftar Berita Pending</h2>
                             {{--<div class="nav navbar-right">--}}
                                 {{--<a href="{{ route('blog-create') }}" class="btn btn-app">--}}
                                     {{--<i class="fa fa-plus"></i> Tambah--}}

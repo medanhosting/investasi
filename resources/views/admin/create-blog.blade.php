@@ -19,7 +19,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Create New Product</h2>
+                        <h2>
+                            Create New Article
+                            @if($product)
+                                {{$product->name}}
+                            @endif
+                        </h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -38,7 +43,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <form id="blog-form" data-parsley-validate class="form-horizontal form-label-left" method="POST" action="/admin/blog">
+                        <form id="blog-form" data-parsley-validate class="form-horizontal form-label-left" method="POST" action="/admin/blog/create/save">
                             {{ csrf_field() }}
 
                             @if(count($errors))
@@ -55,6 +60,8 @@
                                 </div>
                             @endif
 
+                            <input type="hidden" id="product_id" name="product_id" value="{{$product->id}}">
+
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Judul Artikel <span class="required">*</span>
                                 </label>
@@ -63,20 +70,24 @@
                                 </div>
                             </div>
 
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Category <span class="required">*</span>
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select id="category" name="category" class="form-control col-md-7 col-xs-7">
-                                        <option value="-1">Select category</option>
+                            @if($product)
+                                <input type="hidden" id="category" name="category" value="{{$product->category_id}}">
+                            @else
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Category <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select id="category" name="category" class="form-control col-md-7 col-xs-7">
+                                            <option value="-1">Select category</option>
 
-                                        @foreach($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                        @endforeach
+                                            @foreach($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
 
-                                    </select>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                             <div class="form-group">
                                 <label for="contents">Contents</label>
                                 <input type="hidden" id="content" name="content">

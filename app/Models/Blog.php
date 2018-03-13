@@ -44,6 +44,7 @@ class Blog extends Eloquent
 	];
 
 	protected $fillable = [
+	    'id',
 		'title',
 		'alias',
 		'description',

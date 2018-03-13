@@ -69,6 +69,8 @@
                                         <td>
                                             @if($blog->status_id == 1)
                                                 Publish
+                                            @elseif($blog->status_id == 7)
+                                                Reject
                                             @else
                                                 Unpublish
                                             @endif

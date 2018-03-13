@@ -36,7 +36,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Customer List</h2>
+                            <h2>Investor List</h2>
                             {{--<ul class="nav navbar-right panel_toolbox">--}}
                                 {{--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>--}}
                                 {{--</li>--}}
@@ -73,7 +73,7 @@
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->first_name }}</td>
                                         <td>{{ $user->last_name }}t</td>
-                                        <td>{{ \Carbon\Carbon::parse($user->created_on)->format('j M Y G:i:s') }}</td>
+                                        <td>{{ \Carbon\Carbon::parse($user->created_at)->format('j M Y G:i:s') }}</td>
                                     </tr>
                                     @php( $idx++ )
                                 @endforeach

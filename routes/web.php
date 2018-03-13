@@ -121,6 +121,7 @@ Route::get('/admin/logout', 'Auth\LoginAdminController@logout')->name('admin-log
 Route::prefix('/admin/product')->group(function (){
     Route::get('/', 'Admin\ProductController@index')->name('product-list');
     Route::get('/request', 'Admin\ProductController@ProductRequest')->name('product-request');
+    Route::get('/request-news/{productId}', 'Admin\ProductController@RequestBlogProduct')->name('product-news-request');
     Route::post('/', 'Admin\ProductController@store');
     Route::get('/create', 'Admin\ProductController@create')->name('product-create');
     Route::get('/edit/{id}', 'Admin\ProductController@edit')->name('product-edit');

@@ -31,7 +31,7 @@ class BlogController extends Controller
     }
 
     public function index(){
-        $blogs = Blog::all();
+        $blogs = Blog::orderByDesc('created_at')->get();
 
         return View('admin.show-blogs', compact('blogs'));
     }
@@ -39,8 +39,9 @@ class BlogController extends Controller
 
     public function create(){
         $categories = Category::all();
+        $product = "";
 
-        return View('admin.create-blog', compact('categories'));
+        return View('admin.create-blog', compact('categories', 'product'));
     }
 
     public function store(Request $request){
@@ -52,29 +53,31 @@ class BlogController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return back()->withErrors($validator)->withInput();
         }
 
         $dateTimeNow = Carbon::now('Asia/Jakarta');
 
         //Save Data
-        $cartCreate = Blog::create([
+        $blogCreate = Blog::create([
             'id'            => Uuid::generate(),
-            'title'         => Input::get('title'),
-            'description'   => Input::get('content'),
-            'category_id'   => Input::get('category'),
+            'title'         => $request->input('title'),
+            'description'   => $request->input('content'),
+            'category_id'   => $request->input('category'),
             'read_count'    => 0,
-            'status_id'     => 2,
+            'status_id'     => 3,
             'created_at'    => $dateTimeNow->toDateTimeString(),
             'created_by'    => Auth::guard('user_admins')->user()->id,
         ]);
 
+        if($request->filled('product_id')){
+            $blogCreate->product_id = $request->input('product_id');
+            $blogCreate->save();
+        }
+
         Session::flash('message', 'Blog telah berhasil dibuat!');
 
-        $categories = Category::all();
-        return View('admin.create-blog', compact('categories'));
+        return redirect()->route('admin-blog-list');
     }
 
     public function edit($id){
@@ -97,9 +100,7 @@ class BlogController extends Controller
             'content'            => 'required']);
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return back()->withErrors($validator)->withInput();
         }
 
         $dateTimeNow = Carbon::now('Asia/Jakarta');
@@ -119,8 +120,7 @@ class BlogController extends Controller
 
     public function indexUpdate(){
         $blogs = Blog::where('status_id', 3)
-            ->whereNull('product_id')
-            ->get();
+            ->orderByDesc('created_at')->get();
 
         return View('admin.show-blog-updates', compact('blogs'));
     }
