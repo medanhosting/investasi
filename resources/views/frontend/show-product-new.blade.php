@@ -85,9 +85,9 @@
                         <div class="col-md-12 col-xs-12" style="margin-top: 5%;">
                             <div class="col-md-7" style="font-size:16px !important;">
                                 @if(auth()->check())
-                                    <a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Product Disclosure Statement</span></a>
+                                    <a href="{{route('download', ['filename' => 'test.pdf'])}}" style="cursor: pointer;"><span>Product Disclosure Statement</span></a>
                                 @else
-                                    <a data-toggle="modal" data-target="#prospektusModal">Download Product Disclosure Statement</a>
+                                    <a data-toggle="modal" data-target="#prospektusModal" style="cursor: pointer;">Download Product Disclosure Statement</a>
                                 @endif
                             </div>
                             <div class="col-md-5">
@@ -230,15 +230,15 @@
                         <div class="col-md-3 col-xs-12 product-info">
                             <h3>Informasi Pinjaman</h3>
                             <br><br>
-                            <span>Lama Pinjaman : </span>
+                            <span>Lama Pinjaman : {{$product->days_left}} Hari</span>
                             <br><br>
-                            <span>Suku Bunga : </span>
+                            <span>Suku Bunga : {{$product->interest_rate}}% </span>
                             <br><br>
                             <span>Jatuh Tempo Pinjaman : {{$product->days_left}} </span>
                             <br><br>
-                            <span>Industri : </span>
+                            <span>Industri : {{$product->vendor->business_type}}</span>
                             <br><br>
-                            <span>Anggunan : </span>
+                            <span>Agunan : </span>
                             {{--<br><br>--}}
                             {{--<h3>Keterangan Tambahan</h3>--}}
                             {{--<br><br>--}}

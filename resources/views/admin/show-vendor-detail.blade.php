@@ -36,7 +36,7 @@
                 <div class="col-md-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>{{$vendor->name}}</h2>
+                            <h2>{{$product->name}}</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -75,9 +75,29 @@
                                 </ul>
                                 <br />
 
+                                <ul class="stats-overview">
+                                    <li>
+                                        <span class="name"> Kelas (Suku Bunga) </span>
+                                        <span class="value text-success"> {{$product->business_class}} ( {{$product->interest_rate}}% ) </span>
+                                    </li>
+                                    <li>
+                                        <span class="name"> Cicilan/Bulan </span>
+                                        <span class="value text-success"> Rp {{$product->installment_per_month}} </span>
+                                    </li>
+                                    <li class="hidden-phone">
+                                        <span class="name"> Bunga/Bulan </span>
+                                        <span class="value text-success"> Rp {{$product->interest_per_month}} </span>
+                                    </li>
+                                </ul>
+                                <br />
+
                                 <div style="height:350px;">
                                     <img src="{{asset('storage\project\\'.$product->image_path)}}" height="350px" />
                                 </div>
+
+                                @if(!empty($product->youtube_link))
+                                    <iframe src="https://www.youtube.com/embed/{{$product->youtube_link}}" frameborder="0" allowfullscreen></iframe>
+                                @endif
 
                                 <div>
 
@@ -87,11 +107,11 @@
                                         <li>
                                             <img src="{{ asset('storage\owner_picture\\'.$vendor->profile_picture) }}" class="avatar" alt="Avatar">
                                             <div class="message_date">
-                                                <h3 class="date text-info">24</h3>
-                                                <p class="month">May</p>
+                                                <h3 class="date text-info">{{ \Carbon\Carbon::parse($vendor->created_at)->format('j') }}</h3>
+                                                <p class="month">{{ \Carbon\Carbon::parse($vendor->created_at)->format('M Y') }}</p>
                                             </div>
                                             <div class="message_wrapper">
-                                                <h4 class="heading">{{$vendor->name}}</h4>
+                                                <h2 class="heading">{{$vendor->name}}</h2>
                                                 <blockquote class="message">{!! $vendor->description !!}</blockquote>
                                                 <br />
                                             </div>
@@ -115,8 +135,6 @@
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="panel-body">
-                                        <h3 class="green"><i class="fa fa-paint-brush"></i> {{$product->name}}</h3>
-
                                         <p>{!! $product->description !!}</p>
                                         <br />
 

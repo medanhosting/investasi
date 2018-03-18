@@ -60,16 +60,13 @@
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:10%;margin-bottom: 5%;color:white !important; margin-left: 15%;">
-                        <h1 style="color: white !important;">Selamat Datang</h1>
+                        <h1 style="color: white !important;">{{ $section_1->content_1 }}</h1>
                         <br>
                         <h3 style="color: white !important;line-height: 25px;">
-                            Kembangkanlah Proyek & <br>
-                            Bisnis di Indonesia menjadi lebih baik <br>
-                            Berikan Pinjaman dengan return yang menarik <br>
-                            Ataupun ajukan pinjaman dengan rate yang bersahabat
+                            {!! $section_1->content_2 !!}
                         </h3>
                         <br><br>
-                        <a href="#" class="btn btn-big btn-solid "><span style="font-size: 16px;">Apa itu </span>&nbsp;<span> Investasi.me</span></a>
+                        <a href="{{ route('about') }}" class="btn btn-big btn-solid "><span style="font-size: 16px;">{{ $section_1->content_3 }}</span></a>
                     </div>
                 </div>
             </div>
@@ -118,24 +115,16 @@
                 <div class="col-md-offset-6 col-md-6 col-xs-12">
                     <div class="section-name-first parallax one" style="line-height: 1.3;padding-top:5%;margin-bottom: 3%;">
                         {{--<h2 style="color: white !important;">Apa itu Investasi.me</h2>--}}
-                        <h1>Apa itu Investasi.me</h1>
-                        <h2 style="color:black;">Cara baru pinjam-meminjan Uang<br>Jadilah bagian dari gaya hidup dan budaya baru! </h2>
+                        <h1>{{ $section_2->content_1 }}</h1>
+                        <h2 style="color:black;">{!! $section_2->content_2 !!}</h2>
                         <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
                         <br>
                         <span style="font-size:14px;">
-                        Ada banyak potensi bisnis, usaha dan industri di Indonesia yang hingga saat ini belum dapat kesempatan untuk bisa
-                        menjadi lebih besar dan lebih cepat berkembang.<br>
-                        Investasi.me hadir untuk bisa mempertemukan semua masyarakat Indonesi yang memiliki semangat sama untuk
-                        bisa saling membantu dan merasakan manfaat dari perkembangan tesebut.<br>
-                        Anda bisa melihat aneka bisnis, usaha dan industri yang potensial dan jailah pemodal akan usaha tersebut
-                        serta mendapatkan imbal hasil (return) yang menarik.<br>
-                        Anda juga bisa mendapatkan bantuan dari pada pemodal di Investasi.me denga menawarkan usaha Anda disini
-                        dengan bunga maupun bagi hasil yang ringan bagi usaha Anda. <br>
-                        Anda dan kami ada untuk membuat kita semua maju bersama!
-                    </span>
+                            {!! $section_2->content_3 !!}
+                        </span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="#" class="btn btn-big btn-solid "><span>Baca Selanjutnya</span></a>
+                        <a href="{{ route('about') }}" class="btn btn-big btn-solid "><span>{{ $section_2->content_4 }}</span></a>
                     </div>
                 </div>
             </div>
@@ -146,15 +135,15 @@
             <div class="row">
                 <div class="col-md-6 col-xs-12 donet__area" style="background: none; border: none;padding-left: 10%;">
                     <div class="section-name parallax one" style="color: white !important; padding-bottom:5%;">
-                        <h2>P2P Lending </h2>
-                        <h1 class="homepage-section3-h1">Ayo Partisipasi Sekarang</h1>
+                        <h2>{{ $section_3->content_1 }} </h2>
+                        <h1 class="homepage-section3-h1">{{ $section_3->content_2 }}</h1>
                         <img src="{{ URL::asset('frontend_images/homepage/border.png') }}" style="padding: 5% 5% 5% 0;">
                         <br>
-                        <h2>Dapatkan return atas bantuan yang Anda berikan hinggi 20%*</h2>
-                        <span>*) Nilai tersebut adalah simulasi pinjaman dengan rating C dan di setahunkan</span>
+                        <h2>{{ $section_3->content_3 }}</h2>
+                        <span>{{ $section_3->content_4 }}</span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><span style="font-size: 20px;">Daftar Sekarang</span></a>
+                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><span style="font-size: 20px;">{{ $section_3->content_5 }}</span></a>
                     </div>
                 </div>
             </div>
@@ -165,9 +154,9 @@
             <div class="row">
                 <div class="section-name one">
                     <div class="short-text">
-                        <span style="color: white !important;font-size: 24px;">Memberikan Bantuan & Meminjam di <span style="color:#ff7a00;">Investasi.me</span></span>
+                        <span style="color: white !important;font-size: 24px;">{{ $section_4_1->content_1 }}</span>
                     </div>
-                    <h1 style="color: white !important;font-size:70px;">Langkah Mudah dalam Memulai</h1>
+                    <h1 style="color: white !important;font-size:70px;">{{ $section_4_1->content_2 }}</h1>
                 </div>
 
                 <div class="team-members row" style="padding: 5% 10% 0 10%;">
@@ -176,22 +165,22 @@
                             <div style=
                                  "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                                 <div style=" #position: relative; #top: -50%; color: white !important;">
-                                    <h2>Memberikan bantuan</h2>
+                                    <h2>{{ $section_4_2->content_1 }}</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
-                        <h2 style="color: white !important;">Memberikan bantuan</h2>
+                        <h2 style="color: white !important;">{{ $section_4_2->content_1 }}</h2>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-1.png') }}" alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_2->content_2) }}" alt="" class="homepage-section4-img">
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-2.png') }}" alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_2->content_3) }}" alt="" class="homepage-section4-img">
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/bantuan-3.png') }}"alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_2->content_4) }}"alt="" class="homepage-section4-img">
                     </div>
                 </div>
                 <div class="team-members row" style="padding: 0 10% 0 10%;">
@@ -200,22 +189,22 @@
                             <div style=
                                  "#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
                                 <div style=" #position: relative; #top: -50%;color: white !important;">
-                                    <h2>Meminjamkan</h2>
+                                    <h2>{{ $section_4_3->content_1 }}</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 hidden-lg hidden-md hidden-xs" style="padding:30px 0 20px 0;">
-                        <h2 style="color: white !important;">Meminjamkan</h2>
+                        <h2 style="color: white !important;">{{ $section_4_3->content_1 }}</h2>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-1.png') }}"alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_3->content_2) }}"alt="" class="homepage-section4-img">
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-2.png') }}" alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_3->content_3) }}" alt="" class="homepage-section4-img">
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12 center">
-                        <img src="{{ URL::asset('frontend_images/homepage/meminjam-3.png') }}" alt="" class="homepage-section4-img">
+                        <img src="{{ URL::asset('frontend_images/homepage/'.$section_4_3->content_4) }}" alt="" class="homepage-section4-img">
                     </div>
                 </div>
             </div>
@@ -266,7 +255,7 @@
                                 <div class="col-md-2">
                                     Progress {{$percentage}}%
                                     <br>
-                                    <div class="progress-bar-wrapper min">
+                                    <div class="min">
                                         <div class="progress-bar-outer">
                                             <div class="progress-bar-inner">
                                                 <div class="progress-bar">
@@ -341,7 +330,8 @@
                     <input style="margin-bottom: 5%;color:white;" type="email" name="email" id="email" class="subscribe-field" placeholder="Ketikkan alamat E-mail Anda disini">
                 </div>
                 <div class="col-md-3 col-sm-12 field">
-                    {!! Form::submit('Kirim',['class'=>'btn btn-min btn-solid subscribe-submit'])!!}
+                    {!! Form::submit('Kirim',['class'=>'btn btn-min btn-solid subscribe-submit', 'id'=>'subscribe-button'])!!}
+                    <i id="subscribe-spinner" class="fa fa-circle-o-notch fa-spin" style="font-size:24px;display: none;"></i>
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -349,3 +339,6 @@
         &nbsp;
     </div>
 @endsection
+
+
+@include('frontend.partials._modal-ads', compact('section_Popup'))

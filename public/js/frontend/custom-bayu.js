@@ -132,6 +132,8 @@ $(function(){
     $('#subscribe-form').on('submit',function(e){
 
         e.preventDefault();
+        $("#subscribe-button").attr("disabled", true);
+        $("#subscribe-spinner").show();
         var name = '';
         if($('#name').length > 0){
             name = $('#name').val();
@@ -156,6 +158,8 @@ $(function(){
             success : function(response){
                 if(response.success === true){
                     $('#modal-success').modal();
+                    $("#subscribe-button").attr("disabled", false);
+                    $("#subscribe-spinner").hide();
                 }
                 else{
                     alert("There's something wrong!");

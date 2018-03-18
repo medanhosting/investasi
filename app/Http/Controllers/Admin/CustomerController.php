@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Subscribe;
 use App\Models\User;
 use Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -26,6 +27,14 @@ class CustomerController extends Controller
         $users = User::all();
 
         return View('admin.show-customers', compact('users'));
+        //return view('admin.show_users')->with('users', $users);
+    }
+
+    public function subscribe()
+    {
+        $subscribes = Subscribe::all();
+
+        return View('admin.show-subscribes', compact('subscribes'));
         //return view('admin.show_users')->with('users', $users);
     }
 }

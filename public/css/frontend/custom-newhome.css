@@ -386,7 +386,7 @@ p{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
+    /*height: 100%;*/
     padding: 5% !important;
     margin: 0 !important;
 }
@@ -395,14 +395,14 @@ p{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
+    /*height: 100%;*/
 }
 .fullpage_background4 {
     background: url("../../frontend_images/homepage/bg4.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
+    /*height: 100%;*/
     padding: 5% !important;
     margin: 0 !important;
 }
@@ -411,7 +411,7 @@ p{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
+    /*height: 100%;*/
     padding: 5% !important;
     margin: 0 !important;
 }

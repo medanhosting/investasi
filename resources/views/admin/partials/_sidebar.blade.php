@@ -44,7 +44,17 @@
                     </li>
                     <li>
                         <a href="{{ route('customer-list') }}">
-                            <i class="fa fa-money"></i> Investor List
+                            <i class="fa fa-user"></i> Investor List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('subscribe-list') }}">
+                            <i class="fa fa-user"></i> Subscribe List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('content-edit') }}">
+                            <i class="fa fa-file-text"></i> Edit Content
                         </a>
                     </li>
                     <li><a><i class="fa fa-tags"></i> Vendor List <span class="fa fa-chevron-down"></span></a>

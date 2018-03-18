@@ -11,6 +11,7 @@ use App\Mail\Subscribe;
 use App\Models\Blog;
 use App\Models\BlogReadUser;
 use App\Models\BlogUrgent;
+use App\Models\Content;
 use App\Models\PaymentMethod;
 use App\Models\Transaction;
 use App\Models\Product;
@@ -40,6 +41,15 @@ class HomeController extends Controller
             $highlightBlog = array_add($highlightBlog,$blog->id, $string);
         }
 
+        // get content from DB
+        $section1 = Content::where('section', 'home_1')->first();
+        $section2 = Content::where('section', 'home_2')->first();
+        $section3 = Content::where('section', 'home_3')->first();
+        $section4_1 = Content::where('section', 'home_4_title')->first();
+        $section4_2 = Content::where('section', 'home_4_row_1')->first();
+        $section4_3 = Content::where('section', 'home_4_row_2')->first();
+        $sectionPopup = Content::where('section', 'home_popup')->first();
+
         $user = null;
         $pendingTransaction = null;
         $onGoingTransaction = null;
@@ -66,6 +76,7 @@ class HomeController extends Controller
 
             $recentProductCount = Product::where('status_id', 1)->orderByDesc('created_on')->take(5)->count();
             $onGoingProducts = Product::where('status_id', 1)->count();
+
         }
 
         $data = [
@@ -78,6 +89,13 @@ class HomeController extends Controller
             'finishTransaction' => $finishTransaction,
             'recentProductCount' => $recentProductCount,
             'onGoingProducts' => $onGoingProducts,
+            'section_1' => $section1,
+            'section_2' => $section2,
+            'section_3' => $section3,
+            'section_4_1' => $section4_1,
+            'section_4_2' => $section4_2,
+            'section_4_3' => $section4_3,
+            'section_Popup' => $sectionPopup
 
         ];
 

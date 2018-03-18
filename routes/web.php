@@ -112,6 +112,7 @@ Route::get('/investasi-saya/{failed}', function ($failed){
 
 // User
 Route::get('/admin/customer', 'Admin\CustomerController@index')->name('customer-list');
+Route::get('/admin/subscribe', 'Admin\CustomerController@subscribe')->name('subscribe-list');
 
 Route::post('/admin', 'Auth\LoginAdminController@login');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin-dashboard');
@@ -157,6 +158,12 @@ Route::prefix('/admin/banner/side')->group(function(){
     Route::get('/', 'Admin\BannerController@sideBannerIndex')->name('side-banner-list');
     Route::get('/edit/{id}', 'Admin\BannerController@sideBannerEdit')->name('side-banner-edit');
     Route::post('/{id}', 'Admin\BannerController@sideBannerUpdate');
+});
+
+// Content
+Route::prefix('admin/content')->group(function(){
+    Route::get('/edit', 'Admin\ContentController@edit')->name('content-edit');
+    Route::post('/edit/{id}', 'Admin\ContentController@update')->name('content-edit-submit');
 });
 
 // Category

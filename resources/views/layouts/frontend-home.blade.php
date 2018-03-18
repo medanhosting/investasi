@@ -40,7 +40,6 @@
 
 @yield('body-content')
 
-@include('frontend.partials._modal-ads')
 <!-- FOOTER -->
 @include('frontend.partials._footer-new')
 <!-- //FOOTER -->

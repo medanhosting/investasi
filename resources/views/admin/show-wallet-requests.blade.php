@@ -33,7 +33,8 @@
                                         <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Deskripsi</th>
-                                        <th class="text-right">Jumlah</th>
+                                        <th class="text-right">Jumlah Penarikan</th>
+                                        <th class="text-right">Jumlah Saldo</th>
                                         <th>Option</th>
                                     </tr>
                                 </thead>
@@ -45,6 +46,7 @@
                                             <td>{{ $statement->date }}</td>
                                             <td>{{ $statement->description }}</td>
                                             <td class="text-right">Rp {{ $statement->amount }}</td>
+                                            <td class="text-right">Rp {{ $statement->amount }}</td>
                                             <td>
                                                 <a onclick="modalPop('{{ $statement->id }}', 'accept', '/admin/dompet/accept/')" class="btn btn-primary">Terima</a>
                                                 <a onclick="modalPop('{{ $statement->id }}', 'cancel', '/admin/dompet/reject/')" class="btn btn-danger">Tolak</a>
@@ -55,8 +57,6 @@
                                             @endforeach
                                 </tbody>
                             </table>
-
-
                         </div>
                     </div>
                 </div>

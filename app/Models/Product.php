@@ -26,6 +26,10 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $description
  * @property string $youtube_link
  * @property string $image_path
+ * @property string $prospectus_path
+ * @property string $interest_rate
+ * @property string $installment_per_month
+ * @property string $interest_per_month
  * @property int $is_secondary
  * @property string $meta_tag_description
  * @property string $meta_tag_image
@@ -57,6 +61,9 @@ class Product extends Eloquent
 		'raised' => 'float',
 		'equity_offered' => 'int',
 		'days_left' => 'int',
+        'interest_rate' => 'int',
+        'installment_per_month'  => 'float',
+        'interest_per_month'  => 'float',
         'minimum_per_investor' => 'float',
         'is_secondary' => 'int',
 		'status_id' => 'int'
@@ -81,6 +88,10 @@ class Product extends Eloquent
         'description',
         'youtube_link',
         'image_path',
+        'prospectus_path',
+        'interest_rate',
+        'installment_per_month',
+        'interest_per_month',
         'is_secondary',
         'meta_tag_description',
         'meta_tag_image',
@@ -140,6 +151,16 @@ class Product extends Eloquent
     public function getMinimumPerInvestorAttribute(){
         if(!empty($this->attributes['minimum_per_investor'])){
             return number_format($this->attributes['minimum_per_investor'], 0, ",", ".");
+        }
+    }
+    public function getInstallmentPerMonthAttribute(){
+        if(!empty($this->attributes['installment_per_month'])){
+            return number_format($this->attributes['installment_per_month'], 0, ",", ".");
+        }
+    }
+    public function getInterestPerMonthAttribute(){
+        if(!empty($this->attributes['interest_per_month'])){
+            return number_format($this->attributes['interest_per_month'], 0, ",", ".");
         }
     }
 

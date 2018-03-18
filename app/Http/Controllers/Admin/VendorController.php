@@ -104,6 +104,10 @@ class VendorController extends Controller
             'raising'               => 'required',
             'days_left'             => 'required',
             'description'           => 'required',
+            'interest_rate'           => 'required',
+            'installment_per_month'           => 'required',
+            'interest_per_month'           => 'required',
+            'prospectus'           => 'required',
 
             'email'                 => 'required|email|max:100|unique:users',
             'phone'                 => 'required|max:20|unique:users',
@@ -164,6 +168,10 @@ class VendorController extends Controller
                 'raising.required'   => 'Total Pendanaan harus diisi',
                 'days_left.required'   => 'Durasi Pendanaan harus diisi',
                 'description.required'   => 'Deskripsi Proyek harus diisi',
+                'interest_rate.required'   => 'Suku Bunga Proyek harus diisi',
+                'installment_per_month.required'   => 'Cicilan / Bulan harus diisi',
+                'interestpermonth.required'   => 'Bunga / Bulan harus diisi',
+                'prospectus.required'   => 'Product Disclosure Statement Proyek harus diisi',
 
                 'vendor_image.required'   => 'Gambar Perusahaan harus diisi',
                 'name_vendor.required'   => 'Nama Perusahaan harus diisi',
@@ -192,6 +200,7 @@ class VendorController extends Controller
         $userID = Uuid::generate();
         $vendorID = Uuid::generate();
         $dateTimeNow = Carbon::now('Asia/Jakarta');
+
 
 //        create new user
         $newUser = User::create([
@@ -261,26 +270,34 @@ class VendorController extends Controller
             'raising' => $request['raising'],
             'days_left' => $request['days_left'],
             'description' => $request['description'],
+            'interest_rate' => $request['interest_rate'],
+            'installment_per_month' => $request['installment_per_month'],
+            'interest_per_month' => $request['interest_per_month'],
             'is_secondary' => 0,
             'status_id' => 3,
             'created_on'        => $dateTimeNow->toDateTimeString()
         ]);
+
         //get youtube code
         $url = $request['youtube'];
-        if($url.contains('www.youtube.com')){
-            if($url.contains('embed')){
-                $splitedUrl = explode("www.youtube.com/embed/",$url);
-                $newProduct->youtube_link = $splitedUrl[0];
+        if(strpos($url, 'https://www.youtube.com') !== false){
+            if(strpos($url, 'embed') !== false){
+                $splitedUrl = explode("https://www.youtube.com/embed/",$url);
+                $newProduct->youtube_link = $splitedUrl[1];
 
             }
-            else if($url.contains('watch?')){
-                $splitedUrl = explode("www.youtube.com/watch?v=",$url);
-                $newProduct->youtube_link = $splitedUrl[0];
+            else if(strpos($url, 'watch?') !== false){
+                $splitedUrl = explode("https://www.youtube.com/watch?v=",$url);
+                $newProduct->youtube_link = $splitedUrl[1];
+            }
+            else{
+                $splitedUrl = explode("https://www.youtube.com",$url);
+                $newProduct->youtube_link = $splitedUrl[1];
             }
         }
-        if($url.contains('youtu.be')){
-            $splitedUrl = explode("youtu.be/",$url);
-            $newProduct->youtube_link = $splitedUrl[0];
+        if(strpos($url, 'youtu.be') !== false){
+            $splitedUrl = explode("https://youtu.be/",$url);
+            $newProduct->youtube_link = $splitedUrl[1];
         }
 
         // Get image extension
@@ -292,7 +309,15 @@ class VendorController extends Controller
 
         $img->save(public_path('storage/project/'. $filename), 75);
         $newProduct->image_path = $filename;
+
+        // save pdf
+        $filenamePDF = $request['project_name'].'_'.Carbon::now('Asia/Jakarta')->format('Ymdhms').'.pdf';
+        $destinationPath = public_path('storage/project/');
+
+        $request->file('prospectus')->move($destinationPath, $filenamePDF);
+        $newProduct->prospectus_path = $filenamePDF;
         $newProduct->save();
+
 
         return Redirect::route('vendor-list');
     }
