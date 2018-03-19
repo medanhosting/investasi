@@ -7,6 +7,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
@@ -161,6 +162,13 @@ class Product extends Eloquent
     public function getInterestPerMonthAttribute(){
         if(!empty($this->attributes['interest_per_month'])){
             return number_format($this->attributes['interest_per_month'], 0, ",", ".");
+        }
+    }
+    public function getDaysLeftAttribute(){
+        if(!empty($this->attributes['due_date'])){
+            $dateTimeNow = Carbon::now('Asia/Jakarta');
+            $daysLeft = $dateTimeNow->diffInDays(Carbon::parse($this->due_date));
+            return $daysLeft;
         }
     }
 

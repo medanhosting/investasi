@@ -91,6 +91,12 @@ class ProductController extends Controller
             //get description vendor
             $vendorDesc = Utilities::TruncateString($vendor->description);
         }
+        if(!empty($product->due_date)){
+            $dateTimeNow = Carbon::now('Asia/Jakarta');
+            $product->days_left = $dateTimeNow->diffInDays(Carbon::parse($product->due_date));
+            $product->save();
+        }
+
 
         $userId = null;
         if(auth()->check()){

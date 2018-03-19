@@ -56,14 +56,15 @@ class VendorController extends Controller
 
 
     public function AcceptRequest($id){
+        $dateTimeNow = Carbon::now('Asia/Jakarta');
 
         $vendor = Vendor::find($id);
         $vendor->status_id = 1;
         $vendor->save();
 
-
         $product = Product::where('vendor_id', $id)->first();
         $product->status_id = 1;
+        $product->due_date = $dateTimeNow->addDays($product->days_left);
         $product->save();
 
         Session::flash('message', 'Vendor and Project Accepted!');
