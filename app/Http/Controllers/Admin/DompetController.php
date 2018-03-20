@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Admin;
 
 
+use App\Excel\ExcelExport;
 use App\Http\Controllers\Controller;
 use App\Mail\AcceptPenarikan;
 use App\Models\Transaction;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Redirect;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades;
 
 class DompetController extends Controller
 {
@@ -72,6 +74,14 @@ class DompetController extends Controller
         $trx->status_id = 7;
         $trx->date = Carbon::now('Asia/Jakarta');
         $trx->save();
+
+        $user = User::find($trx->user_id);
+        $userWallet = (double) str_replace('.','', $user->wallet_amount);
+        $amount = (double) str_replace('.','', $trx->amount);
+        $userWalletFinal = $userWallet + $amount;
+        $user->wallet_amount = $userWalletFinal;
+        $user->save();
+
 
         Session::flash('message', 'Wallet Statement Rejected!');
 
@@ -123,6 +133,19 @@ class DompetController extends Controller
         $trx->save();
 
         return redirect::route('delivery-list');
+    }
+
+    public function downloadExcel(){
+        try {
+            $newFileName = "List Penarikan Dana_".Carbon::now('Asia/Jakarta')->format('Ymdhms');
+
+            return Facades\Excel::download(new ExcelExport('wallet'), $newFileName.'.xlsx');
+        }
+        catch (Exception $ex){
+            //Utilities::ExceptionLog($ex);
+            return response($ex, 500)
+                ->header('Content-Type', 'text/plain');
+        }
     }
 
     public function track($id){

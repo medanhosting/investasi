@@ -113,6 +113,7 @@ Route::get('/investasi-saya/{failed}', function ($failed){
 // User
 Route::get('/admin/customer', 'Admin\CustomerController@index')->name('customer-list');
 Route::get('/admin/subscribe', 'Admin\CustomerController@subscribe')->name('subscribe-list');
+Route::get('/download-subscribe', 'Admin\CustomerController@downloadExcel')->name('download-subscribe');
 
 Route::post('/admin', 'Auth\LoginAdminController@login');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin-dashboard');
@@ -265,6 +266,7 @@ Route::prefix('admin/dompet')->group(function(){
     Route::get('/detail/{id}', 'Admin\TransactionController@detail')->name('transaction-detail');
     Route::get('/accept/{id}', 'Admin\DompetController@AcceptOrder');
     Route::get('/reject/{id}', 'Admin\DompetController@RejectOrder');
+    Route::get('/download-wallet', 'Admin\DompetController@downloadExcel')->name('download-wallet');
 });
 
 // Blog

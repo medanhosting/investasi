@@ -16,6 +16,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $user_id
  * @property string $description
  * @property float $amount
+ * @property float $saldo
  * @property string $bank_name
  * @property string $bank_acc_name
  * @property string $bank_acc_number
@@ -38,6 +39,7 @@ class WalletStatement extends Eloquent
 
 	protected $casts = [
 		'amount' => 'float',
+		'saldo' => 'float',
 		'status_id' => 'int'
 	];
 
@@ -52,6 +54,7 @@ class WalletStatement extends Eloquent
 		'user_id',
 		'description',
 		'amount',
+		'saldo',
 		'bank_name',
 		'bank_acc_name',
 		'bank_acc_number',
@@ -73,7 +76,18 @@ class WalletStatement extends Eloquent
 		return $this->belongsTo(\App\Models\User::class);
 	}
 
+	public function getUserIdAttribute()
+	{
+        $firstName = User::find($this->attributes['user_id']);
+        $lastName = User::find($this->attributes['user_id']);
+		return $firstName->first_name." ".$lastName->last_name;
+	}
+
     public function getAmountAttribute(){
         return number_format($this->attributes['amount'],0, ",", ".");
+    }
+
+    public function getSaldoAttribute(){
+        return number_format($this->attributes['saldo'],0, ",", ".");
     }
 }

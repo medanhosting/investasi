@@ -44,7 +44,7 @@
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs" >
-                                <li><a href="#topup" data-toggle="tab">Top up</a></li>
+                                <li class="active"><a href="#topup" data-toggle="tab">Top up</a></li>
                                 <li><a href="#withdraw" data-toggle="tab">Penarikan</a></li>
                             </ul>
                         </div>

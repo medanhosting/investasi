@@ -194,29 +194,40 @@ class WalletController extends Controller
                 'google'          => 'required'
             ]);
 
+            $user = User::find($userId);
             if ($validator->fails()) {
                 return back()->withErrors($validator)->withInput();
             }
             else {
+                $amount = (double) str_replace('.','', Input::get('amount'));
+                $userWallet = (double) str_replace('.','', $user->wallet_amount);
+
+                if($amount > $userWallet){
+                    dd($amount." ". $userWallet);
+                    return back()->withErrors("Jumlah Penarikan harus lebih kecil dari Dana yang tersedia")->withInput();
+                }
+
                 $secret = Input::get('google');
                 $google2fa = new Google2FA();
 
-                $user = User::find($userId);
                 $valid = $google2fa->verifyKey($user->google2fa_secret, $secret);
                 if($valid){
                     $dateTimeNow = Carbon::now('Asia/Jakarta');
 
-                    $amount = (double) str_replace('.','', Input::get('amount'));
-//                    $amount = Input::get('amount');
                     $accNumber = Input::get('acc_number');
                     $accName = Input::get('acc_name');
                     $bank = Input::get('bank');
+
+                    $userFinalWallet = $userWallet - $amount;
+
+
                     //status 3=pending, 6=accepted, 7=rejected
                     $newStatement = WalletStatement::create([
                         'id'                => Uuid::generate(),
                         'user_id'           => $userId,
                         'description'       => "Penarikan Dompet (".$bank." - ".$accName." - ".$accNumber.")",
                         'amount'            => $amount,
+                        'saldo'            => $userFinalWallet,
                         'bank_name'         => $bank,
                         'bank_acc_name'     => $accName,
                         'bank_acc_number'   => $accNumber,
@@ -226,9 +237,12 @@ class WalletController extends Controller
                     ]);
 
                     Mail::to($user->email)->send(new RequestWithdrawInvestor($newStatement, $user, request()->ip()));
+
+                    $user->wallet_amount = $userFinalWallet;
+                    $user->save();
                 }
                 else{
-                    return Redirect::back()->withErrors(['google' => ['Kode yang Anda masukan salah!']]);
+                    return back()->withErrors("PIN google yang Anda masukan salah")->withInput();
                 }
             }
 

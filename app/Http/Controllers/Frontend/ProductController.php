@@ -128,9 +128,7 @@ class ProductController extends Controller
         ]);
 
         if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
+            return back()->withErrors($validator)->withInput();
         }
         else {
             $dateTimeNow = Carbon::now('Asia/Jakarta');

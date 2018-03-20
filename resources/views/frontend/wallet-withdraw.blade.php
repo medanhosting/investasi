@@ -50,33 +50,30 @@
                             <form class="comment-form row altered" method="POST" action="{{ route('withdrawSubmit') }}">
                                 {{ csrf_field() }}
 
-
+                                @if(count($errors))
+                                    <div class="form-group">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 alert alert-danger alert-dismissible fade in" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <ul>
+                                                @foreach($errors->all() as $error)
+                                                    <li> {{ $error }} </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                @endif
                                 <div class="field col-sm-12 price-format {{ $errors->has('amount') ? ' has-error' : '' }}">
                                     <h4>Jumlah Penarikan</h4>
-                                    <input type="text" name="amount">
-                                    @if ($errors->has('amount'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('amount') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input type="text" name="amount" value="{{old('amount')}}">
                                 </div>
                                 <div class="field col-sm-12 {{ $errors->has('acc_number') ? ' has-error' : '' }}">
                                     <h4>Nomor Rekening</h4>
-                                    <input type="text" name="acc_number">
-                                    @if ($errors->has('acc_number'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('acc_number') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input type="text" name="acc_number" value="{{old('acc_number')}}">
                                 </div>
                                 <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('acc_name') ? ' has-error' : '' }}">
                                     <h4>Nama Rekening</h4>
-                                    <input type="text" name="acc_name">
-                                    @if ($errors->has('acc_name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('acc_name') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input type="text" name="acc_name" value="{{old('acc_name')}}">
                                 </div>
                                 <div class="field col-sm-12 {{ $errors->has('bank') ? ' has-error' : '' }}">
                                     <h4>Nama Bank</h4>
@@ -89,21 +86,11 @@
                                     {{--<option value="asdf">PT Bank Danamon Indonesia TBK</option>--}}
                                     {{--<option value="asdf">PT Bank Mandiri </option>--}}
                                     {{--</select>--}}
-                                    <input type="text" name="bank">
-                                    @if ($errors->has('bank'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('bank') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input type="text" name="bank" value="{{old('bank')}}">
                                 </div>
                                 <div style="margin-top: 0;" class="field col-sm-12 {{ $errors->has('google') ? ' has-error' : '' }}">
                                     <h4>PIN Google Auth</h4>
-                                    <input type="number" name="google">
-                                    @if ($errors->has('google'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('google') }}</strong>
-                                    </span>
-                                    @endif
+                                    <input type="number" name="google" value="{{old('google')}}">
                                 </div>
                                 <div class="field col-sm-12">
                                     <br/>

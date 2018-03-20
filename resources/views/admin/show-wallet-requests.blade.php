@@ -23,6 +23,11 @@
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Request Penarikan Total Dana</h2>
+                            <div class="nav navbar-right">
+                                <a href="{{ route('download-wallet') }}" class="btn btn-app">
+                                    <i class="fa fa-download"></i> Download to Excel
+                                </a>
+                            </div>
                             <div class="clearfix"></div>
                         </div>
                         @include('admin.partials._success')
@@ -46,7 +51,7 @@
                                             <td>{{ $statement->date }}</td>
                                             <td>{{ $statement->description }}</td>
                                             <td class="text-right">Rp {{ $statement->amount }}</td>
-                                            <td class="text-right">Rp {{ $statement->amount }}</td>
+                                            <td class="text-right">Rp {{ $statement->saldo }}</td>
                                             <td>
                                                 <a onclick="modalPop('{{ $statement->id }}', 'accept', '/admin/dompet/accept/')" class="btn btn-primary">Terima</a>
                                                 <a onclick="modalPop('{{ $statement->id }}', 'cancel', '/admin/dompet/reject/')" class="btn btn-danger">Tolak</a>
