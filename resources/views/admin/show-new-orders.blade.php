@@ -58,8 +58,8 @@
                                         <td>
                                             {{ \Carbon\Carbon::parse($trx->created_on)->format('j F y')}}</td>
                                         <td>
-                                            <a onclick="modalPop('{{ $trx->id }}', 'accept', '/admin/neworder/accept/')" class="btn btn-success">Accept</a>
-                                            <a onclick="rejectModalPop('{{ $trx->id }}')" class="btn btn-danger">Reject</a>
+                                            {{--<a onclick="modalPop('{{ $trx->id }}', 'accept', '/admin/neworder/accept/')" class="btn btn-success">Accept</a>--}}
+                                            {{--<a onclick="rejectModalPop('{{ $trx->id }}')" class="btn btn-danger">Reject</a>--}}
                                             <a href="/admin/transaction/detail/{{ $trx->id }}" class="btn btn-primary">Detail</a>
                                         </td>
                                     </tr>

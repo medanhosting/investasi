@@ -29,7 +29,7 @@ class DashboardController extends Controller
 //        $user = Auth::user();
 //        $user->notify(new NewOrder());
 
-        $trxTotal = Transaction::where('status_id', 8)->get()->count();
+        $trxTotal = Transaction::where('status_id', 9)->get()->count();
         $newCustomerTotal = User::where('status_id',3)->get()->count();
         $walletWithdraw = WalletStatement::where('status_id',3)->get()->count();
 

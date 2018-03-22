@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <label>
-                                    <input type="checkbox" name="check1" id="check1" onclick="check()"> Dengan mendaftarkan diri pada investasi.me saya telah membaca dan mengetahui syarat dan ketentuan yang berlaku pada halaman Syarat & Ketentuan serta Kebijakan Privasi
+                                    <input type="checkbox" name="check1" id="check1" onclick="check()"> Dengan mendaftarkan diri pada indofund.id saya telah membaca dan mengetahui syarat dan ketentuan yang berlaku pada halaman Syarat & Ketentuan serta Kebijakan Privasi
                                 </label>
                             </div>
                             <div class="field col-sm-12">

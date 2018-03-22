@@ -155,6 +155,12 @@ class MidtransController extends Controller
                             $transaction->modified_on = $dateTimeNow->toDateTimeString();
                             $transaction->save();
 
+                            //update product data
+                            $productDB = Product::find($transaction->product_id);
+                            $raisedDB = (double) str_replace('.','', $productDB->raised);
+                            $newRaise = (double) str_replace('.','', $transaction->total_price);
+                            $productDB->raised = $raisedDB + $newRaise;
+                            $productDB->save();
 
                             //Send Email,
                             $userData = User::find($transaction->user_id);

@@ -93,12 +93,12 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <span>
-                            Investasi.me bukan lembaga investasi
+                            Indofund.id bukan lembaga investasi
                             <br><br>
                             Kami adalah sebuah portal yang mempertemukan pikah yang membutuhkan
                             bantuan pendanaan dengan pihak yang mau memberikan bantuan akan pendanaan.
                             <br>
-                            Investasi.me dengan standarisasi yang baku telah melakukan studi kelayaran
+                            Indofund.id dengan standarisasi yang baku telah melakukan studi kelayaran
                             pada semua pihak yang mendaftarkan kebutuhan pendanaannya di portal kami.
                             Namun bukan berarti risiko akan proyek maupun pekerjaan yang dilakukan oleh
                             pihak yang menerima modal menjadi bebas risiko kepada pihak yang memberikan bantuan.
@@ -108,7 +108,7 @@
                             Hal-hal yang sering ditanyakan
                         </span>
                         <ul>
-                            <li>Bagaimana saya mendanai proyek di investasi.me</li>
+                            <li>Bagaimana saya mendanai proyek di indofund.id</li>
                             <li>Biaya transaksi apa yang muncul ketika saya mendanai</li>
                             <li>Kapan saya mendapatkan keuntungan</li>
                             <li>Apakah orang lain mengetahui saya mendanai</li>
@@ -250,7 +250,7 @@
                                 <input type="checkbox" name="check1" id="check1" onclick="check()">
                                 Saya telah membaca dan memahami isi dari prospektus produk investasi ini
                                 (<a href="{{route('download', ['filename' => 'test.pdf'])}}"><span>Download Product Disclosure Statement</span></a>),
-                                dan saya telah menyetujui <a target="_blank" href="{{route('term-condition')}}">syarat dan ketentuan</a> dari investasi.me
+                                dan saya telah menyetujui <a target="_blank" href="{{route('term-condition')}}">syarat dan ketentuan</a> dari indofund.id
 
                             </label>
                         </div>

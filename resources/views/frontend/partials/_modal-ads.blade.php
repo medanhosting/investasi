@@ -11,7 +11,7 @@
                     <div class="col-md-12">
                         <span>
                             {{ $section_Popup->content_2 }}
-                            <a href="{{route('about')}}">Pelajari Lebih Lanjut</a> </span>
+                            <a href="{{$section_Popup->link}}">{{$section_Popup->content_3}}</a> </span>
                     </div>
                 </div>
                 <div class="modal-footer">

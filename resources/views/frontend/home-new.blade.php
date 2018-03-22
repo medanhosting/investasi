@@ -55,7 +55,7 @@
         </div>
     @else
 
-        <!-- apa itu investasi.me -->
+        <!-- apa itu indofund.id -->
         <div class="special-cause fullpage_background">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
@@ -66,7 +66,7 @@
                             {!! $section_1->content_2 !!}
                         </h3>
                         <br><br>
-                        <a href="{{ route('about') }}" class="btn btn-big btn-solid "><span style="font-size: 16px;">{{ $section_1->content_3 }}</span></a>
+                        <a href="{{ $section_1->link }}" class="btn btn-big btn-solid "><span style="font-size: 16px;">{{ $section_1->content_3 }}</span></a>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
         {{--</div>--}}
 
 
-        <!-- apa itu investasi.me -->
+        <!-- apa itu indofund.id -->
         <div class="special-cause fullpage_background2">
             <div class="row">
                 <div class="col-md-offset-6 col-md-6 col-xs-12">
@@ -124,7 +124,7 @@
                         </span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="{{ route('about') }}" class="btn btn-big btn-solid "><span>{{ $section_2->content_4 }}</span></a>
+                        <a href="{{ $section_2->link }}" class="btn btn-big btn-solid "><span>{{ $section_2->content_4 }}</span></a>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                         <span>{{ $section_3->content_4 }}</span>
                     </div>
                     <div class="btns-wrapper">
-                        <a href="{{ route('register') }}" class="btn btn-big btn-solid "><span style="font-size: 20px;">{{ $section_3->content_5 }}</span></a>
+                        <a href="{{ $section_3->link }}" class="btn btn-big btn-solid "><span style="font-size: 20px;">{{ $section_3->content_5 }}</span></a>
                     </div>
                 </div>
             </div>

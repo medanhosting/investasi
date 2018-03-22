@@ -57,7 +57,7 @@
                     <br><br>
                     Apabila Anda tidak menemukan email tersebut silahkan cek pada spam folder Anda.
                     <br><br>
-                    Bila Anda mendapatkan email apapun dari kami silahkan hubungi info@investasi.me
+                    Bila Anda mendapatkan email apapun dari kami silahkan hubungi info@indofund.id
                     <br><br>
                     Terima kasih
 

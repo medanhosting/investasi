@@ -53,7 +53,6 @@
                     <div class="comment-form-wrapper contact-from clearfix">
                         <div class="widget-title ">
                             <h4>Kirimkan email ke Kami</h4>
-                            <p>testing testing testing</p>
                         </div>
                         <form class="comment-form row altered">
                             <div class="field col-sm-4">

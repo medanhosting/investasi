@@ -23,10 +23,10 @@
                 <div class="col-md-12 ">
                     <div class="about-right-text" style="padding-top:0;">
                         <div class="widget-title">
-                            <h4>Apa itu Investasi.me ?</h4>
+                            <h4>Apa itu Indofund.id ?</h4>
                         </div>
                         <p class="first">
-                            Investasi.me adalah sebuah platform fintech lending di Indonesia pertama yang memiliki akses solusi permodalan dan investasi yang paling lengkap. Kami menyadari bahwa setiap usaha adalah unik, sehingga akses permodalan yang dilakukan tidak selalu cocok satu model dengan yang lainnya. Dan demikian juga sebagai investor, memiliki keinginan dan profil yang berbeda-beda. Pelajari Lebih Lanjut
+                            Indofund.id adalah sebuah platform fintech lending di Indonesia pertama yang memiliki akses solusi permodalan dan investasi yang paling lengkap. Kami menyadari bahwa setiap usaha adalah unik, sehingga akses permodalan yang dilakukan tidak selalu cocok satu model dengan yang lainnya. Dan demikian juga sebagai investor, memiliki keinginan dan profil yang berbeda-beda. Pelajari Lebih Lanjut
                         </p>
                         <a href="#" class="btn btn-min btn-secondary"><span>Pelajari Lebih Lanjut</span></a>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="section-name one">
                     <h2>Siapa tim kami?</h2>
                     <div class="short-text">
-                        <h5>Kami menyadari bahwa 'masakan berkwalitas' datang dari 'koki' yang tepat dan berpengalaman. Mari kami perkenalkan tim Investasi.me</h5>
+                        <h5>Kami menyadari bahwa 'masakan berkwalitas' datang dari 'koki' yang tepat dan berpengalaman. Mari kami perkenalkan tim Indofund.id</h5>
                     </div>
                 </div>
 

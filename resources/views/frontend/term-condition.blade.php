@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="blog-posts col-md-8 col-md-offset-2 col-sm-12">
                     <div class="blog-post single-post">
-                        <p>Selamat datang di Investasi.me. Terima kasih telah mengunjungi www.investasi.me Sebelum menggunakan, mengakses atau memanfaatkan Web Site ini, pastikan Anda sudah membaca dengan baik seluruh Syarat dan Ketentuan Umum ini.</p>
+                        <p>Selamat datang di Indofund.id. Terima kasih telah mengunjungi www.indofund.id Sebelum menggunakan, mengakses atau memanfaatkan Web Site ini, pastikan Anda sudah membaca dengan baik seluruh Syarat dan Ketentuan Umum ini.</p>
                         <p>Syarat dan Ketentuan Umum ini berisi mengenai aturan, pedoman, panduan, pemberitahuan, kebijakan dan instruksi yang berkaitan dengan penggunaan Web Site beserta Layanan yang terdapat dalam Web Site. Dengan tetap mengakses dan menggunakan Web Site ini Anda menyatakan bahwa Anda telah membaca, memahami dan menyetujui setiap dan seluruh isi Syarat dan Ketentuan Umum ini.</p>
                         <p>Kami akan mempublikasikan setiap perubahan atau amandemen yang bersifat substansial dari Syarat dan Ketentuan Umum ini (apabila ada) melalui Web Site dan Anda diwajibkan untuk membaca dengan baik setiap perubahan atau amandemen tersebut sehingga apabila Anda tetap menggunakan, mengakses atau memanfaatkan Web Site, Anda dianggap telah mengetahui, memahami dan menyetujui perubahan atau amandemen tersebut.</p>
 
@@ -35,9 +35,9 @@
                             <li>e. Pengguna atau Anda adalah setiap orang yang mengunjungi, mengakses dan/atau menggunakan Web Site.</li>
                             <li>f. Fitur Pinjaman adalah aplikasi Pinjaman dari Debitur yang ditempatkan di dalam Web Site untuk ditawarkan kepada Kreditur.</li>
                             <li>g. Klasifikasi Fitur Pinjaman adalah Jenis Pinjaman berdasarkan bentuk pengembalian atas pinjaman.</li>
-                            <li>h. Pinjaman adalah dana yang diberikan oleh Kreditur untuk ditujukan kepada Debitur melalui dompet Investasi.me.</li>
-                            <li>i. Web Site adalah Investasi.me</li>
-                            <li>j. Dompet Investasi.me adalah rekening Perusahaan yang difungsikan secara khusus kepada Kreditur dan Debitur dalam rangka penyediaan Layanan.</li>
+                            <li>h. Pinjaman adalah dana yang diberikan oleh Kreditur untuk ditujukan kepada Debitur melalui dompet Indofund.id.</li>
+                            <li>i. Web Site adalah Indofund.id</li>
+                            <li>j. Dompet Indofund.id adalah rekening Perusahaan yang difungsikan secara khusus kepada Kreditur dan Debitur dalam rangka penyediaan Layanan.</li>
                             <li>k. Perjanjian Kredit adalah perjanjian pinjam meminjam antara Kreditur dan Debitur sehubungan dengan Pinjaman dalam rangka penyediaan Layanan yang diberikan oleh Perusahaan.</li>
                         </ol>
 
