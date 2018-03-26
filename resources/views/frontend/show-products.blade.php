@@ -58,7 +58,6 @@
                                                                         <td>{{ $product->name }}</td>
                                                                         <td>Rp {{ $product->raising }}</td>
                                                                         <td>{{ $product->days_left }} </td>
-                                                                        <td>Rp {{ $product->raised }}</td>
                                                                         <td>Rp {{ $product->minimum_per_investor }}</td>
                                                                         <td class="hidden-xs hidden-sm">
                                                                             <div class="progress-bar-inner">

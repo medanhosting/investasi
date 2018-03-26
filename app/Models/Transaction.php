@@ -44,7 +44,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property float $admin_fee
  * @property \Carbon\Carbon $paid_date
  * @property \Carbon\Carbon $accept_date
- * @property \Carbon\Carbon $delivery_date
+ * @property \Carbon\Carbon $2_day_due_date
  * @property \Carbon\Carbon $finish_date
  * @property string $reject_note
  * @property int $status_id
@@ -84,7 +84,7 @@ class Transaction extends Eloquent
     protected $dates = [
         'paid_date',
         'accept_date',
-        'delivery_date',
+        '2_day_due_date',
         'finish_date',
         'created_on',
         'modified_on'
@@ -127,6 +127,7 @@ class Transaction extends Eloquent
         'delivery_fee',
         'finish_date',
         'reject_note',
+        '2_day_due_date',
         'status_id',
         'created_by',
         'created_on',

@@ -50,7 +50,7 @@ function modalCheckout(){
             investStr = addCommas(investFeeInt);
             $("#checkout-admin-fee").html(investStr);
 
-            $("#checkout-payment-method").html("Kartu Kredit")
+            $("#checkout-payment-method").html("Kartu Kredit");
 
             // Set total invest amount
             var total = parseInt(invest) + adminFee;
@@ -59,10 +59,10 @@ function modalCheckout(){
             $("#modal-checkout-confirm").modal();
         }
         else if(payment === "bank_transfer"){
-            adminFee += 4000;
-            $("#checkout-admin-fee-input").val(4000);
-            $("#checkout-admin-fee").html("Rp 4.000");
-            $("#checkout-payment-method").html("Bank Transfer")
+            // adminFee += 4000;
+            $("#checkout-admin-fee-input").val(0);
+            $("#checkout-admin-fee").html("GRATIS");
+            $("#checkout-payment-method").html("Akun Virtual");
 
             // Set total invest amount
             var total = parseInt(invest) + adminFee;
@@ -79,7 +79,7 @@ function modalCheckout(){
             else{
                 $("#checkout-admin-fee-input").val(0);
                 $("#checkout-admin-fee").html("GRATIS");
-                $("#checkout-payment-method").html("Dompet")
+                $("#checkout-payment-method").html("Dompet");
 
                 // Set total invest amount
                 var total = parseInt(invest) + adminFee;

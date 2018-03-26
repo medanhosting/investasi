@@ -24,6 +24,8 @@
                     <div class="row">
                         <div class="col-md-7 col-xs-12 center">
                             <h3>
+                                <a href="{{route('withdraw')}}" class="btn btn-big btn-warning">Penarikan Dana</a>
+                                <br>
                                 <i class="fa fa-money fa-1x"></i> Total Dana = Rp {{$user->wallet_amount}}
                             </h3>
                             <h3>
@@ -31,10 +33,10 @@
                             </h3>
 
                         </div>
-                        <div class="col-md-5 col-xs-12 center" style="padding-top:3%;">
-                            <a href="{{route('deposit')}}" class="btn btn-big btn-success">Top Up Dana</a>
-                            <a href="{{route('withdraw')}}" class="btn btn-big btn-warning">Penarikan Dana</a>
-                        </div>
+                        {{--<div class="col-md-5 col-xs-12 center" style="padding-top:3%;">--}}
+                            {{--<a href="{{route('deposit')}}" class="btn btn-big btn-success">Top Up Dana</a>--}}
+
+                        {{--</div>--}}
                     </div>
                 </div>
 
@@ -44,56 +46,56 @@
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs" >
-                                <li class="active"><a href="#topup" data-toggle="tab">Top up</a></li>
-                                <li><a href="#withdraw" data-toggle="tab">Penarikan</a></li>
+                                {{--<li ><a href="#topup" data-toggle="tab">Top up</a></li>--}}
+                                <li class="active"><a href="#withdraw" data-toggle="tab">Penarikan</a></li>
                             </ul>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
-                                <div class="tab-pane fade in active" id="topup">
-                                    <div class="x_panel">
-                                        <div class="x_content table-responsive">
-                                            <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
-                                                <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Deskripsi</th>
-                                                    <th class="text-right">Jumlah</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                @php( $idx = 1 )
-                                                    @foreach($statementsTopup as $statement)
-                                                        <tr>
-                                                            <td>{{ $idx }}</td>
-                                                            <td>{{ $statement->created_at }}</td>
-                                                            <td>Top up dengan order id = {{ $statement->order_id }}</td>
-                                                            <td class="text-right">Rp {{ $statement->amount }}</td>
-                                                            @if($statement->status_id == 3)
-                                                                <td>Pending</td>
-                                                            @elseif($statement->status_id == 7)
-                                                                <td>Dibatalkan</td>
-                                                            @elseif($statement->status_id == 16)
-                                                                <td>Top up Pending</td>
-                                                            @elseif($statement->status_id == 17)
-                                                                <td>Top up Selesai</td>
-                                                            @else
-                                                                <td>Selesai</td>
-                                                            @endif
+                                {{--<div class="tab-pane fade " id="topup">--}}
+                                    {{--<div class="x_panel">--}}
+                                        {{--<div class="x_content table-responsive">--}}
+                                            {{--<table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">--}}
+                                                {{--<thead>--}}
+                                                {{--<tr>--}}
+                                                    {{--<th>No</th>--}}
+                                                    {{--<th>Tanggal</th>--}}
+                                                    {{--<th>Deskripsi</th>--}}
+                                                    {{--<th class="text-right">Jumlah</th>--}}
+                                                    {{--<th>Status</th>--}}
+                                                {{--</tr>--}}
+                                                {{--</thead>--}}
+                                                {{--<tbody>--}}
+                                                {{--@php( $idx = 1 )--}}
+                                                    {{--@foreach($statementsTopup as $statement)--}}
+                                                        {{--<tr>--}}
+                                                            {{--<td>{{ $idx }}</td>--}}
+                                                            {{--<td>{{ $statement->created_at }}</td>--}}
+                                                            {{--<td>Top up dengan order id = {{ $statement->order_id }}</td>--}}
+                                                            {{--<td class="text-right">Rp {{ $statement->amount }}</td>--}}
+                                                            {{--@if($statement->status_id == 3)--}}
+                                                                {{--<td>Pending</td>--}}
+                                                            {{--@elseif($statement->status_id == 7)--}}
+                                                                {{--<td>Dibatalkan</td>--}}
+                                                            {{--@elseif($statement->status_id == 16)--}}
+                                                                {{--<td>Top up Pending</td>--}}
+                                                            {{--@elseif($statement->status_id == 17)--}}
+                                                                {{--<td>Top up Selesai</td>--}}
+                                                            {{--@else--}}
+                                                                {{--<td>Selesai</td>--}}
+                                                            {{--@endif--}}
 
-                                                        </tr>
-                                                        @php( $idx++ )
-                                                            @endforeach
-                                                </tbody>
-                                            </table>
+                                                        {{--</tr>--}}
+                                                        {{--@php( $idx++ )--}}
+                                                            {{--@endforeach--}}
+                                                {{--</tbody>--}}
+                                            {{--</table>--}}
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="withdraw">
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                <div class="tab-pane fade in active" id="withdraw">
                                     <div class="x_panel">
                                         <div class="x_content table-responsive">
                                             <table id="datatable-responsive-debt" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
