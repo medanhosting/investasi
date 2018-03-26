@@ -61,6 +61,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users|not_contains',
             'password' => 'required|string|min:6|confirmed',
             'username' => 'required|unique',
+            'phone' => 'required|string|max:12'
         );
 
         $messages = array(
@@ -84,6 +85,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $temp = $data['phone'];
+        $va_acc = "88795" . substr($temp, 1);
+
         return User::create([
             'id' =>Uuid::generate(),
             'first_name' => $data['first_name'],
@@ -91,6 +95,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone'],
             'username' => $data['username'],
+            'va_acc'    => $va_acc,
             'email_token' => base64_encode($data['email']),
             'status_id' => 3,
             'password' => bcrypt($data['password']),
@@ -109,14 +114,15 @@ class RegisterController extends Controller
             'email'                 => 'required|email|max:100|unique:users|not_contains',
             'first_name'            => 'required|max:100',
             'last_name'             => 'required|max:100',
-            'phone'                 => 'required|max:20|unique:users',
+            'phone'                 => 'required|max:12|unique:users',
             'password'              => 'required|min:6|max:20|same:password',
             'password_confirmation' => 'required|same:password',
             'username'              => 'required|unique:users'
         );
 
         $messages = array(
-            'not_contains' => 'Email can not have a + character',
+            'not_contains'  => 'Email tidak boleh memiliki karakter +',
+            'phone.max'     => 'Nomor Handphone tidak boleh lebih dari 12 karakter!'
 //            'username.unique'   => 'Username sudah pernah terdaftar',
 //            'phone.unique'   => 'Nomor Handphone sudah pernah terdaftar',
         );
