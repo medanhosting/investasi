@@ -114,6 +114,7 @@ Route::get('/investasi-saya/{failed}', function ($failed){
 Route::get('/admin/customer', 'Admin\CustomerController@index')->name('customer-list');
 Route::get('/admin/subscribe', 'Admin\CustomerController@subscribe')->name('subscribe-list');
 Route::get('/download-subscribe', 'Admin\CustomerController@downloadExcel')->name('download-subscribe');
+Route::get('/download-mcm', 'Admin\CustomerController@downloadMCMData')->name('download-mcm');
 
 Route::post('/admin', 'Auth\LoginAdminController@login');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin-dashboard');

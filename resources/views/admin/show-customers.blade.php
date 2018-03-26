@@ -37,6 +37,11 @@
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Investor List</h2>
+                            <div class="nav navbar-right">
+                                <a href="{{ route('download-mcm') }}" class="btn btn-app">
+                                    <i class="fa fa-download"></i> Download MCM to Excel
+                                </a>
+                            </div>
                             {{--<ul class="nav navbar-right panel_toolbox">--}}
                                 {{--<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>--}}
                                 {{--</li>--}}
